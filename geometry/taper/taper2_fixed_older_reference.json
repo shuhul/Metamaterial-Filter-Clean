@@ -1,0 +1,44 @@
+{
+  "status": "user_adopted_fixed_reference",
+  "source_fit": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\output_data\\taper_exploration\\three_tapers_v3_T2_plain_2026-10-28\\idc_rail8_right30_dl256_pad148_w148_p200_i42n70_j50_r74tg2\\response\\extraction_three_caps_older_pm1pct\\fit.json",
+  "source_fit_sha256": "3ac6c970af2dc60f5627c9a78e1a59134cf3ee5d07e40745e40a19eb70ee0848",
+  "source_SNP_sha256": "28d69357601b9d7ad7d39f54d8207b6974be56ed595c412f8dae4aada9586f1b",
+  "source_bound_percent": 1.0,
+  "source_fit_complex_RMS": 0.0047214464434713445,
+  "fixed_C_fF": {
+    "T1": 147.2101440329128,
+    "regular": 187.07889078419188,
+    "output_end": 186.9893352222692
+  },
+  "fixed_G_fF": {
+    "T1_to_regular": 7.940917909015536,
+    "regular_to_output": 8.194650651067347
+  },
+  "fixed_L_nH": [
+    4.323385037250778,
+    6.001411793324284,
+    4.922723945068658,
+    4.922723945068658
+  ],
+  "T2_seed_C_fF": 123.25936005077958,
+  "T2_seed_G_fF": [
+    243.5134150096727,
+    17.45862465013892
+  ],
+  "free_capacitances": [
+    [
+      "C",
+      0
+    ],
+    [
+      "G",
+      0
+    ],
+    [
+      "G",
+      1
+    ]
+  ],
+  "fixture_delay_free": true,
+  "scope": "Adopted older-circuit fitting reference; not an independent measurement or uniqueness claim."
+}

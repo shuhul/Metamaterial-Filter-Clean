@@ -1,0 +1,26 @@
+[
+  {
+    "C_add_fF": 250.0,
+    "frequency_Hz": 3715000000.0,
+    "project_sha256": "edf15dcbccc12b9fdb7647369bcc0b6d290b072498afd4e311091dd3ff719587",
+    "snp_sha256": "cd43e5a5686e86f331669ed0f718b544d27c5e779baf6f86742ef33da32f07c7"
+  },
+  {
+    "C_add_fF": 350.0,
+    "frequency_Hz": 3341000000.0,
+    "project_sha256": "d2d069ef18e6031b69ada944a1aa7c83b8672630f43a8e5e70d0582f4bd1ec87",
+    "snp_sha256": "b4e6d85a3c237e7d63ab10d4e5fbfef783583cc6dba62e01232579de588c02f9"
+  },
+  {
+    "C_add_fF": 450.0,
+    "frequency_Hz": 3060000000.0,
+    "project_sha256": "bd00a5ad2d48bb8897aacb5c2159a763e7cf782f5fdd482da2a6f1740570e342",
+    "snp_sha256": "49a0f8f12b830ed4c0a29d557b70fd01ec835af3312171a30a9bdc9d20515135"
+  },
+  {
+    "C_add_fF": 550.0,
+    "frequency_Hz": 2841000000.0,
+    "project_sha256": "85e26ab67d94a3e2a4c5a2f6554e57c4ff2db0fe4a50a156a468d9208f0018cf",
+    "snp_sha256": "dd1cc825a0bce5de27e2eeb62fcd3f5f2f0ac8b6460da9441f9d2eb5e9176761"
+  }
+]

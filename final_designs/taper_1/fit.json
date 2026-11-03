@@ -1,0 +1,357 @@
+{
+  "specification": {
+    "version": "three_tapers_v3_2026-10-26",
+    "units": {
+      "L": "nH",
+      "C": "fF",
+      "geometry": "um"
+    },
+    "targets": {
+      "unit_cell": {
+        "L0_nH": 4.9194,
+        "C0_fF": 190.4,
+        "Cg_input_fF": 8.2865
+      },
+      "taper_1": {
+        "L0_nH": 5.97,
+        "C0_fF": 148.0,
+        "Cg_input_fF": 15.3
+      },
+      "taper_2": {
+        "L0_nH": 4.33,
+        "C0_fF": 149.0,
+        "Cg_input_fF": 153.0
+      },
+      "taper_3": {
+        "L0_nH": 2.77,
+        "C0_fF": 251.0,
+        "Cg_input_fF": 261.0
+      }
+    },
+    "tolerance_percent": 2.0,
+    "grid_um": 2.0,
+    "curve_acceptance": {
+      "metric": "complex_S21_RMS",
+      "maximum": 0.025
+    },
+    "target_response_acceptance": {
+      "metric": "complex_S21_RMS_against_fixed_target_circuit",
+      "maximum": 0.025,
+      "frequency_range_GHz": [
+        4.65,
+        5.4
+      ],
+      "electrical_parameters": "All specified targets fixed",
+      "nuisance_parameter": "One matched fixture delay only",
+      "extracted_capacitances": "Geometry heuristics; fitted-curve RMS is diagnostic"
+    },
+    "order": [
+      "input",
+      "taper_3",
+      "taper_2",
+      "taper_1",
+      "unit_cell",
+      "output"
+    ]
+  },
+  "stage": "T1",
+  "case": "plain_cw344_w220_p532_g56_j66_c590_tg6",
+  "T1_accepted": true,
+  "T2_accepted": false,
+  "T3_accepted": false,
+  "geometry": {
+    "layout_kind": "T1_no_input_ground_centered_regular_v3",
+    "unit": {
+      "cap": {
+        "w": 344,
+        "l": 590,
+        "t_top": 14,
+        "t_side": 6
+      },
+      "meander": {
+        "w": 220,
+        "l_top": 10,
+        "l": 596,
+        "n": 72,
+        "t": 4,
+        "d": 4
+      },
+      "pad": {
+        "w": 8,
+        "l": 532
+      },
+      "d_top": 8,
+      "d_pad": 20
+    },
+    "isolation": false,
+    "regular": {
+      "cap": {
+        "w": 302,
+        "l": 600,
+        "t_top": 14,
+        "t_side": 6
+      },
+      "meander": {
+        "w": 186,
+        "l_top": 10,
+        "l": 596,
+        "n": 72,
+        "t": 4,
+        "d": 4
+      },
+      "pad": {
+        "w": 24,
+        "l": 586
+      },
+      "d_top": 8,
+      "d_pad": 12
+    },
+    "d_input": 56,
+    "d_junction": 66,
+    "w_sim": 2322,
+    "cell_centers": [
+      598.0,
+      998.0,
+      1387.0,
+      1745.0
+    ],
+    "input_end_resonator": false,
+    "expected_metal_components": 2,
+    "parameters": {
+      "n_cells": 2,
+      "l_sim": 1500,
+      "l_top_ground": 448,
+      "w_side": 412,
+      "t_feed": 10,
+      "unit": {
+        "d_top": 8,
+        "cap": {
+          "t_top": 14
+        }
+      }
+    },
+    "regular_ground_strip_width_um": 6,
+    "input_ground_strip": false,
+    "regular_ground_strip": "centered"
+  },
+  "isolated_L": {
+    "case": "plain_cw344_w220_p532_g56_j66_c590_tg6",
+    "L0_nH": 6.006272102045251,
+    "target_L0_nH": 5.97,
+    "target_error_percent": 0.6075728985804218,
+    "R_squared": 0.9999987817550802,
+    "four_loads_zero_additional_EM": true,
+    "held_out_max_Y_error_S": 4.699504592482692e-09,
+    "termination_identity_max_S_error": 2.237726045655905e-16,
+    "sweep": [
+      {
+        "C_add_fF": 128.5710683923706,
+        "frequency_Hz": 3800001773.0375776
+      },
+      {
+        "C_add_fF": 201.60464965023465,
+        "frequency_Hz": 3400001036.2397404
+      },
+      {
+        "C_add_fF": 305.42427035245015,
+        "frequency_Hz": 3000000569.197082
+      },
+      {
+        "C_add_fF": 460.42747890919617,
+        "frequency_Hz": 2600000293.9297247
+      }
+    ],
+    "scope": "Independent isolation calibration; not an S21 target acceptance",
+    "load_selection": "Positive loads selected for in-band resonances",
+    "requested_calibration_frequencies_GHz": [
+      3.8,
+      3.4,
+      3,
+      2.6
+    ],
+    "adjacent_pair_L0_nH": [
+      5.98391513999278,
+      6.003446347145866,
+      6.01670184726058
+    ],
+    "load_sweep_intercept_effective_C_fF": 163.32493967590082,
+    "intercept_scope": "Includes calibration feed and output loading; not the assembled resonator ground capacitance C0"
+  },
+  "fixed_target_comparison": {
+    "complex_RMS": 0.01888847833683543,
+    "pass": true,
+    "cutoff": 0.025,
+    "fixture_delay_ps": 5.7693885995496945,
+    "all_electrical_targets_fixed": true,
+    "specification": {
+      "version": "three_tapers_v3_2026-10-26",
+      "units": {
+        "L": "nH",
+        "C": "fF",
+        "geometry": "um"
+      },
+      "targets": {
+        "unit_cell": {
+          "L0_nH": 4.9194,
+          "C0_fF": 190.4,
+          "Cg_input_fF": 8.2865
+        },
+        "taper_1": {
+          "L0_nH": 5.97,
+          "C0_fF": 148.0,
+          "Cg_input_fF": 15.3
+        },
+        "taper_2": {
+          "L0_nH": 4.33,
+          "C0_fF": 149.0,
+          "Cg_input_fF": 153.0
+        },
+        "taper_3": {
+          "L0_nH": 2.77,
+          "C0_fF": 251.0,
+          "Cg_input_fF": 261.0
+        }
+      },
+      "tolerance_percent": 2.0,
+      "grid_um": 2.0,
+      "curve_acceptance": {
+        "metric": "complex_S21_RMS",
+        "maximum": 0.025
+      },
+      "target_response_acceptance": {
+        "metric": "complex_S21_RMS_against_fixed_target_circuit",
+        "maximum": 0.025,
+        "frequency_range_GHz": [
+          4.65,
+          5.4
+        ],
+        "electrical_parameters": "All specified targets fixed",
+        "nuisance_parameter": "One matched fixture delay only",
+        "extracted_capacitances": "Geometry heuristics; fitted-curve RMS is diagnostic"
+      },
+      "order": [
+        "input",
+        "taper_3",
+        "taper_2",
+        "taper_1",
+        "unit_cell",
+        "output"
+      ]
+    },
+    "source_sha256": "450fc7b686174e1d4bc4690dda4b3da5ee1d7f685be054179d85bd4f457d4ac7",
+    "frequency_range_GHz": [
+      4.65,
+      5.4
+    ]
+  },
+  "heuristic_fit": {
+    "C_fF": [
+      148.69711518476018
+    ],
+    "G_fF": [
+      15.271402370418647,
+      8.021129201025781
+    ],
+    "L_T1_nH": 6.006272102045251,
+    "delay_ps": 4.461416813946548,
+    "complex_RMS": 0.009118987485480784,
+    "success": true,
+    "fixed_unit_values": true,
+    "input_end_LC_present": false,
+    "free_parameters": [
+      "C0_T1",
+      "Cg_input_T1",
+      "Cg_T1_unit",
+      "fixture_delay_ps"
+    ],
+    "active_bounds": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "source_sha256": "450fc7b686174e1d4bc4690dda4b3da5ee1d7f685be054179d85bd4f457d4ac7",
+    "relative_jacobian_condition": 2279.5022352158835,
+    "multistart_branches": [
+      {
+        "parameters": [
+          148.69711216585273,
+          15.271405259358136,
+          8.021129263983289,
+          4.461416683837596
+        ],
+        "sampled_complex_RMS": 0.009117356459391254
+      },
+      {
+        "parameters": [
+          148.69711218546777,
+          15.271405239675776,
+          8.021129264060045,
+          4.461416675859439
+        ],
+        "sampled_complex_RMS": 0.009117356459391185
+      },
+      {
+        "parameters": [
+          148.69711217216596,
+          15.271405252704923,
+          8.021129264116926,
+          4.4614166880695025
+        ],
+        "sampled_complex_RMS": 0.009117356459391325
+      },
+      {
+        "parameters": [
+          148.6971120988805,
+          15.271405326002697,
+          8.021129264116821,
+          4.461416694386923
+        ],
+        "sampled_complex_RMS": 0.009117356459391917
+      },
+      {
+        "parameters": [
+          148.69711216919032,
+          15.271405255756287,
+          8.021129264115363,
+          4.461416684002371
+        ],
+        "sampled_complex_RMS": 0.009117356459390965
+      }
+    ]
+  },
+  "fixed_regular_extraction_model": {
+    "L0_nH": 4.922723945068658,
+    "C0_fF": 188.8781163861302,
+    "output_Cg_fF": 8.241620220231225
+  },
+  "project": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\sonnet_files\\taper_exploration\\final_designs\\new_T1_plain_cw344_w220_p532_g56_j66_c590_tg6_final\\response\\generated_ncell_2.sonx",
+  "plot": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\sonnet_files\\taper_exploration\\final_designs\\new_T1_plain_cw344_w220_p532_g56_j66_c590_tg6_final\\s21_fit.png",
+  "gds": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\sonnet_files\\taper_exploration\\final_designs\\new_T1_plain_cw344_w220_p532_g56_j66_c590_tg6_final\\geometry.gds",
+  "unit_gds": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\sonnet_files\\taper_exploration\\final_designs\\new_T1_plain_cw344_w220_p532_g56_j66_c590_tg6_final\\t1_unit.gds",
+  "audit": {
+    "GDS_native_XOR_empty": true,
+    "mesh_um": [
+      2,
+      2
+    ],
+    "materials_preserved": true,
+    "source_hashes_checked": true,
+    "production_ideal_components": 0,
+    "calibration_core_matches": true,
+    "native_errors": 0,
+    "native_warnings": 0
+  },
+  "code_sha256": {
+    "geometry/specifications.py": "446c45db6462545fad213cd25c0069e6fe5a6aba004cc6d810669879deb2b5f3",
+    "geometry/taper/three_tapers.py": "98eedb6f6dcfa1bb4d7c2c080eefd8c7db3bc9bfbcc1d299c89612a283a8d79a",
+    "geometry/taper/three_tapers_v2.py": "34ea1fe3ebc15de5098e33a9a0abb99a2bb09ef136b9641ce010cca37be6b69b",
+    "geometry/taper/three_tapers_v3.py": "f3b87ab716e9d05b76d3551e336f1f714bf326853926385133e53b0482435fbc",
+    "geometry/taper/measure_compact_inductance.py": "67408967f380d8732f4251ce6c752bab05af92ca925306d5f298203924578cb6",
+    "geometry/unit_cell.py": "949afb1a6ab1587c4b6cadee55c0f988e675c1a16df3a36727403662edc41e34",
+    "geometry/meander.py": "b7a76fa3fa8bd6d8f5b41da830afff034f9a166f34f90f4bd0d813681527bdd9",
+    "geometry/prepare_sonnet.py": "539fb4a8aa6b9378cf01f8b8fe2e4c4472545aeca3bb79984222127122056c4e",
+    "geometry/taper/sonnet.py": "8c55f38d88c0a572c2844131a2999133d584158f7c96337586d451e10cba369c",
+    "geometry/taper/solver_guard.py": "8d3e06969ccefb3d63c8ccbb274daab3f83947f3289bb2d46d9a3081af31aa08"
+  }
+}

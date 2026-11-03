@@ -1,0 +1,37 @@
+{
+  "stage": "first_taper",
+  "targets": {
+    "L0_nH": 6.06,
+    "C0_fF": 100.0,
+    "Cg_junction_fF": 8.2865,
+    "Cg_input_fF": 56.7
+  },
+  "coupling_clarification": "User confirmed junction 8.2865 fF and next-taper/input-side 56.7 fF.",
+  "screening_tolerance_percent": {
+    "L0": 2,
+    "C0": 2,
+    "Cg_junction": 2,
+    "Cg_input": 2
+  },
+  "constraints": [
+    "Keep 2 um mesh",
+    "Keep cap top alignment and top ground boundary continuous across taper-to-regular interface",
+    "Preserve original tests and selected regular-cell design",
+    "Do not pin C0 to its target during extraction"
+  ],
+  "regular_reference": {
+    "L0_nH": 4.922723945068658,
+    "C0_fF": 188.8781163861302,
+    "Cg_fF": 8.241620220231225
+  },
+  "reference_projects": [
+    "tests/filter_new_v6_taper1.sonx",
+    "tests/filter_new_v6_taper1_unit.sonx"
+  ],
+  "status": "selected_screening_pass",
+  "notes": [
+    "Old taper1_unit has a 26 um top-ground step. Native taper isolation has only 384 um uniform left-side ground, so baseline uses 360 um planes; generated candidates will use 412 um sides and 400 um planes.",
+    "Final right leg 310 um, input finger 536 x 20 um, input gap 6 um, junction gap 56 um; effective fixture phase included and all alternative fits saved."
+  ],
+  "selected_design": "selected_design.json"
+}

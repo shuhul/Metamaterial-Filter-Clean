@@ -1,0 +1,50 @@
+{
+  "body": {
+    "cap": {
+      "l": 590,
+      "t_top": 14,
+      "t_left": 8,
+      "t_right": 8
+    },
+    "clearance": {
+      "d_left": 342,
+      "d_right": 340
+    },
+    "meander": {
+      "w": 130,
+      "l_top": 8,
+      "l": 596,
+      "n": 68,
+      "t": 6,
+      "d": 2
+    },
+    "pad": {
+      "w": 184,
+      "l": 594
+    },
+    "d_pad": 116,
+    "coupling": {
+      "d": 56,
+      "n": 0,
+      "t": 4,
+      "d_finger": 4,
+      "d_tip": 2,
+      "d_t1": 66,
+      "d_regular": 74,
+      "t_regular_ground": 2,
+      "t_input": 8,
+      "w_input_stub": null
+    },
+    "allow_input_idc": false,
+    "d_pad_left": 116,
+    "include_t2_pads": true
+  },
+  "d_input": 54,
+  "n_input": 70,
+  "t_input_rail": 8,
+  "d_t2": 28,
+  "n_t2": 40,
+  "t_finger": 4,
+  "d_finger": 4,
+  "d_tip": 2
+}

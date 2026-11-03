@@ -1,0 +1,203 @@
+{
+  "case": "cap5_i22_j78_pad24x400_r30_w148",
+  "acceptance_basis": "Three new fitted Cs within5%, fit-to-Sonnet RMS<=0.025, explicit L within2%; theoretical target S21 is not an acceptance gate.",
+  "T2_capacitance_goal_met": true,
+  "all_circuit_capacitances_within_5_percent": true,
+  "settings": {
+    "cap": {
+      "l": 590,
+      "t_top": 14,
+      "t_left": 8,
+      "t_right": 30
+    },
+    "clearance": {
+      "d_left": 256,
+      "d_right": 122
+    },
+    "meander": {
+      "w": 148,
+      "l_top": 10,
+      "l": 596,
+      "n": 72,
+      "t": 4,
+      "d": 4
+    },
+    "pad": {
+      "w": 24,
+      "l": 400
+    },
+    "d_pad": 20,
+    "coupling": {
+      "d": 22,
+      "n": 70,
+      "t": 4,
+      "d_finger": 4,
+      "d_tip": 2,
+      "d_t1": 78,
+      "d_regular": 74,
+      "t_regular_ground": 2,
+      "t_input": 8
+    },
+    "allow_input_idc": true,
+    "d_pad_left": 148
+  },
+  "result": {
+    "case": "cap5_i22_j78_pad24x400_r30_w148",
+    "project": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\sonnet_files\\taper_exploration\\three_tapers_v3_T2_plain_2026-10-28\\cap5_i22_j78_pad24x400_r30_w148\\response\\generated_ncell_3.sonx",
+    "fit": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\output_data\\taper_exploration\\three_tapers_v3_T2_cap_targets_2026-10-29\\cap5_i22_j78_pad24x400_r30_w148\\fit\\fit.json",
+    "values_fF": [
+      155.81398089076714,
+      156.60039987587515,
+      15.365227716131333
+    ],
+    "targets_fF": [
+      149.0,
+      153.0,
+      15.3
+    ],
+    "target_errors_percent": [
+      4.573141537427605,
+      2.3532025332517303,
+      0.4263249420348503
+    ],
+    "max_capacitance_error_percent": 4.573141537427605,
+    "capacitance_pass": true,
+    "fit_RMS": 0.006247690894335854,
+    "fit_quality_pass": true,
+    "L0_nH": 4.3235471520370545,
+    "provisional_L": false,
+    "fixed_older_reference": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\geometry\\taper\\taper2_fixed_older_reference.json",
+    "fixed_older_reference_sha256": "4bef3aa6a957c678e1a5f5fdafa6d0ecd3810f44dbabb35cf82ca86b4d81fd7a",
+    "project_sha256": "5676c9c60f5ec9ab67ef7ccb38beb30742a6d649e41982b13c4ae056b9c05d11",
+    "snp_sha256": "71cfa5cafc9e99ce165aa9e3277196d63c4235f27e1af3ea3b2c4c807dd8ffc3",
+    "objective": "Three fitted taper capacitances within5% of nominal. Fit-to-Sonnet RMS checks model quality; theoretical-target S21 RMS is not acceptance.",
+    "geometry": {
+      "cap": {
+        "l": 590,
+        "t_top": 14,
+        "t_left": 8,
+        "t_right": 30
+      },
+      "clearance": {
+        "d_left": 256,
+        "d_right": 122
+      },
+      "meander": {
+        "w": 148,
+        "l_top": 10,
+        "l": 596,
+        "n": 72,
+        "t": 4,
+        "d": 4
+      },
+      "pad": {
+        "w": 24,
+        "l": 400
+      },
+      "d_pad": 20,
+      "coupling": {
+        "d": 22,
+        "n": 70,
+        "t": 4,
+        "d_finger": 4,
+        "d_tip": 2,
+        "d_t1": 78,
+        "d_regular": 74,
+        "t_regular_ground": 2,
+        "t_input": 8
+      },
+      "allow_input_idc": true,
+      "d_pad_left": 148
+    },
+    "explicit_inductance": {
+      "L0_nH": 4.3235471520370545,
+      "R_squared": 0.999999620596489,
+      "regression_standard_error_nH": 0.0018831111594887187,
+      "intercept_s2": 8.504355504710914e-22,
+      "sweep": [
+        {
+          "C_add_fF": 250.0,
+          "frequency_Hz": 3621000000.0,
+          "project_sha256": "6f19c2426058c6ee072827f7199966e579437aaf66112fb168d514884f21018b",
+          "snp_sha256": "391d9eb9df633ed36f2d4aa2be3b65b65c4109d4f58bbf69a28c4f11734c71ce"
+        },
+        {
+          "C_add_fF": 350.0,
+          "frequency_Hz": 3274000000.0,
+          "project_sha256": "d47e25ebd7d97adfcbd583c327ca28ebc0233c45dd271375a8b2b00bb847cad9",
+          "snp_sha256": "80e82c6de0b18f13d8266254afc1743a8e0ad16b898b20354b8e78ce211406b4"
+        },
+        {
+          "C_add_fF": 500.0,
+          "frequency_Hz": 2900000000.0,
+          "project_sha256": "3f7f3113b28dbe7deef9ab5712023ccc161161cd38f33baf8c7a5696a8f2ca02",
+          "snp_sha256": "81cc6762989b5e562e998570bdc298c73858a5dd82000c52e4cac720d4af80e6"
+        },
+        {
+          "C_add_fF": 700.0,
+          "frequency_Hz": 2556000000.0,
+          "project_sha256": "e43494c3aedc749a4ed18b44128076e2dd8eb6e628242f8773fdc63fa2b3e32c",
+          "snp_sha256": "0b3215ef4eed918520af3c2b67029802197ee61356f56387ad7c9fca986eebfb"
+        }
+      ],
+      "target_L0_nH": 4.33,
+      "target_difference_percent": -0.14902651184632854,
+      "method": "Explicit Sonnet CAP components; cache-only subsequent capacitor changes",
+      "adjacent_pair_L0_nH": [
+        4.312107793999196,
+        4.3254757904201036,
+        4.326387120707453
+      ],
+      "max_frequency_residual_MHz": 0.535525416513443,
+      "export_frequency_spacing_MHz": 1.0,
+      "case": "cap5_i22_j78_pad24x400_r30_w148",
+      "target_error_percent": -0.14902651184632854,
+      "source_project": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\sonnet_files\\taper_exploration\\explicit_L_cache\\f63fc23e911b0501\\source\\generated_ncell_1.sonx",
+      "explicit_project": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\sonnet_files\\taper_exploration\\explicit_L_cache\\f63fc23e911b0501\\Lcal\\generated_ncell_1.sonx",
+      "capacitor_connection": "Native Sonnet CAP",
+      "resonance_source": "Native Sonnet exported S21 sampled maxima",
+      "Python_frequency_approximation": false,
+      "started_utc": "2026-10-29T23:28:08.026657+00:00",
+      "total_extraction_seconds": 137.29198750015348,
+      "timings": [
+        {
+          "C_add_fF": 250.0,
+          "new_EM_frequency_counts": [
+            4
+          ],
+          "solver_process_seconds": 114.24778799992055
+        },
+        {
+          "C_add_fF": 350.0,
+          "new_EM_frequency_counts": [
+            0
+          ],
+          "solver_process_seconds": 7.033547000028193
+        },
+        {
+          "C_add_fF": 500.0,
+          "new_EM_frequency_counts": [
+            0
+          ],
+          "solver_process_seconds": 7.028152800165117
+        },
+        {
+          "C_add_fF": 700.0,
+          "new_EM_frequency_counts": [
+            0
+          ],
+          "solver_process_seconds": 8.036104099825025
+        }
+      ],
+      "explicit_body_cache": "f63fc23e911b0501",
+      "source_result": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\output_data\\taper_exploration\\explicit_L_cache\\f63fc23e911b0501\\results.json"
+    }
+  },
+  "project": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\sonnet_files\\taper_exploration\\final_designs\\new_T2_cap5_cap5_i22_j78_pad24x400_r30_w148_final\\response\\generated_ncell_3.sonx",
+  "plot": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\sonnet_files\\taper_exploration\\final_designs\\new_T2_cap5_cap5_i22_j78_pad24x400_r30_w148_final\\final_s21_fit.png",
+  "geometry_plot": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\sonnet_files\\taper_exploration\\final_designs\\new_T2_cap5_cap5_i22_j78_pad24x400_r30_w148_final\\geometry.png",
+  "unit_gds": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\sonnet_files\\taper_exploration\\final_designs\\new_T2_cap5_cap5_i22_j78_pad24x400_r30_w148_final\\t2_unit.gds",
+  "fixed_older_reference": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\geometry\\taper\\taper2_fixed_older_reference.json",
+  "native_material_mesh_geometry_audit_pass": true,
+  "T1_regular_output_component_shapes_unchanged": true
+}

@@ -1,0 +1,32 @@
+{
+  "configuration": {
+    "source": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\sonnet_files\\taper_exploration\\final_designs\\new_T1_plain_cw344_w220_p532_g56_j66_c590_tg6_final\\Lcal\\generated_ncell_1.sonx",
+    "source_sha256": "fd9e34365ce42ee9e07061f98c609272c7e1bfd53bb87644ca52f5b5b0913802",
+    "C_add_fF": [
+      128.5710683923706,
+      201.60464965023465,
+      305.42427035245015,
+      460.42747890919617
+    ],
+    "range_GHz": [
+      2.4,
+      4.0
+    ],
+    "samples": 16001,
+    "target_L_nH": 5.97,
+    "method": "Explicit Sonnet CAP components; cache-only subsequent capacitor changes"
+  },
+  "files_sha256": {
+    "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\sonnet_files\\taper_exploration\\final_designs\\new_T1_plain_cw344_w220_p532_g56_j66_c590_tg6_final\\Lcal\\generated_ncell_1.sonx": "fd9e34365ce42ee9e07061f98c609272c7e1bfd53bb87644ca52f5b5b0913802",
+    "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\sonnet_files\\taper_exploration\\explicit_L_checks_2026-10-28\\T1\\generated_ncell_1.sonx": "d0d8d5d8f9380672b47e027e6090c2b7a2f89ce26a348da5ba3a011bf74444df",
+    "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\sonnet_files\\taper_exploration\\explicit_L_checks_2026-10-28\\T1\\generated_ncell_1.snp": "6a54cbe75f6b770200d39c7ef148f7478b9900bbd57f26c6303036665f97a78e",
+    "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\output_data\\taper_exploration\\explicit_L_checks_2026-10-28\\T1\\cadd_128.571ff.sonx": "8e35d0799a6a43a5fbf016a18136600cb53f12e504ffc8c1bc7da34557990af0",
+    "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\output_data\\taper_exploration\\explicit_L_checks_2026-10-28\\T1\\cadd_128.571ff.snp": "46431a74024cb5ae9db4036628ee174f6db4752719da44ba81268ea13d56e57f",
+    "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\output_data\\taper_exploration\\explicit_L_checks_2026-10-28\\T1\\cadd_201.605ff.sonx": "1e2f2ecab93ef4137ca36ea7736e70d0d5926c64efd84d14d65166e160d088dd",
+    "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\output_data\\taper_exploration\\explicit_L_checks_2026-10-28\\T1\\cadd_201.605ff.snp": "097c65219d98c96f95dca6ef7ed14f707b0d252901b5350247b4b423c6f394ce",
+    "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\output_data\\taper_exploration\\explicit_L_checks_2026-10-28\\T1\\cadd_305.424ff.sonx": "5634eaa658e630dda1e776268aed52088041559886088265c3d4171c7eac9fe5",
+    "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\output_data\\taper_exploration\\explicit_L_checks_2026-10-28\\T1\\cadd_305.424ff.snp": "e6615adb2b3a0d66e99aca069d499abbaeb7006b5e5195726d7ac6209f421c14",
+    "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\output_data\\taper_exploration\\explicit_L_checks_2026-10-28\\T1\\cadd_460.427ff.sonx": "d0d8d5d8f9380672b47e027e6090c2b7a2f89ce26a348da5ba3a011bf74444df",
+    "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\output_data\\taper_exploration\\explicit_L_checks_2026-10-28\\T1\\cadd_460.427ff.snp": "6a54cbe75f6b770200d39c7ef148f7478b9900bbd57f26c6303036665f97a78e"
+  }
+}

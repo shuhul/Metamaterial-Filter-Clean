@@ -1,0 +1,21 @@
+{
+  "configuration": {
+    "source": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\sonnet_files\\taper_exploration\\three_tapers_v3_T3_2026-10-30\\w130_t6g2n68_dl342_dr340_pad184x594_i54_j28n40_pad_tune\\Lcal\\generated_ncell_1.sonx",
+    "source_sha256": "320c964810eac3a813958e0ba0a96bce4dc7fb46b40160083683159c00ce25a6",
+    "C_add_fF": [
+      450.0,
+      600.0,
+      750.0,
+      900.0
+    ],
+    "range_GHz": [
+      2.4,
+      4.0
+    ],
+    "samples": 1601,
+    "target_L_nH": 2.77,
+    "method": "Explicit Sonnet CAP components; cache-only subsequent capacitor changes"
+  },
+  "metal_identical": true,
+  "copied_existing_cache": false
+}

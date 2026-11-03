@@ -1,0 +1,271 @@
+<?xml version='1.0' encoding='utf-8'?>
+<SonnetProject xmlns="https://www.sonnetsoftware.com/schema/project" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Version="20" Type="GEO" xsi:schemaLocation="https://www.sonnetsoftware.com/schema/project https://www.sonnetsoftware.com/schema/project/sonnet_project_file-1.0.xsd">
+    <GlobalTemperature Tnom="25.000" />
+    <Header>
+        <Created Program="xgeom" Version="16.52">
+            <Date>06/06/2016 17:47:38</Date>
+        </Created>
+        <Modified Program="gds" Version="19.52.2025.261">
+            <License>caltech9.1.63687</License>
+            <Date>10/26/2026 06:33:37</Date>
+            <Change Importance="MEDIUM">
+                <Date>06/03/2026 18:09:16</Date>
+            </Change>
+            <Change Importance="HIGH">
+                <Date>06/03/2026 18:09:16</Date>
+            </Change>
+        </Modified>
+    </Header>
+    <Units>
+        <Angle>DEG</Angle>
+        <Capacitance>PF</Capacitance>
+        <Conductance>/OH</Conductance>
+        <Conductivity>SM</Conductivity>
+        <Frequency>GHZ</Frequency>
+        <Inductance>NH</Inductance>
+        <Length>UM</Length>
+        <Roughness>UM</Roughness>
+        <Resistance>OH</Resistance>
+        <Resistivity>OHCM</Resistivity>
+        <SheetRes>OHSQ</SheetRes>
+    </Units>
+    <Control>
+        <SweepType>VARSWP</SweepType>
+        <DeEmbed On="TRUE" />
+        <Precision>DOUBLE</Precision>
+        <SpeedControl>MEDIUM_SPEED</SpeedControl>
+        <ABSCacheLevel>STOP_RESTART</ABSCacheLevel>
+    </Control>
+    <Geometry YDirection="Negative">
+        <Variable MacroID="variableA" Name="Ind_repeat" Units="NONE" Value="1.0" Description="" />
+        <Variable MacroID="variableB" Name="Cp" Units="NONE" Value="0.0" Description="" />
+        <Variable MacroID="variableI" Name="C_add" Units="NONE" Value="0.1285710683923706" Description="" />
+        <Variable MacroID="variableN" Name="adjust" Units="NONE" Value="460.99999579237" Description="" />
+        <Variable MacroID="variableP" Name="total_width" Units="NONE" Value="158.0000327" Description="" />
+        <Variable MacroID="variableL" Name="ind_w_6" Units="NONE" Value="110.0" Description="" />
+        <Variable MacroID="variableM" Name="total_width2" Units="NONE" Value="500.0" Description="" />
+        <Variable MacroID="variableT" Name="width30" Units="NONE" Value="128.0" Description="" />
+        <Variable MacroID="variableAC" Name="in_width100" Units="NONE" Value="188.0" Description="" />
+        <Variable MacroID="variableAF" Name="width3" Units="NONE" Value="302.0" Description="" />
+        <Variable MacroID="variableR" Name="ind_width" Units="LENGTH" Value="190.0" Description="Dim. Param." />
+        <Variable MacroID="variableAK" Name="width4" Units="NONE" Value="300.000069" Description="" />
+        <Variable MacroID="variableAL" Name="width5" Units="NONE" Value="300.000069" Description="" />
+        <Variable MacroID="variableAM" Name="width6" Units="NONE" Value="300.000069" Description="" />
+        <Variable MacroID="variableAN" Name="ind_width2" Units="NONE" Value="188.0" Description="" />
+        <Variable MacroID="variableAO" Name="ind_width3" Units="NONE" Value="188.0" Description="" />
+        <Variable MacroID="variableAP" Name="ind_width4" Units="NONE" Value="188.0" Description="" />
+        <Dielectric MacroID="dielectricA" Name="Air" LossType="CONDUCTIVITY" Anisotropic="FALSE">
+            <FrequencyModel ModelType="None" RefFreq="0.0" ValidRef="FALSE" />
+            <Conductivity Value="0.0" />
+            <Eps Value="1.0" />
+            <Tan Value="0.0" />
+            <MuRel Value="1.0" />
+            <MagLossTan Value="0.0" />
+        </Dielectric>
+        <Dielectric MacroID="dielectricB" Name="Vacuum" LossType="CONDUCTIVITY" Anisotropic="FALSE">
+            <FrequencyModel ModelType="None" RefFreq="0.0" ValidRef="FALSE" />
+            <Conductivity Value="0.0" />
+            <Eps Value="1.0" />
+            <Tan Value="0.0" />
+            <MuRel Value="1.0" />
+            <MagLossTan Value="0.0" />
+        </Dielectric>
+        <Dielectric MacroID="dielectricC" Name="Silicon (intrinsic)" LossType="CONDUCTIVITY" Anisotropic="FALSE">
+            <FrequencyModel ModelType="None" RefFreq="0.0" ValidRef="FALSE" />
+            <Conductivity Value="0.0" />
+            <Eps Value="11.9" />
+            <Tan Value="5.0e-6" />
+            <MuRel Value="1.0" />
+            <MagLossTan Value="0.0" />
+        </Dielectric>
+        <Conductor MacroID="conductorA" Name="Perfect Conductor" Conductivity="INF" LossType="CONDUCTIVITY" />
+        <Conductor MacroID="conductorB" Name="SUPERCONDUCTOR" LossType="SURFACE_IMPEDANCE" Ls="0.0388" Rdc="0.0" Rrf="0.0" Xdc="0.0" />
+        <Conductor MacroID="conductorC" Name="Metal1" Conductivity="INF" LossType="CONDUCTIVITY" />
+        <Box>
+            <BoxCover MacroID="top_cover" Type="TOP" MaterialType="FREE_SPACE" Roughness="0.0" Thickness="0.0" />
+            <BoxCover MacroID="bot_cover" Type="BOTTOM" MaterialType="PERFECT_CONDUCTOR" Roughness="0.0" Thickness="0.0" />
+            <Size X="2038" Y="1500" Z="7000" />
+            <NumCells X="1019" Y="750" />
+            <LocalOrigin X="0" Y="1500" />
+            <Symmetry On="FALSE" />
+            <RefPlane Type="FIXED" Side="LEFT" RefLength="400" />
+            <RefPlane Type="FIXED" Side="RIGHT" RefLength="400" />
+        </Box>
+        <Level MacroID="diel_layerA" MaterialName="Vacuum" Number="0">
+            <DielectricMaterialModel Thickness="1500.0" />
+            <Objects>
+                <PlanarTechLayer MacroID="planarTLA" Name="Metal-1" MaterialName="SUPERCONDUCTOR">
+                    <ImportExportMapping GDSStreamDataTypes="1:0" />
+                    <ColorPattern Color="#32cd32" Pattern="dwndiag" />
+                    <PlanarMaterialModel CurrentRatio="0.5" ModelType="THIN_METAL" Thickness="0.0" />
+                    <RoughnessModel RoughnessOn="FALSE" />
+                    <PlanarMeshing EnableMesh="TRUE" FillType="RECTANGULAR" />
+                    <SubsectionMeshing XMin="1" XMax="100" YMin="1" YMax="100" EdgeMeshed="TRUE" DiagonalEdges="FALSE" AnisotropicType="X_AND_Y" />
+                    <GLGMeshing GLG="FALSE" />
+                </PlanarTechLayer>
+                <PlanarTechLayer MacroID="planarTLB" Name="Stream1:0" MaterialName="SUPERCONDUCTOR">
+                    <ImportExportMapping GDSStreamDataTypes="1:0" />
+                    <ColorPattern Color="#b03060" Pattern="updiag" />
+                    <PlanarMaterialModel CurrentRatio="0.5" ModelType="THIN_METAL" Thickness="0.0" />
+                    <RoughnessModel RoughnessOn="FALSE" />
+                    <PlanarMeshing EnableMesh="TRUE" FillType="RECTANGULAR" />
+                    <SubsectionMeshing XMin="1" XMax="100" YMin="1" YMax="100" EdgeMeshed="TRUE" DiagonalEdges="FALSE" AnisotropicType="X_AND_Y" />
+                    <GLGMeshing GLG="FALSE" />
+                    <Objects>
+                        <PlanarPolygon MacroID="polygonA" Id="1">
+                            <Points>(770,456) (0,456) (0,466) (764,466) (764,1046)</Points>
+                            <Points>(770,1046)</Points>
+                            <Objects>
+                                <Port MacroID="portGenerated1" Number="1" Vertex="1">
+                                    <Type Type="BOX" />
+                                    <Impedance Resistance="50" Reactance="0" Inductance="0" Capacitance="0" />
+                                    <Center>(0,461.0)</Center>
+                                </Port>
+                            </Objects>
+                        </PlanarPolygon>
+                        <PlanarPolygon MacroID="polygonB" Id="2">
+                            <Points>(1274,466) (2038,466) (2038,456) (1268,456) (1268,1046)</Points>
+                            <Points>(1274,1046)</Points>
+                            <Objects>
+                                <Port MacroID="portGenerated2" Number="2" Vertex="1">
+                                    <Type Type="BOX" />
+                                    <Impedance Resistance="50" Reactance="0" Inductance="0" Capacitance="0" />
+                                    <Center>(2038,461.0)</Center>
+                                </Port>
+                            </Objects>
+                        </PlanarPolygon>
+                        <PlanarPolygon MacroID="polygonC" Id="3">
+                            <Points>(2038,448) (2038,0) (0,0) (0,448) (1216,448)</Points>
+                            <Points>(1216,1066) (412,1066) (412,472) (0,472) (0,1500)</Points>
+                            <Points>(2038,1500) (2038,472) (1626,472) (1626,1066) (1222,1066)</Points>
+                            <Points>(1222,448)</Points>
+                        </PlanarPolygon>
+                        <PlanarPolygon MacroID="polygonD" Id="4">
+                            <Points>(826,1046) (832,1046) (832,470) (1164,470) (1164,1046)</Points>
+                            <Points>(1170,1046) (1170,456) (826,456)</Points>
+                        </PlanarPolygon>
+                        <PlanarPolygon MacroID="polygonE" Id="5">
+                            <Points>(1000,1052) (1108,1052) (1108,1040) (892,1040) (892,1036)</Points>
+                            <Points>(1108,1036) (1108,1024) (892,1024) (892,1020) (1108,1020)</Points>
+                            <Points>(1108,1008) (892,1008) (892,1004) (1108,1004) (1108,992)</Points>
+                            <Points>(892,992) (892,988) (1108,988) (1108,976) (892,976)</Points>
+                            <Points>(892,972) (1108,972) (1108,960) (892,960) (892,956)</Points>
+                            <Points>(1108,956) (1108,944) (892,944) (892,940) (1108,940)</Points>
+                            <Points>(1108,928) (892,928) (892,924) (1108,924) (1108,912)</Points>
+                            <Points>(892,912) (892,908) (1108,908) (1108,896) (892,896)</Points>
+                            <Points>(892,892) (1108,892) (1108,880) (892,880) (892,876)</Points>
+                            <Points>(1108,876) (1108,864) (892,864) (892,860) (1108,860)</Points>
+                            <Points>(1108,848) (892,848) (892,844) (1108,844) (1108,832)</Points>
+                            <Points>(892,832) (892,828) (1108,828) (1108,816) (892,816)</Points>
+                            <Points>(892,812) (1108,812) (1108,800) (892,800) (892,796)</Points>
+                            <Points>(1108,796) (1108,784) (892,784) (892,780) (1108,780)</Points>
+                            <Points>(1108,768) (892,768) (892,764) (888,764) (888,772)</Points>
+                            <Points>(1104,772) (1104,776) (888,776) (888,788) (1104,788)</Points>
+                            <Points>(1104,792) (888,792) (888,804) (1104,804) (1104,808)</Points>
+                            <Points>(888,808) (888,820) (1104,820) (1104,824) (888,824)</Points>
+                            <Points>(888,836) (1104,836) (1104,840) (888,840) (888,852)</Points>
+                            <Points>(1104,852) (1104,856) (888,856) (888,868) (1104,868)</Points>
+                            <Points>(1104,872) (888,872) (888,884) (1104,884) (1104,888)</Points>
+                            <Points>(888,888) (888,900) (1104,900) (1104,904) (888,904)</Points>
+                            <Points>(888,916) (1104,916) (1104,920) (888,920) (888,932)</Points>
+                            <Points>(1104,932) (1104,936) (888,936) (888,948) (1104,948)</Points>
+                            <Points>(1104,952) (888,952) (888,964) (1104,964) (1104,968)</Points>
+                            <Points>(888,968) (888,980) (1104,980) (1104,984) (888,984)</Points>
+                            <Points>(888,996) (1104,996) (1104,1000) (888,1000) (888,1012)</Points>
+                            <Points>(1104,1012) (1104,1016) (888,1016) (888,1028) (1104,1028)</Points>
+                            <Points>(1104,1032) (888,1032) (888,1044) (1104,1044) (1104,1048)</Points>
+                            <Points>(996,1048) (996,1066) (1000,1066)</Points>
+                        </PlanarPolygon>
+                        <PlanarPolygon MacroID="polygonF" Id="6">
+                            <Points>(1108,752) (892,752) (892,748) (1108,748) (1108,736)</Points>
+                            <Points>(892,736) (892,732) (1108,732) (1108,720) (892,720)</Points>
+                            <Points>(892,716) (1108,716) (1108,704) (892,704) (892,700)</Points>
+                            <Points>(1108,700) (1108,688) (892,688) (892,684) (1108,684)</Points>
+                            <Points>(1108,672) (892,672) (892,668) (1108,668) (1108,656)</Points>
+                            <Points>(892,656) (892,652) (1108,652) (1108,640) (892,640)</Points>
+                            <Points>(892,636) (1108,636) (1108,624) (892,624) (892,620)</Points>
+                            <Points>(1108,620) (1108,608) (892,608) (892,604) (1108,604)</Points>
+                            <Points>(1108,592) (892,592) (892,588) (1108,588) (1108,576)</Points>
+                            <Points>(892,576) (892,572) (1108,572) (1108,560) (892,560)</Points>
+                            <Points>(892,556) (1108,556) (1108,544) (892,544) (892,540)</Points>
+                            <Points>(1108,540) (1108,528) (892,528) (892,524) (1108,524)</Points>
+                            <Points>(1108,512) (892,512) (892,508) (1108,508) (1108,496)</Points>
+                            <Points>(892,496) (892,492) (1108,492) (1108,480) (1000,480)</Points>
+                            <Points>(1000,470) (996,470) (996,484) (1104,484) (1104,488)</Points>
+                            <Points>(888,488) (888,500) (1104,500) (1104,504) (888,504)</Points>
+                            <Points>(888,516) (1104,516) (1104,520) (888,520) (888,532)</Points>
+                            <Points>(1104,532) (1104,536) (888,536) (888,548) (1104,548)</Points>
+                            <Points>(1104,552) (888,552) (888,564) (1104,564) (1104,568)</Points>
+                            <Points>(888,568) (888,580) (1104,580) (1104,584) (888,584)</Points>
+                            <Points>(888,596) (1104,596) (1104,600) (888,600) (888,612)</Points>
+                            <Points>(1104,612) (1104,616) (888,616) (888,628) (1104,628)</Points>
+                            <Points>(1104,632) (888,632) (888,644) (1104,644) (1104,648)</Points>
+                            <Points>(888,648) (888,660) (1104,660) (1104,664) (888,664)</Points>
+                            <Points>(888,676) (1104,676) (1104,680) (888,680) (888,692)</Points>
+                            <Points>(1104,692) (1104,696) (888,696) (888,708) (1104,708)</Points>
+                            <Points>(1104,712) (888,712) (888,724) (1104,724) (1104,728)</Points>
+                            <Points>(888,728) (888,740) (1104,740) (1104,744) (888,744)</Points>
+                            <Points>(888,756) (1104,756) (1104,760) (888,760) (888,764)</Points>
+                            <Points>(1108,764)</Points>
+                        </PlanarPolygon>
+                        <PlanarPolygon MacroID="polygonG" Id="7">
+                            <Points>(852,1066) (860,1066) (860,534) (852,534)</Points>
+                        </PlanarPolygon>
+                        <PlanarPolygon MacroID="polygonH" Id="8">
+                            <Points>(1136,1066) (1144,1066) (1144,534) (1136,534)</Points>
+                        </PlanarPolygon>
+                    </Objects>
+                </PlanarTechLayer>
+                <Component MacroID="taperCadd" Type="CAP" Name="Cap" Id="9" Units="PF">
+                    <LabelPos>(1004.0,452)</LabelPos>
+                    <SymbolBox>(996.0,450,1000.0,454)</SymbolBox>
+                    <ShowPhysical On="FALSE" />
+                    <GndRef>AUTO</GndRef>
+                    <Pin MacroID="taperPin0" Type="COMPONENT" Number="1" PortNum="3" LevelNum="0" Orientation="TOP">
+                        <TerminalWidth Type="CELL" />
+                        <GndRef Type="AUTO" />
+                        <Center>(998.0,448)</Center>
+                    </Pin>
+                    <Pin MacroID="taperPin1" Type="COMPONENT" Number="2" PortNum="4" LevelNum="0" Orientation="BOTTOM">
+                        <TerminalWidth Type="CELL" />
+                        <GndRef Type="AUTO" />
+                        <Center>(998.0,456)</Center>
+                    </Pin>
+                    <Value>C_add</Value>
+                </Component>
+            </Objects>
+        </Level>
+        <Level MacroID="diel_layerB" MaterialName="Silicon (intrinsic)" Number="1">
+            <DielectricMaterialModel Thickness="500.0" />
+        </Level>
+        <Level MacroID="diel_layerC" MaterialName="Air" Number="2">
+            <DielectricMaterialModel Thickness="5000.0" />
+        </Level>
+    </Geometry>
+    <Sweeps SweepVariables="FALSE">
+        <Set On="TRUE">
+            <Frequencies>
+                <Sweep Type="ABS_ENTRY" On="TRUE" Adaptive="TRUE" Start="2.4" Stop="4" Target="16000" />
+            </Frequencies>
+        </Set>
+    </Sweeps>
+    <OutputFiles Folder=".">
+        <Files>
+            <File MacroID="output_fileA" Type="TOUCH" Name="generated_ncell_1.snp" UseInterpolatedData="TRUE" IncludeComments="TRUE" Precision="15" Parameter="S" Format="MA">
+                <Terminations Type="STD" Single="TRUE">
+                    <Port Rp="50" Xp="0" Lp="0" Cp="0" />
+                </Terminations>
+            </File>
+        </Files>
+    </OutputFiles>
+    <Translator>
+        <GDSIMPORT ImportUnits="inches" LayerMapType="Classic" LayerMapFile="superconductor.lay">
+            <Template UsePresentProject="TRUE" KeepPolygons="FALSE" />
+            <Box BoxType="Circuit" PlacementType="Center" CellCalcType="Auto" CellSizeX="2" CellSizeY="2" BoxSizeX="2038" BoxSizeY="1500" />
+            <Margins MarginType="Absolute" AddMargins="FALSE" TopMargin="0" LeftMargin="0" RightMargin="0" BottomMargin="0" />
+            <Advanced MergePlanar="FALSE" CleanGeo="FALSE" AdditionalOptions="" ViasRectangular="FALSE" AddViaPads="FALSE" AdditionalViaOptions="" />
+            <ViaSimplification SimplifyViaArrays="FALSE" MinViasInArray="5" DistanceToSizeRatio="8" SizeRatio="1.5" MaxExpansionCoeff="7" MergePlanarVias="FALSE" />
+            <BarVias IdentifyBarVias="FALSE" BarViaRatio="2.5" />
+        </GDSIMPORT>
+    </Translator>
+</SonnetProject>

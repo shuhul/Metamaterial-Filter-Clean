@@ -1,0 +1,108 @@
+{
+  "provenance": {
+    "source": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\sonnet_files\\taper_exploration\\three_tapers_v3_T2_plain_2026-10-28\\cap5_i22_j78_pad24x400_r30_w148\\response\\generated_ncell_3.snp",
+    "sha256": "71cfa5cafc9e99ce165aa9e3277196d63c4235f27e1af3ea3b2c4c807dd8ffc3",
+    "code_sha256": "1ea50958ad7845a4f1627438b26e67408083574eead3d25ddcc2f818ae05860a",
+    "fixed_L_nH": [
+      4.3235471520370545,
+      6.001411793324284,
+      4.922723945068658,
+      4.922723945068658
+    ],
+    "initial_C_fF": [
+      123.25936005077958,
+      147.2101440329128,
+      187.07889078419188,
+      186.9893352222692
+    ],
+    "initial_G_fF": [
+      243.5134150096727,
+      17.45862465013892,
+      7.940917909015536,
+      8.194650651067347
+    ],
+    "free_capacitances": [
+      [
+        "C",
+        0
+      ],
+      [
+        "G",
+        0
+      ],
+      [
+        "G",
+        1
+      ]
+    ],
+    "delay_bounds_ps": [
+      -100,
+      100
+    ],
+    "additional_capacitance_seeds": [
+      [
+        149.0,
+        153.0,
+        15.3
+      ]
+    ]
+  },
+  "L_nH": [
+    4.3235471520370545,
+    6.001411793324284,
+    4.922723945068658,
+    4.922723945068658
+  ],
+  "C_fF": [
+    155.81398089076714,
+    147.2101440329128,
+    187.07889078419188,
+    186.9893352222692
+  ],
+  "G_fF": [
+    156.60039987587515,
+    15.365227716131333,
+    7.940917909015536,
+    8.194650651067347
+  ],
+  "delay_ps": 5.403529791461942,
+  "free_capacitances": [
+    [
+      "C",
+      0
+    ],
+    [
+      "G",
+      0
+    ],
+    [
+      "G",
+      1
+    ]
+  ],
+  "optimizer_success": true,
+  "frequency_samples": 7501,
+  "frequency_range_GHz": [
+    4.65,
+    5.4
+  ],
+  "active_bounds": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "complex_RMS": 0.006247690894335854,
+  "complex_max": 0.03385592308749508,
+  "S11_magnitude_RMS": 0.011510194748485098,
+  "S22_magnitude_RMS": 0.004315337407341696,
+  "capacitances_accepted": false,
+  "scope": "Fixed-inductance complex S21 fit; reflection magnitudes are not fitted",
+  "curve_acceptance": {
+    "metric": "complex_S21_RMS",
+    "maximum": 0.025,
+    "policy": "User-approved cutoff; maximum error and peak errors are diagnostics."
+  },
+  "curve_pass": true,
+  "interior_free_parameters": true
+}

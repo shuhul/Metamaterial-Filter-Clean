@@ -1,0 +1,170 @@
+{
+  "layout_kind": "asymmetric_input_IDC_T2_response",
+  "unit": {
+    "cap": {
+      "w": 564,
+      "l": 590,
+      "t_top": 14,
+      "t_left": 8,
+      "t_right": 30
+    },
+    "meander": {
+      "w": 148,
+      "l_top": 10,
+      "l": 596,
+      "n": 72,
+      "t": 4,
+      "d": 4,
+      "x_offset_from_cap_center": 56.0
+    },
+    "pad": {
+      "w": 24,
+      "l": 400
+    },
+    "d_top": 8,
+    "d_pad": 20,
+    "d_pad_left": 148
+  },
+  "isolation": false,
+  "taper1": {
+    "cap": {
+      "w": 344,
+      "l": 590,
+      "t_top": 14,
+      "t_side": 6
+    },
+    "meander": {
+      "w": 220,
+      "l_top": 10,
+      "l": 596,
+      "n": 72,
+      "t": 4,
+      "d": 4
+    },
+    "pad": {
+      "w": 8,
+      "l": 532
+    },
+    "d_top": 8,
+    "d_pad": 20
+  },
+  "regular": {
+    "cap": {
+      "w": 302,
+      "l": 600,
+      "t_top": 14,
+      "t_side": 6
+    },
+    "meander": {
+      "w": 186,
+      "l_top": 10,
+      "l": 596,
+      "n": 72,
+      "t": 4,
+      "d": 4
+    },
+    "pad": {
+      "w": 24,
+      "l": 586
+    },
+    "d_top": 8,
+    "d_pad": 12
+  },
+  "coupler": {
+    "d": 22,
+    "n": 70,
+    "t": 4,
+    "d_finger": 4,
+    "d_tip": 2,
+    "d_t1": 78,
+    "d_regular": 74,
+    "t_regular_ground": 2,
+    "t_input": 8
+  },
+  "w_sim": 3158,
+  "cell_centers": [
+    708.0,
+    1294.0,
+    1826.0,
+    2223.0,
+    2581.0
+  ],
+  "cell_lefts": [
+    426,
+    1012,
+    1654,
+    2072,
+    2430
+  ],
+  "gaps": [
+    22,
+    78,
+    74,
+    56
+  ],
+  "expected_metal_components": 2,
+  "parameters": {
+    "n_cells": 3,
+    "l_sim": 1500,
+    "l_top_ground": 448,
+    "w_side": 412,
+    "t_feed": 10,
+    "unit": {
+      "d_top": 8,
+      "cap": {
+        "t_top": 14
+      }
+    }
+  },
+  "target_stage": "taper_2",
+  "T1_reference_sha256": "3ac8d7a31772d30e1d0966dac8b6c9545d8b30a9e21ffca005b06b4005912515",
+  "trial_settings": {
+    "cap": {
+      "l": 590,
+      "t_top": 14,
+      "t_left": 8,
+      "t_right": 30
+    },
+    "clearance": {
+      "d_left": 256,
+      "d_right": 122
+    },
+    "meander": {
+      "w": 148,
+      "l_top": 10,
+      "l": 596,
+      "n": 72,
+      "t": 4,
+      "d": 4
+    },
+    "pad": {
+      "w": 24,
+      "l": 400
+    },
+    "d_pad": 20,
+    "coupling": {
+      "d": 22,
+      "n": 70,
+      "t": 4,
+      "d_finger": 4,
+      "d_tip": 2,
+      "d_t1": 78,
+      "d_regular": 74,
+      "t_regular_ground": 2,
+      "t_input": 8
+    },
+    "allow_input_idc": true,
+    "d_pad_left": 148
+  },
+  "IDC_clearance_um": {
+    "meander": 264,
+    "nearest_internal_ground_pad": 156,
+    "upper_ground": 24,
+    "lower_ground": 38
+  },
+  "inductance_pin_x": 1350.0,
+  "clearance_to_meander_um": {
+    "left": 256,
+    "right": 122
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "started_utc": "2026-11-01T10:05:45.276100+00:00",
+  "state": "completed",
+  "launcher_pid": 164536,
+  "child_pid": 29064,
+  "working_directory": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\sonnet_files\\taper_exploration\\T2_cleanup_2026-11-01\\trimmed_IDC\\Lcal_explicit_T3",
+  "thread_limit": 4,
+  "logical_processors": 36,
+  "max_concurrent_jobs": 1,
+  "thread_environment": {
+    "SON_THREAD_CONTROL_INI": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\geometry\\taper\\sonnet_threads.ini",
+    "MKL_NUM_THREADS": "4",
+    "OMP_NUM_THREADS": "4",
+    "OPENBLAS_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1",
+    "KMP_BLOCKTIME": "0"
+  },
+  "policy": "Host saturation warns; only child thread/CPU faults stop the child.",
+  "samples": [
+    {
+      "utc": "2026-11-01T10:05:46.284514+00:00",
+      "elapsed_seconds": 1.0084036998450756,
+      "child_cpu_seconds": 1.03125,
+      "child_core_equivalents": null,
+      "host_busy_percent": 69.91452991452991
+    },
+    {
+      "utc": "2026-11-01T10:05:56.302926+00:00",
+      "elapsed_seconds": 11.026941400021315,
+      "child_cpu_seconds": 11.046875,
+      "child_core_equivalents": 0.9989976053805522,
+      "host_busy_percent": 38.32465277777778
+    }
+  ],
+  "peak_child_core_equivalents": 1.0079377608624815,
+  "declared_threads": null,
+  "ended_utc": "2026-11-01T10:05:58.311702+00:00",
+  "elapsed_seconds": 13.035885599441826,
+  "returncode": 0,
+  "error": null,
+  "final_child_cpu_seconds": 12.40625
+}

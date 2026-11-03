@@ -1,0 +1,18 @@
+{
+  "source": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\sonnet_files\\generated_ncell_4_w186_d56\\generated_ncell_4.snp",
+  "n_cells": 4,
+  "L0_nH_fixed": 4.922723945068658,
+  "C0_fF": 188.8781163861302,
+  "Cg_fF": 8.241620220231225,
+  "meander_w_um": 186,
+  "d_cell_um": 56.0,
+  "target_Cg_fF": 8.2865,
+  "Cg_error_percent": -0.5416011557204614,
+  "Cg_within_2_percent": true,
+  "inductance_source": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\output_data\\meander_tuning_ref400\\best_refined\\results.json",
+  "inductance_source_sha256": "62fe1e3b172605c0d8810f742c56d2e5e7d2e1490d20e8041ec5ae7852f9bdc5",
+  "project_sha256": "1c0f2bd7a0e0c86ea099ee06c58a3c4b7f7031c867f8080a04d80eae34983af3",
+  "snp_sha256": "e6d7071c6497b08811ea1b567c52ef65167666f7ae5428da52061f8a5548074c",
+  "fit_rms_db": 4.687275087897606,
+  "note": "L0 transferred from single-cell extraction; fitted effective capacitances of the N=4 model."
+}

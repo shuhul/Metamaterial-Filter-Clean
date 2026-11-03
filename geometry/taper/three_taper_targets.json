@@ -1,0 +1,55 @@
+{
+  "version": "three_tapers_v3_2026-10-26",
+  "units": {
+    "L": "nH",
+    "C": "fF",
+    "geometry": "um"
+  },
+  "targets": {
+    "unit_cell": {
+      "L0_nH": 4.9194,
+      "C0_fF": 190.4,
+      "Cg_input_fF": 8.2865
+    },
+    "taper_1": {
+      "L0_nH": 5.97,
+      "C0_fF": 148.0,
+      "Cg_input_fF": 15.3
+    },
+    "taper_2": {
+      "L0_nH": 4.33,
+      "C0_fF": 149.0,
+      "Cg_input_fF": 153.0
+    },
+    "taper_3": {
+      "L0_nH": 2.77,
+      "C0_fF": 251.0,
+      "Cg_input_fF": 261.0
+    }
+  },
+  "tolerance_percent": 2.0,
+  "grid_um": 2.0,
+  "curve_acceptance": {
+    "metric": "complex_S21_RMS",
+    "maximum": 0.025
+  },
+  "target_response_acceptance": {
+    "metric": "complex_S21_RMS_against_fixed_target_circuit",
+    "maximum": 0.025,
+    "frequency_range_GHz": [
+      4.65,
+      5.4
+    ],
+    "electrical_parameters": "All specified targets fixed",
+    "nuisance_parameter": "One matched fixture delay only",
+    "extracted_capacitances": "Geometry heuristics; fitted-curve RMS is diagnostic"
+  },
+  "order": [
+    "input",
+    "taper_3",
+    "taper_2",
+    "taper_1",
+    "unit_cell",
+    "output"
+  ]
+}

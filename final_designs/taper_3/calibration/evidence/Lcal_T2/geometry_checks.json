@@ -1,0 +1,24 @@
+{
+  "project": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\sonnet_files\\taper_exploration\\T2_cleanup_2026-11-01\\trimmed_IDC_centered_T2\\Lcal_T2\\generated_ncell_1.sonx",
+  "source": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\sonnet_files\\taper_exploration\\final_designs\\new_T2_cap5_cap5_i22_j78_pad24x400_r30_w148_final\\Lcal\\generated_ncell_1.sonx",
+  "source_sha256": "014408ee07762a6cad688b765ea5d7e3f6406c02c898fa7119073d84e4d67e74",
+  "GDS_native_XOR_empty": true,
+  "mesh_um": 2,
+  "material_stack_ports_control_unchanged": true,
+  "IDC_rail_bottom_old_new_um": [
+    -598,
+    -340
+  ],
+  "IDC_fingers_unchanged": true,
+  "T2_coil_shift_um": -56,
+  "T2_pad_shifts_um": [
+    -52,
+    -54
+  ],
+  "T2_meander_center_um": 1328.0,
+  "T2_pad_centers_um": [
+    1162.0,
+    1494.0
+  ],
+  "pad_to_meander_gap_um": 80
+}

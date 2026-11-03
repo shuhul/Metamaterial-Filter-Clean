@@ -1,0 +1,81 @@
+{
+  "L0_nH": 2.7923663999366597,
+  "R_squared": 0.9999996910328796,
+  "regression_standard_error_nH": 0.0010975229375033628,
+  "intercept_s2": 5.726071448876049e-22,
+  "sweep": [
+    {
+      "C_add_fF": 450.0,
+      "frequency_Hz": 3721000000.0,
+      "project_sha256": "5b1bdded6f8b889d7230d5a8347f76b4a171a70cdcf9472759e288d6cb148cc5",
+      "snp_sha256": "3dc586996676a674abedc10fd25132d38bdd842b30edb29343890af36bbfdbc5"
+    },
+    {
+      "C_add_fF": 600.0,
+      "frequency_Hz": 3357000000.0,
+      "project_sha256": "ca52ca87fbeeacc20a2ca62db17983c2837814e7ac6ba83c7af3abfd0cea06d5",
+      "snp_sha256": "695c39560250b8c76c5d84e8639cda862a820ccbf5d3313fc0d416f6b86a0822"
+    },
+    {
+      "C_add_fF": 750.0,
+      "frequency_Hz": 3082000000.0,
+      "project_sha256": "77b39afa3a2ce44926b0c189fbdc35ea38353f4bbf7db0ea1803f9d60a058ee3",
+      "snp_sha256": "cd9327b270a8ef9828e01bbaf73945749401303652863e20bd6f0d4537ddbfb8"
+    },
+    {
+      "C_add_fF": 900.0,
+      "frequency_Hz": 2865000000.0,
+      "project_sha256": "e79ae6c876c88a04ac04aef079e6b810b3df0b89d70a890f2a49d7eb2a41ca98",
+      "snp_sha256": "9c93cdb44829bb631edb2b54a6614b6a12817328abfdbd8ae8a79f4a57876b1d"
+    }
+  ],
+  "target_L0_nH": 2.77,
+  "target_difference_percent": 0.8074512612512352,
+  "method": "Explicit Sonnet CAP components; cache-only subsequent capacitor changes",
+  "adjacent_pair_L0_nH": [
+    2.788296307668216,
+    2.793393845053328,
+    2.7950665653828772
+  ],
+  "max_frequency_residual_MHz": 0.28434809780263903,
+  "export_frequency_spacing_MHz": 1.0,
+  "case": "trimmed_IDC_T3",
+  "target_error_percent": 0.8074512612512352,
+  "source_project": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\sonnet_files\\taper_exploration\\T2_cleanup_2026-11-01\\trimmed_IDC\\Lcal_T3\\generated_ncell_1.sonx",
+  "explicit_project": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\sonnet_files\\taper_exploration\\T2_cleanup_2026-11-01\\trimmed_IDC\\Lcal_explicit_T3\\generated_ncell_1.sonx",
+  "capacitor_connection": "Native Sonnet CAP",
+  "resonance_source": "Native Sonnet exported S21 sampled maxima",
+  "Python_frequency_approximation": false,
+  "started_utc": "2026-11-01T10:01:27.674093+00:00",
+  "total_extraction_seconds": 296.47148139961064,
+  "timings": [
+    {
+      "C_add_fF": 450.0,
+      "new_EM_frequency_counts": [
+        5
+      ],
+      "solver_process_seconds": 257.461541400291
+    },
+    {
+      "C_add_fF": 600.0,
+      "new_EM_frequency_counts": [
+        0
+      ],
+      "solver_process_seconds": 13.035885599441826
+    },
+    {
+      "C_add_fF": 750.0,
+      "new_EM_frequency_counts": [
+        0
+      ],
+      "solver_process_seconds": 13.034342099912465
+    },
+    {
+      "C_add_fF": 900.0,
+      "new_EM_frequency_counts": [
+        0
+      ],
+      "solver_process_seconds": 12.029003400355577
+    }
+  ]
+}

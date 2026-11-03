@@ -1,0 +1,16 @@
+{
+  "name": "taper_1",
+  "project": "project.sonx",
+  "layout": "layout.gds",
+  "parameters": "parameters.json",
+  "box_um": [
+    2322.0,
+    1500.0
+  ],
+  "coordinate_system": "GDS box origin bottom-left; Sonnet y = box_height - GDS y",
+  "grid_um": 2,
+  "verification": "Saved staged/reference response",
+  "source_project_relative": "sonnet_files/taper_exploration/final_designs/new_T1_plain_cw344_w220_p532_g56_j66_c590_tg6_final/response/generated_ncell_2.sonx",
+  "source_project_sha256": "6a8727de3cc78f620f13f74a8b77e27bf5130740218cde6ae3bf5eb0651c0e24",
+  "response": "response.snp"
+}

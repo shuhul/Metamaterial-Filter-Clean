@@ -1,0 +1,160 @@
+{
+  "started_utc": "2026-10-26T13:33:37.980472+00:00",
+  "state": "completed",
+  "launcher_pid": 155440,
+  "child_pid": 109780,
+  "working_directory": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\sonnet_files\\taper_exploration\\three_tapers_v3_2026-10-26\\plain_cw344_w220_p532_g56_j66_c590_tg6\\Lcal",
+  "thread_limit": 4,
+  "logical_processors": 36,
+  "thread_environment": {
+    "SON_THREAD_CONTROL_INI": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\geometry\\taper\\sonnet_threads.ini",
+    "MKL_NUM_THREADS": "4",
+    "OMP_NUM_THREADS": "4",
+    "OPENBLAS_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1",
+    "KMP_BLOCKTIME": "0"
+  },
+  "policy": "Host saturation warns; only child thread/CPU faults stop the child.",
+  "samples": [
+    {
+      "utc": "2026-10-26T13:33:38.989702+00:00",
+      "elapsed_seconds": 1.0091939000412822,
+      "child_cpu_seconds": 1.0,
+      "child_core_equivalents": null,
+      "host_busy_percent": 57.82051282051282
+    },
+    {
+      "utc": "2026-10-26T13:33:49.032815+00:00",
+      "elapsed_seconds": 11.05239240033552,
+      "child_cpu_seconds": 8.984375,
+      "child_core_equivalents": 0.2947315938309934,
+      "host_busy_percent": 26.258680555555557
+    },
+    {
+      "utc": "2026-10-26T13:33:59.042639+00:00",
+      "elapsed_seconds": 21.062231299933046,
+      "child_cpu_seconds": 48.25,
+      "child_core_equivalents": 3.996138132476157,
+      "host_busy_percent": 35.98090277777778
+    },
+    {
+      "utc": "2026-10-26T13:34:09.052317+00:00",
+      "elapsed_seconds": 31.071810000110418,
+      "child_cpu_seconds": 89.625,
+      "child_core_equivalents": 4.6054700227936385,
+      "host_busy_percent": 41.666666666666664
+    },
+    {
+      "utc": "2026-10-26T13:34:19.076630+00:00",
+      "elapsed_seconds": 41.0961492001079,
+      "child_cpu_seconds": 126.109375,
+      "child_core_equivalents": 4.746792591584855,
+      "host_busy_percent": 20.26909722222222
+    },
+    {
+      "utc": "2026-10-26T13:34:29.111895+00:00",
+      "elapsed_seconds": 51.131427000276744,
+      "child_cpu_seconds": 163.21875,
+      "child_core_equivalents": 4.323124872941098,
+      "host_busy_percent": 57.9059829059829
+    },
+    {
+      "utc": "2026-10-26T13:34:39.123207+00:00",
+      "elapsed_seconds": 61.142789100296795,
+      "child_cpu_seconds": 203.609375,
+      "child_core_equivalents": 4.387871610542154,
+      "host_busy_percent": 47.56944444444444
+    },
+    {
+      "utc": "2026-10-26T13:34:49.141033+00:00",
+      "elapsed_seconds": 71.1606044000946,
+      "child_cpu_seconds": 242.109375,
+      "child_core_equivalents": 3.0835774823495776,
+      "host_busy_percent": 31.901041666666664
+    },
+    {
+      "utc": "2026-10-26T13:34:59.159578+00:00",
+      "elapsed_seconds": 81.17911550030112,
+      "child_cpu_seconds": 278.703125,
+      "child_core_equivalents": 4.0584014199073355,
+      "host_busy_percent": 63.67521367521367
+    },
+    {
+      "utc": "2026-10-26T13:35:09.171833+00:00",
+      "elapsed_seconds": 91.19134540017694,
+      "child_cpu_seconds": 319.140625,
+      "child_core_equivalents": 3.9972766546880742,
+      "host_busy_percent": 57.89930555555556
+    },
+    {
+      "utc": "2026-10-26T13:35:19.183912+00:00",
+      "elapsed_seconds": 101.20345740020275,
+      "child_cpu_seconds": 361.734375,
+      "child_core_equivalents": 4.572743794585029,
+      "host_busy_percent": 75.43402777777779
+    },
+    {
+      "utc": "2026-10-26T13:35:29.209937+00:00",
+      "elapsed_seconds": 111.22955120028928,
+      "child_cpu_seconds": 397.890625,
+      "child_core_equivalents": 2.9039509417745193,
+      "host_busy_percent": 35.026041666666664
+    },
+    {
+      "utc": "2026-10-26T13:35:39.227404+00:00",
+      "elapsed_seconds": 121.24692020006478,
+      "child_cpu_seconds": 435.828125,
+      "child_core_equivalents": 3.996678759785888,
+      "host_busy_percent": 52.30034722222222
+    },
+    {
+      "utc": "2026-10-26T13:35:49.237821+00:00",
+      "elapsed_seconds": 131.25738400034606,
+      "child_cpu_seconds": 476.28125,
+      "child_core_equivalents": 4.056205174949741,
+      "host_busy_percent": 38.418803418803414
+    },
+    {
+      "utc": "2026-10-26T13:35:59.266476+00:00",
+      "elapsed_seconds": 141.285916400142,
+      "child_cpu_seconds": 513.75,
+      "child_core_equivalents": 4.243651920674989,
+      "host_busy_percent": 72.30902777777779
+    },
+    {
+      "utc": "2026-10-26T13:36:09.287711+00:00",
+      "elapsed_seconds": 151.30711070029065,
+      "child_cpu_seconds": 552.390625,
+      "child_core_equivalents": 3.8993960316099283,
+      "host_busy_percent": 83.15972222222221
+    },
+    {
+      "utc": "2026-10-26T13:36:19.298305+00:00",
+      "elapsed_seconds": 161.31781439995393,
+      "child_cpu_seconds": 592.65625,
+      "child_core_equivalents": 3.994254265662263,
+      "host_busy_percent": 59.07118055555556
+    },
+    {
+      "utc": "2026-10-26T13:36:29.309631+00:00",
+      "elapsed_seconds": 171.32924310024828,
+      "child_cpu_seconds": 634.046875,
+      "child_core_equivalents": 4.165701430027436,
+      "host_busy_percent": 44.791666666666664
+    },
+    {
+      "utc": "2026-10-26T13:36:39.336338+00:00",
+      "elapsed_seconds": 181.35593130020425,
+      "child_cpu_seconds": 667.984375,
+      "child_core_equivalents": 2.2458493972096525,
+      "host_busy_percent": 52.222222222222214
+    }
+  ],
+  "peak_child_core_equivalents": 4.917564263546328,
+  "declared_threads": 4,
+  "ended_utc": "2026-10-26T13:36:39.336944+00:00",
+  "elapsed_seconds": 181.35668019996956,
+  "returncode": 0,
+  "error": null,
+  "final_child_cpu_seconds": 667.984375
+}

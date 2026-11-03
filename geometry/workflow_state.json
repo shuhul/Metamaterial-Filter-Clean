@@ -1,0 +1,172 @@
+{
+  "schema_version": 1,
+  "updated_date": "2026-10-13",
+  "human_document": "geometry/WORKFLOW_HANDOFF.md",
+  "workflow_status": "requested_Cg_tuning_complete_stop_until_new_user_objective",
+  "targets": {
+    "L0_nH": 4.9194,
+    "C0_fF": 190.4,
+    "Cg_fF": 8.2865,
+    "band_GHz": [
+      4.8,
+      5.2
+    ]
+  },
+  "acceptance": {
+    "Cg_tolerance_percent": 2,
+    "Cg_error_percent": -0.5416011557204614,
+    "Cg_passed": true,
+    "C0_status": "user_accepted_good_enough"
+  },
+  "selected_results": {
+    "L0_nH_fixed": 4.922723945068658,
+    "L0_origin": "native_filter_v6_single_cell_Cadd_slope",
+    "C0_fF": 188.8781163861302,
+    "Cg_fF": 8.241620220231225,
+    "fit_rms_db": 4.687275087897606
+  },
+  "selected_geometry": {
+    "parameters": {
+      "unit": {
+        "cap": {
+          "w": 302,
+          "l": 600,
+          "t_top": 14,
+          "t_side": 6
+        },
+        "meander": {
+          "w": 186,
+          "l_top": 10,
+          "l": 596,
+          "n": 72,
+          "t": 4,
+          "d": 4
+        },
+        "pad": {
+          "w": 24,
+          "l": 586
+        },
+        "d_top": 8,
+        "d_pad": 12
+      },
+      "n_cells": 4,
+      "d_cell": 56.0,
+      "t_ground": 4,
+      "d_end_sep": 14,
+      "w_side": 412,
+      "l_top_ground": 448,
+      "l_sim": 1500,
+      "t_feed": 10,
+      "d_feed": 6
+    },
+    "units": "um",
+    "total_cells": 6,
+    "w_sim": 2944.0,
+    "l_total": 618,
+    "intended_box": [
+      [
+        0,
+        -1052
+      ],
+      [
+        2944.0,
+        448
+      ]
+    ],
+    "cell_centers": [
+      577.0,
+      935.0,
+      1293.0,
+      1651.0,
+      2009.0,
+      2367.0
+    ]
+  },
+  "simulation": {
+    "version": "19.52.2025.261",
+    "mesh_um": [
+      2,
+      2
+    ],
+    "reference_planes_um": [
+      400,
+      400
+    ],
+    "normalization_ohm": 50,
+    "adaptive_range_GHz": [
+      4.5,
+      5.5
+    ],
+    "ABS_target": 500,
+    "export_samples": 501,
+    "export_spacing_MHz": 2,
+    "actual_EM_frequencies": 6,
+    "native_runtime_seconds": 283,
+    "precision": "DOUBLE",
+    "speed_control": "MEDIUM_SPEED",
+    "material_Ls_pH_per_square": 0.0388
+  },
+  "defaults_are_not_selected_geometry": {
+    "MeanderParams_w_um": 190,
+    "NCellParams_d_cell_um": 60,
+    "array_runner_w_um": 186,
+    "array_runner_default_d_cell_um": 60
+  },
+  "provenance": {
+    "design_gds": {
+      "path": "geometry/output/ncell_4_w186_d56.gds",
+      "sha256": "b91cff33e0c659e455dd730cd6a4627fa03a12b53d323690ce2e2155e4353383"
+    },
+    "geometry_metadata": {
+      "path": "geometry/output/ncell_4_w186_d56.json",
+      "sha256": "da5201aea1dfd21e042d90b9b76cc1462649bc3dd2186a9288a8888cb3ee4433"
+    },
+    "simulation_gds": {
+      "path": "sonnet_files/generated_ncell_4_w186_d56/ncell_4_grid2.gds",
+      "sha256": "12f172118f6fdbd3254a01bc6869a0fac343eab794b38f844b78356cb13f7cac"
+    },
+    "sonnet_project": {
+      "path": "sonnet_files/generated_ncell_4_w186_d56/generated_ncell_4.sonx",
+      "sha256": "1c0f2bd7a0e0c86ea099ee06c58a3c4b7f7031c867f8080a04d80eae34983af3"
+    },
+    "s_parameters": {
+      "path": "sonnet_files/generated_ncell_4_w186_d56/generated_ncell_4.snp",
+      "sha256": "e6d7071c6497b08811ea1b567c52ef65167666f7ae5428da52061f8a5548074c"
+    },
+    "fit": {
+      "path": "output_data/generated_ncell_4_w186_d56/fit_parameters.json",
+      "sha256": "6d7ed12a4f865af02c8abf1e79e8144bdb082df322e323ded02ccd44427b6318"
+    },
+    "inductance": {
+      "path": "output_data/meander_tuning_ref400/best_refined/results.json",
+      "sha256": "62fe1e3b172605c0d8810f742c56d2e5e7d2e1490d20e8041ec5ae7852f9bdc5"
+    },
+    "selection_summary": {
+      "path": "output_data/cg_tuning/summary.json",
+      "sha256": "45d981dde3cd9a11868de72ea61cae862511a7cdfc6b419fd921ff99ae9153f1"
+    },
+    "s21_plot": {
+      "path": "output_data/generated_ncell_4_w186_d56/s21_fit.png",
+      "sha256": "c7b9d1d4846452763d5d3f7adb47be30eb9cc1686ec3fba2fe731519dc130956"
+    }
+  },
+  "critical_rules": [
+    "Preserve selected and original projects/results.",
+    "Use explicit saved measured L0 for array fitting; default CLI L0 is target.",
+    "N=4 circuit model corresponds to six physical EM structures.",
+    "No L sweeps were rerun for the spacing trials.",
+    "Simulated geometry is the grid-snapped GDS.",
+    "Do not use the 50 fF test response as a final 0.1 fF response.",
+    "Cache reuse is geometry/settings-specific.",
+    "Mesh convergence and independent N=4 L0 are not established.",
+    "Fresh experiment identity is required for repeated studies."
+  ],
+  "minimal_refit_command": ".\\.venv\\Scripts\\python.exe extract_circuit_params_ncell.py --no-simulate --snp sonnet_files\\generated_ncell_4_w186_d56\\generated_ncell_4.snp --n-cells 4 --l0-nh 4.922723945068658 --output-dir output_data\\selected_d56_refit",
+  "preferred_user_entry_point": {
+    "script": "geometry/run_filter.py",
+    "guide": "geometry/RUN_FILTER.md",
+    "settings_location": "EDIT YOUR SETTINGS HERE block",
+    "default_geometry": "w186/d56",
+    "default_inductance_mode": "no new sweep; prior extraction for same run if present, otherwise explicit FIXED_L0_NH"
+  }
+}

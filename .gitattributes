@@ -1,0 +1,7 @@
+# Preserve exact native/evidence bytes and their recorded hashes.
+* -text
+* whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+*.png binary
+*.pdf binary
+*.gds binary
+*.snp -whitespace

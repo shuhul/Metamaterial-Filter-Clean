@@ -1,0 +1,83 @@
+{
+  "started_utc": "2026-10-29T03:51:05.387181+00:00",
+  "state": "completed",
+  "launcher_pid": 95424,
+  "child_pid": 170064,
+  "working_directory": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\sonnet_files\\taper_exploration\\explicit_L_checks_2026-10-28\\T1",
+  "thread_limit": 4,
+  "logical_processors": 36,
+  "thread_environment": {
+    "SON_THREAD_CONTROL_INI": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\geometry\\taper\\sonnet_threads.ini",
+    "MKL_NUM_THREADS": "4",
+    "OMP_NUM_THREADS": "4",
+    "OPENBLAS_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1",
+    "KMP_BLOCKTIME": "0"
+  },
+  "policy": "Host saturation warns; only child thread/CPU faults stop the child.",
+  "samples": [
+    {
+      "utc": "2026-10-29T03:51:06.394785+00:00",
+      "elapsed_seconds": 1.0076344003900886,
+      "child_cpu_seconds": 1.0625,
+      "child_core_equivalents": null,
+      "host_busy_percent": 55.08547008547009
+    },
+    {
+      "utc": "2026-10-29T03:51:16.406325+00:00",
+      "elapsed_seconds": 11.01916370075196,
+      "child_cpu_seconds": 11.0625,
+      "child_core_equivalents": 0.998579918798034,
+      "host_busy_percent": 49.869791666666664
+    },
+    {
+      "utc": "2026-10-29T03:51:26.416806+00:00",
+      "elapsed_seconds": 21.02965719997883,
+      "child_cpu_seconds": 21.0625,
+      "child_core_equivalents": 0.9986051488672556,
+      "host_busy_percent": 43.83680555555556
+    },
+    {
+      "utc": "2026-10-29T03:51:36.426741+00:00",
+      "elapsed_seconds": 31.0395911000669,
+      "child_cpu_seconds": 31.078125,
+      "child_core_equivalents": 0.9994002603399097,
+      "host_busy_percent": 42.23090277777778
+    },
+    {
+      "utc": "2026-10-29T03:51:46.437367+00:00",
+      "elapsed_seconds": 41.05006600078195,
+      "child_cpu_seconds": 41.078125,
+      "child_core_equivalents": 0.99853484923761,
+      "host_busy_percent": 47.829861111111114
+    },
+    {
+      "utc": "2026-10-29T03:51:56.455108+00:00",
+      "elapsed_seconds": 51.068003800697625,
+      "child_cpu_seconds": 51.09375,
+      "child_core_equivalents": 0.9990262492598543,
+      "host_busy_percent": 32.89930555555556
+    },
+    {
+      "utc": "2026-10-29T03:52:06.465840+00:00",
+      "elapsed_seconds": 61.07874390017241,
+      "child_cpu_seconds": 61.09375,
+      "child_core_equivalents": 0.9985944788451043,
+      "host_busy_percent": 29.25347222222222
+    },
+    {
+      "utc": "2026-10-29T03:52:16.480461+00:00",
+      "elapsed_seconds": 71.09343110024929,
+      "child_cpu_seconds": 71.0625,
+      "child_core_equivalents": 0.9472792452000003,
+      "host_busy_percent": 7.60309278350515
+    }
+  ],
+  "peak_child_core_equivalents": 1.0149787634177234,
+  "declared_threads": null,
+  "ended_utc": "2026-10-29T03:52:16.480917+00:00",
+  "elapsed_seconds": 71.09397769998759,
+  "returncode": 0,
+  "error": null,
+  "final_child_cpu_seconds": 71.0625
+}

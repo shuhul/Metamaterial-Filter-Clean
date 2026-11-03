@@ -1,0 +1,189 @@
+{
+  "layout_kind": "T2_cleanup_cal_T3",
+  "unit": {
+    "cap": {
+      "w": 828,
+      "l": 590,
+      "t_top": 14,
+      "t_left": 8,
+      "t_right": 8
+    },
+    "meander": {
+      "w": 130,
+      "l_top": 8,
+      "l": 596,
+      "n": 68,
+      "t": 6,
+      "d": 2,
+      "x_offset_from_cap_center": 1.0
+    },
+    "pad": {
+      "w": 184,
+      "l": 594
+    },
+    "d_top": 8,
+    "d_pad": 116,
+    "d_pad_left": 116
+  },
+  "isolation": true,
+  "regular": {
+    "cap": {
+      "w": 302,
+      "l": 600,
+      "t_top": 14,
+      "t_side": 6
+    },
+    "meander": {
+      "w": 186,
+      "l_top": 10,
+      "l": 596,
+      "n": 72,
+      "t": 4,
+      "d": 4
+    },
+    "pad": {
+      "w": 24,
+      "l": 586
+    },
+    "d_top": 8,
+    "d_pad": 12
+  },
+  "d_input": 56,
+  "d_junction": 66,
+  "w_sim": 3490,
+  "cell_centers": [
+    840.0,
+    1724.0,
+    2650.0
+  ],
+  "input_end_resonator": false,
+  "expected_metal_components": 3,
+  "parameters": {
+    "n_cells": 1,
+    "l_sim": 1500,
+    "l_top_ground": 448,
+    "w_side": 412,
+    "t_feed": 10,
+    "unit": {
+      "d_top": 8,
+      "cap": {
+        "t_top": 14
+      }
+    }
+  },
+  "regular_ground_strip_width_um": 6,
+  "input_ground_strip": false,
+  "regular_ground_strip": "centered",
+  "isolation_output_gap_um": 98,
+  "target_stage": "taper_3",
+  "T1_reference_sha256": "3ac8d7a31772d30e1d0966dac8b6c9545d8b30a9e21ffca005b06b4005912515",
+  "trial_settings": {
+    "cap": {
+      "l": 590,
+      "t_top": 14,
+      "t_left": 8,
+      "t_right": 8
+    },
+    "clearance": {
+      "d_left": 342,
+      "d_right": 340
+    },
+    "meander": {
+      "w": 130,
+      "l_top": 8,
+      "l": 596,
+      "n": 68,
+      "t": 6,
+      "d": 2
+    },
+    "pad": {
+      "w": 184,
+      "l": 594
+    },
+    "d_pad": 116,
+    "coupling": {
+      "d": 56,
+      "n": 0,
+      "t": 4,
+      "d_finger": 4,
+      "d_tip": 2,
+      "d_t1": 66,
+      "d_regular": 74,
+      "t_regular_ground": 2,
+      "t_input": 8
+    },
+    "d_pad_left": 116
+  },
+  "inductance_pin_x": 1725.0,
+  "clearance_to_meander_um": {
+    "left": 342,
+    "right": 340
+  },
+  "t3_settings": {
+    "body": {
+      "cap": {
+        "l": 590,
+        "t_top": 14,
+        "t_left": 8,
+        "t_right": 8
+      },
+      "clearance": {
+        "d_left": 342,
+        "d_right": 340
+      },
+      "meander": {
+        "w": 130,
+        "l_top": 8,
+        "l": 596,
+        "n": 68,
+        "t": 6,
+        "d": 2
+      },
+      "pad": {
+        "w": 184,
+        "l": 594
+      },
+      "d_pad": 116,
+      "coupling": {
+        "d": 56,
+        "n": 0,
+        "t": 4,
+        "d_finger": 4,
+        "d_tip": 2,
+        "d_t1": 66,
+        "d_regular": 74,
+        "t_regular_ground": 2,
+        "t_input": 8,
+        "w_input_stub": null
+      },
+      "allow_input_idc": false,
+      "d_pad_left": 116,
+      "include_t2_pads": true
+    },
+    "d_input": 54,
+    "n_input": 70,
+    "t_input_rail": 8,
+    "d_t2": 28,
+    "n_t2": 40,
+    "t_finger": 4,
+    "d_finger": 4,
+    "d_tip": 2
+  },
+  "T2_reference_sha256": "636d44c83e74c6e64c4a4e5b0bbe3b5d72e0c3647108bdfe6ff1a2783d7fb9b1",
+  "stage": "Lcal",
+  "cleanup": {
+    "source": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\sonnet_files\\taper_exploration\\final_designs\\new_T3_w130_t6g2n68_dl342_dr340_pad184x594_i54_j28n40_pad_tune_final\\Lcal\\generated_ncell_1.sonx",
+    "source_sha256": "320c964810eac3a813958e0ba0a96bce4dc7fb46b40160083683159c00ce25a6",
+    "trim": true,
+    "center": false,
+    "calibration": "T3",
+    "changes": {
+      "IDC_rail_bottom_old_new_um": [
+        -598,
+        -340
+      ],
+      "IDC_fingers_unchanged": true
+    },
+    "outside_edit_windows_XOR_empty": true
+  }
+}

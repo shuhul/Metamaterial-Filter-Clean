@@ -1,0 +1,57 @@
+{
+  "parameters": {
+    "unit": {
+      "cap": {
+        "w": 302,
+        "l": 600,
+        "t_top": 14,
+        "t_side": 6
+      },
+      "meander": {
+        "w": 186,
+        "l_top": 10,
+        "l": 596,
+        "n": 72,
+        "t": 4,
+        "d": 4
+      },
+      "pad": {
+        "w": 24,
+        "l": 586
+      },
+      "d_top": 8,
+      "d_pad": 12
+    },
+    "n_cells": 4,
+    "d_cell": 56.0,
+    "t_ground": 4,
+    "d_end_sep": 14,
+    "w_side": 412,
+    "l_top_ground": 448,
+    "l_sim": 1500,
+    "t_feed": 10,
+    "d_feed": 6
+  },
+  "units": "um",
+  "total_cells": 6,
+  "w_sim": 2944.0,
+  "l_total": 618,
+  "intended_box": [
+    [
+      0,
+      -1052
+    ],
+    [
+      2944.0,
+      448
+    ]
+  ],
+  "cell_centers": [
+    577.0,
+    935.0,
+    1293.0,
+    1651.0,
+    2009.0,
+    2367.0
+  ]
+}

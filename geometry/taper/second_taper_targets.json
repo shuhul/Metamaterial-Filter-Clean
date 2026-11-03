@@ -1,0 +1,33 @@
+{
+  "units": {
+    "L": "nH",
+    "C": "fF",
+    "geometry": "um"
+  },
+  "targets": {
+    "unit_cell": {
+      "L0_nH": 4.9194,
+      "C0_fF": 190.4,
+      "Cg_input_fF": 8.2865
+    },
+    "taper_1": {
+      "L0_nH": 6.06,
+      "C0_fF": 100.0,
+      "Cg_input_fF": 56.7
+    },
+    "taper_2": {
+      "L0_nH": 0.74,
+      "C0_fF": 100.0,
+      "Cg_input_fF": 459.0
+    }
+  },
+  "tolerance_percent": 2.0,
+  "grid_um": 2.0,
+  "order": [
+    "input",
+    "taper_2",
+    "taper_1",
+    "unit_cell",
+    "output"
+  ]
+}

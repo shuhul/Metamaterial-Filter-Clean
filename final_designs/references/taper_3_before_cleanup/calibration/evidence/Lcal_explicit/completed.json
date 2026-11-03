@@ -1,0 +1,32 @@
+{
+  "configuration": {
+    "source": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\sonnet_files\\taper_exploration\\three_tapers_v3_T3_2026-10-30\\w130_t6g2n68_dl342_dr340_pad184x594_i54_j28n40_pad_tune\\Lcal\\generated_ncell_1.sonx",
+    "source_sha256": "320c964810eac3a813958e0ba0a96bce4dc7fb46b40160083683159c00ce25a6",
+    "C_add_fF": [
+      450.0,
+      600.0,
+      750.0,
+      900.0
+    ],
+    "range_GHz": [
+      2.4,
+      4.0
+    ],
+    "samples": 1601,
+    "target_L_nH": 2.77,
+    "method": "Explicit Sonnet CAP components; cache-only subsequent capacitor changes"
+  },
+  "files_sha256": {
+    "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\sonnet_files\\taper_exploration\\three_tapers_v3_T3_2026-10-30\\w130_t6g2n68_dl342_dr340_pad184x594_i54_j28n40_pad_tune\\Lcal\\generated_ncell_1.sonx": "320c964810eac3a813958e0ba0a96bce4dc7fb46b40160083683159c00ce25a6",
+    "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\sonnet_files\\taper_exploration\\three_tapers_v3_T3_2026-10-30\\w130_t6g2n68_dl342_dr340_pad184x594_i54_j28n40_pad_tune\\Lcal_explicit\\generated_ncell_1.sonx": "3fca5d4260246f30e3752d11193ed8558b1947d653ae44daf02743e556d30dab",
+    "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\sonnet_files\\taper_exploration\\three_tapers_v3_T3_2026-10-30\\w130_t6g2n68_dl342_dr340_pad184x594_i54_j28n40_pad_tune\\Lcal_explicit\\generated_ncell_1.snp": "2ca97d1f7500675a1dce7339371d99393d3c5d54ba93cd3862cac5d867f740b5",
+    "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\output_data\\taper_exploration\\three_tapers_v3_T3_2026-10-30\\w130_t6g2n68_dl342_dr340_pad184x594_i54_j28n40_pad_tune\\Lcal_explicit\\cadd_450ff.sonx": "fdf4ca8f642b0d1a9b87f49a019e27fae42e4477248d6760813a938bd35ac791",
+    "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\output_data\\taper_exploration\\three_tapers_v3_T3_2026-10-30\\w130_t6g2n68_dl342_dr340_pad184x594_i54_j28n40_pad_tune\\Lcal_explicit\\cadd_450ff.snp": "93966d7611804aab8e8b92eaec2c72f88b2ed91da62a366f1fdc510a9edb8790",
+    "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\output_data\\taper_exploration\\three_tapers_v3_T3_2026-10-30\\w130_t6g2n68_dl342_dr340_pad184x594_i54_j28n40_pad_tune\\Lcal_explicit\\cadd_600ff.sonx": "52c3db93b4bf261f6309ad5806a005564e585901107e3db8ce92b67bf18d9e07",
+    "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\output_data\\taper_exploration\\three_tapers_v3_T3_2026-10-30\\w130_t6g2n68_dl342_dr340_pad184x594_i54_j28n40_pad_tune\\Lcal_explicit\\cadd_600ff.snp": "dc8c76b7271d9c033537ca25182786c83efebc707e7599304a68d2f99c5c3973",
+    "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\output_data\\taper_exploration\\three_tapers_v3_T3_2026-10-30\\w130_t6g2n68_dl342_dr340_pad184x594_i54_j28n40_pad_tune\\Lcal_explicit\\cadd_750ff.sonx": "a7b4f0bb481cbdf29f28eb079195bd51995176be132aed344828cc63d4846ea3",
+    "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\output_data\\taper_exploration\\three_tapers_v3_T3_2026-10-30\\w130_t6g2n68_dl342_dr340_pad184x594_i54_j28n40_pad_tune\\Lcal_explicit\\cadd_750ff.snp": "7e41be81298b2080cc32a0411ac76c5f1a350d42faa864ec0f700f576d5ce7ac",
+    "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\output_data\\taper_exploration\\three_tapers_v3_T3_2026-10-30\\w130_t6g2n68_dl342_dr340_pad184x594_i54_j28n40_pad_tune\\Lcal_explicit\\cadd_900ff.sonx": "3fca5d4260246f30e3752d11193ed8558b1947d653ae44daf02743e556d30dab",
+    "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\output_data\\taper_exploration\\three_tapers_v3_T3_2026-10-30\\w130_t6g2n68_dl342_dr340_pad184x594_i54_j28n40_pad_tune\\Lcal_explicit\\cadd_900ff.snp": "2ca97d1f7500675a1dce7339371d99393d3c5d54ba93cd3862cac5d867f740b5"
+  }
+}

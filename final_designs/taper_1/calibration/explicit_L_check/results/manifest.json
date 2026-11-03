@@ -1,0 +1,21 @@
+{
+  "configuration": {
+    "source": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\sonnet_files\\taper_exploration\\final_designs\\new_T1_plain_cw344_w220_p532_g56_j66_c590_tg6_final\\Lcal\\generated_ncell_1.sonx",
+    "source_sha256": "fd9e34365ce42ee9e07061f98c609272c7e1bfd53bb87644ca52f5b5b0913802",
+    "C_add_fF": [
+      128.5710683923706,
+      201.60464965023465,
+      305.42427035245015,
+      460.42747890919617
+    ],
+    "range_GHz": [
+      2.4,
+      4.0
+    ],
+    "samples": 16001,
+    "target_L_nH": 5.97,
+    "method": "Explicit Sonnet CAP components; cache-only subsequent capacitor changes"
+  },
+  "metal_identical": true,
+  "copied_existing_cache": false
+}

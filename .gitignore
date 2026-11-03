@@ -1,0 +1,41 @@
+# Python/environment caches
+.venv/
+__pycache__/
+*.py[cod]
+.uv-bootstrap/
+.uv-cache/
+.pytest_cache/
+
+# Regenerated builds and Sonnet solver caches
+/build/
+**/sondata/
+*.sid
+*.log
+*.npz
+
+# Local campaigns and historical export bundles
+/sonnet_files/
+/output_data/
+/investigations/
+/geometry/output/
+/geometry/taper/output/
+/tests/review/
+/filter_automation_decisions/
+/filter_automation_existing_docs/
+/filter_automation_handoff/
+*.zip
+
+# Local inventory and superseded publication manifest
+/docs/git_publication_review/
+/docs/PUBLICATION_MANIFEST.json
+
+# Live coordination and trial-status records
+/geometry/taper/*progress.json
+/geometry/taper/*status.json
+/geometry/taper/full_filter_work_plan.json
+
+# Credentials and local editor state
+.env
+.env.*
+.vscode/
+.idea/

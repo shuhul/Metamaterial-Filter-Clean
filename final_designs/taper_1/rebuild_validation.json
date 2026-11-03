@@ -1,0 +1,10 @@
+{
+  "design": "taper_1",
+  "native_GDS_XOR_empty": true,
+  "grid_um": 2,
+  "ports": 2,
+  "full_filter_regenerated_from_blocks": false,
+  "solver_started": false,
+  "native_reimport_and_read_passed": true,
+  "settings_preserved": true
+}

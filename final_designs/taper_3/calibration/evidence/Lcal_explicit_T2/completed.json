@@ -1,0 +1,32 @@
+{
+  "configuration": {
+    "source": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\sonnet_files\\taper_exploration\\T2_cleanup_2026-11-01\\trimmed_IDC_centered_T2\\Lcal_T2\\generated_ncell_1.sonx",
+    "source_sha256": "1ac66773d0b089346cf6d32af52f81f8a954eb8b03c2ad47bf46d7bf813d074b",
+    "C_add_fF": [
+      250.0,
+      350.0,
+      450.0,
+      550.0
+    ],
+    "range_GHz": [
+      2.4,
+      4.4
+    ],
+    "samples": 1601,
+    "target_L_nH": 4.33,
+    "method": "Explicit Sonnet CAP components; cache-only subsequent capacitor changes"
+  },
+  "files_sha256": {
+    "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\sonnet_files\\taper_exploration\\T2_cleanup_2026-11-01\\trimmed_IDC_centered_T2\\Lcal_T2\\generated_ncell_1.sonx": "1ac66773d0b089346cf6d32af52f81f8a954eb8b03c2ad47bf46d7bf813d074b",
+    "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\sonnet_files\\taper_exploration\\T2_cleanup_2026-11-01\\trimmed_IDC_centered_T2\\Lcal_explicit_T2\\generated_ncell_1.sonx": "85e26ab67d94a3e2a4c5a2f6554e57c4ff2db0fe4a50a156a468d9208f0018cf",
+    "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\sonnet_files\\taper_exploration\\T2_cleanup_2026-11-01\\trimmed_IDC_centered_T2\\Lcal_explicit_T2\\generated_ncell_1.snp": "dd1cc825a0bce5de27e2eeb62fcd3f5f2f0ac8b6460da9441f9d2eb5e9176761",
+    "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\output_data\\taper_exploration\\T2_cleanup_2026-11-01\\trimmed_IDC_centered_T2\\Lcal_explicit_T2\\cadd_250ff.sonx": "edf15dcbccc12b9fdb7647369bcc0b6d290b072498afd4e311091dd3ff719587",
+    "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\output_data\\taper_exploration\\T2_cleanup_2026-11-01\\trimmed_IDC_centered_T2\\Lcal_explicit_T2\\cadd_250ff.snp": "cd43e5a5686e86f331669ed0f718b544d27c5e779baf6f86742ef33da32f07c7",
+    "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\output_data\\taper_exploration\\T2_cleanup_2026-11-01\\trimmed_IDC_centered_T2\\Lcal_explicit_T2\\cadd_350ff.sonx": "d2d069ef18e6031b69ada944a1aa7c83b8672630f43a8e5e70d0582f4bd1ec87",
+    "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\output_data\\taper_exploration\\T2_cleanup_2026-11-01\\trimmed_IDC_centered_T2\\Lcal_explicit_T2\\cadd_350ff.snp": "b4e6d85a3c237e7d63ab10d4e5fbfef783583cc6dba62e01232579de588c02f9",
+    "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\output_data\\taper_exploration\\T2_cleanup_2026-11-01\\trimmed_IDC_centered_T2\\Lcal_explicit_T2\\cadd_450ff.sonx": "bd00a5ad2d48bb8897aacb5c2159a763e7cf782f5fdd482da2a6f1740570e342",
+    "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\output_data\\taper_exploration\\T2_cleanup_2026-11-01\\trimmed_IDC_centered_T2\\Lcal_explicit_T2\\cadd_450ff.snp": "49a0f8f12b830ed4c0a29d557b70fd01ec835af3312171a30a9bdc9d20515135",
+    "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\output_data\\taper_exploration\\T2_cleanup_2026-11-01\\trimmed_IDC_centered_T2\\Lcal_explicit_T2\\cadd_550ff.sonx": "85e26ab67d94a3e2a4c5a2f6554e57c4ff2db0fe4a50a156a468d9208f0018cf",
+    "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\output_data\\taper_exploration\\T2_cleanup_2026-11-01\\trimmed_IDC_centered_T2\\Lcal_explicit_T2\\cadd_550ff.snp": "dd1cc825a0bce5de27e2eeb62fcd3f5f2f0ac8b6460da9441f9d2eb5e9176761"
+  }
+}

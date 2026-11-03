@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SonnetProject Version="20" Type="GEO" xmlns="https://www.sonnetsoftware.com/schema/project" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.sonnetsoftware.com/schema/project https://www.sonnetsoftware.com/schema/project/sonnet_project_file-1.0.xsd">
+    <GlobalTemperature Tnom="25.000"/>
+    <Header>
+        <Created Program="sonnet" Version="19.52.2025.261">
+            <Date>10/09/2026 13:22:46</Date>
+        </Created>
+        <Modified Program="sonnet" Version="19.52.2025.261">
+            <License>caltech9.1.63687</License>
+            <Date>10/09/2026 13:23:00</Date>
+            <Change Importance="MEDIUM">
+                <Date>10/09/2026 13:23:00</Date>
+            </Change>
+            <Change Importance="HIGH">
+                <Date>10/09/2026 13:23:00</Date>
+            </Change>
+        </Modified>
+    </Header>
+    <Units>
+        <Angle>DEG</Angle>
+        <Capacitance>PF</Capacitance>
+        <Conductance>/OH</Conductance>
+        <Conductivity>SM</Conductivity>
+        <Frequency>GHZ</Frequency>
+        <Inductance>NH</Inductance>
+        <Length>UM</Length>
+        <Roughness>UM</Roughness>
+        <Resistance>OH</Resistance>
+        <Resistivity>OHCM</Resistivity>
+        <SheetRes>OHSQ</SheetRes>
+    </Units>
+    <Control>
+        <SweepType>VARSWP</SweepType>
+        <DeEmbed On="TRUE"/>
+        <Precision>DOUBLE</Precision>
+        <SpeedControl>MAX_ACCURACY</SpeedControl>
+        <ABSCacheLevel>MULTI_SWEEP</ABSCacheLevel>
+        <ABSTarget>300</ABSTarget>
+    </Control>
+    <Geometry YDirection="Negative">
+        <Dielectric MacroID="dielectricA" Name="Air" LossType="CONDUCTIVITY" Anisotropic="FALSE">
+            <FrequencyModel ModelType="None" RefFreq="0.0" ValidRef="FALSE"/>
+            <Conductivity Value="0.0"/>
+            <Eps Value="1.0"/>
+            <Tan Value="0.0"/>
+            <MuRel Value="1.0"/>
+            <MagLossTan Value="0.0"/>
+        </Dielectric>
+        <Dielectric MacroID="dielectricB" Name="Unnamed" LossType="CONDUCTIVITY" Anisotropic="FALSE">
+            <FrequencyModel ModelType="None" RefFreq="0.0" ValidRef="FALSE"/>
+            <Conductivity Value="0.0"/>
+            <Eps Value="1.0"/>
+            <Tan Value="0.0"/>
+            <MuRel Value="1.0"/>
+            <MagLossTan Value="0.0"/>
+        </Dielectric>
+        <Conductor MacroID="conductorA" Name="Perfect Conductor" Conductivity="INF" LossType="CONDUCTIVITY"/>
+        <Box>
+            <BoxCover MacroID="top_cover" Type="TOP" MaterialType="PERFECT_CONDUCTOR" Roughness="0.0" Thickness="0.0"/>
+            <BoxCover MacroID="bot_cover" Type="BOTTOM" MaterialType="PERFECT_CONDUCTOR" Roughness="0.0" Thickness="0.0"/>
+            <Size X="200" Y="100" Z="0"/>
+            <NumCells X="2000" Y="1000"/>
+            <LocalOrigin X="0" Y="100"/>
+            <Symmetry On="FALSE"/>
+        </Box>
+        <Level MacroID="diel_layerA" MaterialName="Air" Number="0">
+            <DielectricMaterialModel Thickness="0.0"/>
+            <Objects>
+                <PlanarTechLayer MacroID="planarTLA" Name="Stream1:0" MaterialName="Perfect Conductor">
+                    <ImportExportMapping GDSStreamDataTypes="1:0"/>
+                    <ColorPattern Color="#b03060" Pattern="updiag"/>
+                    <PlanarMaterialModel CurrentRatio="0.5" ModelType="THIN_METAL" Thickness="0.0"/>
+                    <RoughnessModel RoughnessOn="FALSE"/>
+                    <PlanarMeshing EnableMesh="TRUE" FillType="RECTANGULAR"/>
+                    <SubsectionMeshing XMin="1" XMax="100" YMin="1" YMax="100" EdgeMeshed="TRUE" DiagonalEdges="FALSE" AnisotropicType="X_AND_Y"/>
+                    <GLGMeshing GLG="FALSE"/>
+                    <Objects>
+                        <PlanarPolygon MacroID="polygonA" Id="1">
+                            <Points>(0,100) (200,100) (200,0) (0,0)</Points>
+                        </PlanarPolygon>
+                    </Objects>
+                </PlanarTechLayer>
+            </Objects>
+        </Level>
+        <Level MacroID="diel_layerB" MaterialName="Air" Number="1">
+            <DielectricMaterialModel Thickness="0.0"/>
+        </Level>
+    </Geometry>
+    <Sweeps SweepVariables="FALSE"/>
+    <OutputFiles Folder=""/>
+    <Translator>
+        <GDSIMPORT ImportUnits="microns" LayerMapType="Block">
+            <Template UsePresentProject="FALSE" KeepPolygons="FALSE"/>
+            <Box BoxType="Circuit" PlacementType="Center" CellCalcType="Auto" CellSizeX="0.1" CellSizeY="0.1" BoxSizeX="200" BoxSizeY="100"/>
+            <Margins MarginType="Relative" AddMargins="FALSE" TopMargin="0" LeftMargin="0" RightMargin="0" BottomMargin="0"/>
+            <Advanced MergePlanar="FALSE" CleanGeo="FALSE" AdditionalOptions="" ViasRectangular="FALSE" AddViaPads="FALSE" AdditionalViaOptions=""/>
+            <ViaSimplification SimplifyViaArrays="FALSE" MinViasInArray="5" DistanceToSizeRatio="8" SizeRatio="1.5" MaxExpansionCoeff="7" MergePlanarVias="TRUE"/>
+            <BarVias IdentifyBarVias="FALSE" BarViaRatio="2.5"/>
+            <GDSOnly ZeroWidthType="Boundary" SpecifyStructure="FALSE" StructureName=""/>
+        </GDSIMPORT>
+    </Translator>
+</SonnetProject>

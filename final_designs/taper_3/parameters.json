@@ -1,0 +1,133 @@
+{
+  "layout_kind": "T2_cleanup_response",
+  "stage": "response",
+  "isolation": false,
+  "unit": {
+    "cap": {
+      "w": 828,
+      "l": 590,
+      "t_top": 14,
+      "t_left": 8,
+      "t_right": 8
+    },
+    "meander": {
+      "w": 130,
+      "l_top": 8,
+      "l": 596,
+      "n": 68,
+      "t": 6,
+      "d": 2,
+      "x_offset_from_cap_center": 1.0
+    },
+    "pad": {
+      "w": 184,
+      "l": 594
+    },
+    "d_top": 8,
+    "d_pad": 116,
+    "d_pad_left": 116
+  },
+  "t3_settings": {
+    "body": {
+      "cap": {
+        "l": 590,
+        "t_top": 14,
+        "t_left": 8,
+        "t_right": 8
+      },
+      "clearance": {
+        "d_left": 342,
+        "d_right": 340
+      },
+      "meander": {
+        "w": 130,
+        "l_top": 8,
+        "l": 596,
+        "n": 68,
+        "t": 6,
+        "d": 2
+      },
+      "pad": {
+        "w": 184,
+        "l": 594
+      },
+      "d_pad": 116,
+      "coupling": {
+        "d": 56,
+        "n": 0,
+        "t": 4,
+        "d_finger": 4,
+        "d_tip": 2,
+        "d_t1": 66,
+        "d_regular": 74,
+        "t_regular_ground": 2,
+        "t_input": 8,
+        "w_input_stub": null
+      },
+      "allow_input_idc": false,
+      "d_pad_left": 116,
+      "include_t2_pads": true
+    },
+    "d_input": 54,
+    "n_input": 70,
+    "t_input_rail": 8,
+    "d_t2": 28,
+    "n_t2": 40,
+    "t_finger": 4,
+    "d_finger": 4,
+    "d_tip": 2
+  },
+  "T2_reference_sha256": "636d44c83e74c6e64c4a4e5b0bbe3b5d72e0c3647108bdfe6ff1a2783d7fb9b1",
+  "downstream_shift_um": 1152,
+  "downstream_left_um": 2164,
+  "w_sim": 4310,
+  "cell_centers": [
+    840.0,
+    1722.0,
+    2446.0,
+    2978.0,
+    3375.0,
+    3733.0
+  ],
+  "inductance_pin_x": 1723.0,
+  "expected_metal_components": 2,
+  "parameters": {
+    "n_cells": 4,
+    "l_sim": 1500,
+    "l_top_ground": 448,
+    "w_side": 412,
+    "t_feed": 10,
+    "unit": {
+      "d_top": 8,
+      "cap": {
+        "t_top": 14
+      }
+    }
+  },
+  "cleanup": {
+    "source": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\sonnet_files\\taper_exploration\\final_designs\\new_T3_w130_t6g2n68_dl342_dr340_pad184x594_i54_j28n40_pad_tune_final\\response\\generated_ncell_4.sonx",
+    "source_sha256": "c650006a152cae65adadf8fcd196881d08642def1c0a08d112241ca9804ee18e",
+    "trim": true,
+    "center": true,
+    "calibration": null,
+    "changes": {
+      "IDC_rail_bottom_old_new_um": [
+        -598,
+        -340
+      ],
+      "IDC_fingers_unchanged": true,
+      "T2_coil_shift_um": -56,
+      "T2_pad_shifts_um": [
+        -52,
+        -54
+      ],
+      "T2_meander_center_um": 2446.0,
+      "T2_pad_centers_um": [
+        2280.0,
+        2612.0
+      ],
+      "pad_to_meander_gap_um": 80
+    },
+    "outside_edit_windows_XOR_empty": true
+  }
+}

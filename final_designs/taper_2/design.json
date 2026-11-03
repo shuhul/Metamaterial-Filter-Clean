@@ -1,0 +1,16 @@
+{
+  "name": "taper_2",
+  "project": "project.sonx",
+  "layout": "layout.gds",
+  "parameters": "parameters.json",
+  "box_um": [
+    3158.0,
+    1500.0
+  ],
+  "coordinate_system": "GDS box origin bottom-left; Sonnet y = box_height - GDS y",
+  "grid_um": 2,
+  "verification": "Saved staged/reference response",
+  "source_project_relative": "sonnet_files/taper_exploration/final_designs/new_T2_cap5_cap5_i22_j78_pad24x400_r30_w148_final/response/generated_ncell_3.sonx",
+  "source_project_sha256": "5676c9c60f5ec9ab67ef7ccb38beb30742a6d649e41982b13c4ae056b9c05d11",
+  "response": "response.snp"
+}

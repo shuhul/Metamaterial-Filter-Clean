@@ -1,0 +1,49 @@
+{
+  "L0_nH": 4.922723945068658,
+  "R_squared": 0.9999999734622109,
+  "regression_standard_error_nH": 0.0005670519642394497,
+  "intercept_s2": 9.934262798440285e-22,
+  "sweep": [
+    {
+      "C_add_fF": 20.0,
+      "frequency_Hz": 4816500000.0,
+      "project_sha256": "3a931517b3bb6c0fc51f8563718f4ba46998100dadc186dc9dbb6f2d9f5b1ad7",
+      "snp_sha256": "4396bc383067c831ef87a55a06918fe76c281a361e86387fb26e9c61f3657fbd"
+    },
+    {
+      "C_add_fF": 30.0,
+      "frequency_Hz": 4711500000.0,
+      "project_sha256": "eda2511eea9e59b506a182d915e1ec327838597fed859bcf100ff3494d3697a1",
+      "snp_sha256": "1616497ac237f293f11719918f647604a8494bfbb71ac0c53a5c7d3cdc91e637"
+    },
+    {
+      "C_add_fF": 40.0,
+      "frequency_Hz": 4613000000.0,
+      "project_sha256": "e3fa9559359d9f59795b6e1a6b5d0604bc682ae4f3c531e35147223e5f86646e",
+      "snp_sha256": "c8a1af94a9aff9d0391354f18f7f6dd7d379c45b9a763b801784125b61f9c977"
+    },
+    {
+      "C_add_fF": 50.0,
+      "frequency_Hz": 4520500000.0,
+      "project_sha256": "0812d591acc13e8d715f04d3a5da620f8ae6ad0919bd59b620ea49353357345c",
+      "snp_sha256": "c159172941cfad51c841f3685a0a4b1abb3b6ba42ca644d22d39d29cba8d406e"
+    }
+  ],
+  "target_L0_nH": 4.9194,
+  "target_difference_percent": 0.06756809913115447,
+  "method": "Slope of 1/(2*pi*f_peak)^2 vs C_add; sampled maxima, fixed geometry.",
+  "adjacent_pair_L0_nH": [
+    4.92095949903582,
+    4.925119211225532,
+    4.921294702892333
+  ],
+  "max_frequency_residual_MHz": 0.0264545224943161,
+  "export_frequency_spacing_MHz": 0.5,
+  "meander_w_um": 186,
+  "project": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\sonnet_files\\meander_tuning_ref400\\w186\\filter_v6_w186.sonx",
+  "source_sha256": "7c8d9ffa71a20e85156287121e994faf6dc2d8eae0b5a0f5ac53dfedeb9779a8",
+  "last_sweep_export": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\sonnet_files\\meander_tuning_ref400\\w186\\last_sweep_cadd_50ff.snp",
+  "project_C_add_fF": 0.1,
+  "note": "Project restored to 0.1 fF and original 4-6 GHz/500 interval sweep; no final 0.1 fF export.",
+  "final_project_sha256": "2ef936c1b360c13677e7b526153fb89955917eaecefeda97bf97f29ad9c32357"
+}

@@ -1,0 +1,199 @@
+{
+  "case": "trimmed_IDC_centered_T2",
+  "trim": true,
+  "center": true,
+  "project": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\sonnet_files\\taper_exploration\\final_designs\\T3_T2_cleanup_trimmed_IDC_centered_T2_final\\response\\generated_ncell_4.sonx",
+  "fit_path": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\output_data\\taper_exploration\\T2_cleanup_2026-11-01\\trimmed_IDC_centered_T2\\response\\fit_all_caps_target5\\fit.json",
+  "fit_RMS": 0.020312253775446595,
+  "fit_pass": true,
+  "C_fF": [
+    238.45000000000013,
+    141.55000000000013,
+    149.04421956876033,
+    187.0655246662816,
+    180.88000000002185
+  ],
+  "G_fF": [
+    247.95000000000022,
+    145.35000000000028,
+    14.535000000000002,
+    7.872175000000003,
+    8.154451659227371
+  ],
+  "L_nH": [
+    2.7923663999366597,
+    4.344786864683883,
+    6.001411793324284,
+    4.922723945068658,
+    4.922723945068658
+  ],
+  "plot": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\sonnet_files\\taper_exploration\\final_designs\\T3_T2_cleanup_trimmed_IDC_centered_T2_final\\final_s21_fit.png",
+  "geometry": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\sonnet_files\\taper_exploration\\final_designs\\T3_T2_cleanup_trimmed_IDC_centered_T2_final\\response\\T2_closeup.png",
+  "inductance_calibrations": {
+    "T2": {
+      "L0_nH": 4.344786864683883,
+      "R_squared": 0.9999986325627316,
+      "regression_standard_error_nH": 0.0035925885544668547,
+      "intercept_s2": 7.491236522732087e-22,
+      "sweep": [
+        {
+          "C_add_fF": 250.0,
+          "frequency_Hz": 3715000000.0,
+          "project_sha256": "edf15dcbccc12b9fdb7647369bcc0b6d290b072498afd4e311091dd3ff719587",
+          "snp_sha256": "cd43e5a5686e86f331669ed0f718b544d27c5e779baf6f86742ef33da32f07c7"
+        },
+        {
+          "C_add_fF": 350.0,
+          "frequency_Hz": 3341000000.0,
+          "project_sha256": "d2d069ef18e6031b69ada944a1aa7c83b8672630f43a8e5e70d0582f4bd1ec87",
+          "snp_sha256": "b4e6d85a3c237e7d63ab10d4e5fbfef783583cc6dba62e01232579de588c02f9"
+        },
+        {
+          "C_add_fF": 450.0,
+          "frequency_Hz": 3060000000.0,
+          "project_sha256": "bd00a5ad2d48bb8897aacb5c2159a763e7cf782f5fdd482da2a6f1740570e342",
+          "snp_sha256": "49a0f8f12b830ed4c0a29d557b70fd01ec835af3312171a30a9bdc9d20515135"
+        },
+        {
+          "C_add_fF": 550.0,
+          "frequency_Hz": 2841000000.0,
+          "project_sha256": "85e26ab67d94a3e2a4c5a2f6554e57c4ff2db0fe4a50a156a468d9208f0018cf",
+          "snp_sha256": "dd1cc825a0bce5de27e2eeb62fcd3f5f2f0ac8b6460da9441f9d2eb5e9176761"
+        }
+      ],
+      "target_L0_nH": 4.33,
+      "target_difference_percent": 0.3414980296508663,
+      "method": "Explicit Sonnet CAP components; cache-only subsequent capacitor changes",
+      "adjacent_pair_L0_nH": [
+        4.339101908640674,
+        4.359117806770307,
+        4.331363897945193
+      ],
+      "max_frequency_residual_MHz": 0.5148061714205742,
+      "export_frequency_spacing_MHz": 1.0,
+      "case": "trimmed_IDC_centered_T2_T2",
+      "target_error_percent": 0.3414980296508663,
+      "source_project": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\sonnet_files\\taper_exploration\\T2_cleanup_2026-11-01\\trimmed_IDC_centered_T2\\Lcal_T2\\generated_ncell_1.sonx",
+      "explicit_project": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\sonnet_files\\taper_exploration\\T2_cleanup_2026-11-01\\trimmed_IDC_centered_T2\\Lcal_explicit_T2\\generated_ncell_1.sonx",
+      "capacitor_connection": "Native Sonnet CAP",
+      "resonance_source": "Native Sonnet exported S21 sampled maxima",
+      "Python_frequency_approximation": false,
+      "started_utc": "2026-11-01T10:55:52.316417+00:00",
+      "total_extraction_seconds": 177.43479080032557,
+      "timings": [
+        {
+          "C_add_fF": 250.0,
+          "new_EM_frequency_counts": [
+            5
+          ],
+          "solver_process_seconds": 140.31735809985548
+        },
+        {
+          "C_add_fF": 350.0,
+          "new_EM_frequency_counts": [
+            0
+          ],
+          "solver_process_seconds": 12.035943400114775
+        },
+        {
+          "C_add_fF": 450.0,
+          "new_EM_frequency_counts": [
+            0
+          ],
+          "solver_process_seconds": 12.037066499702632
+        },
+        {
+          "C_add_fF": 550.0,
+          "new_EM_frequency_counts": [
+            0
+          ],
+          "solver_process_seconds": 12.034012499265373
+        }
+      ]
+    },
+    "T3": {
+      "L0_nH": 2.7923663999366597,
+      "R_squared": 0.9999996910328796,
+      "regression_standard_error_nH": 0.0010975229375033628,
+      "intercept_s2": 5.726071448876049e-22,
+      "sweep": [
+        {
+          "C_add_fF": 450.0,
+          "frequency_Hz": 3721000000.0,
+          "project_sha256": "5b1bdded6f8b889d7230d5a8347f76b4a171a70cdcf9472759e288d6cb148cc5",
+          "snp_sha256": "3dc586996676a674abedc10fd25132d38bdd842b30edb29343890af36bbfdbc5"
+        },
+        {
+          "C_add_fF": 600.0,
+          "frequency_Hz": 3357000000.0,
+          "project_sha256": "ca52ca87fbeeacc20a2ca62db17983c2837814e7ac6ba83c7af3abfd0cea06d5",
+          "snp_sha256": "695c39560250b8c76c5d84e8639cda862a820ccbf5d3313fc0d416f6b86a0822"
+        },
+        {
+          "C_add_fF": 750.0,
+          "frequency_Hz": 3082000000.0,
+          "project_sha256": "77b39afa3a2ce44926b0c189fbdc35ea38353f4bbf7db0ea1803f9d60a058ee3",
+          "snp_sha256": "cd9327b270a8ef9828e01bbaf73945749401303652863e20bd6f0d4537ddbfb8"
+        },
+        {
+          "C_add_fF": 900.0,
+          "frequency_Hz": 2865000000.0,
+          "project_sha256": "e79ae6c876c88a04ac04aef079e6b810b3df0b89d70a890f2a49d7eb2a41ca98",
+          "snp_sha256": "9c93cdb44829bb631edb2b54a6614b6a12817328abfdbd8ae8a79f4a57876b1d"
+        }
+      ],
+      "target_L0_nH": 2.77,
+      "target_difference_percent": 0.8074512612512352,
+      "method": "Explicit Sonnet CAP components; cache-only subsequent capacitor changes",
+      "adjacent_pair_L0_nH": [
+        2.788296307668216,
+        2.793393845053328,
+        2.7950665653828772
+      ],
+      "max_frequency_residual_MHz": 0.28434809780263903,
+      "export_frequency_spacing_MHz": 1.0,
+      "case": "trimmed_IDC_T3",
+      "target_error_percent": 0.8074512612512352,
+      "source_project": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\sonnet_files\\taper_exploration\\T2_cleanup_2026-11-01\\trimmed_IDC\\Lcal_T3\\generated_ncell_1.sonx",
+      "explicit_project": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\sonnet_files\\taper_exploration\\T2_cleanup_2026-11-01\\trimmed_IDC\\Lcal_explicit_T3\\generated_ncell_1.sonx",
+      "capacitor_connection": "Native Sonnet CAP",
+      "resonance_source": "Native Sonnet exported S21 sampled maxima",
+      "Python_frequency_approximation": false,
+      "started_utc": "2026-11-01T10:01:27.674093+00:00",
+      "total_extraction_seconds": 296.47148139961064,
+      "timings": [
+        {
+          "C_add_fF": 450.0,
+          "new_EM_frequency_counts": [
+            5
+          ],
+          "solver_process_seconds": 257.461541400291
+        },
+        {
+          "C_add_fF": 600.0,
+          "new_EM_frequency_counts": [
+            0
+          ],
+          "solver_process_seconds": 13.035885599441826
+        },
+        {
+          "C_add_fF": 750.0,
+          "new_EM_frequency_counts": [
+            0
+          ],
+          "solver_process_seconds": 13.034342099912465
+        },
+        {
+          "C_add_fF": 900.0,
+          "new_EM_frequency_counts": [
+            0
+          ],
+          "solver_process_seconds": 12.029003400355577
+        }
+      ]
+    }
+  },
+  "L_pass": true,
+  "accepted": true,
+  "archive": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\sonnet_files\\taper_exploration\\final_designs\\T3_T2_cleanup_trimmed_IDC_centered_T2_final"
+}

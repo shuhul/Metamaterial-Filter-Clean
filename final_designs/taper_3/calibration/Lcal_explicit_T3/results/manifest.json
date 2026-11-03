@@ -1,0 +1,21 @@
+{
+  "configuration": {
+    "source": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\sonnet_files\\taper_exploration\\T2_cleanup_2026-11-01\\trimmed_IDC\\Lcal_T3\\generated_ncell_1.sonx",
+    "source_sha256": "be7c903360fb19bbb226e87592829db148a56a9b9c92be327d21257c39f40426",
+    "C_add_fF": [
+      450.0,
+      600.0,
+      750.0,
+      900.0
+    ],
+    "range_GHz": [
+      2.4,
+      4.4
+    ],
+    "samples": 1601,
+    "target_L_nH": 2.77,
+    "method": "Explicit Sonnet CAP components; cache-only subsequent capacitor changes"
+  },
+  "metal_identical": true,
+  "copied_existing_cache": false
+}

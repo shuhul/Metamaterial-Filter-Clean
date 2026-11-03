@@ -1,0 +1,75 @@
+{
+  "layout_kind": "T1_no_input_ground_centered_regular_v3",
+  "unit": {
+    "cap": {
+      "w": 344,
+      "l": 590,
+      "t_top": 14,
+      "t_side": 6
+    },
+    "meander": {
+      "w": 220,
+      "l_top": 10,
+      "l": 596,
+      "n": 72,
+      "t": 4,
+      "d": 4
+    },
+    "pad": {
+      "w": 8,
+      "l": 532
+    },
+    "d_top": 8,
+    "d_pad": 20
+  },
+  "isolation": false,
+  "regular": {
+    "cap": {
+      "w": 302,
+      "l": 600,
+      "t_top": 14,
+      "t_side": 6
+    },
+    "meander": {
+      "w": 186,
+      "l_top": 10,
+      "l": 596,
+      "n": 72,
+      "t": 4,
+      "d": 4
+    },
+    "pad": {
+      "w": 24,
+      "l": 586
+    },
+    "d_top": 8,
+    "d_pad": 12
+  },
+  "d_input": 56,
+  "d_junction": 66,
+  "w_sim": 2322,
+  "cell_centers": [
+    598.0,
+    998.0,
+    1387.0,
+    1745.0
+  ],
+  "input_end_resonator": false,
+  "expected_metal_components": 2,
+  "parameters": {
+    "n_cells": 2,
+    "l_sim": 1500,
+    "l_top_ground": 448,
+    "w_side": 412,
+    "t_feed": 10,
+    "unit": {
+      "d_top": 8,
+      "cap": {
+        "t_top": 14
+      }
+    }
+  },
+  "regular_ground_strip_width_um": 6,
+  "input_ground_strip": false,
+  "regular_ground_strip": "centered"
+}

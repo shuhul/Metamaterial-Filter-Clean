@@ -1,0 +1,32 @@
+{
+  "project": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\sonnet_files\\taper_exploration\\T2_cleanup_2026-11-01\\trimmed_IDC_centered_T2\\Lcal_T2\\generated_ncell_1.sonx",
+  "baseline_sha256": "b0935624d509dfefdff7d74db2b7f9cf9869afd4444e01d9843b2880a3984e4e",
+  "source_gds_sha256": "43d2146650a604dff1c5d3a2a44c692766c000989e1a08c46c9973b40671dae8",
+  "source_metadata_sha256": "7149d1c05ae8f09d1b09f50823c1a188154db2a64db9c3c2eb29c2e4dbdc2fd8",
+  "project_sha256": "1ac66773d0b089346cf6d32af52f81f8a954eb8b03c2ad47bf46d7bf813d074b",
+  "box_um": [
+    2698,
+    1500
+  ],
+  "mesh_um": [
+    2,
+    2
+  ],
+  "polygons": 78,
+  "snapped_vertex_count": 0,
+  "max_snap_um": 1,
+  "ports": 2,
+  "reference_planes_um": [
+    400,
+    400
+  ],
+  "material": "SUPERCONDUCTOR",
+  "geometry_xor_empty": true,
+  "settings_preserved": [
+    "stackup",
+    "materials",
+    "sweeps",
+    "control"
+  ],
+  "solver_run": false
+}

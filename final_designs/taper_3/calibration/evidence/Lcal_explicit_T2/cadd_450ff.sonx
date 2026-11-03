@@ -1,0 +1,463 @@
+<?xml version='1.0' encoding='utf-8'?>
+<SonnetProject xmlns="https://www.sonnetsoftware.com/schema/project" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Version="20" Type="GEO" xsi:schemaLocation="https://www.sonnetsoftware.com/schema/project https://www.sonnetsoftware.com/schema/project/sonnet_project_file-1.0.xsd">
+    <GlobalTemperature Tnom="25.000" />
+    <Header>
+        <Created Program="xgeom" Version="16.52">
+            <Date>06/06/2016 17:47:38</Date>
+        </Created>
+        <Modified Program="gds" Version="19.52.2025.261">
+            <License>caltech9.1.63687</License>
+            <Date>11/01/2026 02:00:02</Date>
+            <Change Importance="MEDIUM">
+                <Date>06/03/2026 18:09:16</Date>
+            </Change>
+            <Change Importance="HIGH">
+                <Date>06/03/2026 18:09:16</Date>
+            </Change>
+        </Modified>
+    </Header>
+    <Units>
+        <Angle>DEG</Angle>
+        <Capacitance>PF</Capacitance>
+        <Conductance>/OH</Conductance>
+        <Conductivity>SM</Conductivity>
+        <Frequency>GHZ</Frequency>
+        <Inductance>NH</Inductance>
+        <Length>UM</Length>
+        <Roughness>UM</Roughness>
+        <Resistance>OH</Resistance>
+        <Resistivity>OHCM</Resistivity>
+        <SheetRes>OHSQ</SheetRes>
+    </Units>
+    <Control>
+        <SweepType>VARSWP</SweepType>
+        <DeEmbed On="TRUE" />
+        <Precision>DOUBLE</Precision>
+        <SpeedControl>MEDIUM_SPEED</SpeedControl>
+        <ABSCacheLevel>STOP_RESTART</ABSCacheLevel>
+    </Control>
+    <Geometry YDirection="Negative">
+        <Variable MacroID="variableA" Name="Ind_repeat" Units="NONE" Value="1.0" Description="" />
+        <Variable MacroID="variableB" Name="Cp" Units="NONE" Value="0.0" Description="" />
+        <Variable MacroID="variableI" Name="C_add" Units="NONE" Value="0.45" Description="" />
+        <Variable MacroID="variableN" Name="adjust" Units="NONE" Value="460.99999579237" Description="" />
+        <Variable MacroID="variableP" Name="total_width" Units="NONE" Value="158.0000327" Description="" />
+        <Variable MacroID="variableL" Name="ind_w_6" Units="NONE" Value="110.0" Description="" />
+        <Variable MacroID="variableM" Name="total_width2" Units="NONE" Value="500.0" Description="" />
+        <Variable MacroID="variableT" Name="width30" Units="NONE" Value="128.0" Description="" />
+        <Variable MacroID="variableAC" Name="in_width100" Units="NONE" Value="188.0" Description="" />
+        <Variable MacroID="variableAF" Name="width3" Units="NONE" Value="302.0" Description="" />
+        <Variable MacroID="variableR" Name="ind_width" Units="LENGTH" Value="190.0" Description="Dim. Param." />
+        <Variable MacroID="variableAK" Name="width4" Units="NONE" Value="300.000069" Description="" />
+        <Variable MacroID="variableAL" Name="width5" Units="NONE" Value="300.000069" Description="" />
+        <Variable MacroID="variableAM" Name="width6" Units="NONE" Value="300.000069" Description="" />
+        <Variable MacroID="variableAN" Name="ind_width2" Units="NONE" Value="188.0" Description="" />
+        <Variable MacroID="variableAO" Name="ind_width3" Units="NONE" Value="188.0" Description="" />
+        <Variable MacroID="variableAP" Name="ind_width4" Units="NONE" Value="188.0" Description="" />
+        <Dielectric MacroID="dielectricA" Name="Air" LossType="CONDUCTIVITY" Anisotropic="FALSE">
+            <FrequencyModel ModelType="None" RefFreq="0.0" ValidRef="FALSE" />
+            <Conductivity Value="0.0" />
+            <Eps Value="1.0" />
+            <Tan Value="0.0" />
+            <MuRel Value="1.0" />
+            <MagLossTan Value="0.0" />
+        </Dielectric>
+        <Dielectric MacroID="dielectricB" Name="Vacuum" LossType="CONDUCTIVITY" Anisotropic="FALSE">
+            <FrequencyModel ModelType="None" RefFreq="0.0" ValidRef="FALSE" />
+            <Conductivity Value="0.0" />
+            <Eps Value="1.0" />
+            <Tan Value="0.0" />
+            <MuRel Value="1.0" />
+            <MagLossTan Value="0.0" />
+        </Dielectric>
+        <Dielectric MacroID="dielectricC" Name="Silicon (intrinsic)" LossType="CONDUCTIVITY" Anisotropic="FALSE">
+            <FrequencyModel ModelType="None" RefFreq="0.0" ValidRef="FALSE" />
+            <Conductivity Value="0.0" />
+            <Eps Value="11.9" />
+            <Tan Value="5.0e-6" />
+            <MuRel Value="1.0" />
+            <MagLossTan Value="0.0" />
+        </Dielectric>
+        <Conductor MacroID="conductorA" Name="Perfect Conductor" Conductivity="INF" LossType="CONDUCTIVITY" />
+        <Conductor MacroID="conductorB" Name="SUPERCONDUCTOR" LossType="SURFACE_IMPEDANCE" Ls="0.0388" Rdc="0.0" Rrf="0.0" Xdc="0.0" />
+        <Conductor MacroID="conductorC" Name="Metal1" Conductivity="INF" LossType="CONDUCTIVITY" />
+        <Box>
+            <BoxCover MacroID="top_cover" Type="TOP" MaterialType="FREE_SPACE" Roughness="0.0" Thickness="0.0" />
+            <BoxCover MacroID="bot_cover" Type="BOTTOM" MaterialType="PERFECT_CONDUCTOR" Roughness="0.0" Thickness="0.0" />
+            <Size X="2698" Y="1500" Z="7000" />
+            <NumCells X="1349" Y="750" />
+            <LocalOrigin X="0" Y="1500" />
+            <Symmetry On="FALSE" />
+            <RefPlane Type="FIXED" Side="LEFT" RefLength="400" />
+            <RefPlane Type="FIXED" Side="RIGHT" RefLength="400" />
+        </Box>
+        <Level MacroID="diel_layerA" MaterialName="Vacuum" Number="0">
+            <DielectricMaterialModel Thickness="1500.0" />
+            <Objects>
+                <PlanarTechLayer MacroID="planarTLA" Name="Metal-1" MaterialName="SUPERCONDUCTOR">
+                    <ImportExportMapping GDSStreamDataTypes="1:0" />
+                    <ColorPattern Color="#32cd32" Pattern="dwndiag" />
+                    <PlanarMaterialModel CurrentRatio="0.5" ModelType="THIN_METAL" Thickness="0.0" />
+                    <RoughnessModel RoughnessOn="FALSE" />
+                    <PlanarMeshing EnableMesh="TRUE" FillType="RECTANGULAR" />
+                    <SubsectionMeshing XMin="1" XMax="100" YMin="1" YMax="100" EdgeMeshed="TRUE" DiagonalEdges="FALSE" AnisotropicType="X_AND_Y" />
+                    <GLGMeshing GLG="FALSE" />
+                </PlanarTechLayer>
+                <PlanarTechLayer MacroID="planarTLB" Name="Stream1:0" MaterialName="SUPERCONDUCTOR">
+                    <ImportExportMapping GDSStreamDataTypes="1:0" />
+                    <ColorPattern Color="#b03060" Pattern="updiag" />
+                    <PlanarMaterialModel CurrentRatio="0.5" ModelType="THIN_METAL" Thickness="0.0" />
+                    <RoughnessModel RoughnessOn="FALSE" />
+                    <PlanarMeshing EnableMesh="TRUE" FillType="RECTANGULAR" />
+                    <SubsectionMeshing XMin="1" XMax="100" YMin="1" YMax="100" EdgeMeshed="TRUE" DiagonalEdges="FALSE" AnisotropicType="X_AND_Y" />
+                    <GLGMeshing GLG="FALSE" />
+                    <Objects>
+                        <PlanarPolygon MacroID="polygonA" Id="1">
+                            <Points>(1398,0) (0,0) (0,448) (1398,448)</Points>
+                        </PlanarPolygon>
+                        <PlanarPolygon MacroID="polygonB" Id="2">
+                            <Points>(1054,470) (1326,470) (1326,484) (1398,484) (1398,480)</Points>
+                            <Points>(1330,480) (1330,470) (1398,470) (1398,456) (1046,456)</Points>
+                            <Points>(1046,788) (1054,788)</Points>
+                        </PlanarPolygon>
+                        <PlanarPolygon MacroID="polygonC" Id="3">
+                            <Points>(1398,1066) (1330,1066) (1330,1052) (1398,1052) (1398,1048)</Points>
+                            <Points>(1326,1048) (1326,1066) (1174,1066) (1174,666) (1150,666)</Points>
+                            <Points>(1150,1066) (412,1066) (412,472) (0,472) (0,1500)</Points>
+                            <Points>(1398,1500)</Points>
+                        </PlanarPolygon>
+                        <PlanarPolygon MacroID="polygonD" Id="4">
+                            <Points>(1258,496) (1258,492) (1398,492) (1398,488) (1254,488)</Points>
+                            <Points>(1254,500) (1398,500) (1398,496)</Points>
+                        </PlanarPolygon>
+                        <PlanarPolygon MacroID="polygonE" Id="5">
+                            <Points>(1258,512) (1258,508) (1398,508) (1398,504) (1254,504)</Points>
+                            <Points>(1254,516) (1398,516) (1398,512)</Points>
+                        </PlanarPolygon>
+                        <PlanarPolygon MacroID="polygonF" Id="6">
+                            <Points>(1258,528) (1258,524) (1398,524) (1398,520) (1254,520)</Points>
+                            <Points>(1254,532) (1398,532) (1398,528)</Points>
+                        </PlanarPolygon>
+                        <PlanarPolygon MacroID="polygonG" Id="7">
+                            <Points>(1258,544) (1258,540) (1398,540) (1398,536) (1254,536)</Points>
+                            <Points>(1254,548) (1398,548) (1398,544)</Points>
+                        </PlanarPolygon>
+                        <PlanarPolygon MacroID="polygonH" Id="8">
+                            <Points>(1258,560) (1258,556) (1398,556) (1398,552) (1254,552)</Points>
+                            <Points>(1254,564) (1398,564) (1398,560)</Points>
+                        </PlanarPolygon>
+                        <PlanarPolygon MacroID="polygonI" Id="9">
+                            <Points>(1258,576) (1258,572) (1398,572) (1398,568) (1254,568)</Points>
+                            <Points>(1254,580) (1398,580) (1398,576)</Points>
+                        </PlanarPolygon>
+                        <PlanarPolygon MacroID="polygonJ" Id="10">
+                            <Points>(1258,592) (1258,588) (1398,588) (1398,584) (1254,584)</Points>
+                            <Points>(1254,596) (1398,596) (1398,592)</Points>
+                        </PlanarPolygon>
+                        <PlanarPolygon MacroID="polygonK" Id="11">
+                            <Points>(1258,608) (1258,604) (1398,604) (1398,600) (1254,600)</Points>
+                            <Points>(1254,612) (1398,612) (1398,608)</Points>
+                        </PlanarPolygon>
+                        <PlanarPolygon MacroID="polygonL" Id="12">
+                            <Points>(1258,624) (1258,620) (1398,620) (1398,616) (1254,616)</Points>
+                            <Points>(1254,628) (1398,628) (1398,624)</Points>
+                        </PlanarPolygon>
+                        <PlanarPolygon MacroID="polygonM" Id="13">
+                            <Points>(1258,640) (1258,636) (1398,636) (1398,632) (1254,632)</Points>
+                            <Points>(1254,644) (1398,644) (1398,640)</Points>
+                        </PlanarPolygon>
+                        <PlanarPolygon MacroID="polygonN" Id="14">
+                            <Points>(1258,656) (1258,652) (1398,652) (1398,648) (1254,648)</Points>
+                            <Points>(1254,660) (1398,660) (1398,656)</Points>
+                        </PlanarPolygon>
+                        <PlanarPolygon MacroID="polygonO" Id="16">
+                            <Points>(1258,672) (1258,668) (1398,668) (1398,664) (1254,664)</Points>
+                            <Points>(1254,676) (1398,676) (1398,672)</Points>
+                        </PlanarPolygon>
+                        <PlanarPolygon MacroID="polygonP" Id="18">
+                            <Points>(1258,688) (1258,684) (1398,684) (1398,680) (1254,680)</Points>
+                            <Points>(1254,692) (1398,692) (1398,688)</Points>
+                        </PlanarPolygon>
+                        <PlanarPolygon MacroID="polygonQ" Id="29">
+                            <Points>(1258,704) (1258,700) (1398,700) (1398,696) (1254,696)</Points>
+                            <Points>(1254,708) (1398,708) (1398,704)</Points>
+                        </PlanarPolygon>
+                        <PlanarPolygon MacroID="polygonR" Id="30">
+                            <Points>(1258,720) (1258,716) (1398,716) (1398,712) (1254,712)</Points>
+                            <Points>(1254,724) (1398,724) (1398,720)</Points>
+                        </PlanarPolygon>
+                        <PlanarPolygon MacroID="polygonS" Id="31">
+                            <Points>(1258,736) (1258,732) (1398,732) (1398,728) (1254,728)</Points>
+                            <Points>(1254,740) (1398,740) (1398,736)</Points>
+                        </PlanarPolygon>
+                        <PlanarPolygon MacroID="polygonT" Id="32">
+                            <Points>(1258,752) (1258,748) (1398,748) (1398,744) (1254,744)</Points>
+                            <Points>(1254,756) (1398,756) (1398,752)</Points>
+                        </PlanarPolygon>
+                        <PlanarPolygon MacroID="polygonU" Id="33">
+                            <Points>(1258,768) (1258,764) (1398,764) (1398,760) (1254,760)</Points>
+                            <Points>(1254,772) (1398,772) (1398,768)</Points>
+                        </PlanarPolygon>
+                        <PlanarPolygon MacroID="polygonV" Id="34">
+                            <Points>(1258,784) (1258,780) (1398,780) (1398,776) (1254,776)</Points>
+                            <Points>(1254,788) (1398,788) (1398,784)</Points>
+                        </PlanarPolygon>
+                        <PlanarPolygon MacroID="polygonW" Id="35">
+                            <Points>(1258,800) (1258,796) (1398,796) (1398,792) (1254,792)</Points>
+                            <Points>(1254,804) (1398,804) (1398,800)</Points>
+                        </PlanarPolygon>
+                        <PlanarPolygon MacroID="polygonX" Id="36">
+                            <Points>(1258,816) (1258,812) (1398,812) (1398,808) (1254,808)</Points>
+                            <Points>(1254,820) (1398,820) (1398,816)</Points>
+                        </PlanarPolygon>
+                        <PlanarPolygon MacroID="polygonY" Id="37">
+                            <Points>(1258,832) (1258,828) (1398,828) (1398,824) (1254,824)</Points>
+                            <Points>(1254,836) (1398,836) (1398,832)</Points>
+                        </PlanarPolygon>
+                        <PlanarPolygon MacroID="polygonZ" Id="38">
+                            <Points>(1258,848) (1258,844) (1398,844) (1398,840) (1254,840)</Points>
+                            <Points>(1254,852) (1398,852) (1398,848)</Points>
+                        </PlanarPolygon>
+                        <PlanarPolygon MacroID="polygonAA" Id="39">
+                            <Points>(1258,864) (1258,860) (1398,860) (1398,856) (1254,856)</Points>
+                            <Points>(1254,868) (1398,868) (1398,864)</Points>
+                        </PlanarPolygon>
+                        <PlanarPolygon MacroID="polygonAB" Id="40">
+                            <Points>(1258,880) (1258,876) (1398,876) (1398,872) (1254,872)</Points>
+                            <Points>(1254,884) (1398,884) (1398,880)</Points>
+                        </PlanarPolygon>
+                        <PlanarPolygon MacroID="polygonAC" Id="41">
+                            <Points>(1258,896) (1258,892) (1398,892) (1398,888) (1254,888)</Points>
+                            <Points>(1254,900) (1398,900) (1398,896)</Points>
+                        </PlanarPolygon>
+                        <PlanarPolygon MacroID="polygonAD" Id="42">
+                            <Points>(1258,912) (1258,908) (1398,908) (1398,904) (1254,904)</Points>
+                            <Points>(1254,916) (1398,916) (1398,912)</Points>
+                        </PlanarPolygon>
+                        <PlanarPolygon MacroID="polygonAE" Id="43">
+                            <Points>(1258,928) (1258,924) (1398,924) (1398,920) (1254,920)</Points>
+                            <Points>(1254,932) (1398,932) (1398,928)</Points>
+                        </PlanarPolygon>
+                        <PlanarPolygon MacroID="polygonAF" Id="44">
+                            <Points>(1258,944) (1258,940) (1398,940) (1398,936) (1254,936)</Points>
+                            <Points>(1254,948) (1398,948) (1398,944)</Points>
+                        </PlanarPolygon>
+                        <PlanarPolygon MacroID="polygonAG" Id="45">
+                            <Points>(1258,960) (1258,956) (1398,956) (1398,952) (1254,952)</Points>
+                            <Points>(1254,964) (1398,964) (1398,960)</Points>
+                        </PlanarPolygon>
+                        <PlanarPolygon MacroID="polygonAH" Id="46">
+                            <Points>(1258,976) (1258,972) (1398,972) (1398,968) (1254,968)</Points>
+                            <Points>(1254,980) (1398,980) (1398,976)</Points>
+                        </PlanarPolygon>
+                        <PlanarPolygon MacroID="polygonAI" Id="47">
+                            <Points>(1258,992) (1258,988) (1398,988) (1398,984) (1254,984)</Points>
+                            <Points>(1254,996) (1398,996) (1398,992)</Points>
+                        </PlanarPolygon>
+                        <PlanarPolygon MacroID="polygonAJ" Id="48">
+                            <Points>(1258,1008) (1258,1004) (1398,1004) (1398,1000) (1254,1000)</Points>
+                            <Points>(1254,1012) (1398,1012) (1398,1008)</Points>
+                        </PlanarPolygon>
+                        <PlanarPolygon MacroID="polygonAK" Id="49">
+                            <Points>(1258,1024) (1258,1020) (1398,1020) (1398,1016) (1254,1016)</Points>
+                            <Points>(1254,1028) (1398,1028) (1398,1024)</Points>
+                        </PlanarPolygon>
+                        <PlanarPolygon MacroID="polygonAL" Id="50">
+                            <Points>(1258,1040) (1258,1036) (1398,1036) (1398,1032) (1254,1032)</Points>
+                            <Points>(1254,1044) (1398,1044) (1398,1040)</Points>
+                        </PlanarPolygon>
+                        <PlanarPolygon MacroID="polygonAM" Id="51">
+                            <Points>(2698,472) (2286,472) (2286,1066) (1662,1066) (1662,448)</Points>
+                            <Points>(2698,448) (2698,0) (1398,0) (1398,448) (1656,448)</Points>
+                            <Points>(1656,1066) (1506,1066) (1506,666) (1482,666) (1482,1066)</Points>
+                            <Points>(1398,1066) (1398,1500) (2698,1500)</Points>
+                        </PlanarPolygon>
+                        <PlanarPolygon MacroID="polygonAN" Id="52">
+                            <Points>(1610,456) (1398,456) (1398,470) (1580,470) (1580,1046)</Points>
+                            <Points>(1610,1046)</Points>
+                        </PlanarPolygon>
+                        <PlanarPolygon MacroID="polygonAO" Id="53">
+                            <Points>(1402,492) (1402,480) (1398,480) (1398,492)</Points>
+                        </PlanarPolygon>
+                        <PlanarPolygon MacroID="polygonAP" Id="54">
+                            <Points>(1402,508) (1402,496) (1398,496) (1398,508)</Points>
+                        </PlanarPolygon>
+                        <PlanarPolygon MacroID="polygonAQ" Id="55">
+                            <Points>(1402,524) (1402,512) (1398,512) (1398,524)</Points>
+                        </PlanarPolygon>
+                        <PlanarPolygon MacroID="polygonAR" Id="56">
+                            <Points>(1402,540) (1402,528) (1398,528) (1398,540)</Points>
+                        </PlanarPolygon>
+                        <PlanarPolygon MacroID="polygonAS" Id="57">
+                            <Points>(1402,556) (1402,544) (1398,544) (1398,556)</Points>
+                        </PlanarPolygon>
+                        <PlanarPolygon MacroID="polygonAT" Id="67">
+                            <Points>(1402,572) (1402,560) (1398,560) (1398,572)</Points>
+                        </PlanarPolygon>
+                        <PlanarPolygon MacroID="polygonAU" Id="68">
+                            <Points>(1402,588) (1402,576) (1398,576) (1398,588)</Points>
+                        </PlanarPolygon>
+                        <PlanarPolygon MacroID="polygonAV" Id="69">
+                            <Points>(1402,604) (1402,592) (1398,592) (1398,604)</Points>
+                        </PlanarPolygon>
+                        <PlanarPolygon MacroID="polygonAW" Id="70">
+                            <Points>(1402,620) (1402,608) (1398,608) (1398,620)</Points>
+                        </PlanarPolygon>
+                        <PlanarPolygon MacroID="polygonAX" Id="88">
+                            <Points>(1402,636) (1402,624) (1398,624) (1398,636)</Points>
+                        </PlanarPolygon>
+                        <PlanarPolygon MacroID="polygonAY" Id="89">
+                            <Points>(1402,652) (1402,640) (1398,640) (1398,652)</Points>
+                        </PlanarPolygon>
+                        <PlanarPolygon MacroID="polygonAZ" Id="90">
+                            <Points>(1402,668) (1402,656) (1398,656) (1398,668)</Points>
+                        </PlanarPolygon>
+                        <PlanarPolygon MacroID="polygonBA" Id="91">
+                            <Points>(1402,684) (1402,672) (1398,672) (1398,684)</Points>
+                        </PlanarPolygon>
+                        <PlanarPolygon MacroID="polygonBB" Id="92">
+                            <Points>(1402,700) (1402,688) (1398,688) (1398,700)</Points>
+                        </PlanarPolygon>
+                        <PlanarPolygon MacroID="polygonBC" Id="93">
+                            <Points>(1402,716) (1402,704) (1398,704) (1398,716)</Points>
+                        </PlanarPolygon>
+                        <PlanarPolygon MacroID="polygonBD" Id="94">
+                            <Points>(1402,732) (1402,720) (1398,720) (1398,732)</Points>
+                        </PlanarPolygon>
+                        <PlanarPolygon MacroID="polygonBE" Id="95">
+                            <Points>(1402,748) (1402,736) (1398,736) (1398,748)</Points>
+                        </PlanarPolygon>
+                        <PlanarPolygon MacroID="polygonBF" Id="96">
+                            <Points>(1402,764) (1402,752) (1398,752) (1398,764)</Points>
+                        </PlanarPolygon>
+                        <PlanarPolygon MacroID="polygonBG" Id="97">
+                            <Points>(1402,780) (1402,768) (1398,768) (1398,780)</Points>
+                        </PlanarPolygon>
+                        <PlanarPolygon MacroID="polygonBH" Id="98">
+                            <Points>(1402,796) (1402,784) (1398,784) (1398,796)</Points>
+                        </PlanarPolygon>
+                        <PlanarPolygon MacroID="polygonBI" Id="99">
+                            <Points>(1402,812) (1402,800) (1398,800) (1398,812)</Points>
+                        </PlanarPolygon>
+                        <PlanarPolygon MacroID="polygonBJ" Id="109">
+                            <Points>(1402,828) (1402,816) (1398,816) (1398,828)</Points>
+                        </PlanarPolygon>
+                        <PlanarPolygon MacroID="polygonBK" Id="110">
+                            <Points>(1402,844) (1402,832) (1398,832) (1398,844)</Points>
+                        </PlanarPolygon>
+                        <PlanarPolygon MacroID="polygonBL" Id="112">
+                            <Points>(1402,860) (1402,848) (1398,848) (1398,860)</Points>
+                        </PlanarPolygon>
+                        <PlanarPolygon MacroID="polygonBM" Id="113">
+                            <Points>(1402,876) (1402,864) (1398,864) (1398,876)</Points>
+                        </PlanarPolygon>
+                        <PlanarPolygon MacroID="polygonBN" Id="114">
+                            <Points>(1402,892) (1402,880) (1398,880) (1398,892)</Points>
+                        </PlanarPolygon>
+                        <PlanarPolygon MacroID="polygonBO" Id="115">
+                            <Points>(1402,908) (1402,896) (1398,896) (1398,908)</Points>
+                        </PlanarPolygon>
+                        <PlanarPolygon MacroID="polygonBP" Id="116">
+                            <Points>(1402,924) (1402,912) (1398,912) (1398,924)</Points>
+                        </PlanarPolygon>
+                        <PlanarPolygon MacroID="polygonBQ" Id="117">
+                            <Points>(1402,940) (1402,928) (1398,928) (1398,940)</Points>
+                        </PlanarPolygon>
+                        <PlanarPolygon MacroID="polygonBR" Id="118">
+                            <Points>(1402,956) (1402,944) (1398,944) (1398,956)</Points>
+                        </PlanarPolygon>
+                        <PlanarPolygon MacroID="polygonBS" Id="119">
+                            <Points>(1402,972) (1402,960) (1398,960) (1398,972)</Points>
+                        </PlanarPolygon>
+                        <PlanarPolygon MacroID="polygonBT" Id="120">
+                            <Points>(1402,988) (1402,976) (1398,976) (1398,988)</Points>
+                        </PlanarPolygon>
+                        <PlanarPolygon MacroID="polygonBU" Id="121">
+                            <Points>(1402,1004) (1402,992) (1398,992) (1398,1004)</Points>
+                        </PlanarPolygon>
+                        <PlanarPolygon MacroID="polygonBV" Id="122">
+                            <Points>(1402,1020) (1402,1008) (1398,1008) (1398,1020)</Points>
+                        </PlanarPolygon>
+                        <PlanarPolygon MacroID="polygonBW" Id="123">
+                            <Points>(1402,1036) (1402,1024) (1398,1024) (1398,1036)</Points>
+                        </PlanarPolygon>
+                        <PlanarPolygon MacroID="polygonBX" Id="124">
+                            <Points>(1402,1052) (1402,1040) (1398,1040) (1398,1052)</Points>
+                        </PlanarPolygon>
+                        <PlanarPolygon MacroID="polygonBY" Id="125">
+                            <Points>(990,456) (0,456) (0,466) (960,466) (960,1046)</Points>
+                            <Points>(990,1046)</Points>
+                            <Objects>
+                                <Port MacroID="portGenerated1" Number="1" Vertex="1">
+                                    <Type Type="BOX" />
+                                    <Impedance Resistance="50" Reactance="0" Inductance="0" Capacitance="0" />
+                                    <Center>(0,461.0)</Center>
+                                </Port>
+                            </Objects>
+                        </PlanarPolygon>
+                        <PlanarPolygon MacroID="polygonBZ" Id="126">
+                            <Points>(1738,466) (2698,466) (2698,456) (1708,456) (1708,1046)</Points>
+                            <Points>(1738,1046)</Points>
+                            <Objects>
+                                <Port MacroID="portGenerated2" Number="2" Vertex="1">
+                                    <Type Type="BOX" />
+                                    <Impedance Resistance="50" Reactance="0" Inductance="0" Capacitance="0" />
+                                    <Center>(2698,461.0)</Center>
+                                </Port>
+                            </Objects>
+                        </PlanarPolygon>
+                    </Objects>
+                </PlanarTechLayer>
+                <Component MacroID="taperCadd" Type="CAP" Name="Cap" Id="127" Units="PF">
+                    <LabelPos>(1334.0,452)</LabelPos>
+                    <SymbolBox>(1326.0,450,1330.0,454)</SymbolBox>
+                    <ShowPhysical On="FALSE" />
+                    <GndRef>AUTO</GndRef>
+                    <Pin MacroID="taperPin0" Type="COMPONENT" Number="1" PortNum="3" LevelNum="0" Orientation="TOP">
+                        <TerminalWidth Type="CELL" />
+                        <GndRef Type="AUTO" />
+                        <Center>(1328.0,448)</Center>
+                    </Pin>
+                    <Pin MacroID="taperPin1" Type="COMPONENT" Number="2" PortNum="4" LevelNum="0" Orientation="BOTTOM">
+                        <TerminalWidth Type="CELL" />
+                        <GndRef Type="AUTO" />
+                        <Center>(1328.0,456)</Center>
+                    </Pin>
+                    <Value>C_add</Value>
+                </Component>
+            </Objects>
+        </Level>
+        <Level MacroID="diel_layerB" MaterialName="Silicon (intrinsic)" Number="1">
+            <DielectricMaterialModel Thickness="500.0" />
+        </Level>
+        <Level MacroID="diel_layerC" MaterialName="Air" Number="2">
+            <DielectricMaterialModel Thickness="5000.0" />
+        </Level>
+    </Geometry>
+    <Sweeps SweepVariables="FALSE">
+        <Set On="TRUE">
+            <Frequencies>
+                <Sweep Type="ABS_ENTRY" On="TRUE" Adaptive="TRUE" Start="2.4" Stop="4.4" Target="1600" />
+            </Frequencies>
+        </Set>
+    </Sweeps>
+    <OutputFiles Folder=".">
+        <Files>
+            <File MacroID="output_fileA" Type="TOUCH" Name="generated_ncell_1.snp" UseInterpolatedData="TRUE" IncludeComments="TRUE" Precision="15" Parameter="S" Format="MA">
+                <Terminations Type="STD" Single="TRUE">
+                    <Port Rp="50" Xp="0" Lp="0" Cp="0" />
+                </Terminations>
+            </File>
+        </Files>
+    </OutputFiles>
+    <Translator>
+        <GDSIMPORT ImportUnits="inches" LayerMapType="Classic" LayerMapFile="superconductor.lay">
+            <Template UsePresentProject="TRUE" KeepPolygons="FALSE" />
+            <Box BoxType="Circuit" PlacementType="Center" CellCalcType="Auto" CellSizeX="2" CellSizeY="2" BoxSizeX="2698" BoxSizeY="1500" />
+            <Margins MarginType="Absolute" AddMargins="FALSE" TopMargin="0" LeftMargin="0" RightMargin="0" BottomMargin="0" />
+            <Advanced MergePlanar="FALSE" CleanGeo="FALSE" AdditionalOptions="" ViasRectangular="FALSE" AddViaPads="FALSE" AdditionalViaOptions="" />
+            <ViaSimplification SimplifyViaArrays="FALSE" MinViasInArray="5" DistanceToSizeRatio="8" SizeRatio="1.5" MaxExpansionCoeff="7" MergePlanarVias="FALSE" />
+            <BarVias IdentifyBarVias="FALSE" BarViaRatio="2.5" />
+        </GDSIMPORT>
+    </Translator>
+</SonnetProject>

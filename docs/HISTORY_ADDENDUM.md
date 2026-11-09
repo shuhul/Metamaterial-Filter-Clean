@@ -1,5 +1,7 @@
 # T2-to-T3 history addendum
 
+Publication paths in this dated record were subsequently simplified; see `final_designs/PUBLICATION_PATHS.json` for current locations. Original campaign paths are unchanged.
+
 Paths below are relative to the project root unless noted. This supplement answers mailbox request 0007 using saved records, not new simulations. `T3DATA` abbreviates `output_data/taper_exploration/three_tapers_v3_T3_2026-10-30/`.
 
 ## Initial T3 extension and failed constrained fits

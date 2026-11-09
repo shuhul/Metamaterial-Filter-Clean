@@ -5,3 +5,5 @@
 *.pdf binary
 *.gds binary
 *.snp -whitespace
+
+*.emp binary

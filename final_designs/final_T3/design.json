@@ -1,13 +1,13 @@
 {
-  "name": "current_2026_11_08/full_filter_single_point",
+  "name": "final_T3",
   "project": "project.sonx",
   "layout": "layout.gds",
   "parameters": "parameters.json",
   "box_um": [
-    9972.0,
+    4310.0,
     1500.0
   ],
   "coordinate_system": "GDS box origin bottom-left; Sonnet y = box_height - GDS y",
   "grid_um": 2,
-  "verification": "Completed single-frequency EM only"
+  "verification": "Completed taper response; comparator is not a unique extraction"
 }

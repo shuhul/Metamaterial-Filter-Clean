@@ -2,7 +2,7 @@
 
 The accepted taper matches a normal ladder comparator with all ten capacitances and five inductances within 0.25% of nominal, at complex S21 RMS 0.00249186334 over 4.65–5.40 GHz. These are **optimized comparator values, not uniquely extracted physical L/C values**. An independently simulated terminal network predicts the taper response at RMS 0.00000811746. These two errors answer different questions.
 
-Current artifacts are in `final_designs/current_2026_11_08/`. The older `taper_3/` and `full_filter/` packages remain historical. `SOURCE_PATHS.json` maps every copied original artifact to its new repository path and hash. No working simulation was moved.
+Current artifacts are in `final_designs/`. The older `taper_3/` and `full_filter/` packages remain historical. `SOURCE_PATHS.json` maps every copied original artifact to its new repository path and hash. No working simulation was moved.
 
 ## What changed after the selected T2 stage
 
@@ -24,7 +24,7 @@ With external/internal partitions e/i, the short-restored impedance is
 
 For equal real 50 Ω references, `Z = 50 (I+S) inv(I-S)` and `S = (Z-50I) inv(Z+50I)`. The equivalent direct scattering closure is `See - Sei inv(I+Sii) Sie`. The code checks these two closures against each other and uses a polarity transform `diag(1,1,-1,-1,-1,-1,-1)` before terminal analysis. This is a validated series-port restoration, not an assertion that internal ports are intrinsically nonperturbing or a general known-capacitor calibration result.
 
-For the accepted geometry, restored-port versus original native data has maximum all-S error 0.000118456, below the 0.001 reconstruction gate. See `taper/local_model/analysis.json`. The source project, seven-port response, manifest, completion record and network coefficients are included there. No additional known-capacitor connection validation is claimed by this report.
+For the accepted geometry, restored-port versus original native data has maximum all-S error 0.000118456, below the 0.001 reconstruction gate. See `final_T3/local_model/analysis.json`. The source project, seven-port response, manifest, completion record and network coefficients are included there. No additional known-capacitor connection validation is claimed by this report.
 
 ## Static capacitance and distributed response
 
@@ -62,7 +62,7 @@ The isolated short-input check reduced clearance 740→440 µm and worsened comp
 
 Ten regular cells plus three mirrored tapers at each end make sixteen resonators. The conditional ladder prediction repeats the regular values, omits the output fixture, mirrors taper components, and omits fixture phase delay. At 4.92 GHz it predicts |S21|=0.957403974 (−0.378095480 dB). Direct EM gives 0.972139673 (−0.245426656 dB), a +0.132668825 dB difference, in 867.274 s. Phase was not aligned, so this is a magnitude sanity check at one frequency only.
 
-The separate ABS sweep covers 4.5–5.5 GHz with 2,000 output intervals and 36 threads. Its input is copied under `full_filter_sweep_input/`; no partial response is published as final. Direct solve count and ABS SNR are progress observations, not percent complete or stopband attenuation. See the timestamped mailbox snapshot for live status. Completing the taper comparator criterion does not automatically validate passband ripple, loss, or band edges of the full device.
+The separate ABS sweep covers 4.5–5.5 GHz with 2,000 output intervals and 36 threads. Its input is copied under `final_full_filter/`; no partial response is published as final. Direct solve count and ABS SNR are progress observations, not percent complete or stopband attenuation. See the timestamped mailbox snapshot for live status. Completing the taper comparator criterion does not automatically validate passband ripple, loss, or band edges of the full device.
 
 ## Reproduction and remaining limits
 

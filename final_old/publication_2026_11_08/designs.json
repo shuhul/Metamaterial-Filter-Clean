@@ -1,0 +1,141 @@
+{
+  "schema_version": 1,
+  "designs": [
+    {
+      "name": "regular_cell",
+      "project": "project.sonx",
+      "layout": "layout.gds",
+      "parameters": "parameters.json",
+      "box_um": [
+        2944.0,
+        1500.0
+      ],
+      "coordinate_system": "GDS box origin bottom-left; Sonnet y = box_height - GDS y",
+      "grid_um": 2,
+      "verification": "Saved staged/reference response",
+      "source_project_relative": "sonnet_files/generated_ncell_4_w186_d56/generated_ncell_4.sonx",
+      "source_project_sha256": "1c0f2bd7a0e0c86ea099ee06c58a3c4b7f7031c867f8080a04d80eae34983af3",
+      "response": "response.snp"
+    },
+    {
+      "name": "taper_1",
+      "project": "project.sonx",
+      "layout": "layout.gds",
+      "parameters": "parameters.json",
+      "box_um": [
+        2322.0,
+        1500.0
+      ],
+      "coordinate_system": "GDS box origin bottom-left; Sonnet y = box_height - GDS y",
+      "grid_um": 2,
+      "verification": "Saved staged/reference response",
+      "source_project_relative": "sonnet_files/taper_exploration/final_designs/new_T1_plain_cw344_w220_p532_g56_j66_c590_tg6_final/response/generated_ncell_2.sonx",
+      "source_project_sha256": "6a8727de3cc78f620f13f74a8b77e27bf5130740218cde6ae3bf5eb0651c0e24",
+      "response": "response.snp"
+    },
+    {
+      "name": "taper_2",
+      "project": "project.sonx",
+      "layout": "layout.gds",
+      "parameters": "parameters.json",
+      "box_um": [
+        3158.0,
+        1500.0
+      ],
+      "coordinate_system": "GDS box origin bottom-left; Sonnet y = box_height - GDS y",
+      "grid_um": 2,
+      "verification": "Saved staged/reference response",
+      "source_project_relative": "sonnet_files/taper_exploration/final_designs/new_T2_cap5_cap5_i22_j78_pad24x400_r30_w148_final/response/generated_ncell_3.sonx",
+      "source_project_sha256": "5676c9c60f5ec9ab67ef7ccb38beb30742a6d649e41982b13c4ae056b9c05d11",
+      "response": "response.snp"
+    },
+    {
+      "name": "taper_3",
+      "project": "project.sonx",
+      "layout": "layout.gds",
+      "parameters": "parameters.json",
+      "box_um": [
+        4310.0,
+        1500.0
+      ],
+      "coordinate_system": "GDS box origin bottom-left; Sonnet y = box_height - GDS y",
+      "grid_um": 2,
+      "verification": "Saved staged/reference response",
+      "source_project_relative": "sonnet_files/taper_exploration/final_designs/T3_T2_cleanup_trimmed_IDC_centered_T2_final/response/generated_ncell_4.sonx",
+      "source_project_sha256": "270e6a12e6f3a017bb4da37b128045ca311a1d7b9b4df1df46cef3e15adfc068",
+      "response": "response.snp"
+    },
+    {
+      "name": "references/taper_3_before_cleanup",
+      "project": "project.sonx",
+      "layout": "layout.gds",
+      "parameters": "parameters.json",
+      "box_um": [
+        4310.0,
+        1500.0
+      ],
+      "coordinate_system": "GDS box origin bottom-left; Sonnet y = box_height - GDS y",
+      "grid_um": 2,
+      "verification": "Saved staged/reference response",
+      "source_project_relative": "sonnet_files/taper_exploration/final_designs/new_T3_w130_t6g2n68_dl342_dr340_pad184x594_i54_j28n40_pad_tune_final/response/generated_ncell_4.sonx",
+      "source_project_sha256": "c650006a152cae65adadf8fcd196881d08642def1c0a08d112241ca9804ee18e",
+      "response": "response.snp"
+    },
+    {
+      "name": "full_filter",
+      "project": "project.sonx",
+      "layout": "layout.gds",
+      "parameters": "parameters.json",
+      "box_um": [
+        9972.0,
+        1500.0
+      ],
+      "coordinate_system": "GDS box origin bottom-left; Sonnet y = box_height - GDS y",
+      "grid_um": 2,
+      "verification": "Full EM pending",
+      "source_project_relative": "sonnet_files/taper_exploration/full_filter/full_filter_10_regular_3_tapers_each_side_T2_cleanup_2026-11-01/full_filter_10_regular_3_tapers_each_side_T2_cleanup_2026-11-01.sonx",
+      "source_project_sha256": "10cd07ce90ba5951da6765e70e079f20399ee0a83aa77914878ab1baa915dd05",
+      "response": null
+    },
+    {
+      "name": "current_2026_11_08/taper",
+      "project": "project.sonx",
+      "layout": "layout.gds",
+      "parameters": "parameters.json",
+      "box_um": [
+        4310.0,
+        1500.0
+      ],
+      "coordinate_system": "GDS box origin bottom-left; Sonnet y = box_height - GDS y",
+      "grid_um": 2,
+      "verification": "Completed taper response; comparator is not a unique extraction"
+    },
+    {
+      "name": "current_2026_11_08/full_filter_single_point",
+      "project": "project.sonx",
+      "layout": "layout.gds",
+      "parameters": "parameters.json",
+      "box_um": [
+        9972.0,
+        1500.0
+      ],
+      "coordinate_system": "GDS box origin bottom-left; Sonnet y = box_height - GDS y",
+      "grid_um": 2,
+      "verification": "Completed single-frequency EM only"
+    },
+    {
+      "name": "current_2026_11_08/full_filter_sweep_input",
+      "project": "project.sonx",
+      "layout": "layout.gds",
+      "parameters": "parameters.json",
+      "box_um": [
+        9972.0,
+        1500.0
+      ],
+      "coordinate_system": "GDS box origin bottom-left; Sonnet y = box_height - GDS y",
+      "grid_um": 2,
+      "verification": "Input only; adaptive full sweep unfinished"
+    }
+  ],
+  "full_filter_status": "Input frozen, EM verification still running; no final response published"
+}

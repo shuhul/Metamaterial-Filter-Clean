@@ -7,7 +7,7 @@ import numpy as np
 import skrf as rf
 
 ROOT = Path(__file__).resolve().parents[1]
-BASE = ROOT / 'final_designs/current_2026_11_08/taper'
+BASE = ROOT / 'final_designs/final_T3'
 
 
 def ladder(f, c, l, delay_ps=0):

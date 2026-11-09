@@ -1,19 +1,25 @@
-﻿# Selected filter designs
+# Selected final designs
 
-**Current checkpoint:** see [current_2026_11_08/README.md](current_2026_11_08/README.md). The older entries below are retained as historical baselines; their earlier acceptance criteria are superseded.
-All paths below are relative to this directory. Open `project.sonx` to inspect a design in Sonnet. `layout.gds` is its approved frozen metal; `parameters.json` preserves its original geometry settings.
+| Folder | Role | Verification |
 
-| Folder | Role | Saved response |
 |---|---|---|
-| [regular_cell](regular_cell/) | Selected regular-cell array | Yes |
-| [taper_1](taper_1/) | T1 baseline assembly | Yes |
-| [taper_2](taper_2/) | T2 baseline assembly | Yes |
-| [taper_3](taper_3/) | Historical T3/T2/T1/regular cleanup assembly | Yes |
-| [full_filter](full_filter/) | Ten regular cells and mirrored three-taper sections | **Still running; input only** |
-| [references/taper_3_before_cleanup](references/taper_3_before_cleanup/) | Pre-cleanup baseline used to establish the current assembly | Yes |
 
-Each completed assembly has `response.snp`, its recorded fit or selection, and an S21 plot. `calibration/` includes available native calibration inputs and supporting results. The historical T3 cleanup shortens the T3-T2 IDC rails to the finger ends and centers T2's coil and pads. Its staged bounded fit RMS is 0.020312; it is not proof of unique extracted capacitances or a completed full-filter target match.
+| final_regular | Selected standalone regular array | Historical calibration/response |
 
-The full-filter native input uses a 2 um mesh and 50 ohm reference impedances. The right taper section is mirrored. Its EM verification is unfinished, so no incomplete full-filter response is presented as final.
+| final_T1 | Selected standalone T1 fixture | Historical calibration/response |
 
-See [the rebuild guide](../docs/REBUILD.md). Frozen native/GDS replay is verified for all six projects, and the full-filter geometry regenerates from the current taper assembly and repeated regular body. Original provenance retains old paths and hashes; the replay tool uses only these repository-contained files.
+| final_T2 | Selected standalone T2 fixture | Historical calibration/response |
+
+| final_T3 | Current assembled taper fixture | Completed native response and independent terminal model |
+
+| final_full_filter | Current 10-cell filter with mirrored tapers | Input; final full-band results pending |
+
+| final_full_filter/verification_4p92GHz | Same full-filter geometry, single-frequency test | Completed 4.92 GHz EM |
+
+Open project.sonx in a selected folder. layout.gds is its frozen metal, and design.json/parameters.json record its role. Older baseline responses are named response.snp; the current taper and single-point exports are project.snp. A standalone T1/T2 baseline is not identical to its later embedded version in final_T3.
+
+For a continuous-ground taper-only drawing, use final_T3/continuous_ground/project.sonx. Its metal union matches the accepted original, but it has not been separately simulated as a taper validation. The full filter uses merged ground and has its own verification.
+
+Final full-filter result placeholder: **await completed native sweep and validation**. No live point count or provisional full response is represented as final here.
+
+PUBLICATION_PATHS.json records the publication-only rename mapping. SOURCE_PATHS.json records original source paths and hashes. Original solver/campaign paths are unchanged. Earlier alternative packages are archived in ../final_old/. See ../docs/SECTIONS_10_11_READER_GUIDE.md and ../docs/REBUILD.md.

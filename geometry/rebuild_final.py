@@ -9,6 +9,7 @@ import numpy as np
 import gdstk
 ROOT=Path(__file__).resolve().parents[1]
 FINAL=ROOT/'final_designs'
+ARCHIVE=ROOT/'final_old'
 NS='https://www.sonnetsoftware.com/schema/project'
 ET.register_namespace('',NS);ET.register_namespace('xsi','http://www.w3.org/2001/XMLSchema-instance')
 def tag(n):return '{'+NS+'}'+n
@@ -29,7 +30,7 @@ def flipped(polys,height):return [gdstk.Polygon(np.column_stack((p.points[:,0],h
 def same(a,b):return not gdstk.boolean(a,b,'xor',precision=.001)
 def full_from_blocks():
  """Assemble ten copies of the saved regular body and mirrored taper metal."""
- meta=read(FINAL/'full_filter/parameters.json');source=gds_polys(FINAL/'taper_3/layout.gds');first=meta['first_regular_left_um'];uw=meta['regular_width_um'];gap=meta['regular_gap_um'];n=meta['n_regular'];height=1500
+ meta=read(ARCHIVE/'full_filter_cleanup/parameters.json');source=gds_polys(ARCHIVE/'taper_3_cleanup/layout.gds');first=meta['first_regular_left_um'];uw=meta['regular_width_um'];gap=meta['regular_gap_um'];n=meta['n_regular'];height=1500
  width=2*first+n*uw+(n-1)*gap;assert width==meta['w_sim']
  left=gdstk.boolean(source,[gdstk.rectangle((0,0),(first,height))],'and',precision=.001,layer=1)
  right=[gdstk.Polygon(np.column_stack((width-p.points[:,0],p.points[:,1])),layer=1) for p in left]
@@ -41,7 +42,7 @@ def full_from_blocks():
   parts.extend(p.copy().translate(i*(uw+gap),0) for p in body)
   if i<n-1:
    mid=first+i*(uw+gap)+uw+gap/2;parts.append(gdstk.rectangle((mid-2,434),(mid+2,1052),layer=1))
- assert same(parts,gds_polys(FINAL/'full_filter/layout.gds')),'Full layout differs from checked-in input'
+ assert same(parts,gds_polys(ARCHIVE/'full_filter_cleanup/layout.gds')),'Archived full layout differs from checked-in input'
  return parts
 
 def verify(folder):

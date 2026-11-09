@@ -1,0 +1,61 @@
+{
+  "purpose": "Publication-copy relocation only; original solver and investigation paths unchanged.",
+  "moves": [
+    {
+      "old": "final_designs/regular_cell",
+      "new": "final_designs/final_regular",
+      "file_count": 11,
+      "all_file_bytes_preserved_at_move": true
+    },
+    {
+      "old": "final_designs/taper_1",
+      "new": "final_designs/final_T1",
+      "file_count": 35,
+      "all_file_bytes_preserved_at_move": true
+    },
+    {
+      "old": "final_designs/taper_2",
+      "new": "final_designs/final_T2",
+      "file_count": 17,
+      "all_file_bytes_preserved_at_move": true
+    },
+    {
+      "old": "final_designs/taper_3",
+      "new": "final_old/taper_3_cleanup",
+      "file_count": 59,
+      "all_file_bytes_preserved_at_move": true
+    },
+    {
+      "old": "final_designs/full_filter",
+      "new": "final_old/full_filter_cleanup",
+      "file_count": 6,
+      "all_file_bytes_preserved_at_move": true
+    },
+    {
+      "old": "final_designs/references",
+      "new": "final_old/references",
+      "file_count": 37,
+      "all_file_bytes_preserved_at_move": true
+    },
+    {
+      "old": "final_designs/current_2026_11_08/taper",
+      "new": "final_designs/final_T3",
+      "file_count": 41,
+      "all_file_bytes_preserved_at_move": true
+    },
+    {
+      "old": "final_designs/current_2026_11_08/full_filter_sweep_input",
+      "new": "final_designs/final_full_filter",
+      "file_count": 6,
+      "all_file_bytes_preserved_at_move": true
+    },
+    {
+      "old": "final_designs/current_2026_11_08/full_filter_single_point",
+      "new": "final_designs/final_full_filter/verification_4p92GHz",
+      "file_count": 9,
+      "all_file_bytes_preserved_at_move": true
+    }
+  ],
+  "previous_publication_records": "final_old/publication_2026_11_08",
+  "source_provenance": "final_old/publication_2026_11_08/SOURCE_PATHS.json"
+}

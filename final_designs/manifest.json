@@ -1,1132 +1,1172 @@
 {
-  "schema_version": 2,
-  "purpose": "Integrity manifest only; does not control Git tracking.",
-  "full_filter_status": "Current 4.92 GHz point complete; full sweep unfinished. Earlier design folders are historical.",
+  "schema_version": 3,
+  "purpose": "Integrity manifest only; does not control Git tracking. Includes final_old history and supplied reference_inputs.",
+  "full_filter_status": "4.92 GHz point complete; final full-band results pending. final_old is historical.",
   "files": [
     {
-      "path": "final_designs/current_2026_11_08/full_filter_single_point/comparison.png",
-      "bytes": 103680,
-      "sha256": "e01bf8a11837d3aae2a49f7826d62bfffb104675582792b67a54635bef9852b1"
+      "path": "final_designs/designs.json",
+      "bytes": 3330,
+      "sha256": "686402fb319a8485fcb9e3b707f25f676cd67abd6dacf192e0eb14621557031c"
     },
     {
-      "path": "final_designs/current_2026_11_08/full_filter_single_point/complete.json",
-      "bytes": 867,
-      "sha256": "945667ce2936e54428e8a5c5417f13c6e7bbfe564f23186beaf5436762d4a738"
+      "path": "final_designs/final_full_filter/design.json",
+      "bytes": 343,
+      "sha256": "0317a12e3bfac0633af47032b66daf02b326baef272b542dddb306f6911b7fde"
     },
     {
-      "path": "final_designs/current_2026_11_08/full_filter_single_point/design.json",
-      "bytes": 361,
-      "sha256": "50ce3c4c7650937920aff5fee51fae05059fa5bc3a955e27615af9e00bd18cba"
-    },
-    {
-      "path": "final_designs/current_2026_11_08/full_filter_single_point/geometry.png",
+      "path": "final_designs/final_full_filter/geometry.png",
       "bytes": 109382,
       "sha256": "58fcfda1a906279f3e8579db29fa6b595ea53c2ed6fec8965b19ba1d9929a761"
     },
     {
-      "path": "final_designs/current_2026_11_08/full_filter_single_point/layout.gds",
+      "path": "final_designs/final_full_filter/layout.gds",
       "bytes": 87822,
       "sha256": "f0db21e22c4026d2d339054a643b62178533ae4fa10a9467c428fa1412e095f0"
     },
     {
-      "path": "final_designs/current_2026_11_08/full_filter_single_point/parameters.json",
+      "path": "final_designs/final_full_filter/parameters.json",
       "bytes": 1734,
       "sha256": "98a90adafe4f53dd0584c1e91c1060dd86bca5e67f4b3a608c03176cfc53a53e"
     },
     {
-      "path": "final_designs/current_2026_11_08/full_filter_single_point/project.snp",
-      "bytes": 764,
-      "sha256": "13ea2918dec19c5d273c8258f3ec6ee27e0eeec6b9d972004941f334831f28c7"
-    },
-    {
-      "path": "final_designs/current_2026_11_08/full_filter_single_point/project.sonx",
-      "bytes": 130241,
-      "sha256": "889dde1c58758f5a1c8782b6ecb26c501ec16b93f6881b9271d18995c51f8e9b"
-    },
-    {
-      "path": "final_designs/current_2026_11_08/full_filter_single_point/rebuild_validation.json",
-      "bytes": 282,
-      "sha256": "601d14138c9ee4d9ac750ce30d5a381f1ff5b49dd68f9c0a341174479d69e588"
-    },
-    {
-      "path": "final_designs/current_2026_11_08/full_filter_sweep_input/design.json",
-      "bytes": 368,
-      "sha256": "fbc6c9f05f8960531bfea2f52075edc7e02a8bef63cdea6df755504976671cba"
-    },
-    {
-      "path": "final_designs/current_2026_11_08/full_filter_sweep_input/geometry.png",
-      "bytes": 109382,
-      "sha256": "58fcfda1a906279f3e8579db29fa6b595ea53c2ed6fec8965b19ba1d9929a761"
-    },
-    {
-      "path": "final_designs/current_2026_11_08/full_filter_sweep_input/layout.gds",
-      "bytes": 87822,
-      "sha256": "f0db21e22c4026d2d339054a643b62178533ae4fa10a9467c428fa1412e095f0"
-    },
-    {
-      "path": "final_designs/current_2026_11_08/full_filter_sweep_input/parameters.json",
-      "bytes": 1734,
-      "sha256": "98a90adafe4f53dd0584c1e91c1060dd86bca5e67f4b3a608c03176cfc53a53e"
-    },
-    {
-      "path": "final_designs/current_2026_11_08/full_filter_sweep_input/project.sonx",
+      "path": "final_designs/final_full_filter/project.sonx",
       "bytes": 134008,
       "sha256": "f021bbab9da274d7a6b835ab4a45b7a9219217440be1ca941e4a3c3f9ee49e99"
     },
     {
-      "path": "final_designs/current_2026_11_08/full_filter_sweep_input/rebuild_validation.json",
+      "path": "final_designs/final_full_filter/rebuild_validation.json",
       "bytes": 281,
       "sha256": "b45a86ec0caef33e771794c64abc9a7614f2cbeba9e8ac0c67c1c67cae1919dc"
     },
     {
-      "path": "final_designs/current_2026_11_08/README.md",
-      "bytes": 2169,
-      "sha256": "a16b0c0ef009fd1b79cbd20151b2f8775fc3bc834534dc310f6924b465760be9"
+      "path": "final_designs/final_full_filter/verification_4p92GHz/comparison.png",
+      "bytes": 103680,
+      "sha256": "e01bf8a11837d3aae2a49f7826d62bfffb104675582792b67a54635bef9852b1"
     },
     {
-      "path": "final_designs/current_2026_11_08/SOURCE_PATHS.json",
-      "bytes": 14780,
-      "sha256": "70dc5ccc3d41e32b26cadaa2c37ad699d447f127914d054e8272a0c70549da61"
+      "path": "final_designs/final_full_filter/verification_4p92GHz/complete.json",
+      "bytes": 867,
+      "sha256": "945667ce2936e54428e8a5c5417f13c6e7bbfe564f23186beaf5436762d4a738"
     },
     {
-      "path": "final_designs/current_2026_11_08/taper/ACCEPTED_CHECKPOINT.json",
-      "bytes": 411,
-      "sha256": "e7bef90a8c6ea2f2e52de48e880f84844a06cf9342c113ea11fe4fb5c635b62e"
+      "path": "final_designs/final_full_filter/verification_4p92GHz/design.json",
+      "bytes": 356,
+      "sha256": "77375831e0b27945243f9061c0b1e2314d4f21b3f5badace5189261b8f4a9671"
     },
     {
-      "path": "final_designs/current_2026_11_08/taper/baseline.sonx",
-      "bytes": 96578,
-      "sha256": "6d01b08d56812d1a0ca6dca16a88bcce6de709af4daba5374edd197333c993df"
+      "path": "final_designs/final_full_filter/verification_4p92GHz/geometry.png",
+      "bytes": 109382,
+      "sha256": "58fcfda1a906279f3e8579db29fa6b595ea53c2ed6fec8965b19ba1d9929a761"
     },
     {
-      "path": "final_designs/current_2026_11_08/taper/boundary_configuration.json",
-      "bytes": 305,
-      "sha256": "2e6bf9aabc25f30d612c5299ddbd6e420e42979d0030ca7f6338085612ae2139"
+      "path": "final_designs/final_full_filter/verification_4p92GHz/layout.gds",
+      "bytes": 87822,
+      "sha256": "f0db21e22c4026d2d339054a643b62178533ae4fa10a9467c428fa1412e095f0"
     },
     {
-      "path": "final_designs/current_2026_11_08/taper/conditional_ten_cell_components.json",
-      "bytes": 1259,
-      "sha256": "cf0b1799e8213bb981f7f79c1f5854761d032526f513fc7059f992ba22b1c1c0"
+      "path": "final_designs/final_full_filter/verification_4p92GHz/parameters.json",
+      "bytes": 1734,
+      "sha256": "98a90adafe4f53dd0584c1e91c1060dd86bca5e67f4b3a608c03176cfc53a53e"
     },
     {
-      "path": "final_designs/current_2026_11_08/taper/conditional_ten_cell_s21.png",
-      "bytes": 138741,
-      "sha256": "25b8c82dfae91c7e3b9ee9ed23a2c2bc7bf17453b64aa5d165ef6633214bfa97"
+      "path": "final_designs/final_full_filter/verification_4p92GHz/project.snp",
+      "bytes": 764,
+      "sha256": "13ea2918dec19c5d273c8258f3ec6ee27e0eeec6b9d972004941f334831f28c7"
     },
     {
-      "path": "final_designs/current_2026_11_08/taper/continuous_ground/merge_validation.json",
-      "bytes": 744,
-      "sha256": "8924a6b27e071d454f59e246d12bdf537b70f1b6e6f7f8144d59e9ab7285c527"
+      "path": "final_designs/final_full_filter/verification_4p92GHz/project.sonx",
+      "bytes": 130241,
+      "sha256": "889dde1c58758f5a1c8782b6ecb26c501ec16b93f6881b9271d18995c51f8e9b"
     },
     {
-      "path": "final_designs/current_2026_11_08/taper/continuous_ground/project.sonx",
-      "bytes": 54149,
-      "sha256": "0fad24a51ad533a474370c450ccdd7c400f54c851e82b5d910ba602d5778c876"
+      "path": "final_designs/final_full_filter/verification_4p92GHz/rebuild_validation.json",
+      "bytes": 282,
+      "sha256": "601d14138c9ee4d9ac750ce30d5a381f1ff5b49dd68f9c0a341174479d69e588"
     },
     {
-      "path": "final_designs/current_2026_11_08/taper/cover_30mm_verification/project.snp",
-      "bytes": 221264,
-      "sha256": "facf4f0a1b530a154b65995910fc30a4719d028769e36d66c23936eab2af734c"
-    },
-    {
-      "path": "final_designs/current_2026_11_08/taper/cover_30mm_verification/project.sonx",
-      "bytes": 59126,
-      "sha256": "6e0230f04a7dfaf68ddef669a8abc3afdf593773329ecbca9097edb1af68cce9"
-    },
-    {
-      "path": "final_designs/current_2026_11_08/taper/cover_30mm_verification/run_status.json",
-      "bytes": 529,
-      "sha256": "6b31f245b006d916f027b2e58a8deae7e42eaa8e2106493d47ef6891653e1473"
-    },
-    {
-      "path": "final_designs/current_2026_11_08/taper/design.json",
-      "bytes": 371,
-      "sha256": "ba3c11af3aca412c35581175e8e18dae6cedee46153535555dda6af120e0dc81"
-    },
-    {
-      "path": "final_designs/current_2026_11_08/taper/eight_dimension_geometry.json",
-      "bytes": 493,
-      "sha256": "0a67c50d13bfc7399f393b29689b957873b98181469f4aa5eb3216cb91d2f0f4"
-    },
-    {
-      "path": "final_designs/current_2026_11_08/taper/eleven_dimension_geometry.json",
-      "bytes": 587,
-      "sha256": "7898612b88b26d90b54dbb7f6a3501bc6470652a147c68919116d69b092af1eb"
-    },
-    {
-      "path": "final_designs/current_2026_11_08/taper/extension_check.json",
-      "bytes": 145,
-      "sha256": "9242016432180f55674ef92136e624dfc25b92fa8c13f6cc4b5c862715b3e794"
-    },
-    {
-      "path": "final_designs/current_2026_11_08/taper/fourteen_dimension_geometry.json",
-      "bytes": 531,
-      "sha256": "83ea7899931018216453fd63f4177f6ca053b3dbe99aa692402cf798ae4b4867"
-    },
-    {
-      "path": "final_designs/current_2026_11_08/taper/geometry.png",
-      "bytes": 34304,
-      "sha256": "138c0cf59fbcf12b759fd5723ba2b5ce747e801fcadef7859f7b1be3ab0bcb55"
-    },
-    {
-      "path": "final_designs/current_2026_11_08/taper/independent_comparator_check.json",
-      "bytes": 126,
-      "sha256": "d97ccc6e333fbd67dab29c949b414df03d46a43f8a19f16816b8562f48fc63d7"
-    },
-    {
-      "path": "final_designs/current_2026_11_08/taper/input_ground_geometry.json",
-      "bytes": 357,
-      "sha256": "abc944d45a670056fd1a9a11bb159b53065449337fa5560982e8b25f04392255"
-    },
-    {
-      "path": "final_designs/current_2026_11_08/taper/iteration_history.json",
-      "bytes": 4344,
-      "sha256": "2313aea1593ca4a5e06e952beae165fb5104ff0c13ddab3a70c82d1dafd3e365"
-    },
-    {
-      "path": "final_designs/current_2026_11_08/taper/layout.gds",
-      "bytes": 22878,
-      "sha256": "b54e18f599b77ee048e5f1971d1bf369bbc0b44004662f05064a26c0e9ec93f0"
-    },
-    {
-      "path": "final_designs/current_2026_11_08/taper/local_model/analysis.json",
-      "bytes": 5778,
-      "sha256": "74c1988628bd8f7bf36ae89df3e258c37ee3fb2f23abe62fece436d6e9fd97ac"
-    },
-    {
-      "path": "final_designs/current_2026_11_08/taper/local_model/complete.json",
-      "bytes": 361,
-      "sha256": "b6f3113d40fd557763d9f0dee3c088bc1b2ba392dc2b7b91bdc584aaf1cdfb59"
-    },
-    {
-      "path": "final_designs/current_2026_11_08/taper/local_model/manifest.json",
-      "bytes": 1014,
-      "sha256": "2265d6908253d2adefea0427a076723e99bbb854ab91c9ae663a12a264ad0f36"
-    },
-    {
-      "path": "final_designs/current_2026_11_08/taper/local_model/network.json",
-      "bytes": 33983,
-      "sha256": "d0d20c5361a4c4057be37d88c73bdadff3728bebbeea1eed4a5b300ab4316e77"
-    },
-    {
-      "path": "final_designs/current_2026_11_08/taper/local_model/prediction.png",
-      "bytes": 73962,
-      "sha256": "0376b5d327587cd91ca7a6ff3507e2d85be906166587de24efa734a07649ec50"
-    },
-    {
-      "path": "final_designs/current_2026_11_08/taper/local_model/project.snp",
-      "bytes": 18957,
-      "sha256": "c5515d6669f6a633396beef35c5eecf027a40e24dbb44b7769fa2eccb75647cf"
-    },
-    {
-      "path": "final_designs/current_2026_11_08/taper/local_model/project.sonx",
-      "bytes": 59922,
-      "sha256": "db1550a104378583c7cabe38c0360ab3bb857c54c13683d6377beeb232a02fb0"
-    },
-    {
-      "path": "final_designs/current_2026_11_08/taper/local_model/terminal_profiles.json",
-      "bytes": 36163,
-      "sha256": "4489918dc2d65039eefc3de381b0dd60247d8f81fdf984e43adc7fb72e57eec6"
-    },
-    {
-      "path": "final_designs/current_2026_11_08/taper/meander_geometry.json",
-      "bytes": 1107,
-      "sha256": "c9e164dc7af7bde59e9979a4966e8ca028de17c29dd3b44fab3d3e0c20d28283"
-    },
-    {
-      "path": "final_designs/current_2026_11_08/taper/nine_dimension_geometry.json",
-      "bytes": 563,
-      "sha256": "82457ad8e359a049fb26241feb669172d3cc54d023d79541e95469781eb34f06"
-    },
-    {
-      "path": "final_designs/current_2026_11_08/taper/parameters.json",
-      "bytes": 8535,
-      "sha256": "347cb3226d33fce86c8cab09d33d87adf759926adcba8af0dc19e7212d22b4b8"
-    },
-    {
-      "path": "final_designs/current_2026_11_08/taper/project.snp",
-      "bytes": 221264,
-      "sha256": "4e35386c4b7d28299eab416ac230aa8cade30f5eedc2e55ae426b5532a55fcce"
-    },
-    {
-      "path": "final_designs/current_2026_11_08/taper/project.sonx",
-      "bytes": 59126,
-      "sha256": "ec140715df34013203218b873d264b6fffaeb0b9a8188f83895ec4282e308172"
-    },
-    {
-      "path": "final_designs/current_2026_11_08/taper/raised_geometry.json",
-      "bytes": 274,
-      "sha256": "204bcc05965d7d840b349d73208a6d4a75bfd6b653abc065913544adefa2ee41"
-    },
-    {
-      "path": "final_designs/current_2026_11_08/taper/rebuild_validation.json",
-      "bytes": 263,
-      "sha256": "edaa5fdb204684a13cd29ac5fab5ef5efbd4aeb0df9e89bfe0df785200b89d36"
-    },
-    {
-      "path": "final_designs/current_2026_11_08/taper/result.json",
-      "bytes": 8535,
-      "sha256": "347cb3226d33fce86c8cab09d33d87adf759926adcba8af0dc19e7212d22b4b8"
-    },
-    {
-      "path": "final_designs/current_2026_11_08/taper/s21.png",
-      "bytes": 86171,
-      "sha256": "548f5243bc4e14e81065593d1ceca01e07866338d9b65cb3d482658077376da0"
-    },
-    {
-      "path": "final_designs/current_2026_11_08/taper/s21_verified.png",
-      "bytes": 162107,
-      "sha256": "841b36ed57b5786a7ebef3ca46e3d05cf67cae9c82f3e5cd3af62e8c2591170b"
-    },
-    {
-      "path": "final_designs/current_2026_11_08/taper/s21_with_target_parameters.png",
-      "bytes": 237620,
-      "sha256": "9c4c303b859c406bf4fc2e73d3a18444586ccc1762a8f7c989f627cb27d99931"
-    },
-    {
-      "path": "final_designs/current_2026_11_08/taper/seven_dimension_geometry.json",
-      "bytes": 589,
-      "sha256": "d28fedfefbf887354ca39267d902b9cdad0dbe1e093dcc66aa1c59df3c2e7cb1"
-    },
-    {
-      "path": "final_designs/current_2026_11_08/taper/ten_dimension_geometry.json",
-      "bytes": 531,
-      "sha256": "6161803046373f5ec726e865693effba3baa4332b14f2ab5f3dfd725dc5f13ea"
-    },
-    {
-      "path": "final_designs/designs.json",
-      "bytes": 5463,
-      "sha256": "23f0e3840f1ace9cdc3f4c59a9034a9528ca1069a3b4780bc2d8294ef6af1c8c"
-    },
-    {
-      "path": "final_designs/full_filter/design.json",
-      "bytes": 636,
-      "sha256": "210c7eb209fca1474645e2a5c7b455a96b13e8f53c4225d68484e7755826657b"
-    },
-    {
-      "path": "final_designs/full_filter/geometry.png",
-      "bytes": 114632,
-      "sha256": "2ef1ee6129482c043992c0158ef5f68090acb7b6b6f090eedb7278a8e1c9a175"
-    },
-    {
-      "path": "final_designs/full_filter/layout.gds",
-      "bytes": 73902,
-      "sha256": "0793616d5d1b2559f4643834d819e6484586f28e247592a6b21e8a44daf6e0ae"
-    },
-    {
-      "path": "final_designs/full_filter/parameters.json",
-      "bytes": 1706,
-      "sha256": "d864dec9038a7b73276e5f37c634b74b920addf32d2d5dd428a3a95225b3ce88"
-    },
-    {
-      "path": "final_designs/full_filter/project.sonx",
-      "bytes": 225820,
-      "sha256": "10cd07ce90ba5951da6765e70e079f20399ee0a83aa77914878ab1baa915dd05"
-    },
-    {
-      "path": "final_designs/full_filter/rebuild_validation.json",
-      "bytes": 249,
-      "sha256": "4121e9865f324eee26353fe83c6a8028923b5ee70701868db542aecdd0e6905e"
-    },
-    {
-      "path": "final_designs/README.md",
-      "bytes": 1941,
-      "sha256": "8b609bc4d015a34b8965416c80242feffbdedbc9a468061d107cbf8f08eea6c7"
-    },
-    {
-      "path": "final_designs/references/taper_3_before_cleanup/calibration/evidence/Lcal/geometry.png",
-      "bytes": 48190,
-      "sha256": "e7374b730de69fd15658035979eef8d5a29605ceeaedc9b56e0dcae3a3eecd05"
-    },
-    {
-      "path": "final_designs/references/taper_3_before_cleanup/calibration/evidence/Lcal/settings.json",
-      "bytes": 852,
-      "sha256": "a6b3f6cac319503d466fe48b023b413b7102500d2d50447e2f0dfdc6728b96c9"
-    },
-    {
-      "path": "final_designs/references/taper_3_before_cleanup/calibration/evidence/Lcal_explicit/cadd_450ff.log.resources.json",
-      "bytes": 7974,
-      "sha256": "8ede9c17f23b4ea3bd973d92f467f967762aa8d9e3f6c21834c099d6c21e3f78"
-    },
-    {
-      "path": "final_designs/references/taper_3_before_cleanup/calibration/evidence/Lcal_explicit/cadd_450ff.snp",
-      "bytes": 235973,
-      "sha256": "93966d7611804aab8e8b92eaec2c72f88b2ed91da62a366f1fdc510a9edb8790"
-    },
-    {
-      "path": "final_designs/references/taper_3_before_cleanup/calibration/evidence/Lcal_explicit/cadd_450ff.sonx",
-      "bytes": 18506,
-      "sha256": "fdf4ca8f642b0d1a9b87f49a019e27fae42e4477248d6760813a938bd35ac791"
-    },
-    {
-      "path": "final_designs/references/taper_3_before_cleanup/calibration/evidence/Lcal_explicit/cadd_600ff.log.resources.json",
-      "bytes": 1335,
-      "sha256": "5b3f28be6d9cd7f07dd9b3fc27d23e4c51afecad16e9a132f274658d1d99f474"
-    },
-    {
-      "path": "final_designs/references/taper_3_before_cleanup/calibration/evidence/Lcal_explicit/cadd_600ff.snp",
-      "bytes": 235972,
-      "sha256": "dc8c76b7271d9c033537ca25182786c83efebc707e7599304a68d2f99c5c3973"
-    },
-    {
-      "path": "final_designs/references/taper_3_before_cleanup/calibration/evidence/Lcal_explicit/cadd_600ff.sonx",
-      "bytes": 18505,
-      "sha256": "52c3db93b4bf261f6309ad5806a005564e585901107e3db8ce92b67bf18d9e07"
-    },
-    {
-      "path": "final_designs/references/taper_3_before_cleanup/calibration/evidence/Lcal_explicit/cadd_750ff.log.resources.json",
-      "bytes": 1342,
-      "sha256": "14488e373b63a8ee95a6d78a40f1d4cf0af377188b328502cec28cd61aa6a0e9"
-    },
-    {
-      "path": "final_designs/references/taper_3_before_cleanup/calibration/evidence/Lcal_explicit/cadd_750ff.snp",
-      "bytes": 235973,
-      "sha256": "7e41be81298b2080cc32a0411ac76c5f1a350d42faa864ec0f700f576d5ce7ac"
-    },
-    {
-      "path": "final_designs/references/taper_3_before_cleanup/calibration/evidence/Lcal_explicit/cadd_750ff.sonx",
-      "bytes": 18506,
-      "sha256": "a7b4f0bb481cbdf29f28eb079195bd51995176be132aed344828cc63d4846ea3"
-    },
-    {
-      "path": "final_designs/references/taper_3_before_cleanup/calibration/evidence/Lcal_explicit/cadd_900ff.log.resources.json",
-      "bytes": 1333,
-      "sha256": "2359f136b0e6d7f08bf574bf77afbd2b7961abe036930a025c90984ea26ccd73"
-    },
-    {
-      "path": "final_designs/references/taper_3_before_cleanup/calibration/evidence/Lcal_explicit/cadd_900ff.snp",
-      "bytes": 235972,
-      "sha256": "2ca97d1f7500675a1dce7339371d99393d3c5d54ba93cd3862cac5d867f740b5"
-    },
-    {
-      "path": "final_designs/references/taper_3_before_cleanup/calibration/evidence/Lcal_explicit/cadd_900ff.sonx",
-      "bytes": 18505,
-      "sha256": "3fca5d4260246f30e3752d11193ed8558b1947d653ae44daf02743e556d30dab"
-    },
-    {
-      "path": "final_designs/references/taper_3_before_cleanup/calibration/evidence/Lcal_explicit/completed.json",
-      "bytes": 3802,
-      "sha256": "2864fd3fae2839d9aaffd8343f7a86226b1da79caa1f230c60da7da6285a4713"
-    },
-    {
-      "path": "final_designs/references/taper_3_before_cleanup/calibration/evidence/Lcal_explicit/inductance_fit.png",
-      "bytes": 96931,
-      "sha256": "94501c09ba279ef8e8ab754f863b14c4919f9d470b6cdf5e21f03b79cb154a35"
-    },
-    {
-      "path": "final_designs/references/taper_3_before_cleanup/calibration/evidence/Lcal_explicit/manifest.json",
-      "bytes": 683,
-      "sha256": "17bddb0401c83d6aa4edebdb40ee7ca80950f6f0f5b46e7e1e1d11c1f8037fe5"
-    },
-    {
-      "path": "final_designs/references/taper_3_before_cleanup/calibration/evidence/Lcal_explicit/results.json",
-      "bytes": 3067,
-      "sha256": "c0b2a0acf39e058a0c4938a57ceaa8d378bb95734b8275a768cae6472742a344"
-    },
-    {
-      "path": "final_designs/references/taper_3_before_cleanup/calibration/evidence/Lcal_explicit/sweep_points.json",
-      "bytes": 993,
-      "sha256": "0e3a12cce1c2f2289880f42bdd0d069166da7ec743871df2d26c31ab9b252c48"
-    },
-    {
-      "path": "final_designs/references/taper_3_before_cleanup/calibration/evidence/Lcal_explicit/sweep_s21.png",
-      "bytes": 200454,
-      "sha256": "951f74600425d8017d5e31f41bd7e85b93e844a0b0f406c057383abe01bcda09"
-    },
-    {
-      "path": "final_designs/references/taper_3_before_cleanup/calibration/Lcal/generated_ncell_1.sonx",
-      "bytes": 21272,
-      "sha256": "320c964810eac3a813958e0ba0a96bce4dc7fb46b40160083683159c00ce25a6"
-    },
-    {
-      "path": "final_designs/references/taper_3_before_cleanup/calibration/Lcal/geometry.gds",
-      "bytes": 3148,
-      "sha256": "b0c4987fe5c697f48bf0867a86768cdfcf2d72fc2fd7637e8f7717b81da07a03"
-    },
-    {
-      "path": "final_designs/references/taper_3_before_cleanup/calibration/Lcal/geometry.json",
-      "bytes": 3306,
-      "sha256": "e6a1beb1ceab88494018f6ff2c619a7175e308961746b39e878cb0a714977921"
-    },
-    {
-      "path": "final_designs/references/taper_3_before_cleanup/calibration/Lcal/imported_review.png",
-      "bytes": 62103,
-      "sha256": "47bc9542355bde7aa1084bf79150c47a4e27734ab4319aedb23296cd22c24867"
-    },
-    {
-      "path": "final_designs/references/taper_3_before_cleanup/calibration/Lcal/ncell_1_grid2.gds",
-      "bytes": 2942,
-      "sha256": "9a621245e1ddff053ccd4a118424c805bb289b069746186d746dbfca9a25a897"
-    },
-    {
-      "path": "final_designs/references/taper_3_before_cleanup/calibration/Lcal/validation.json",
-      "bytes": 1000,
-      "sha256": "de74533d2ec2e328bfead160743ebbb9efa80bbc7b844983c323ffb5a906e296"
-    },
-    {
-      "path": "final_designs/references/taper_3_before_cleanup/calibration/Lcal_explicit/generated_ncell_1.snp",
-      "bytes": 235972,
-      "sha256": "2ca97d1f7500675a1dce7339371d99393d3c5d54ba93cd3862cac5d867f740b5"
-    },
-    {
-      "path": "final_designs/references/taper_3_before_cleanup/calibration/Lcal_explicit/generated_ncell_1.sonx",
-      "bytes": 18505,
-      "sha256": "3fca5d4260246f30e3752d11193ed8558b1947d653ae44daf02743e556d30dab"
-    },
-    {
-      "path": "final_designs/references/taper_3_before_cleanup/design.json",
-      "bytes": 654,
-      "sha256": "91464bdc2d2d33e76939e4275df4faf7b778ff9dccd3e78c272f404f062a6222"
-    },
-    {
-      "path": "final_designs/references/taper_3_before_cleanup/fit.json",
-      "bytes": 3918,
-      "sha256": "9d40f1b79dce003c6fe4604790d42b4be471412fac90bee8a40bc90d9e422963"
-    },
-    {
-      "path": "final_designs/references/taper_3_before_cleanup/layout.gds",
-      "bytes": 19454,
-      "sha256": "025da1484aa726efe5f09e422df41d8f8a7a2c97a04263bbfe05d47fbeb86003"
-    },
-    {
-      "path": "final_designs/references/taper_3_before_cleanup/parameters.json",
-      "bytes": 2036,
-      "sha256": "3853f172cde68d749b2f19366d544acd0c307f463972cc0f2216ed472995f5e4"
-    },
-    {
-      "path": "final_designs/references/taper_3_before_cleanup/project.sonx",
-      "bytes": 67060,
-      "sha256": "c650006a152cae65adadf8fcd196881d08642def1c0a08d112241ca9804ee18e"
-    },
-    {
-      "path": "final_designs/references/taper_3_before_cleanup/rebuild_validation.json",
-      "bytes": 272,
-      "sha256": "3c9bb19e85eb5ae03a0f1989c33a98d47188a1dcea7e8a0fa5de14357bbd4d4e"
-    },
-    {
-      "path": "final_designs/references/taper_3_before_cleanup/response.snp",
-      "bytes": 1103274,
-      "sha256": "de7a7e1943be1257c2cfdca90c84cc3c1b6de6102c45cddd2f09e5e9c1fb9b4e"
-    },
-    {
-      "path": "final_designs/references/taper_3_before_cleanup/s21_fit.png",
-      "bytes": 370427,
-      "sha256": "b9241c5e46e4b8ca3c488558a8605f1b11c68cab7c057026962f631fcb8bf4e7"
-    },
-    {
-      "path": "final_designs/references/taper_3_before_cleanup/selection.json",
-      "bytes": 7558,
-      "sha256": "d707611ece0271e79e1ed7c5274a34f3c8db36444a920622f5fdb37ea1fd0c5f"
-    },
-    {
-      "path": "final_designs/regular_cell/calibration/filter_v6.snp",
+      "path": "final_designs/final_regular/calibration/filter_v6.snp",
       "bytes": 59459,
       "sha256": "e095e1130788fda95e5240d3485674299a88d12f003dff06d71694612c370252"
     },
     {
-      "path": "final_designs/regular_cell/calibration/filter_v6.sonx",
+      "path": "final_designs/final_regular/calibration/filter_v6.sonx",
       "bytes": 171134,
       "sha256": "7c8d9ffa71a20e85156287121e994faf6dc2d8eae0b5a0f5ac53dfedeb9779a8"
     },
     {
-      "path": "final_designs/regular_cell/calibration/results.json",
+      "path": "final_designs/final_regular/calibration/results.json",
       "bytes": 2219,
       "sha256": "62fe1e3b172605c0d8810f742c56d2e5e7d2e1490d20e8041ec5ae7852f9bdc5"
     },
     {
-      "path": "final_designs/regular_cell/design.json",
-      "bytes": 550,
-      "sha256": "a11a5c7cdee1480b3490629fb9c105534e1b7618c22baf2d5ff5f4d8f833778d"
+      "path": "final_designs/final_regular/design.json",
+      "bytes": 551,
+      "sha256": "b2308fa2ec5eeeb16546a8771037c6ddb53ff752452200f9f920be44eb1f63f2"
     },
     {
-      "path": "final_designs/regular_cell/fit.json",
+      "path": "final_designs/final_regular/fit.json",
       "bytes": 973,
       "sha256": "6d7ed12a4f865af02c8abf1e79e8144bdb082df322e323ded02ccd44427b6318"
     },
     {
-      "path": "final_designs/regular_cell/layout.gds",
+      "path": "final_designs/final_regular/layout.gds",
       "bytes": 16526,
       "sha256": "39c0f592a943c73752f6e00d5fd86cc4dee6e190b1652c836cf5e1be8874d4f6"
     },
     {
-      "path": "final_designs/regular_cell/parameters.json",
+      "path": "final_designs/final_regular/parameters.json",
       "bytes": 870,
       "sha256": "da5201aea1dfd21e042d90b9b76cc1462649bc3dd2186a9288a8888cb3ee4433"
     },
     {
-      "path": "final_designs/regular_cell/project.sonx",
+      "path": "final_designs/final_regular/project.sonx",
       "bytes": 56685,
       "sha256": "1c0f2bd7a0e0c86ea099ee06c58a3c4b7f7031c867f8080a04d80eae34983af3"
     },
     {
-      "path": "final_designs/regular_cell/rebuild_validation.json",
+      "path": "final_designs/final_regular/rebuild_validation.json",
       "bytes": 251,
       "sha256": "76b5f9a8f1ae56d4e92415dd4e7d45ea802b77cba275f57e9cfc4f864b28f016"
     },
     {
-      "path": "final_designs/regular_cell/response.snp",
+      "path": "final_designs/final_regular/response.snp",
       "bytes": 74274,
       "sha256": "e6d7071c6497b08811ea1b567c52ef65167666f7ae5428da52061f8a5548074c"
     },
     {
-      "path": "final_designs/regular_cell/s21_fit.png",
+      "path": "final_designs/final_regular/s21_fit.png",
       "bytes": 238135,
       "sha256": "c7b9d1d4846452763d5d3f7adb47be30eb9cc1686ec3fba2fe731519dc130956"
     },
     {
-      "path": "final_designs/taper_1/calibration/explicit_L_check/generated_ncell_1.snp",
+      "path": "final_designs/final_T1/calibration/explicit_L_check/generated_ncell_1.snp",
       "bytes": 2352787,
       "sha256": "6a54cbe75f6b770200d39c7ef148f7478b9900bbd57f26c6303036665f97a78e"
     },
     {
-      "path": "final_designs/taper_1/calibration/explicit_L_check/generated_ncell_1.sonx",
+      "path": "final_designs/final_T1/calibration/explicit_L_check/generated_ncell_1.sonx",
       "bytes": 18737,
       "sha256": "d0d8d5d8f9380672b47e027e6090c2b7a2f89ce26a348da5ba3a011bf74444df"
     },
     {
-      "path": "final_designs/taper_1/calibration/explicit_L_check/results/cadd_128.571ff.log.resources.json",
+      "path": "final_designs/final_T1/calibration/explicit_L_check/results/cadd_128.571ff.log.resources.json",
       "bytes": 4692,
       "sha256": "cc091125f3476460845e5b7f1a05abf9ddf971b79835e5ad6b6fab883e48639f"
     },
     {
-      "path": "final_designs/taper_1/calibration/explicit_L_check/results/cadd_128.571ff.snp",
+      "path": "final_designs/final_T1/calibration/explicit_L_check/results/cadd_128.571ff.snp",
       "bytes": 2352787,
       "sha256": "46431a74024cb5ae9db4036628ee174f6db4752719da44ba81268ea13d56e57f"
     },
     {
-      "path": "final_designs/taper_1/calibration/explicit_L_check/results/cadd_128.571ff.sonx",
+      "path": "final_designs/final_T1/calibration/explicit_L_check/results/cadd_128.571ff.sonx",
       "bytes": 18736,
       "sha256": "8e35d0799a6a43a5fbf016a18136600cb53f12e504ffc8c1bc7da34557990af0"
     },
     {
-      "path": "final_designs/taper_1/calibration/explicit_L_check/results/cadd_201.605ff.log.resources.json",
+      "path": "final_designs/final_T1/calibration/explicit_L_check/results/cadd_201.605ff.log.resources.json",
       "bytes": 2966,
       "sha256": "f37ff3e4c23ea654c72151e63533218426a8d20315908a5dc5c2e3b20d666ad7"
     },
     {
-      "path": "final_designs/taper_1/calibration/explicit_L_check/results/cadd_201.605ff.snp",
+      "path": "final_designs/final_T1/calibration/explicit_L_check/results/cadd_201.605ff.snp",
       "bytes": 2352787,
       "sha256": "097c65219d98c96f95dca6ef7ed14f707b0d252901b5350247b4b423c6f394ce"
     },
     {
-      "path": "final_designs/taper_1/calibration/explicit_L_check/results/cadd_201.605ff.sonx",
+      "path": "final_designs/final_T1/calibration/explicit_L_check/results/cadd_201.605ff.sonx",
       "bytes": 18737,
       "sha256": "1e2f2ecab93ef4137ca36ea7736e70d0d5926c64efd84d14d65166e160d088dd"
     },
     {
-      "path": "final_designs/taper_1/calibration/explicit_L_check/results/cadd_305.424ff.log.resources.json",
+      "path": "final_designs/final_T1/calibration/explicit_L_check/results/cadd_305.424ff.log.resources.json",
       "bytes": 2954,
       "sha256": "d1f0a0b4e61c3bdd383775c4e438d9bebef06511506d800a1c08c5e589e09f16"
     },
     {
-      "path": "final_designs/taper_1/calibration/explicit_L_check/results/cadd_305.424ff.snp",
+      "path": "final_designs/final_T1/calibration/explicit_L_check/results/cadd_305.424ff.snp",
       "bytes": 2352787,
       "sha256": "e6615adb2b3a0d66e99aca069d499abbaeb7006b5e5195726d7ac6209f421c14"
     },
     {
-      "path": "final_designs/taper_1/calibration/explicit_L_check/results/cadd_305.424ff.sonx",
+      "path": "final_designs/final_T1/calibration/explicit_L_check/results/cadd_305.424ff.sonx",
       "bytes": 18736,
       "sha256": "5634eaa658e630dda1e776268aed52088041559886088265c3d4171c7eac9fe5"
     },
     {
-      "path": "final_designs/taper_1/calibration/explicit_L_check/results/cadd_460.427ff.log.resources.json",
+      "path": "final_designs/final_T1/calibration/explicit_L_check/results/cadd_460.427ff.log.resources.json",
       "bytes": 2962,
       "sha256": "fceb477b2f85f534fefaa4e00bb8467514d2f7581ff68289c6036c510ed50aed"
     },
     {
-      "path": "final_designs/taper_1/calibration/explicit_L_check/results/cadd_460.427ff.snp",
+      "path": "final_designs/final_T1/calibration/explicit_L_check/results/cadd_460.427ff.snp",
       "bytes": 2352787,
       "sha256": "6a54cbe75f6b770200d39c7ef148f7478b9900bbd57f26c6303036665f97a78e"
     },
     {
-      "path": "final_designs/taper_1/calibration/explicit_L_check/results/cadd_460.427ff.sonx",
+      "path": "final_designs/final_T1/calibration/explicit_L_check/results/cadd_460.427ff.sonx",
       "bytes": 18737,
       "sha256": "d0d8d5d8f9380672b47e027e6090c2b7a2f89ce26a348da5ba3a011bf74444df"
     },
     {
-      "path": "final_designs/taper_1/calibration/explicit_L_check/results/completed.json",
+      "path": "final_designs/final_T1/calibration/explicit_L_check/results/completed.json",
       "bytes": 3156,
       "sha256": "2ac9dfac7e5b11ea9a734e22f6573beb3cfbc876a94dc7f53be6e8e6fe898b8b"
     },
     {
-      "path": "final_designs/taper_1/calibration/explicit_L_check/results/inductance_fit.png",
+      "path": "final_designs/final_T1/calibration/explicit_L_check/results/inductance_fit.png",
       "bytes": 104868,
       "sha256": "afa7da1ca0e9892cc55b8d22d308661618fb9810bb8e907430c20b75595d8a55"
     },
     {
-      "path": "final_designs/taper_1/calibration/explicit_L_check/results/manifest.json",
+      "path": "final_designs/final_T1/calibration/explicit_L_check/results/manifest.json",
       "bytes": 715,
       "sha256": "7ac058031670a64cd49c1f7f0a0ee90bfa7e01700afd842c7303bea89fea229d"
     },
     {
-      "path": "final_designs/taper_1/calibration/explicit_L_check/results/results.json",
+      "path": "final_designs/final_T1/calibration/explicit_L_check/results/results.json",
       "bytes": 3025,
       "sha256": "2b514fd4fd180453b7dbaa3cc1d2f549133d02851a2ad9c15edb9809bd7c9fa4"
     },
     {
-      "path": "final_designs/taper_1/calibration/explicit_L_check/results/sweep_points.json",
+      "path": "final_designs/final_T1/calibration/explicit_L_check/results/sweep_points.json",
       "bytes": 1044,
       "sha256": "e26811820a2ef43b5fe8e6913972a12707b5b88ba593a04a2a1864c0a2558902"
     },
     {
-      "path": "final_designs/taper_1/calibration/explicit_L_check/results/sweep_s21.png",
+      "path": "final_designs/final_T1/calibration/explicit_L_check/results/sweep_s21.png",
       "bytes": 219827,
       "sha256": "26cf12540d010b266d67b3646e801a60f396b6613f882c2e493a0c505c51858d"
     },
     {
-      "path": "final_designs/taper_1/calibration/Lcal/em.log.resources.json",
+      "path": "final_designs/final_T1/calibration/Lcal/em.log.resources.json",
       "bytes": 5747,
       "sha256": "f09e5d2c4e2295e57871b6f6153453e76662f1cb04d067d14171207009bd5029"
     },
     {
-      "path": "final_designs/taper_1/calibration/Lcal/generated_ncell_1.snp",
+      "path": "final_designs/final_T1/calibration/Lcal/generated_ncell_1.snp",
       "bytes": 3568,
       "sha256": "a3ae8a6aec1fdf0a7ba204941b45788fb8fcd894d3b5ce4284c7a634f7089b20"
     },
     {
-      "path": "final_designs/taper_1/calibration/Lcal/generated_ncell_1.sonx",
+      "path": "final_designs/final_T1/calibration/Lcal/generated_ncell_1.sonx",
       "bytes": 19047,
       "sha256": "fd9e34365ce42ee9e07061f98c609272c7e1bfd53bb87644ca52f5b5b0913802"
     },
     {
-      "path": "final_designs/taper_1/calibration/Lcal/imported_review.png",
+      "path": "final_designs/final_T1/calibration/Lcal/imported_review.png",
       "bytes": 64057,
       "sha256": "a29b602e8e85d0d9641724dcc423220dbf0f1df24499451868c919f16c7a1d83"
     },
     {
-      "path": "final_designs/taper_1/calibration/Lcal/ncell_1_grid2.gds",
+      "path": "final_designs/final_T1/calibration/Lcal/ncell_1_grid2.gds",
       "bytes": 3070,
       "sha256": "11aeff4c2fa4a55ccf36a9b066ed98b1f5b616c851d907b790bd71abeb3904c3"
     },
     {
-      "path": "final_designs/taper_1/calibration/Lcal/validation.json",
+      "path": "final_designs/final_T1/calibration/Lcal/validation.json",
       "bytes": 980,
       "sha256": "a2eaef90158c7463be712bf603585e7e84e2fde431a64f72b39a8d41a50b0e31"
     },
     {
-      "path": "final_designs/taper_1/design.json",
-      "bytes": 611,
-      "sha256": "14f97202de6704e69af3368bc8ae991f97675ad42aba8018fce66bef2da681f7"
+      "path": "final_designs/final_T1/design.json",
+      "bytes": 612,
+      "sha256": "9c32d72655100aff6443479f6858072db001d2c6a4193da9d42bf24b32490526"
     },
     {
-      "path": "final_designs/taper_1/fit.json",
+      "path": "final_designs/final_T1/fit.json",
       "bytes": 10246,
       "sha256": "3ac8d7a31772d30e1d0966dac8b6c9545d8b30a9e21ffca005b06b4005912515"
     },
     {
-      "path": "final_designs/taper_1/layout.gds",
+      "path": "final_designs/final_T1/layout.gds",
       "bytes": 8382,
       "sha256": "7cd7ca6f6278696ce331358bd68f528b446946834c062486ac30bcedd104e956"
     },
     {
-      "path": "final_designs/taper_1/parameters.json",
+      "path": "final_designs/final_T1/parameters.json",
       "bytes": 1271,
       "sha256": "a15cb1000cdb186baa927c8192fd5b26af5ce671b4b9fb28df47f976539f6692"
     },
     {
-      "path": "final_designs/taper_1/project.sonx",
+      "path": "final_designs/final_T1/project.sonx",
       "bytes": 35431,
       "sha256": "6a8727de3cc78f620f13f74a8b77e27bf5130740218cde6ae3bf5eb0651c0e24"
     },
     {
-      "path": "final_designs/taper_1/rebuild_validation.json",
+      "path": "final_designs/final_T1/rebuild_validation.json",
       "bytes": 246,
       "sha256": "7d6eddc712954c98c2a87d39679f48ec64270a5a0f2d84e9b163ff12188012a0"
     },
     {
-      "path": "final_designs/taper_1/response.snp",
+      "path": "final_designs/final_T1/response.snp",
       "bytes": 1103274,
       "sha256": "450fc7b686174e1d4bc4690dda4b3da5ee1d7f685be054179d85bd4f457d4ac7"
     },
     {
-      "path": "final_designs/taper_1/s21_fit.png",
+      "path": "final_designs/final_T1/s21_fit.png",
       "bytes": 215812,
       "sha256": "9271ddbe6e61825c4d1b5ee2b2071048231abf40a8fb3f25bfe64ce49a501309"
     },
     {
-      "path": "final_designs/taper_1/selection.json",
+      "path": "final_designs/final_T1/selection.json",
       "bytes": 10246,
       "sha256": "3ac8d7a31772d30e1d0966dac8b6c9545d8b30a9e21ffca005b06b4005912515"
     },
     {
-      "path": "final_designs/taper_2/calibration/Lcal/generated_ncell_1.sonx",
+      "path": "final_designs/final_T2/calibration/Lcal/generated_ncell_1.sonx",
       "bytes": 21646,
       "sha256": "014408ee07762a6cad688b765ea5d7e3f6406c02c898fa7119073d84e4d67e74"
     },
     {
-      "path": "final_designs/taper_2/calibration/Lcal/geometry.gds",
+      "path": "final_designs/final_T2/calibration/Lcal/geometry.gds",
       "bytes": 3272,
       "sha256": "e1144b3880f378f9596f3f53a8485c8710bf4513940ecb2523cc7ec4b560adbf"
     },
     {
-      "path": "final_designs/taper_2/calibration/Lcal/geometry.json",
+      "path": "final_designs/final_T2/calibration/Lcal/geometry.json",
       "bytes": 2261,
       "sha256": "c3ca6dea6ddff7de0f471b31a9da7dac61aee4250858e307326cd5ace02c0512"
     },
     {
-      "path": "final_designs/taper_2/calibration/Lcal/imported_review.png",
+      "path": "final_designs/final_T2/calibration/Lcal/imported_review.png",
       "bytes": 60529,
       "sha256": "372861dffbe8c3ebd0732e49b25e53b7c077b31b828984c2286faefd1aa2333b"
     },
     {
-      "path": "final_designs/taper_2/calibration/Lcal/ncell_1_grid2.gds",
+      "path": "final_designs/final_T2/calibration/Lcal/ncell_1_grid2.gds",
       "bytes": 3070,
       "sha256": "808e5e5208d3c7a2de0972e515a7964fdb4c84a636dfe9e695a38c0d523b2c54"
     },
     {
-      "path": "final_designs/taper_2/calibration/Lcal/validation.json",
+      "path": "final_designs/final_T2/calibration/Lcal/validation.json",
       "bytes": 982,
       "sha256": "79af8a4eb59c89bc412cd4eda1649bb9882d4080be2aca1e65e6bcbcb17566dd"
     },
     {
-      "path": "final_designs/taper_2/calibration/Lcal_explicit/generated_ncell_1.snp",
+      "path": "final_designs/final_T2/calibration/Lcal_explicit/generated_ncell_1.snp",
       "bytes": 235972,
       "sha256": "0b3215ef4eed918520af3c2b67029802197ee61356f56387ad7c9fca986eebfb"
     },
     {
-      "path": "final_designs/taper_2/calibration/Lcal_explicit/generated_ncell_1.sonx",
+      "path": "final_designs/final_T2/calibration/Lcal_explicit/generated_ncell_1.sonx",
       "bytes": 18877,
       "sha256": "e43494c3aedc749a4ed18b44128076e2dd8eb6e628242f8773fdc63fa2b3e32c"
     },
     {
-      "path": "final_designs/taper_2/design.json",
-      "bytes": 609,
-      "sha256": "56e4e705a78a4dc73c6974fea8cf74f9f04dc4cd29d71610cbaf28d0b319c564"
+      "path": "final_designs/final_T2/design.json",
+      "bytes": 610,
+      "sha256": "f927d87be84a678fa498d4af140add09bc9305f28b35867faee0f00c5863b7dd"
     },
     {
-      "path": "final_designs/taper_2/fit.json",
+      "path": "final_designs/final_T2/fit.json",
       "bytes": 2370,
       "sha256": "d98edf6db96672015a20637b18f75a154cc02fb71937ed38c10a62426a1bf28a"
     },
     {
-      "path": "final_designs/taper_2/layout.gds",
+      "path": "final_designs/final_T2/layout.gds",
       "bytes": 15550,
       "sha256": "ed36dd99c6f77e532f4211c9f7f501392c6712a433eb77b7375a54b6ea324fea"
     },
     {
-      "path": "final_designs/taper_2/parameters.json",
+      "path": "final_designs/final_T2/parameters.json",
       "bytes": 2860,
       "sha256": "89998d052fe64606dfe8ced372032f7fdf23f44fc1e676154493b4627d0bb071"
     },
     {
-      "path": "final_designs/taper_2/project.sonx",
+      "path": "final_designs/final_T2/project.sonx",
       "bytes": 56702,
       "sha256": "5676c9c60f5ec9ab67ef7ccb38beb30742a6d649e41982b13c4ae056b9c05d11"
     },
     {
-      "path": "final_designs/taper_2/rebuild_validation.json",
+      "path": "final_designs/final_T2/rebuild_validation.json",
       "bytes": 246,
       "sha256": "34d13d795cffa3e7c43635dd69853e9436f2520e2cecd9ba771c00edbd291759"
     },
     {
-      "path": "final_designs/taper_2/response.snp",
+      "path": "final_designs/final_T2/response.snp",
       "bytes": 1103274,
       "sha256": "71cfa5cafc9e99ce165aa9e3277196d63c4235f27e1af3ea3b2c4c807dd8ffc3"
     },
     {
-      "path": "final_designs/taper_2/s21_fit.png",
+      "path": "final_designs/final_T2/s21_fit.png",
       "bytes": 361389,
       "sha256": "8e2a2bf4b8cfb3d1bd00beb4ff740b6fc0da85e5177afb0bbee6757534c8c9e4"
     },
     {
-      "path": "final_designs/taper_2/selection.json",
+      "path": "final_designs/final_T2/selection.json",
       "bytes": 7788,
       "sha256": "636d44c83e74c6e64c4a4e5b0bbe3b5d72e0c3647108bdfe6ff1a2783d7fb9b1"
     },
     {
-      "path": "final_designs/taper_3/calibration/evidence/Lcal_explicit_T2/cadd_250ff.snp",
+      "path": "final_designs/final_T3/ACCEPTED_CHECKPOINT.json",
+      "bytes": 411,
+      "sha256": "e7bef90a8c6ea2f2e52de48e880f84844a06cf9342c113ea11fe4fb5c635b62e"
+    },
+    {
+      "path": "final_designs/final_T3/baseline.sonx",
+      "bytes": 96578,
+      "sha256": "6d01b08d56812d1a0ca6dca16a88bcce6de709af4daba5374edd197333c993df"
+    },
+    {
+      "path": "final_designs/final_T3/boundary_configuration.json",
+      "bytes": 305,
+      "sha256": "2e6bf9aabc25f30d612c5299ddbd6e420e42979d0030ca7f6338085612ae2139"
+    },
+    {
+      "path": "final_designs/final_T3/conditional_ten_cell_components.json",
+      "bytes": 1259,
+      "sha256": "cf0b1799e8213bb981f7f79c1f5854761d032526f513fc7059f992ba22b1c1c0"
+    },
+    {
+      "path": "final_designs/final_T3/conditional_ten_cell_s21.png",
+      "bytes": 138741,
+      "sha256": "25b8c82dfae91c7e3b9ee9ed23a2c2bc7bf17453b64aa5d165ef6633214bfa97"
+    },
+    {
+      "path": "final_designs/final_T3/continuous_ground/merge_validation.json",
+      "bytes": 744,
+      "sha256": "8924a6b27e071d454f59e246d12bdf537b70f1b6e6f7f8144d59e9ab7285c527"
+    },
+    {
+      "path": "final_designs/final_T3/continuous_ground/project.sonx",
+      "bytes": 54149,
+      "sha256": "0fad24a51ad533a474370c450ccdd7c400f54c851e82b5d910ba602d5778c876"
+    },
+    {
+      "path": "final_designs/final_T3/cover_30mm_verification/project.snp",
+      "bytes": 221264,
+      "sha256": "facf4f0a1b530a154b65995910fc30a4719d028769e36d66c23936eab2af734c"
+    },
+    {
+      "path": "final_designs/final_T3/cover_30mm_verification/project.sonx",
+      "bytes": 59126,
+      "sha256": "6e0230f04a7dfaf68ddef669a8abc3afdf593773329ecbca9097edb1af68cce9"
+    },
+    {
+      "path": "final_designs/final_T3/cover_30mm_verification/run_status.json",
+      "bytes": 529,
+      "sha256": "6b31f245b006d916f027b2e58a8deae7e42eaa8e2106493d47ef6891653e1473"
+    },
+    {
+      "path": "final_designs/final_T3/design.json",
+      "bytes": 355,
+      "sha256": "283e079e7b980dec0aa47c116e8b537cafeb26ba1e5de7b21b76dda6eb7e3b1d"
+    },
+    {
+      "path": "final_designs/final_T3/eight_dimension_geometry.json",
+      "bytes": 493,
+      "sha256": "0a67c50d13bfc7399f393b29689b957873b98181469f4aa5eb3216cb91d2f0f4"
+    },
+    {
+      "path": "final_designs/final_T3/eleven_dimension_geometry.json",
+      "bytes": 587,
+      "sha256": "7898612b88b26d90b54dbb7f6a3501bc6470652a147c68919116d69b092af1eb"
+    },
+    {
+      "path": "final_designs/final_T3/extension_check.json",
+      "bytes": 145,
+      "sha256": "9242016432180f55674ef92136e624dfc25b92fa8c13f6cc4b5c862715b3e794"
+    },
+    {
+      "path": "final_designs/final_T3/fourteen_dimension_geometry.json",
+      "bytes": 531,
+      "sha256": "83ea7899931018216453fd63f4177f6ca053b3dbe99aa692402cf798ae4b4867"
+    },
+    {
+      "path": "final_designs/final_T3/geometry.png",
+      "bytes": 34304,
+      "sha256": "138c0cf59fbcf12b759fd5723ba2b5ce747e801fcadef7859f7b1be3ab0bcb55"
+    },
+    {
+      "path": "final_designs/final_T3/independent_comparator_check.json",
+      "bytes": 126,
+      "sha256": "d97ccc6e333fbd67dab29c949b414df03d46a43f8a19f16816b8562f48fc63d7"
+    },
+    {
+      "path": "final_designs/final_T3/input_ground_geometry.json",
+      "bytes": 357,
+      "sha256": "abc944d45a670056fd1a9a11bb159b53065449337fa5560982e8b25f04392255"
+    },
+    {
+      "path": "final_designs/final_T3/iteration_history.json",
+      "bytes": 4344,
+      "sha256": "2313aea1593ca4a5e06e952beae165fb5104ff0c13ddab3a70c82d1dafd3e365"
+    },
+    {
+      "path": "final_designs/final_T3/layout.gds",
+      "bytes": 22878,
+      "sha256": "b54e18f599b77ee048e5f1971d1bf369bbc0b44004662f05064a26c0e9ec93f0"
+    },
+    {
+      "path": "final_designs/final_T3/local_model/analysis.json",
+      "bytes": 5778,
+      "sha256": "74c1988628bd8f7bf36ae89df3e258c37ee3fb2f23abe62fece436d6e9fd97ac"
+    },
+    {
+      "path": "final_designs/final_T3/local_model/complete.json",
+      "bytes": 361,
+      "sha256": "b6f3113d40fd557763d9f0dee3c088bc1b2ba392dc2b7b91bdc584aaf1cdfb59"
+    },
+    {
+      "path": "final_designs/final_T3/local_model/manifest.json",
+      "bytes": 1014,
+      "sha256": "2265d6908253d2adefea0427a076723e99bbb854ab91c9ae663a12a264ad0f36"
+    },
+    {
+      "path": "final_designs/final_T3/local_model/network.json",
+      "bytes": 33983,
+      "sha256": "d0d20c5361a4c4057be37d88c73bdadff3728bebbeea1eed4a5b300ab4316e77"
+    },
+    {
+      "path": "final_designs/final_T3/local_model/prediction.png",
+      "bytes": 73962,
+      "sha256": "0376b5d327587cd91ca7a6ff3507e2d85be906166587de24efa734a07649ec50"
+    },
+    {
+      "path": "final_designs/final_T3/local_model/project.snp",
+      "bytes": 18957,
+      "sha256": "c5515d6669f6a633396beef35c5eecf027a40e24dbb44b7769fa2eccb75647cf"
+    },
+    {
+      "path": "final_designs/final_T3/local_model/project.sonx",
+      "bytes": 59922,
+      "sha256": "db1550a104378583c7cabe38c0360ab3bb857c54c13683d6377beeb232a02fb0"
+    },
+    {
+      "path": "final_designs/final_T3/local_model/terminal_profiles.json",
+      "bytes": 36163,
+      "sha256": "4489918dc2d65039eefc3de381b0dd60247d8f81fdf984e43adc7fb72e57eec6"
+    },
+    {
+      "path": "final_designs/final_T3/meander_geometry.json",
+      "bytes": 1107,
+      "sha256": "c9e164dc7af7bde59e9979a4966e8ca028de17c29dd3b44fab3d3e0c20d28283"
+    },
+    {
+      "path": "final_designs/final_T3/nine_dimension_geometry.json",
+      "bytes": 563,
+      "sha256": "82457ad8e359a049fb26241feb669172d3cc54d023d79541e95469781eb34f06"
+    },
+    {
+      "path": "final_designs/final_T3/parameters.json",
+      "bytes": 8535,
+      "sha256": "347cb3226d33fce86c8cab09d33d87adf759926adcba8af0dc19e7212d22b4b8"
+    },
+    {
+      "path": "final_designs/final_T3/project.snp",
+      "bytes": 221264,
+      "sha256": "4e35386c4b7d28299eab416ac230aa8cade30f5eedc2e55ae426b5532a55fcce"
+    },
+    {
+      "path": "final_designs/final_T3/project.sonx",
+      "bytes": 59126,
+      "sha256": "ec140715df34013203218b873d264b6fffaeb0b9a8188f83895ec4282e308172"
+    },
+    {
+      "path": "final_designs/final_T3/raised_geometry.json",
+      "bytes": 274,
+      "sha256": "204bcc05965d7d840b349d73208a6d4a75bfd6b653abc065913544adefa2ee41"
+    },
+    {
+      "path": "final_designs/final_T3/rebuild_validation.json",
+      "bytes": 263,
+      "sha256": "edaa5fdb204684a13cd29ac5fab5ef5efbd4aeb0df9e89bfe0df785200b89d36"
+    },
+    {
+      "path": "final_designs/final_T3/result.json",
+      "bytes": 8535,
+      "sha256": "347cb3226d33fce86c8cab09d33d87adf759926adcba8af0dc19e7212d22b4b8"
+    },
+    {
+      "path": "final_designs/final_T3/s21.png",
+      "bytes": 86171,
+      "sha256": "548f5243bc4e14e81065593d1ceca01e07866338d9b65cb3d482658077376da0"
+    },
+    {
+      "path": "final_designs/final_T3/s21_verified.png",
+      "bytes": 162107,
+      "sha256": "841b36ed57b5786a7ebef3ca46e3d05cf67cae9c82f3e5cd3af62e8c2591170b"
+    },
+    {
+      "path": "final_designs/final_T3/s21_with_target_parameters.png",
+      "bytes": 237620,
+      "sha256": "9c4c303b859c406bf4fc2e73d3a18444586ccc1762a8f7c989f627cb27d99931"
+    },
+    {
+      "path": "final_designs/final_T3/seven_dimension_geometry.json",
+      "bytes": 589,
+      "sha256": "d28fedfefbf887354ca39267d902b9cdad0dbe1e093dcc66aa1c59df3c2e7cb1"
+    },
+    {
+      "path": "final_designs/final_T3/ten_dimension_geometry.json",
+      "bytes": 531,
+      "sha256": "6161803046373f5ec726e865693effba3baa4332b14f2ab5f3dfd725dc5f13ea"
+    },
+    {
+      "path": "final_designs/PUBLICATION_PATHS.json",
+      "bytes": 1927,
+      "sha256": "cad527450630c3cd263c34aedb2cdb7b707faa502c63d5db2a7718e1ec948dfe"
+    },
+    {
+      "path": "final_designs/README.md",
+      "bytes": 1715,
+      "sha256": "9df06e5032fba9045a7f68c744c07b3611c8f39084df9998d7541964808dad12"
+    },
+    {
+      "path": "final_designs/SOURCE_PATHS.json",
+      "bytes": 13933,
+      "sha256": "502fb003e4923e20271fe411b10497dcc405559fec0d37a51bcf89eea12d3829"
+    },
+    {
+      "path": "final_old/full_filter_cleanup/design.json",
+      "bytes": 636,
+      "sha256": "210c7eb209fca1474645e2a5c7b455a96b13e8f53c4225d68484e7755826657b"
+    },
+    {
+      "path": "final_old/full_filter_cleanup/geometry.png",
+      "bytes": 114632,
+      "sha256": "2ef1ee6129482c043992c0158ef5f68090acb7b6b6f090eedb7278a8e1c9a175"
+    },
+    {
+      "path": "final_old/full_filter_cleanup/layout.gds",
+      "bytes": 73902,
+      "sha256": "0793616d5d1b2559f4643834d819e6484586f28e247592a6b21e8a44daf6e0ae"
+    },
+    {
+      "path": "final_old/full_filter_cleanup/parameters.json",
+      "bytes": 1706,
+      "sha256": "d864dec9038a7b73276e5f37c634b74b920addf32d2d5dd428a3a95225b3ce88"
+    },
+    {
+      "path": "final_old/full_filter_cleanup/project.sonx",
+      "bytes": 225820,
+      "sha256": "10cd07ce90ba5951da6765e70e079f20399ee0a83aa77914878ab1baa915dd05"
+    },
+    {
+      "path": "final_old/full_filter_cleanup/rebuild_validation.json",
+      "bytes": 249,
+      "sha256": "4121e9865f324eee26353fe83c6a8028923b5ee70701868db542aecdd0e6905e"
+    },
+    {
+      "path": "final_old/publication_2026_11_08/designs.json",
+      "bytes": 5463,
+      "sha256": "23f0e3840f1ace9cdc3f4c59a9034a9528ca1069a3b4780bc2d8294ef6af1c8c"
+    },
+    {
+      "path": "final_old/publication_2026_11_08/manifest.json",
+      "bytes": 46843,
+      "sha256": "e34d60c20621dc2dd6831b0bd5e0e3013d46a59e89a121f7c62d7294111928a3"
+    },
+    {
+      "path": "final_old/publication_2026_11_08/README.md",
+      "bytes": 2169,
+      "sha256": "a16b0c0ef009fd1b79cbd20151b2f8775fc3bc834534dc310f6924b465760be9"
+    },
+    {
+      "path": "final_old/publication_2026_11_08/SOURCE_PATHS.json",
+      "bytes": 14780,
+      "sha256": "70dc5ccc3d41e32b26cadaa2c37ad699d447f127914d054e8272a0c70549da61"
+    },
+    {
+      "path": "final_old/README.md",
+      "bytes": 667,
+      "sha256": "1442f4a93ef253c15d477b1727f939785001afbe696ffe6100162b2ab0ef274d"
+    },
+    {
+      "path": "final_old/references/taper_3_before_cleanup/calibration/evidence/Lcal/geometry.png",
+      "bytes": 48190,
+      "sha256": "e7374b730de69fd15658035979eef8d5a29605ceeaedc9b56e0dcae3a3eecd05"
+    },
+    {
+      "path": "final_old/references/taper_3_before_cleanup/calibration/evidence/Lcal/settings.json",
+      "bytes": 852,
+      "sha256": "a6b3f6cac319503d466fe48b023b413b7102500d2d50447e2f0dfdc6728b96c9"
+    },
+    {
+      "path": "final_old/references/taper_3_before_cleanup/calibration/evidence/Lcal_explicit/cadd_450ff.log.resources.json",
+      "bytes": 7974,
+      "sha256": "8ede9c17f23b4ea3bd973d92f467f967762aa8d9e3f6c21834c099d6c21e3f78"
+    },
+    {
+      "path": "final_old/references/taper_3_before_cleanup/calibration/evidence/Lcal_explicit/cadd_450ff.snp",
+      "bytes": 235973,
+      "sha256": "93966d7611804aab8e8b92eaec2c72f88b2ed91da62a366f1fdc510a9edb8790"
+    },
+    {
+      "path": "final_old/references/taper_3_before_cleanup/calibration/evidence/Lcal_explicit/cadd_450ff.sonx",
+      "bytes": 18506,
+      "sha256": "fdf4ca8f642b0d1a9b87f49a019e27fae42e4477248d6760813a938bd35ac791"
+    },
+    {
+      "path": "final_old/references/taper_3_before_cleanup/calibration/evidence/Lcal_explicit/cadd_600ff.log.resources.json",
+      "bytes": 1335,
+      "sha256": "5b3f28be6d9cd7f07dd9b3fc27d23e4c51afecad16e9a132f274658d1d99f474"
+    },
+    {
+      "path": "final_old/references/taper_3_before_cleanup/calibration/evidence/Lcal_explicit/cadd_600ff.snp",
+      "bytes": 235972,
+      "sha256": "dc8c76b7271d9c033537ca25182786c83efebc707e7599304a68d2f99c5c3973"
+    },
+    {
+      "path": "final_old/references/taper_3_before_cleanup/calibration/evidence/Lcal_explicit/cadd_600ff.sonx",
+      "bytes": 18505,
+      "sha256": "52c3db93b4bf261f6309ad5806a005564e585901107e3db8ce92b67bf18d9e07"
+    },
+    {
+      "path": "final_old/references/taper_3_before_cleanup/calibration/evidence/Lcal_explicit/cadd_750ff.log.resources.json",
+      "bytes": 1342,
+      "sha256": "14488e373b63a8ee95a6d78a40f1d4cf0af377188b328502cec28cd61aa6a0e9"
+    },
+    {
+      "path": "final_old/references/taper_3_before_cleanup/calibration/evidence/Lcal_explicit/cadd_750ff.snp",
+      "bytes": 235973,
+      "sha256": "7e41be81298b2080cc32a0411ac76c5f1a350d42faa864ec0f700f576d5ce7ac"
+    },
+    {
+      "path": "final_old/references/taper_3_before_cleanup/calibration/evidence/Lcal_explicit/cadd_750ff.sonx",
+      "bytes": 18506,
+      "sha256": "a7b4f0bb481cbdf29f28eb079195bd51995176be132aed344828cc63d4846ea3"
+    },
+    {
+      "path": "final_old/references/taper_3_before_cleanup/calibration/evidence/Lcal_explicit/cadd_900ff.log.resources.json",
+      "bytes": 1333,
+      "sha256": "2359f136b0e6d7f08bf574bf77afbd2b7961abe036930a025c90984ea26ccd73"
+    },
+    {
+      "path": "final_old/references/taper_3_before_cleanup/calibration/evidence/Lcal_explicit/cadd_900ff.snp",
+      "bytes": 235972,
+      "sha256": "2ca97d1f7500675a1dce7339371d99393d3c5d54ba93cd3862cac5d867f740b5"
+    },
+    {
+      "path": "final_old/references/taper_3_before_cleanup/calibration/evidence/Lcal_explicit/cadd_900ff.sonx",
+      "bytes": 18505,
+      "sha256": "3fca5d4260246f30e3752d11193ed8558b1947d653ae44daf02743e556d30dab"
+    },
+    {
+      "path": "final_old/references/taper_3_before_cleanup/calibration/evidence/Lcal_explicit/completed.json",
+      "bytes": 3802,
+      "sha256": "2864fd3fae2839d9aaffd8343f7a86226b1da79caa1f230c60da7da6285a4713"
+    },
+    {
+      "path": "final_old/references/taper_3_before_cleanup/calibration/evidence/Lcal_explicit/inductance_fit.png",
+      "bytes": 96931,
+      "sha256": "94501c09ba279ef8e8ab754f863b14c4919f9d470b6cdf5e21f03b79cb154a35"
+    },
+    {
+      "path": "final_old/references/taper_3_before_cleanup/calibration/evidence/Lcal_explicit/manifest.json",
+      "bytes": 683,
+      "sha256": "17bddb0401c83d6aa4edebdb40ee7ca80950f6f0f5b46e7e1e1d11c1f8037fe5"
+    },
+    {
+      "path": "final_old/references/taper_3_before_cleanup/calibration/evidence/Lcal_explicit/results.json",
+      "bytes": 3067,
+      "sha256": "c0b2a0acf39e058a0c4938a57ceaa8d378bb95734b8275a768cae6472742a344"
+    },
+    {
+      "path": "final_old/references/taper_3_before_cleanup/calibration/evidence/Lcal_explicit/sweep_points.json",
+      "bytes": 993,
+      "sha256": "0e3a12cce1c2f2289880f42bdd0d069166da7ec743871df2d26c31ab9b252c48"
+    },
+    {
+      "path": "final_old/references/taper_3_before_cleanup/calibration/evidence/Lcal_explicit/sweep_s21.png",
+      "bytes": 200454,
+      "sha256": "951f74600425d8017d5e31f41bd7e85b93e844a0b0f406c057383abe01bcda09"
+    },
+    {
+      "path": "final_old/references/taper_3_before_cleanup/calibration/Lcal/generated_ncell_1.sonx",
+      "bytes": 21272,
+      "sha256": "320c964810eac3a813958e0ba0a96bce4dc7fb46b40160083683159c00ce25a6"
+    },
+    {
+      "path": "final_old/references/taper_3_before_cleanup/calibration/Lcal/geometry.gds",
+      "bytes": 3148,
+      "sha256": "b0c4987fe5c697f48bf0867a86768cdfcf2d72fc2fd7637e8f7717b81da07a03"
+    },
+    {
+      "path": "final_old/references/taper_3_before_cleanup/calibration/Lcal/geometry.json",
+      "bytes": 3306,
+      "sha256": "e6a1beb1ceab88494018f6ff2c619a7175e308961746b39e878cb0a714977921"
+    },
+    {
+      "path": "final_old/references/taper_3_before_cleanup/calibration/Lcal/imported_review.png",
+      "bytes": 62103,
+      "sha256": "47bc9542355bde7aa1084bf79150c47a4e27734ab4319aedb23296cd22c24867"
+    },
+    {
+      "path": "final_old/references/taper_3_before_cleanup/calibration/Lcal/ncell_1_grid2.gds",
+      "bytes": 2942,
+      "sha256": "9a621245e1ddff053ccd4a118424c805bb289b069746186d746dbfca9a25a897"
+    },
+    {
+      "path": "final_old/references/taper_3_before_cleanup/calibration/Lcal/validation.json",
+      "bytes": 1000,
+      "sha256": "de74533d2ec2e328bfead160743ebbb9efa80bbc7b844983c323ffb5a906e296"
+    },
+    {
+      "path": "final_old/references/taper_3_before_cleanup/calibration/Lcal_explicit/generated_ncell_1.snp",
+      "bytes": 235972,
+      "sha256": "2ca97d1f7500675a1dce7339371d99393d3c5d54ba93cd3862cac5d867f740b5"
+    },
+    {
+      "path": "final_old/references/taper_3_before_cleanup/calibration/Lcal_explicit/generated_ncell_1.sonx",
+      "bytes": 18505,
+      "sha256": "3fca5d4260246f30e3752d11193ed8558b1947d653ae44daf02743e556d30dab"
+    },
+    {
+      "path": "final_old/references/taper_3_before_cleanup/design.json",
+      "bytes": 654,
+      "sha256": "91464bdc2d2d33e76939e4275df4faf7b778ff9dccd3e78c272f404f062a6222"
+    },
+    {
+      "path": "final_old/references/taper_3_before_cleanup/fit.json",
+      "bytes": 3918,
+      "sha256": "9d40f1b79dce003c6fe4604790d42b4be471412fac90bee8a40bc90d9e422963"
+    },
+    {
+      "path": "final_old/references/taper_3_before_cleanup/layout.gds",
+      "bytes": 19454,
+      "sha256": "025da1484aa726efe5f09e422df41d8f8a7a2c97a04263bbfe05d47fbeb86003"
+    },
+    {
+      "path": "final_old/references/taper_3_before_cleanup/parameters.json",
+      "bytes": 2036,
+      "sha256": "3853f172cde68d749b2f19366d544acd0c307f463972cc0f2216ed472995f5e4"
+    },
+    {
+      "path": "final_old/references/taper_3_before_cleanup/project.sonx",
+      "bytes": 67060,
+      "sha256": "c650006a152cae65adadf8fcd196881d08642def1c0a08d112241ca9804ee18e"
+    },
+    {
+      "path": "final_old/references/taper_3_before_cleanup/rebuild_validation.json",
+      "bytes": 272,
+      "sha256": "3c9bb19e85eb5ae03a0f1989c33a98d47188a1dcea7e8a0fa5de14357bbd4d4e"
+    },
+    {
+      "path": "final_old/references/taper_3_before_cleanup/response.snp",
+      "bytes": 1103274,
+      "sha256": "de7a7e1943be1257c2cfdca90c84cc3c1b6de6102c45cddd2f09e5e9c1fb9b4e"
+    },
+    {
+      "path": "final_old/references/taper_3_before_cleanup/s21_fit.png",
+      "bytes": 370427,
+      "sha256": "b9241c5e46e4b8ca3c488558a8605f1b11c68cab7c057026962f631fcb8bf4e7"
+    },
+    {
+      "path": "final_old/references/taper_3_before_cleanup/selection.json",
+      "bytes": 7558,
+      "sha256": "d707611ece0271e79e1ed7c5274a34f3c8db36444a920622f5fdb37ea1fd0c5f"
+    },
+    {
+      "path": "final_old/taper_3_cleanup/calibration/evidence/Lcal_explicit_T2/cadd_250ff.snp",
       "bytes": 294773,
       "sha256": "cd43e5a5686e86f331669ed0f718b544d27c5e779baf6f86742ef33da32f07c7"
     },
     {
-      "path": "final_designs/taper_3/calibration/evidence/Lcal_explicit_T2/cadd_250ff.sonx",
+      "path": "final_old/taper_3_cleanup/calibration/evidence/Lcal_explicit_T2/cadd_250ff.sonx",
       "bytes": 30748,
       "sha256": "edf15dcbccc12b9fdb7647369bcc0b6d290b072498afd4e311091dd3ff719587"
     },
     {
-      "path": "final_designs/taper_3/calibration/evidence/Lcal_explicit_T2/cadd_350ff.snp",
+      "path": "final_old/taper_3_cleanup/calibration/evidence/Lcal_explicit_T2/cadd_350ff.snp",
       "bytes": 294773,
       "sha256": "b4e6d85a3c237e7d63ab10d4e5fbfef783583cc6dba62e01232579de588c02f9"
     },
     {
-      "path": "final_designs/taper_3/calibration/evidence/Lcal_explicit_T2/cadd_350ff.sonx",
+      "path": "final_old/taper_3_cleanup/calibration/evidence/Lcal_explicit_T2/cadd_350ff.sonx",
       "bytes": 30748,
       "sha256": "d2d069ef18e6031b69ada944a1aa7c83b8672630f43a8e5e70d0582f4bd1ec87"
     },
     {
-      "path": "final_designs/taper_3/calibration/evidence/Lcal_explicit_T2/cadd_450ff.snp",
+      "path": "final_old/taper_3_cleanup/calibration/evidence/Lcal_explicit_T2/cadd_450ff.snp",
       "bytes": 294773,
       "sha256": "49a0f8f12b830ed4c0a29d557b70fd01ec835af3312171a30a9bdc9d20515135"
     },
     {
-      "path": "final_designs/taper_3/calibration/evidence/Lcal_explicit_T2/cadd_450ff.sonx",
+      "path": "final_old/taper_3_cleanup/calibration/evidence/Lcal_explicit_T2/cadd_450ff.sonx",
       "bytes": 30748,
       "sha256": "bd00a5ad2d48bb8897aacb5c2159a763e7cf782f5fdd482da2a6f1740570e342"
     },
     {
-      "path": "final_designs/taper_3/calibration/evidence/Lcal_explicit_T2/cadd_550ff.snp",
+      "path": "final_old/taper_3_cleanup/calibration/evidence/Lcal_explicit_T2/cadd_550ff.snp",
       "bytes": 294773,
       "sha256": "dd1cc825a0bce5de27e2eeb62fcd3f5f2f0ac8b6460da9441f9d2eb5e9176761"
     },
     {
-      "path": "final_designs/taper_3/calibration/evidence/Lcal_explicit_T2/cadd_550ff.sonx",
+      "path": "final_old/taper_3_cleanup/calibration/evidence/Lcal_explicit_T2/cadd_550ff.sonx",
       "bytes": 30748,
       "sha256": "85e26ab67d94a3e2a4c5a2f6554e57c4ff2db0fe4a50a156a468d9208f0018cf"
     },
     {
-      "path": "final_designs/taper_3/calibration/evidence/Lcal_explicit_T2/completed.json",
+      "path": "final_old/taper_3_cleanup/calibration/evidence/Lcal_explicit_T2/completed.json",
       "bytes": 3358,
       "sha256": "48f71e3b0d856b0ff3900d40acb2a2cf56c6f8468445ac64e728de4c2460c24a"
     },
     {
-      "path": "final_designs/taper_3/calibration/evidence/Lcal_explicit_T2/inductance_fit.png",
+      "path": "final_old/taper_3_cleanup/calibration/evidence/Lcal_explicit_T2/inductance_fit.png",
       "bytes": 104007,
       "sha256": "365717d8ce995a4aa913cd744fed7cfe63ff8c3cc05bf6040fa3f78a84a6f597"
     },
     {
-      "path": "final_designs/taper_3/calibration/evidence/Lcal_explicit_T2/manifest.json",
+      "path": "final_old/taper_3_cleanup/calibration/evidence/Lcal_explicit_T2/manifest.json",
       "bytes": 646,
       "sha256": "c782c40887da7a75a5c69ae95a0a193cb57420bace8111cf487a3f5a11c36f62"
     },
     {
-      "path": "final_designs/taper_3/calibration/evidence/Lcal_explicit_T2/results.json",
+      "path": "final_old/taper_3_cleanup/calibration/evidence/Lcal_explicit_T2/results.json",
       "bytes": 2967,
       "sha256": "df0bd6d60be3f73422daa7dd1ee7a36a3396e55dbc34d3398f9198970561e29e"
     },
     {
-      "path": "final_designs/taper_3/calibration/evidence/Lcal_explicit_T2/sweep_points.json",
+      "path": "final_old/taper_3_cleanup/calibration/evidence/Lcal_explicit_T2/sweep_points.json",
       "bytes": 993,
       "sha256": "2f32c4dbd5be0ed9b461244eb3405663e0f1269d2607029419fab36308fffb62"
     },
     {
-      "path": "final_designs/taper_3/calibration/evidence/Lcal_explicit_T2/sweep_s21.png",
+      "path": "final_old/taper_3_cleanup/calibration/evidence/Lcal_explicit_T2/sweep_s21.png",
       "bytes": 219119,
       "sha256": "5e4911357e318bc458e6bfebff2f299360c05a39bebab51d201feda0c126fafb"
     },
     {
-      "path": "final_designs/taper_3/calibration/evidence/Lcal_T2/geometry_checks.json",
+      "path": "final_old/taper_3_cleanup/calibration/evidence/Lcal_T2/geometry_checks.json",
       "bytes": 884,
       "sha256": "15f980bb5cb6e1ab6e90df570317661f22de45f413b003f4080e4eb806190743"
     },
     {
-      "path": "final_designs/taper_3/calibration/Lcal_explicit_T2/generated_ncell_1.snp",
+      "path": "final_old/taper_3_cleanup/calibration/Lcal_explicit_T2/generated_ncell_1.snp",
       "bytes": 294773,
       "sha256": "dd1cc825a0bce5de27e2eeb62fcd3f5f2f0ac8b6460da9441f9d2eb5e9176761"
     },
     {
-      "path": "final_designs/taper_3/calibration/Lcal_explicit_T2/generated_ncell_1.sonx",
+      "path": "final_old/taper_3_cleanup/calibration/Lcal_explicit_T2/generated_ncell_1.sonx",
       "bytes": 30748,
       "sha256": "85e26ab67d94a3e2a4c5a2f6554e57c4ff2db0fe4a50a156a468d9208f0018cf"
     },
     {
-      "path": "final_designs/taper_3/calibration/Lcal_explicit_T3/generated_ncell_1.snp",
+      "path": "final_old/taper_3_cleanup/calibration/Lcal_explicit_T3/generated_ncell_1.snp",
       "bytes": 294772,
       "sha256": "9c93cdb44829bb631edb2b54a6614b6a12817328abfdbd8ae8a79f4a57876b1d"
     },
     {
-      "path": "final_designs/taper_3/calibration/Lcal_explicit_T3/generated_ncell_1.sonx",
+      "path": "final_old/taper_3_cleanup/calibration/Lcal_explicit_T3/generated_ncell_1.sonx",
       "bytes": 29737,
       "sha256": "e79ae6c876c88a04ac04aef079e6b810b3df0b89d70a890f2a49d7eb2a41ca98"
     },
     {
-      "path": "final_designs/taper_3/calibration/Lcal_explicit_T3/results/cadd_450ff.log.resources.json",
+      "path": "final_old/taper_3_cleanup/calibration/Lcal_explicit_T3/results/cadd_450ff.log.resources.json",
       "bytes": 7456,
       "sha256": "7b5e2cf1dab78843ef3910c31534aa143fe647373cf9b6de62fceefd88d0f42d"
     },
     {
-      "path": "final_designs/taper_3/calibration/Lcal_explicit_T3/results/cadd_450ff.snp",
+      "path": "final_old/taper_3_cleanup/calibration/Lcal_explicit_T3/results/cadd_450ff.snp",
       "bytes": 294773,
       "sha256": "3dc586996676a674abedc10fd25132d38bdd842b30edb29343890af36bbfdbc5"
     },
     {
-      "path": "final_designs/taper_3/calibration/Lcal_explicit_T3/results/cadd_450ff.sonx",
+      "path": "final_old/taper_3_cleanup/calibration/Lcal_explicit_T3/results/cadd_450ff.sonx",
       "bytes": 29738,
       "sha256": "5b1bdded6f8b889d7230d5a8347f76b4a171a70cdcf9472759e288d6cb148cc5"
     },
     {
-      "path": "final_designs/taper_3/calibration/Lcal_explicit_T3/results/cadd_600ff.log.resources.json",
+      "path": "final_old/taper_3_cleanup/calibration/Lcal_explicit_T3/results/cadd_600ff.log.resources.json",
       "bytes": 1541,
       "sha256": "ec65a8b27d14e9bb5b3c80baa3f6332f3c68944c9afcfd203ae06434794965f8"
     },
     {
-      "path": "final_designs/taper_3/calibration/Lcal_explicit_T3/results/cadd_600ff.snp",
+      "path": "final_old/taper_3_cleanup/calibration/Lcal_explicit_T3/results/cadd_600ff.snp",
       "bytes": 294772,
       "sha256": "695c39560250b8c76c5d84e8639cda862a820ccbf5d3313fc0d416f6b86a0822"
     },
     {
-      "path": "final_designs/taper_3/calibration/Lcal_explicit_T3/results/cadd_600ff.sonx",
+      "path": "final_old/taper_3_cleanup/calibration/Lcal_explicit_T3/results/cadd_600ff.sonx",
       "bytes": 29737,
       "sha256": "ca52ca87fbeeacc20a2ca62db17983c2837814e7ac6ba83c7af3abfd0cea06d5"
     },
     {
-      "path": "final_designs/taper_3/calibration/Lcal_explicit_T3/results/cadd_750ff.log.resources.json",
+      "path": "final_old/taper_3_cleanup/calibration/Lcal_explicit_T3/results/cadd_750ff.log.resources.json",
       "bytes": 1537,
       "sha256": "7b280f07940d396724a4ad7da35d358584484f157ee297b10eebb98bef426cb8"
     },
     {
-      "path": "final_designs/taper_3/calibration/Lcal_explicit_T3/results/cadd_750ff.snp",
+      "path": "final_old/taper_3_cleanup/calibration/Lcal_explicit_T3/results/cadd_750ff.snp",
       "bytes": 294773,
       "sha256": "cd9327b270a8ef9828e01bbaf73945749401303652863e20bd6f0d4537ddbfb8"
     },
     {
-      "path": "final_designs/taper_3/calibration/Lcal_explicit_T3/results/cadd_750ff.sonx",
+      "path": "final_old/taper_3_cleanup/calibration/Lcal_explicit_T3/results/cadd_750ff.sonx",
       "bytes": 29738,
       "sha256": "77b39afa3a2ce44926b0c189fbdc35ea38353f4bbf7db0ea1803f9d60a058ee3"
     },
     {
-      "path": "final_designs/taper_3/calibration/Lcal_explicit_T3/results/cadd_900ff.log.resources.json",
+      "path": "final_old/taper_3_cleanup/calibration/Lcal_explicit_T3/results/cadd_900ff.log.resources.json",
       "bytes": 1538,
       "sha256": "1108f0a50f7708e7e9a4e87c1d3bc34c83ff95d3b1944ca5e6ce65546d735258"
     },
     {
-      "path": "final_designs/taper_3/calibration/Lcal_explicit_T3/results/cadd_900ff.snp",
+      "path": "final_old/taper_3_cleanup/calibration/Lcal_explicit_T3/results/cadd_900ff.snp",
       "bytes": 294772,
       "sha256": "9c93cdb44829bb631edb2b54a6614b6a12817328abfdbd8ae8a79f4a57876b1d"
     },
     {
-      "path": "final_designs/taper_3/calibration/Lcal_explicit_T3/results/cadd_900ff.sonx",
+      "path": "final_old/taper_3_cleanup/calibration/Lcal_explicit_T3/results/cadd_900ff.sonx",
       "bytes": 29737,
       "sha256": "e79ae6c876c88a04ac04aef079e6b810b3df0b89d70a890f2a49d7eb2a41ca98"
     },
     {
-      "path": "final_designs/taper_3/calibration/Lcal_explicit_T3/results/completed.json",
+      "path": "final_old/taper_3_cleanup/calibration/Lcal_explicit_T3/results/completed.json",
       "bytes": 3214,
       "sha256": "1004970ffcf3f0dce31edea74c5879fff0be316f3043a37f7a2441ea729c884d"
     },
     {
-      "path": "final_designs/taper_3/calibration/Lcal_explicit_T3/results/inductance_fit.png",
+      "path": "final_old/taper_3_cleanup/calibration/Lcal_explicit_T3/results/inductance_fit.png",
       "bytes": 97054,
       "sha256": "5000bc1e6bc16d4e4907c44a2ece412688e549d42ec89ccf6da08311d4820c3e"
     },
     {
-      "path": "final_designs/taper_3/calibration/Lcal_explicit_T3/results/manifest.json",
+      "path": "final_old/taper_3_cleanup/calibration/Lcal_explicit_T3/results/manifest.json",
       "bytes": 634,
       "sha256": "dff981dbcee19c352921282c456192b96930ee37b9b00c4f626724c7eb186bcc"
     },
     {
-      "path": "final_designs/taper_3/calibration/Lcal_explicit_T3/results/results.json",
+      "path": "final_old/taper_3_cleanup/calibration/Lcal_explicit_T3/results/results.json",
       "bytes": 2932,
       "sha256": "cc42f775ecd27c3220ca55b27f24ffd04feb60ec45d4f80d5249c22548e62b85"
     },
     {
-      "path": "final_designs/taper_3/calibration/Lcal_explicit_T3/results/sweep_points.json",
+      "path": "final_old/taper_3_cleanup/calibration/Lcal_explicit_T3/results/sweep_points.json",
       "bytes": 993,
       "sha256": "a4f0ca379bde5a1c52a58d02864a13040246caf4a6dd996e1b52a50e6888055c"
     },
     {
-      "path": "final_designs/taper_3/calibration/Lcal_explicit_T3/results/sweep_s21.png",
+      "path": "final_old/taper_3_cleanup/calibration/Lcal_explicit_T3/results/sweep_s21.png",
       "bytes": 185093,
       "sha256": "9dac586ea728f07ce4be985231f59e112b34ee908889b0c8582c3801dc821390"
     },
     {
-      "path": "final_designs/taper_3/calibration/Lcal_T2/generated_ncell_1.sonx",
+      "path": "final_old/taper_3_cleanup/calibration/Lcal_T2/generated_ncell_1.sonx",
       "bytes": 33512,
       "sha256": "1ac66773d0b089346cf6d32af52f81f8a954eb8b03c2ad47bf46d7bf813d074b"
     },
     {
-      "path": "final_designs/taper_3/calibration/Lcal_T2/geometry.gds",
+      "path": "final_old/taper_3_cleanup/calibration/Lcal_T2/geometry.gds",
       "bytes": 6542,
       "sha256": "43d2146650a604dff1c5d3a2a44c692766c000989e1a08c46c9973b40671dae8"
     },
     {
-      "path": "final_designs/taper_3/calibration/Lcal_T2/geometry.json",
+      "path": "final_old/taper_3_cleanup/calibration/Lcal_T2/geometry.json",
       "bytes": 3058,
       "sha256": "7149d1c05ae8f09d1b09f50823c1a188154db2a64db9c3c2eb29c2e4dbdc2fd8"
     },
     {
-      "path": "final_designs/taper_3/calibration/Lcal_T2/imported_review.png",
+      "path": "final_old/taper_3_cleanup/calibration/Lcal_T2/imported_review.png",
       "bytes": 60524,
       "sha256": "4b9b579d1f7d86aa521b6da171b9aa6180889f6899f65fbc7a12d98af8b2c481"
     },
     {
-      "path": "final_designs/taper_3/calibration/Lcal_T2/ncell_1_grid2.gds",
+      "path": "final_old/taper_3_cleanup/calibration/Lcal_T2/ncell_1_grid2.gds",
       "bytes": 6542,
       "sha256": "f0813ded0212123744863d1745f1732c4f536cd663ef1cc84a578ec480970387"
     },
     {
-      "path": "final_designs/taper_3/calibration/Lcal_T2/validation.json",
+      "path": "final_old/taper_3_cleanup/calibration/Lcal_T2/validation.json",
       "bytes": 964,
       "sha256": "8a3f5644ea4fef3a845a96f4a0fc38b0ece0da3c33bb98869e70b531ad8cad25"
     },
     {
-      "path": "final_designs/taper_3/calibration/Lcal_T3/generated_ncell_1.sonx",
+      "path": "final_old/taper_3_cleanup/calibration/Lcal_T3/generated_ncell_1.sonx",
       "bytes": 32502,
       "sha256": "be7c903360fb19bbb226e87592829db148a56a9b9c92be327d21257c39f40426"
     },
     {
-      "path": "final_designs/taper_3/calibration/Lcal_T3/geometry.gds",
+      "path": "final_old/taper_3_cleanup/calibration/Lcal_T3/geometry.gds",
       "bytes": 6222,
       "sha256": "5c695ca68834d607dd5d6bf1f26ff45ea6c7313bd4f17d7265f747c60f374107"
     },
     {
-      "path": "final_designs/taper_3/calibration/Lcal_T3/geometry.json",
+      "path": "final_old/taper_3_cleanup/calibration/Lcal_T3/geometry.json",
       "bytes": 3885,
       "sha256": "b33d19759a19c62af70eecc95f4828d5ed164050022661bb247ad6fb6ed12bae"
     },
     {
-      "path": "final_designs/taper_3/calibration/Lcal_T3/imported_review.png",
+      "path": "final_old/taper_3_cleanup/calibration/Lcal_T3/imported_review.png",
       "bytes": 62106,
       "sha256": "dc2424f41358518572085d7b8bfc93ddfe0dde362915c0b59dea773e66817c3d"
     },
     {
-      "path": "final_designs/taper_3/calibration/Lcal_T3/ncell_1_grid2.gds",
+      "path": "final_old/taper_3_cleanup/calibration/Lcal_T3/ncell_1_grid2.gds",
       "bytes": 6222,
       "sha256": "0ea16807b7f60d85b02010438d5693141ad427dec09f40d50628afa829069392"
     },
     {
-      "path": "final_designs/taper_3/calibration/Lcal_T3/results/geometry_checks.json",
+      "path": "final_old/taper_3_cleanup/calibration/Lcal_T3/results/geometry_checks.json",
       "bytes": 689,
       "sha256": "14c43636a0f1d0e6583b143863cb6c13a59d67dc82a62baa067b68463ab7dc7b"
     },
     {
-      "path": "final_designs/taper_3/calibration/Lcal_T3/validation.json",
+      "path": "final_old/taper_3_cleanup/calibration/Lcal_T3/validation.json",
       "bytes": 952,
       "sha256": "ca3f90fc6b36aec6df0c2b941253008c0e9c39ce4721e6e1c09c8abc0b75ac61"
     },
     {
-      "path": "final_designs/taper_3/design.json",
+      "path": "final_old/taper_3_cleanup/design.json",
       "bytes": 603,
       "sha256": "227456ee44411103c0f789f5dbfcfbc03c449910c200d3c26b57c197a0d39b20"
     },
     {
-      "path": "final_designs/taper_3/fit.json",
+      "path": "final_old/taper_3_cleanup/fit.json",
       "bytes": 3878,
       "sha256": "b78ddf360ced08757c958d6b994ba2b597ab4dd228277fa2dc37cf9f271bfeb7"
     },
     {
-      "path": "final_designs/taper_3/layout.gds",
+      "path": "final_old/taper_3_cleanup/layout.gds",
       "bytes": 29278,
       "sha256": "ff5119bfb856f8c451ecdb3a85ffdb539010cadd016335272470ad586048bf59"
     },
     {
-      "path": "final_designs/taper_3/parameters.json",
+      "path": "final_old/taper_3_cleanup/parameters.json",
       "bytes": 2871,
       "sha256": "167ef44e5f748cde0664464790906001ea5dd3e09c69b91fd3ab99fe1827a2a8"
     },
     {
-      "path": "final_designs/taper_3/project.sonx",
+      "path": "final_old/taper_3_cleanup/project.sonx",
       "bytes": 99256,
       "sha256": "270e6a12e6f3a017bb4da37b128045ca311a1d7b9b4df1df46cef3e15adfc068"
     },
     {
-      "path": "final_designs/taper_3/rebuild_validation.json",
+      "path": "final_old/taper_3_cleanup/rebuild_validation.json",
       "bytes": 246,
       "sha256": "5dea1a221999abff70d982239f60dcd4f085045bd7828854070fc105c73fdf67"
     },
     {
-      "path": "final_designs/taper_3/response.snp",
+      "path": "final_old/taper_3_cleanup/response.snp",
       "bytes": 1103274,
       "sha256": "a69b003c7554b1a6dc4ccb354a5d859beae12d3f7a7077a1fcc8f13c4b808b58"
     },
     {
-      "path": "final_designs/taper_3/s21_fit.png",
+      "path": "final_old/taper_3_cleanup/s21_fit.png",
       "bytes": 365512,
       "sha256": "3ae23593b6b7874ac6787970d47d0cd1a886f343a64d26b0be821db5957d0806"
     },
     {
-      "path": "final_designs/taper_3/selection.json",
+      "path": "final_old/taper_3_cleanup/selection.json",
       "bytes": 8143,
       "sha256": "4372abc4c0bb9723c2f4a21dec98a4c77e66328de27015a0d5f4f695761cc609"
+    },
+    {
+      "path": "reference_inputs/awr/AWR_optimizer.png",
+      "bytes": 31308,
+      "sha256": "fcbcf88f55a93ca9bff443a7c4f1418c1bfd324c3920ee108a90241d8d4832f8"
+    },
+    {
+      "path": "reference_inputs/awr/Filter4_Final_Version.emp",
+      "bytes": 29070,
+      "sha256": "40aae2509dfeadd55facb440b82d4aa85dedcb97b5b7c903ccbd8ea473d7837a"
+    },
+    {
+      "path": "reference_inputs/awr/README.md",
+      "bytes": 1255,
+      "sha256": "175b3f0857b12c96aed2b4828a1c9c3931009b3625ba2ea36555ffcc17f7321a"
     },
     {
       "path": "reference_taper_geometry.png",
@@ -1139,5 +1179,5 @@
       "sha256": "1d9c74cbcdff45e15fb7b6f477bcf8b51bf6e68b275fbc1b42ba9d96b6f61616"
     }
   ],
-  "total_bytes": 29141251
+  "total_bytes": 29269315
 }

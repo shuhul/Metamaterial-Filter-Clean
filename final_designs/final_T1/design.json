@@ -1,16 +1,16 @@
 {
-  "name": "regular_cell",
+  "name": "final_T1",
   "project": "project.sonx",
   "layout": "layout.gds",
   "parameters": "parameters.json",
   "box_um": [
-    2944.0,
+    2322.0,
     1500.0
   ],
   "coordinate_system": "GDS box origin bottom-left; Sonnet y = box_height - GDS y",
   "grid_um": 2,
   "verification": "Saved staged/reference response",
-  "source_project_relative": "sonnet_files/generated_ncell_4_w186_d56/generated_ncell_4.sonx",
-  "source_project_sha256": "1c0f2bd7a0e0c86ea099ee06c58a3c4b7f7031c867f8080a04d80eae34983af3",
+  "source_project_relative": "sonnet_files/taper_exploration/final_designs/new_T1_plain_cw344_w220_p532_g56_j66_c590_tg6_final/response/generated_ncell_2.sonx",
+  "source_project_sha256": "6a8727de3cc78f620f13f74a8b77e27bf5130740218cde6ae3bf5eb0651c0e24",
   "response": "response.snp"
 }

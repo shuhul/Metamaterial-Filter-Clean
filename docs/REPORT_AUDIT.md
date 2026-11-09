@@ -1,5 +1,7 @@
 # Audit of the November 9 reference-only Notion drafts
 
+Publication paths in this dated record were subsequently simplified; see `final_designs/PUBLICATION_PATHS.json` for current locations. Original campaign paths are unchanged.
+
 Audited against source code and saved results; this is not an edit of either Notion page. The supplied references were `revision-main-reference.md` and `revision-appendix-reference.md` in the lab-share `results/local-reference/` folder. Preserve their older results as explicitly dated history.
 
 | Draft section | Required correction or qualification |

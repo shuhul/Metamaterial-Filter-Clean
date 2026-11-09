@@ -1,60 +1,51 @@
-﻿# Metamaterial Filter Automation
+# Metamaterial Filter Automation
 
-Filter geometry, Sonnet simulation automation, explicit-capacitor inductance calibration, and equivalent-circuit fitting.
+Python geometry generation, Sonnet electromagnetic simulation, and verified circuit-response comparison for a superconducting metamaterial filter.
 
-## Selected deliverables
+## Selected designs
 
-All publishable design artifacts live under **[final_designs/](final_designs/README.md)**. Each design contains its Sonnet project, approved GDS geometry, parameters, and saved results where available. Calibration inputs and supporting responses are included inside that design's folder.
+The selected files are in [final_designs](final_designs/README.md):
 
-```text
-final_designs/
-    regular_cell/
-    taper_1/
-    taper_2/
-    taper_3/                 # historical cleanup assembly
-    full_filter/             # historical full-filter input
-    current_2026_11_08/      # accepted taper and separate full-filter evidence
-    references/              # the pre-cleanup T3 baseline
-reference_taper_geometry.png
-```
+- [final_regular](final_designs/final_regular/): standalone regular-cell baseline.
 
-**Current checkpoint (November 8):** [current_2026_11_08](final_designs/current_2026_11_08/README.md) contains the accepted taper, completed 4.92 GHz full-filter check, and separate ongoing-sweep input. Taper complex S21 RMS is 0.00249186334 to a comparator whose 15 L/C values are within 0.25% of nominal. These are not uniquely extracted physical values. The full-band filter sweep remains preliminary. See [the current method and evidence](docs/CURRENT_METHOD.md).
+- [final_T1](final_designs/final_T1/): standalone T1 baseline.
 
-| Cell | L0 (nH) | C0 (fF) | Input Cg (fF) |
-|---|---:|---:|---:|
-| Regular | 4.9194 | 190.4 | 8.2865 |
-| T1 | 5.97 | 148 | 15.3 |
-| T2 | 4.33 | 149 | 153 |
-| T3 | 2.77 | 251 | 261 |
+- [final_T2](final_designs/final_T2/): standalone T2 baseline.
 
-These are nominal targets. The older staged cleanup fit (RMS 0.020312, 5% bounds) remains in the historical folders. The current checkpoint supersedes it; measured, fitted, and optimized comparator values must be distinguished.
+- [final_T3](final_designs/final_T3/): accepted assembled T3/T2/T1/regular taper fixture.
 
-## Rebuild from a fresh clone
+- [final_full_filter](final_designs/final_full_filter/): current full-filter input, with completed 4.92 GHz verification in its subfolder.
 
-Install Python and [uv](https://docs.astral.sh/uv/), then:
+The accepted taper has complex S21 RMS 0.00249186334 to a normal circuit whose ten capacitances and five inductances are within 0.25% of nominal. Those are comparator values, not unique physical extractions. **Final full-band filter results are pending.** A one-frequency check is not full-band validation.
+
+Superseded publication copies are preserved in [final_old](final_old/README.md). [PUBLICATION_PATHS.json](final_designs/PUBLICATION_PATHS.json) records the renames; [SOURCE_PATHS.json](final_designs/SOURCE_PATHS.json) links current copies to original working artifacts. Running simulations and their source directories were not moved.
+
+## Read and reproduce
+
+Start with the [Sections 10?11 reader guide](docs/SECTIONS_10_11_READER_GUIDE.md), [current technical method](docs/CURRENT_METHOD.md), and [rebuild guide](docs/REBUILD.md). The supplied AWR target project and optimizer screenshot are in [reference_inputs/awr](reference_inputs/awr/README.md).
 
 ```powershell
+
 uv sync --locked
+
 uv run python tools/check_published_files.py
+
 uv run python -m geometry.rebuild_final --verify-only
+
+uv run python tools/verify_current_response.py
+
 ```
 
-To regenerate the native projects from the frozen approved GDS inputs, with a licensed Sonnet installation:
+To regenerate the frozen native projects from the packaged GDS layouts:
 
 ```powershell
+
 uv run python -m geometry.rebuild_final --output-dir build/final_designs
+
 ```
 
-This imports geometry and reads the resulting projects; it **does not launch an EM calculation**. An alternate Sonnet installation can be supplied with `--sonnet-bin`. See [the rebuild guide](docs/REBUILD.md) for what is regenerated and how to run new simulations deliberately.
+The replay imports and reads projects; it does not start EM. Native project inputs include geometry, materials, mesh, ports, and sweep settings. Sonnet and a working license are required for native import or simulation. Caches can be regenerated and are excluded from Git.
 
-## Documentation and source
+Source is under geometry/ and tools/, documentation under docs/, and nominal electrical targets in geometry/specifications.py. Local trial campaigns and solver outputs stay in ignored investigations/, sonnet_files/, and output_data/. Historical scripts may depend on those campaigns; the frozen replay and saved-response verifier above are self-contained.
 
-- [Selected designs](docs/SELECTED_DESIGNS.md) and [publication policy](docs/PUBLISHING.md).
-- [Geometry guide](geometry/README.md) and [editable regular-cell runner](geometry/RUN_FILTER.md).
-- [Electrical specifications](geometry/specifications.py) and [inductance measurement](docs/MEASURING_INDUCTANCE.md).
-- [Sonnet process control](tools/README.md).
-- [Reference taper geometry](reference_taper_geometry.png).
-
-The reusable source includes older helper modules used during development. Historical campaign drivers can depend on excluded trial data and original Windows paths. The documented `geometry.rebuild_final` path is the self-contained replay route for approved designs; it does not depend on those campaigns. Original provenance JSON is retained unchanged, including historical paths and hashes.
-
-Normal folder-based `.gitignore` rules keep campaigns, generated builds, environments, logs, and solver caches local. There is no explicit allowlist of tracked files. Sonnet regenerates `sondata` when a project is simulated; those caches are not required to reconstruct its metal, materials, ports, mesh, or sweep settings.
+Reference images: [taper geometry](reference_taper_geometry.png), [reference passband](reference_passband_plot.png).

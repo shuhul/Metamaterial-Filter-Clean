@@ -96,6 +96,45 @@
       "source_project_relative": "sonnet_files/taper_exploration/full_filter/full_filter_10_regular_3_tapers_each_side_T2_cleanup_2026-11-01/full_filter_10_regular_3_tapers_each_side_T2_cleanup_2026-11-01.sonx",
       "source_project_sha256": "10cd07ce90ba5951da6765e70e079f20399ee0a83aa77914878ab1baa915dd05",
       "response": null
+    },
+    {
+      "name": "current_2026_11_08/taper",
+      "project": "project.sonx",
+      "layout": "layout.gds",
+      "parameters": "parameters.json",
+      "box_um": [
+        4310.0,
+        1500.0
+      ],
+      "coordinate_system": "GDS box origin bottom-left; Sonnet y = box_height - GDS y",
+      "grid_um": 2,
+      "verification": "Completed taper response; comparator is not a unique extraction"
+    },
+    {
+      "name": "current_2026_11_08/full_filter_single_point",
+      "project": "project.sonx",
+      "layout": "layout.gds",
+      "parameters": "parameters.json",
+      "box_um": [
+        9972.0,
+        1500.0
+      ],
+      "coordinate_system": "GDS box origin bottom-left; Sonnet y = box_height - GDS y",
+      "grid_um": 2,
+      "verification": "Completed single-frequency EM only"
+    },
+    {
+      "name": "current_2026_11_08/full_filter_sweep_input",
+      "project": "project.sonx",
+      "layout": "layout.gds",
+      "parameters": "parameters.json",
+      "box_um": [
+        9972.0,
+        1500.0
+      ],
+      "coordinate_system": "GDS box origin bottom-left; Sonnet y = box_height - GDS y",
+      "grid_um": 2,
+      "verification": "Input only; adaptive full sweep unfinished"
     }
   ],
   "full_filter_status": "Input frozen, EM verification still running; no final response published"

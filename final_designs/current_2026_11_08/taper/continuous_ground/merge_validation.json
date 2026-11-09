@@ -1,0 +1,12 @@
+{
+  "source": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\sonnet_files\\taper_exploration\\final_designs\\T3_T2_T1_quarter_percent_target_2026-11-06\\project.sonx",
+  "project": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\sonnet_files\\taper_exploration\\final_designs\\T3_T2_T1_quarter_percent_target_2026-11-06\\continuous_ground\\project.sonx",
+  "source_sha256": "ec140715df34013203218b873d264b6fffaeb0b9a8188f83895ec4282e308172",
+  "merged_sha256": "0fad24a51ad533a474370c450ccdd7c400f54c851e82b5d910ba602d5778c876",
+  "before_polygons": 124,
+  "after_polygons": 4,
+  "metal_XOR_empty": true,
+  "settings_and_ports_preserved": true,
+  "EM_simulation_run": false,
+  "input_length_changed": false
+}

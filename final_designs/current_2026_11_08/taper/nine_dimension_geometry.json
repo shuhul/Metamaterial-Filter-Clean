@@ -1,0 +1,28 @@
+{
+  "names": [
+    "input_IDC_span",
+    "T3_pad_width",
+    "T3_T2_IDC_span",
+    "T2_T1_rail_width",
+    "T1_regular_paired_rail_width",
+    "T2_pad_height",
+    "T1_regular_facing_rail_tip_length",
+    "T1_ground_pad_height",
+    "T1_regular_paired_rail_displacement"
+  ],
+  "deltas_um": [
+    -2,
+    34,
+    16,
+    16,
+    2,
+    -20,
+    -20,
+    -32,
+    2
+  ],
+  "only_existing_dimensions_changed": true,
+  "ground_strip_center_unchanged": true,
+  "rail_widths_unchanged_by_displacement": true,
+  "meanders_unchanged": true
+}

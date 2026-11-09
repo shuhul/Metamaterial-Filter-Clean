@@ -1,12 +1,302 @@
 {
   "schema_version": 2,
   "purpose": "Integrity manifest only; does not control Git tracking.",
-  "full_filter_status": "Native input packaged; EM verification still running.",
+  "full_filter_status": "Current 4.92 GHz point complete; full sweep unfinished. Earlier design folders are historical.",
   "files": [
     {
+      "path": "final_designs/current_2026_11_08/full_filter_single_point/comparison.png",
+      "bytes": 103680,
+      "sha256": "e01bf8a11837d3aae2a49f7826d62bfffb104675582792b67a54635bef9852b1"
+    },
+    {
+      "path": "final_designs/current_2026_11_08/full_filter_single_point/complete.json",
+      "bytes": 867,
+      "sha256": "945667ce2936e54428e8a5c5417f13c6e7bbfe564f23186beaf5436762d4a738"
+    },
+    {
+      "path": "final_designs/current_2026_11_08/full_filter_single_point/design.json",
+      "bytes": 361,
+      "sha256": "50ce3c4c7650937920aff5fee51fae05059fa5bc3a955e27615af9e00bd18cba"
+    },
+    {
+      "path": "final_designs/current_2026_11_08/full_filter_single_point/geometry.png",
+      "bytes": 109382,
+      "sha256": "58fcfda1a906279f3e8579db29fa6b595ea53c2ed6fec8965b19ba1d9929a761"
+    },
+    {
+      "path": "final_designs/current_2026_11_08/full_filter_single_point/layout.gds",
+      "bytes": 87822,
+      "sha256": "f0db21e22c4026d2d339054a643b62178533ae4fa10a9467c428fa1412e095f0"
+    },
+    {
+      "path": "final_designs/current_2026_11_08/full_filter_single_point/parameters.json",
+      "bytes": 1734,
+      "sha256": "98a90adafe4f53dd0584c1e91c1060dd86bca5e67f4b3a608c03176cfc53a53e"
+    },
+    {
+      "path": "final_designs/current_2026_11_08/full_filter_single_point/project.snp",
+      "bytes": 764,
+      "sha256": "13ea2918dec19c5d273c8258f3ec6ee27e0eeec6b9d972004941f334831f28c7"
+    },
+    {
+      "path": "final_designs/current_2026_11_08/full_filter_single_point/project.sonx",
+      "bytes": 130241,
+      "sha256": "889dde1c58758f5a1c8782b6ecb26c501ec16b93f6881b9271d18995c51f8e9b"
+    },
+    {
+      "path": "final_designs/current_2026_11_08/full_filter_single_point/rebuild_validation.json",
+      "bytes": 282,
+      "sha256": "601d14138c9ee4d9ac750ce30d5a381f1ff5b49dd68f9c0a341174479d69e588"
+    },
+    {
+      "path": "final_designs/current_2026_11_08/full_filter_sweep_input/design.json",
+      "bytes": 368,
+      "sha256": "fbc6c9f05f8960531bfea2f52075edc7e02a8bef63cdea6df755504976671cba"
+    },
+    {
+      "path": "final_designs/current_2026_11_08/full_filter_sweep_input/geometry.png",
+      "bytes": 109382,
+      "sha256": "58fcfda1a906279f3e8579db29fa6b595ea53c2ed6fec8965b19ba1d9929a761"
+    },
+    {
+      "path": "final_designs/current_2026_11_08/full_filter_sweep_input/layout.gds",
+      "bytes": 87822,
+      "sha256": "f0db21e22c4026d2d339054a643b62178533ae4fa10a9467c428fa1412e095f0"
+    },
+    {
+      "path": "final_designs/current_2026_11_08/full_filter_sweep_input/parameters.json",
+      "bytes": 1734,
+      "sha256": "98a90adafe4f53dd0584c1e91c1060dd86bca5e67f4b3a608c03176cfc53a53e"
+    },
+    {
+      "path": "final_designs/current_2026_11_08/full_filter_sweep_input/project.sonx",
+      "bytes": 134008,
+      "sha256": "f021bbab9da274d7a6b835ab4a45b7a9219217440be1ca941e4a3c3f9ee49e99"
+    },
+    {
+      "path": "final_designs/current_2026_11_08/full_filter_sweep_input/rebuild_validation.json",
+      "bytes": 281,
+      "sha256": "b45a86ec0caef33e771794c64abc9a7614f2cbeba9e8ac0c67c1c67cae1919dc"
+    },
+    {
+      "path": "final_designs/current_2026_11_08/README.md",
+      "bytes": 2169,
+      "sha256": "a16b0c0ef009fd1b79cbd20151b2f8775fc3bc834534dc310f6924b465760be9"
+    },
+    {
+      "path": "final_designs/current_2026_11_08/SOURCE_PATHS.json",
+      "bytes": 14780,
+      "sha256": "70dc5ccc3d41e32b26cadaa2c37ad699d447f127914d054e8272a0c70549da61"
+    },
+    {
+      "path": "final_designs/current_2026_11_08/taper/ACCEPTED_CHECKPOINT.json",
+      "bytes": 411,
+      "sha256": "e7bef90a8c6ea2f2e52de48e880f84844a06cf9342c113ea11fe4fb5c635b62e"
+    },
+    {
+      "path": "final_designs/current_2026_11_08/taper/baseline.sonx",
+      "bytes": 96578,
+      "sha256": "6d01b08d56812d1a0ca6dca16a88bcce6de709af4daba5374edd197333c993df"
+    },
+    {
+      "path": "final_designs/current_2026_11_08/taper/boundary_configuration.json",
+      "bytes": 305,
+      "sha256": "2e6bf9aabc25f30d612c5299ddbd6e420e42979d0030ca7f6338085612ae2139"
+    },
+    {
+      "path": "final_designs/current_2026_11_08/taper/conditional_ten_cell_components.json",
+      "bytes": 1259,
+      "sha256": "cf0b1799e8213bb981f7f79c1f5854761d032526f513fc7059f992ba22b1c1c0"
+    },
+    {
+      "path": "final_designs/current_2026_11_08/taper/conditional_ten_cell_s21.png",
+      "bytes": 138741,
+      "sha256": "25b8c82dfae91c7e3b9ee9ed23a2c2bc7bf17453b64aa5d165ef6633214bfa97"
+    },
+    {
+      "path": "final_designs/current_2026_11_08/taper/continuous_ground/merge_validation.json",
+      "bytes": 744,
+      "sha256": "8924a6b27e071d454f59e246d12bdf537b70f1b6e6f7f8144d59e9ab7285c527"
+    },
+    {
+      "path": "final_designs/current_2026_11_08/taper/continuous_ground/project.sonx",
+      "bytes": 54149,
+      "sha256": "0fad24a51ad533a474370c450ccdd7c400f54c851e82b5d910ba602d5778c876"
+    },
+    {
+      "path": "final_designs/current_2026_11_08/taper/cover_30mm_verification/project.snp",
+      "bytes": 221264,
+      "sha256": "facf4f0a1b530a154b65995910fc30a4719d028769e36d66c23936eab2af734c"
+    },
+    {
+      "path": "final_designs/current_2026_11_08/taper/cover_30mm_verification/project.sonx",
+      "bytes": 59126,
+      "sha256": "6e0230f04a7dfaf68ddef669a8abc3afdf593773329ecbca9097edb1af68cce9"
+    },
+    {
+      "path": "final_designs/current_2026_11_08/taper/cover_30mm_verification/run_status.json",
+      "bytes": 529,
+      "sha256": "6b31f245b006d916f027b2e58a8deae7e42eaa8e2106493d47ef6891653e1473"
+    },
+    {
+      "path": "final_designs/current_2026_11_08/taper/design.json",
+      "bytes": 371,
+      "sha256": "ba3c11af3aca412c35581175e8e18dae6cedee46153535555dda6af120e0dc81"
+    },
+    {
+      "path": "final_designs/current_2026_11_08/taper/eight_dimension_geometry.json",
+      "bytes": 493,
+      "sha256": "0a67c50d13bfc7399f393b29689b957873b98181469f4aa5eb3216cb91d2f0f4"
+    },
+    {
+      "path": "final_designs/current_2026_11_08/taper/eleven_dimension_geometry.json",
+      "bytes": 587,
+      "sha256": "7898612b88b26d90b54dbb7f6a3501bc6470652a147c68919116d69b092af1eb"
+    },
+    {
+      "path": "final_designs/current_2026_11_08/taper/extension_check.json",
+      "bytes": 145,
+      "sha256": "9242016432180f55674ef92136e624dfc25b92fa8c13f6cc4b5c862715b3e794"
+    },
+    {
+      "path": "final_designs/current_2026_11_08/taper/fourteen_dimension_geometry.json",
+      "bytes": 531,
+      "sha256": "83ea7899931018216453fd63f4177f6ca053b3dbe99aa692402cf798ae4b4867"
+    },
+    {
+      "path": "final_designs/current_2026_11_08/taper/geometry.png",
+      "bytes": 34304,
+      "sha256": "138c0cf59fbcf12b759fd5723ba2b5ce747e801fcadef7859f7b1be3ab0bcb55"
+    },
+    {
+      "path": "final_designs/current_2026_11_08/taper/independent_comparator_check.json",
+      "bytes": 126,
+      "sha256": "d97ccc6e333fbd67dab29c949b414df03d46a43f8a19f16816b8562f48fc63d7"
+    },
+    {
+      "path": "final_designs/current_2026_11_08/taper/input_ground_geometry.json",
+      "bytes": 357,
+      "sha256": "abc944d45a670056fd1a9a11bb159b53065449337fa5560982e8b25f04392255"
+    },
+    {
+      "path": "final_designs/current_2026_11_08/taper/iteration_history.json",
+      "bytes": 4344,
+      "sha256": "2313aea1593ca4a5e06e952beae165fb5104ff0c13ddab3a70c82d1dafd3e365"
+    },
+    {
+      "path": "final_designs/current_2026_11_08/taper/layout.gds",
+      "bytes": 22878,
+      "sha256": "b54e18f599b77ee048e5f1971d1bf369bbc0b44004662f05064a26c0e9ec93f0"
+    },
+    {
+      "path": "final_designs/current_2026_11_08/taper/local_model/analysis.json",
+      "bytes": 5778,
+      "sha256": "74c1988628bd8f7bf36ae89df3e258c37ee3fb2f23abe62fece436d6e9fd97ac"
+    },
+    {
+      "path": "final_designs/current_2026_11_08/taper/local_model/complete.json",
+      "bytes": 361,
+      "sha256": "b6f3113d40fd557763d9f0dee3c088bc1b2ba392dc2b7b91bdc584aaf1cdfb59"
+    },
+    {
+      "path": "final_designs/current_2026_11_08/taper/local_model/manifest.json",
+      "bytes": 1014,
+      "sha256": "2265d6908253d2adefea0427a076723e99bbb854ab91c9ae663a12a264ad0f36"
+    },
+    {
+      "path": "final_designs/current_2026_11_08/taper/local_model/network.json",
+      "bytes": 33983,
+      "sha256": "d0d20c5361a4c4057be37d88c73bdadff3728bebbeea1eed4a5b300ab4316e77"
+    },
+    {
+      "path": "final_designs/current_2026_11_08/taper/local_model/prediction.png",
+      "bytes": 73962,
+      "sha256": "0376b5d327587cd91ca7a6ff3507e2d85be906166587de24efa734a07649ec50"
+    },
+    {
+      "path": "final_designs/current_2026_11_08/taper/local_model/project.snp",
+      "bytes": 18957,
+      "sha256": "c5515d6669f6a633396beef35c5eecf027a40e24dbb44b7769fa2eccb75647cf"
+    },
+    {
+      "path": "final_designs/current_2026_11_08/taper/local_model/project.sonx",
+      "bytes": 59922,
+      "sha256": "db1550a104378583c7cabe38c0360ab3bb857c54c13683d6377beeb232a02fb0"
+    },
+    {
+      "path": "final_designs/current_2026_11_08/taper/local_model/terminal_profiles.json",
+      "bytes": 36163,
+      "sha256": "4489918dc2d65039eefc3de381b0dd60247d8f81fdf984e43adc7fb72e57eec6"
+    },
+    {
+      "path": "final_designs/current_2026_11_08/taper/meander_geometry.json",
+      "bytes": 1107,
+      "sha256": "c9e164dc7af7bde59e9979a4966e8ca028de17c29dd3b44fab3d3e0c20d28283"
+    },
+    {
+      "path": "final_designs/current_2026_11_08/taper/nine_dimension_geometry.json",
+      "bytes": 563,
+      "sha256": "82457ad8e359a049fb26241feb669172d3cc54d023d79541e95469781eb34f06"
+    },
+    {
+      "path": "final_designs/current_2026_11_08/taper/parameters.json",
+      "bytes": 8535,
+      "sha256": "347cb3226d33fce86c8cab09d33d87adf759926adcba8af0dc19e7212d22b4b8"
+    },
+    {
+      "path": "final_designs/current_2026_11_08/taper/project.snp",
+      "bytes": 221264,
+      "sha256": "4e35386c4b7d28299eab416ac230aa8cade30f5eedc2e55ae426b5532a55fcce"
+    },
+    {
+      "path": "final_designs/current_2026_11_08/taper/project.sonx",
+      "bytes": 59126,
+      "sha256": "ec140715df34013203218b873d264b6fffaeb0b9a8188f83895ec4282e308172"
+    },
+    {
+      "path": "final_designs/current_2026_11_08/taper/raised_geometry.json",
+      "bytes": 274,
+      "sha256": "204bcc05965d7d840b349d73208a6d4a75bfd6b653abc065913544adefa2ee41"
+    },
+    {
+      "path": "final_designs/current_2026_11_08/taper/rebuild_validation.json",
+      "bytes": 263,
+      "sha256": "edaa5fdb204684a13cd29ac5fab5ef5efbd4aeb0df9e89bfe0df785200b89d36"
+    },
+    {
+      "path": "final_designs/current_2026_11_08/taper/result.json",
+      "bytes": 8535,
+      "sha256": "347cb3226d33fce86c8cab09d33d87adf759926adcba8af0dc19e7212d22b4b8"
+    },
+    {
+      "path": "final_designs/current_2026_11_08/taper/s21.png",
+      "bytes": 86171,
+      "sha256": "548f5243bc4e14e81065593d1ceca01e07866338d9b65cb3d482658077376da0"
+    },
+    {
+      "path": "final_designs/current_2026_11_08/taper/s21_verified.png",
+      "bytes": 162107,
+      "sha256": "841b36ed57b5786a7ebef3ca46e3d05cf67cae9c82f3e5cd3af62e8c2591170b"
+    },
+    {
+      "path": "final_designs/current_2026_11_08/taper/s21_with_target_parameters.png",
+      "bytes": 237620,
+      "sha256": "9c4c303b859c406bf4fc2e73d3a18444586ccc1762a8f7c989f627cb27d99931"
+    },
+    {
+      "path": "final_designs/current_2026_11_08/taper/seven_dimension_geometry.json",
+      "bytes": 589,
+      "sha256": "d28fedfefbf887354ca39267d902b9cdad0dbe1e093dcc66aa1c59df3c2e7cb1"
+    },
+    {
+      "path": "final_designs/current_2026_11_08/taper/ten_dimension_geometry.json",
+      "bytes": 531,
+      "sha256": "6161803046373f5ec726e865693effba3baa4332b14f2ab5f3dfd725dc5f13ea"
+    },
+    {
       "path": "final_designs/designs.json",
-      "bytes": 4204,
-      "sha256": "a37d50dbc14e1a4b939839a12ea23446eba802bd9c2cf278d284992f004fe787"
+      "bytes": 5463,
+      "sha256": "23f0e3840f1ace9cdc3f4c59a9034a9528ca1069a3b4780bc2d8294ef6af1c8c"
     },
     {
       "path": "final_designs/full_filter/design.json",
@@ -40,8 +330,8 @@
     },
     {
       "path": "final_designs/README.md",
-      "bytes": 1733,
-      "sha256": "232d30eee4289be39aa8d448dc9a00241776ccbaf3b9e811bda15baf88818945"
+      "bytes": 1941,
+      "sha256": "8b609bc4d015a34b8965416c80242feffbdedbc9a468061d107cbf8f08eea6c7"
     },
     {
       "path": "final_designs/references/taper_3_before_cleanup/calibration/evidence/Lcal/geometry.png",
@@ -842,7 +1132,12 @@
       "path": "reference_taper_geometry.png",
       "bytes": 1007098,
       "sha256": "70130000ba5ad8e3823b768bf3f56cf05893c8ddeb47d4c328a008bdc617fd65"
+    },
+    {
+      "path": "reference_passband_plot.png",
+      "bytes": 37102,
+      "sha256": "1d9c74cbcdff45e15fb7b6f477bcf8b51bf6e68b275fbc1b42ba9d96b6f61616"
     }
   ],
-  "total_bytes": 26662938
+  "total_bytes": 29141251
 }

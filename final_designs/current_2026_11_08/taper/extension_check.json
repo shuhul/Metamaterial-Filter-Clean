@@ -1,0 +1,9 @@
+{
+  "T3_pad_to_meander_gaps_um": [
+    12.0,
+    10.0
+  ],
+  "old_optimizer_limit_um": 32,
+  "new_pad_control_um": 34,
+  "grid_um": 2
+}

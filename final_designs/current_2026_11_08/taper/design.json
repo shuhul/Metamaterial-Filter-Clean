@@ -1,0 +1,13 @@
+{
+  "name": "current_2026_11_08/taper",
+  "project": "project.sonx",
+  "layout": "layout.gds",
+  "parameters": "parameters.json",
+  "box_um": [
+    4310.0,
+    1500.0
+  ],
+  "coordinate_system": "GDS box origin bottom-left; Sonnet y = box_height - GDS y",
+  "grid_um": 2,
+  "verification": "Completed taper response; comparator is not a unique extraction"
+}

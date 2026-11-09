@@ -1,0 +1,40 @@
+"""Conditional lossless ladder prediction; no new EM or parameter extraction."""
+from campaign import *
+
+def full_filter(f,c,l):
+    # 16 resonators, 17 series couplings. Mirror components, not cell order alone.
+    ls=list(l[:3])+[l[3]]*10+list(l[:3][::-1])
+    cs=list(c[:3])+[c[3]]*10+list(c[:3][::-1])
+    gs=list(c[5:9])+[c[9]]*9+list(c[5:9][::-1])
+    assert len(ls)==16 and len(gs)==17
+    w=2*np.pi*f;m=np.tile(np.eye(2,dtype=complex),(len(f),1,1))
+    for k,g in enumerate(gs):
+        a=np.tile(np.eye(2,dtype=complex),(len(f),1,1));a[:,0,1]=1/(1j*w*g*1e-15);m=m@a
+        if k<len(ls):
+            a=np.tile(np.eye(2,dtype=complex),(len(f),1,1));a[:,1,0]=1j*w*cs[k]*1e-15+1/(1j*w*ls[k]*1e-9);m=m@a
+    a,b,cc,d=m[:,0,0],m[:,0,1],m[:,1,0],m[:,1,1];den=a+b/50+cc*50+d
+    s=np.empty((len(f),2,2),complex);s[:,1,0]=s[:,0,1]=2/den;s[:,0,0]=(a+b/50-cc*50-d)/den;s[:,1,1]=(-a+b/50-cc*50+d)/den
+    assert np.max(abs(s[:,0,0]-s[:,1,1]))<1e-9
+    assert np.max(abs(abs(s[:,0,0])**2+abs(s[:,1,0])**2-1))<1e-9
+    return s,dict(L_nH=ls,C0_fF=cs,Cg_fF=gs)
+
+def main():
+    folder=ROOT/'sonnet_files/taper_exploration/final_designs/T3_T2_T1_reachable_target_2026-11-06'
+    r=json.loads((folder/'result.json').read_text());out=folder/'ten_cell_circuit_prediction';out.mkdir(exist_ok=True)
+    f=np.linspace(4.5e9,5.5e9,20001);c=np.array(r['normal_target_C_fF']);l=np.array(r['calibrated_L_nH'])
+    s,components=full_filter(f,c,l);nominal,_=full_filter(f,np.array(r['nominal_C_fF']),np.array([2.77,4.33,5.97,4.9194,4.9194]))
+    db=20*np.log10(abs(s[:,1,0]));ndb=20*np.log10(abs(nominal[:,1,0]));band=(f>=4.8e9)&(f<=5.2e9)
+    intervals={}
+    for threshold in [-1,-3]:
+        ix=np.flatnonzero(db>=threshold);chunks=np.split(ix,np.where(np.diff(ix)>1)[0]+1);intervals[str(threshold)]=[[float(f[v[0]]/1e9),float(f[v[-1]]/1e9)] for v in chunks if len(v)]
+    report=dict(assumption='Treat taper target-comparator C values as correct lumped elements and repeat the regular-cell values; not an EM prediction validated for the full filter.',source=str(folder/'result.json'),regular_C0_fF=float(c[3]),regular_Cg_fF=float(c[9]),output_fixture_C0_omitted_fF=float(c[4]),components=components,reference_impedance_ohm=50,lossless=True,delay_omitted='Matched reference delay changes phase only; fixture delay is not a physical filter component.',passband_4p8_5p2_min_dB=float(db[band].min()),passband_4p8_5p2_max_dB=float(db[band].max()),threshold_intervals_GHz=intervals)
+    save(out/'prediction.json',report);np.savez(out/'response.npz',f_Hz=f,S=s,nominal_S=nominal)
+    np.savetxt(out/'s21.csv',np.c_[f/1e9,s[:,1,0].real,s[:,1,0].imag,db,ndb],delimiter=',',header='GHz,S21_real,S21_imag,S21_dB,nominal_S21_dB',comments='')
+    fig,axes=plt.subplots(2,1,figsize=(11,8),sharex=True)
+    for ax,nom,pred in [(axes[0],abs(nominal[:,1,0]),abs(s[:,1,0])),(axes[1],ndb,db)]:
+        ax.plot(f/1e9,nom,'--',color='0.5',label='Original nominal circuit');ax.plot(f/1e9,pred,color='#1769aa',label='Matched values, conditional circuit prediction');ax.axvspan(4.8,5.2,color='green',alpha=.06);ax.grid(alpha=.2);ax.set(xlim=(4.5,5.5))
+    axes[0].set(ylim=(0,1.05),ylabel='|S21| (linear magnitude)',title='10 unit cells + T3/T2/T1 tapers mirrored at both ends\nLossless circuit calculation — not full-filter Sonnet');axes[0].legend()
+    axes[1].set(ylim=(-60,1),ylabel='S21 (dB)',xlabel='Frequency (GHz)',title='20 log10(|S21|)');axes[1].axhline(-3,color='0.6',lw=.7)
+    fig.tight_layout();fig.savefig(out/'s21.png',dpi=160);plt.close(fig);print(json.dumps(report,indent=2))
+
+if __name__=='__main__':main()

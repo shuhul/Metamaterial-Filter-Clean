@@ -1,5 +1,7 @@
 ﻿# Rebuilding the selected designs
 
+The design registry now also includes the November 8 current taper, full-filter single-point check, and full-sweep input. See [CURRENT_METHOD.md](CURRENT_METHOD.md). They replay their exact frozen layouts; only the older full-filter entry uses the legacy block assembler. The current geometry/GDS and response replay checks pass without EM.
+
 ## What is included
 
 `final_designs/` is the self-contained design package. The regular cell and each selected taper assembly include:

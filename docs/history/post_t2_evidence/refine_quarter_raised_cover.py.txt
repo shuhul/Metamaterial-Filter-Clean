@@ -1,0 +1,85 @@
+"""Native-verified geometry search at the converged open-boundary setting."""
+from refine_quarter_coils import *
+import refine_quarter_coils as coil_search
+from quarter_meander_control import make_coils
+DEST=OUT/'quarter_percent_converged_cover'
+
+def report(phase,**kw):
+    row=dict(phase=phase,utc=datetime.now(timezone.utc).isoformat(),pid=os.getpid(),**kw)
+    save(DEST/'refinement_status.json',row);print(json.dumps(row),flush=True)
+
+def set_height(tree,height):
+    level=next(e for e in tree.iter(tag('Level')) if e.get('Number')=='0')
+    level.find(tag('DielectricMaterialModel')).set('Thickness',str(height))
+    tree.find('.//'+tag('Size')).set('Z',str(height+5500))
+
+def native_raised(body,coils,feed,folder):
+    expected=dict(body=np.asarray(body).tolist(),coils=np.asarray(coils).tolist(),input_ground_shift_um=int(feed),air_height_um=12000)
+    p=folder/'project.sonx';marker=folder/'analysis_run/run_status.json'
+    if not marker.exists() or json.loads(marker.read_text()).get('status')!='complete':
+        make_coils(body,coils,folder,feed);tree=ET.parse(p);set_height(tree,12000);write_xml(tree,p)
+        save(folder/'raised_geometry.json',expected)
+        save(folder/'boundary_configuration.json',dict(air_height_um=12000,original_air_height_um=1500,open_boundary_convergence_reference=str(DEST/'full_band_boundary_convergence.json')))
+        sonnet.guarded_solver=solver;sonnet.simulate(p,folder/'analysis_run')
+    row=json.loads(marker.read_text());assert digest(p)==row['project_sha256'] and digest(p.with_suffix('.snp'))==row['snp_sha256']
+    assert json.loads((folder/'raised_geometry.json').read_text())==expected
+    return read_snp(p.with_suffix('.snp'))
+
+def finish(folder,d,r,pars,history):
+    calibration.calibrate(folder,{},full=True)
+    analysis=json.loads((folder/'full_local_model/analysis.json').read_text())
+    check=folder/'cover_30mm_check';check.mkdir(exist_ok=True);p=check/'project.sonx';marker=check/'analysis_run/run_status.json'
+    if not marker.exists() or json.loads(marker.read_text()).get('status')!='complete':
+        tree=ET.parse(folder/'project.sonx');set_height(tree,30000);write_xml(tree,p)
+        sonnet.guarded_solver=solver;sonnet.simulate(p,check/'analysis_run')
+    a=read_snp(folder/'project.snp');b=read_snp(check/'project.snp');assert np.array_equal(a.f,b.f)
+    err=b.s-a.s;br=float(np.sqrt(np.mean(abs(err[:,1,0])**2)));bm=float(np.max(abs(err)));r30,p30=distance(b.f,b.s[:,1,0])
+    assert br<.000125 and bm<.00025 and r30<.0025,'Final geometry requires further boundary convergence'
+    row=dict(project=str(folder/'project.sonx'),deltas_um=d.tolist(),actual_target_RMS=r,model_S21_RMS=analysis['dense_S21_RMS'],normal_target_C_fF=(TARGET*pars[:10]).tolist(),target_L_nH=(NOMINAL_L*pars[10:15]).tolist(),total_reference_delay_ps=float(pars[-1]),target_percent=.25,physical_parameter_uniqueness_claim=False,air_height_um=12000,cover_30mm_project=str(p),cover_30mm_target_RMS=r30,full_band_cover_change_RMS=br,max_all_S_boundary_change=bm,legacy_1p5mm_environment_not_used_for_this_acceptance=True)
+    save(DEST/'target_verified.json',row);save(DEST/'history.json',history);report('strict_target_verified',**row)
+
+def main():
+    while not (DEST/'baseline_model.npz').exists() or not (DEST/'full_band_boundary_convergence.json').exists():time.sleep(10)
+    convergence=json.loads((DEST/'full_band_boundary_convergence.json').read_text());assert convergence['pass_gate']
+    a=np.load(DEST/'baseline_model.npz');old=np.load(coil_search.DEST/'resume.npz')
+    assert np.array_equal(a['f'],old['f']);f=a['f'];z=a['z'];j=old['jac'].copy();d=old['d'].astype(int);body=old['body'].astype(int);feed=int(old['feed']);folder=DEST/'baseline'
+    body[:9]=d[:9];metadata=json.loads((Path(str(old['folder']))/'meander_geometry.json').read_text())
+    assert np.array_equal(metadata['deltas_um'],body) and np.array_equal(metadata['coil_controls'],d[9:]@coil_search.PAIR//2)
+    model=dict(coefficients=a['coefficients'],powers=a['powers']);net=read_snp(folder/'project.snp');rms,pars=distance(f,net.s[:,1,0]);history=[]
+    if rms<.0025:finish(folder,d,rms,pars,history);return
+    trust=np.array([4,8,4,4,2,16,16,16,2,4,4,2])
+    if (DEST/'resume.npz').exists():
+        resume=np.load(DEST/'resume.npz');z=resume['z'];j=resume['jac'];d=resume['d'].astype(int);body=resume['body'].astype(int);feed=int(resume['feed']);folder=Path(str(resume['folder']))
+        model=dict(coefficients=resume['coefficients'],powers=resume['powers']);history=json.loads((DEST/'history.json').read_text())
+        trust=resume['trust'].astype(int) if 'trust' in resume else np.array([2,4,2,2,2,8,8,8,2,2,2,2])
+        if len(history)>=2:
+            last=history[-1];changed=np.flatnonzero(np.asarray(last['deltas_um'])-np.asarray(history[-2]['deltas_um']))
+            if np.array_equal(changed,[1]) and last['improved'] and last['prediction_RMS']<.00025 and abs(last['actual_target_RMS']-last['predicted_RMS'])<.00001:
+                trust[1]=max(trust[1],8)
+                report('expanding_validated_pad_width_step',trust_um=int(trust[1]),native_prediction_RMS=last['prediction_RMS'])
+        report('tightening_current_local_model',project=str(folder/'project.sonx'),dense_gate=.00005)
+        model=calibration.calibrate(folder,model,dense_gate=.00005,heldout_gate=.00005);z=evaluate(model,f)
+        rms,pars=distance(f,read_snp(folder/'project.snp').s[:,1,0])
+    for it in range(len(history),len(history)+12):
+        report('proposal',iteration=it,best_RMS=rms,derivatives_transferred_from_legacy_boundary=True)
+        step,pz,pred,pr,pp=propose_network(f,z,j,d,trust)
+        if not step.any() or (pr>=rms-1e-5 and pr>=.0025):report('needs_fresh_derivatives',best_RMS=rms,predicted_RMS=pr,reason='Transferred geometry sensitivities offer no improvement');return
+        dd=d+step;bb=body.copy();bb[:9]=dd[:9];coils=(dd[9:]@coil_search.PAIR//2).astype(int);trial=DEST/'steps'/f'{it:02d}'
+        report('native_candidate_running',iteration=it,predicted_RMS=pr,deltas_um=dd.tolist())
+        net=native_raised(bb,coils,feed,trial);ar,at=distance(f,net.s[:,1,0]);err=float(np.sqrt(np.mean(abs(net.s[:,1,0]-pred)**2)))
+        row=dict(iteration=it,project=str(trial/'project.sonx'),deltas_um=dd.tolist(),actual_target_RMS=ar,predicted_RMS=pr,prediction_RMS=err,improved=bool(ar<rms));history.append(row);save(DEST/'history.json',history);report('native_candidate_complete',**row)
+        fig,ax=plt.subplots(figsize=(11,6));ax.plot(f/1e9,abs(net.s[:,1,0]),label='Sonnet: 12 mm air');ax.plot(f/1e9,abs(predict_target(f,at)),label=f'Target within 0.25%, RMS {ar:.6f}');ax.legend();ax.grid(alpha=.2);fig.tight_layout();fig.savefig(trial/'s21.png',dpi=160);plt.close(fig)
+        if ar<.0025:finish(trial,dd,ar,at,history);return
+        new=calibration.calibrate(trial,model,dense_gate=.00005,heldout_gate=.00005);actualz=evaluate(new,f);j=calibration.update_jac(j,step,actualz-pz)
+        if ar<rms:
+            d=dd;z=actualz;model=new;rms=ar;pars=at;folder=trial;save(DEST/'best.json',row)
+        if err>.0005 or not row['improved']:trust=np.maximum(2,2*np.floor(trust/4)).astype(int)
+        elif err<.00025 and abs(ar-pr)<.00001 and np.array_equal(np.flatnonzero(step),[1]):trust[1]=min(16,2*trust[1])
+        np.savez(DEST/'resume.npz',f=f,z=z,jac=j,d=d,body=body,feed=feed,folder=str(folder),coefficients=model['coefficients'],powers=model['powers'],trust=trust)
+        if err>.002:
+            report('needs_fresh_derivatives',best_RMS=rms,prediction_RMS=err,reason='Legacy boundary sensitivities failed native validation');return
+    report('iteration_limit',RMS=rms,project=str(folder/'project.sonx'))
+
+if __name__=='__main__':
+    try:main()
+    except BaseException as e:report('failed',error=str(e),traceback=traceback.format_exc());raise

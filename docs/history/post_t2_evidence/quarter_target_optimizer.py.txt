@@ -1,0 +1,36 @@
+"""All normal C and L targets constrained to +/-0.25%, plus reference delay."""
+from reachable_iterate_fine import *
+NOMINAL_L=np.array([2.77,4.33,5.97,4.9194,4.9194])
+
+def predict_target(f,x):
+    return circuit(f,NOMINAL_L*x[10:15],TARGET[:5]*x[:5],TARGET[5:]*x[5:10],left_ps=x[-1]/2,right_ps=x[-1]/2)[:,1,0]
+
+def distance(f,s):
+    def residual(x):
+        v=s-predict_target(f,x);return np.r_[v.real,v.imag]
+    fits=[least_squares(residual,np.r_[np.ones(15),t],bounds=(np.r_[np.full(15,.9975),-100],np.r_[np.full(15,1.0025),100]),x_scale=np.r_[np.ones(15),20],max_nfev=700) for t in [0,-20,20]]
+    q=min(fits,key=lambda q:q.cost);return float(np.sqrt(2*q.cost/len(f))),q.x
+
+def propose(f,z,jac,d,trust):
+    ix=np.unique(np.linspace(0,len(f)-1,201).astype(int));lo=np.maximum(LOW-d,-trust);hi=np.minimum(HIGH-d,trust);_,pars=distance(f[ix],closez(z[ix])[:,1,0]);active=np.flatnonzero(hi>lo);m=len(active)
+    def expand(x):
+        v=np.zeros(len(d));v[active]=x[:m];return v
+    def residual(x):
+        v=closez(z[ix]+np.einsum('i,ifab->fab',expand(x),jac[:,ix]))[:,1,0]-predict_target(f[ix],x[m:]);return np.r_[v.real,v.imag]
+    q=least_squares(residual,np.r_[np.zeros(m),pars],bounds=(np.r_[lo[active],np.full(15,.9975),-100],np.r_[hi[active],np.full(15,1.0025),100]),x_scale=np.r_[np.maximum(trust[active],2),np.ones(15),20],max_nfev=900)
+    cont=expand(q.x);choices=[]
+    import itertools
+    # Width and spacing both strongly affect junction loading. Enumerate their
+    # neighboring manufacturable values jointly, then re-optimize all others.
+    axes=[4,8]
+    grids=[sorted(set([0.,2*np.floor(cont[k]/2),2*np.ceil(cont[k]/2)])) for k in axes]
+    for fixed in itertools.product(*grids):
+        if any(not lo[k]<=v<=hi[k] for k,v in zip(axes,fixed)):continue
+        other=[i for i in active if i not in axes];n=len(other)
+        def ex(x):
+            v=np.zeros(len(d));v[axes]=fixed;v[other]=x[:n];return v
+        def res(x):
+            v=closez(z[ix]+np.einsum('i,ifab->fab',ex(x),jac[:,ix]))[:,1,0]-predict_target(f[ix],x[n:]);return np.r_[v.real,v.imag]
+        opt=least_squares(res,np.r_[cont[other],q.x[m:]],bounds=(np.r_[lo[other],np.full(15,.9975),-100],np.r_[hi[other],np.full(15,1.0025),100]),x_scale=np.r_[np.maximum(trust[other],2),np.ones(15),20],max_nfev=800)
+        step=(2*np.round(ex(opt.x)/2)).astype(int);pred=closez(z+np.einsum('i,ifab->fab',step,jac));r,p=distance(f[ix],pred[ix,1,0]);choices.append((r,step,pred,p))
+    r,step,pred,p=min(choices,key=lambda x:x[0]);return step,pred,r,p,cont

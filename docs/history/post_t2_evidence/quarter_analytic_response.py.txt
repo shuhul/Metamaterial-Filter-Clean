@@ -1,0 +1,53 @@
+"""Analytic derivatives of the existing network and target, without a model change."""
+from quarter_target_optimizer import *
+
+def target_with_jac(f,p):
+    w=2*np.pi*np.asarray(f);n=len(f);eye=np.tile(np.eye(2,dtype=complex),(n,1,1));stages=[];zs=[];ys=[];lis=[]
+    for k in range(5):
+        z=1/(1j*w*TARGET[5+k]*p[5+k]*1e-15);li=1/(1j*w*NOMINAL_L[k]*p[10+k]*1e-9);y=1j*w*TARGET[k]*p[k]*1e-15+li
+        m=eye.copy();m[:,0,0]+=z*y;m[:,0,1]=z;m[:,1,0]=y;stages.append(m);zs.append(z);ys.append(y);lis.append(li)
+    prefix=[eye];suffix=[None]*6;suffix[5]=eye
+    for m in stages:prefix.append(prefix[-1]@m)
+    for k in range(4,-1,-1):suffix[k]=stages[k]@suffix[k+1]
+    def denominator(m):return m[:,0,0]+m[:,0,1]/50+50*m[:,1,0]+m[:,1,1]
+    den=denominator(prefix[-1]);phase=np.exp(-1j*w*p[-1]*1e-12);s=2*phase/den;j=np.empty((n,16),complex)
+    for k in range(5):
+        for column,dy,dz in [(k,1j*w*TARGET[k]*1e-15,None),(10+k,-lis[k]/p[10+k],None),(5+k,None,-zs[k]/p[5+k])]:
+            dm=np.zeros_like(eye)
+            if dy is not None:dm[:,0,0]=zs[k]*dy;dm[:,1,0]=dy
+            else:dm[:,0,0]=dz*ys[k];dm[:,0,1]=dz
+            j[:,column]=-2*phase*denominator(prefix[k]@dm@suffix[k+1])/den**2
+    j[:,-1]=-1j*w*1e-12*s
+    return s,j
+
+def network_with_jac(z,j):
+    inverse=np.linalg.inv(z[:,2:,2:]);x=inverse@z[:,2:,:2];left=z[:,:2,2:]@inverse
+    ze=z[:,:2,:2]-z[:,:2,2:]@x;rz=np.linalg.inv(ze+50*np.eye(2));s=-100*rz[:,1,0]
+    dz=j[:,:,:2,:2]-j[:,:,:2,2:]@x+left@j[:,:,2:,2:]@x-left@j[:,:,2:,:2]
+    ds=100*rz@dz@rz
+    return s,ds[:,:,1,0].T
+
+def fast_distance(f,s,initial):
+    last=[None,None]
+    def evaluate(p):
+        if last[0] is None or not np.array_equal(last[0],p):
+            pred,j=target_with_jac(f,p);e=s-pred;last[:]=[p.copy(),(np.r_[e.real,e.imag],np.r_[-j.real,-j.imag])]
+        return last[1]
+    q=least_squares(lambda p:evaluate(p)[0],initial,jac=lambda p:evaluate(p)[1],bounds=(np.r_[np.full(15,.9975),-100],np.r_[np.full(15,1.0025),100]),x_scale=np.r_[np.ones(15),20],max_nfev=200)
+    return float(np.sqrt(2*q.cost/len(f))),q.x
+
+if __name__=='__main__':
+    import refine_quarter_body as q
+    a=np.load(q.OUT/'quarter_percent/resume.npz');f=read_snp(Path(str(a['folder']))/'project.snp').f[::20];p=np.r_[np.linspace(.998,1.002,15),-12.3]
+    s,j=target_with_jac(f,p);assert np.max(abs(s-predict_target(f,p)))<1e-10
+    target_errors=[]
+    for k in range(16):
+        h=1e-6 if k<15 else 1e-4;pp=p.copy();pm=p.copy();pp[k]+=h;pm[k]-=h;numeric=(predict_target(f,pp)-predict_target(f,pm))/(2*h)
+        target_errors.append(float(np.linalg.norm(numeric-j[:,k])/np.linalg.norm(numeric)))
+    z=a['z'][::20];jj=a['jac'][:,::20];s,j=network_with_jac(z,jj);assert np.max(abs(s-closez(z)[:,1,0]))<1e-10
+    geometry_errors=[]
+    for k in range(9):
+        h=1e-4;numeric=(closez(z+h*jj[k])[:,1,0]-closez(z-h*jj[k])[:,1,0])/(2*h);geometry_errors.append(float(np.linalg.norm(numeric-j[:,k])/np.linalg.norm(numeric)))
+    assert max(target_errors+geometry_errors)<1e-4
+    record=dict(max_target_derivative_relative_error=max(target_errors),max_geometry_derivative_relative_error=max(geometry_errors),validated_against_central_finite_differences=True,model_and_objective_unchanged=True)
+    save(q.OUT/'quarter_percent_meanders/analytic_derivative_validation.json',record);print(json.dumps(record),flush=True)

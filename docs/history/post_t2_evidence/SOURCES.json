@@ -1,0 +1,72 @@
+[
+  {
+    "source": "investigations/full_filter_fit_72_2026-11-03/REPORT.md",
+    "published": "docs\\history\\post_t2_evidence\\full_filter_fit_72_2026-11-03_REPORT.md",
+    "sha256": "75c0254073018b86f189c0451b0a3602c9fac41e6d7419ca5b30fa4d90beb109"
+  },
+  {
+    "source": "investigations/full_filter_fit_72_2026-11-03/new_points_and_design/REPORT.md",
+    "published": "docs\\history\\post_t2_evidence\\new_points_and_design_REPORT.md",
+    "sha256": "f08cbf91051d91cbbd31a2c469d91272575bd14484afa726d02c12c1e4d617c7"
+  },
+  {
+    "source": "investigations/joint_physical_extraction_2026-11-04/REPORT.md",
+    "published": "docs\\history\\post_t2_evidence\\joint_physical_extraction_2026-11-04_REPORT.md",
+    "sha256": "8612c2d3122e8df63a66fd2f73c003fb3d962214058116119ecd16b131b05eba"
+  },
+  {
+    "source": "investigations/joint_physical_extraction_2026-11-04/COMPARISONS.md",
+    "published": "docs\\history\\post_t2_evidence\\joint_physical_extraction_2026-11-04_COMPARISONS.md",
+    "sha256": "edb01173254d2f8a1b06f7d620d4741ad6c2672ff71bfe0fc67bdac7cab82080"
+  },
+  {
+    "source": "investigations/shorting_speed_2026-11-05/REPORT.md",
+    "published": "docs\\history\\post_t2_evidence\\shorting_speed_2026-11-05_REPORT.md",
+    "sha256": "97293cdc969518456550cdd52f0e37558e5f0b88f143f109150ea7105561438d"
+  },
+  {
+    "source": "investigations\\filter_refinement_2026-11-05\\reachable_network.py",
+    "published": "docs\\history\\post_t2_evidence\\reachable_network.py.txt",
+    "sha256": "ef6ed033749037755f94fdca32109e7e5eaf203305908f62c7061907f0e90f61"
+  },
+  {
+    "source": "investigations\\filter_refinement_2026-11-05\\reachable_geometry.py",
+    "published": "docs\\history\\post_t2_evidence\\reachable_geometry.py.txt",
+    "sha256": "2aff93ee3f45b56bc7d1bacdcce054a798344e43107d18c7ff548d5dd3fcf5ee"
+  },
+  {
+    "source": "investigations\\filter_refinement_2026-11-05\\reachable_iterate.py",
+    "published": "docs\\history\\post_t2_evidence\\reachable_iterate.py.txt",
+    "sha256": "ab212d532544ff23fd249972ebf21338ab99a4a7e1d23231c72d187e7549a619"
+  },
+  {
+    "source": "investigations\\filter_refinement_2026-11-05\\terminal_profiles.py",
+    "published": "docs\\history\\post_t2_evidence\\terminal_profiles.py.txt",
+    "sha256": "ea9c52b9ff41f0fdec1b4ae7a26257de3e0c83275c44b6c1e3e9dd27c854cc4b"
+  },
+  {
+    "source": "investigations\\filter_refinement_2026-11-05\\quarter_target_optimizer.py",
+    "published": "docs\\history\\post_t2_evidence\\quarter_target_optimizer.py.txt",
+    "sha256": "dcce4b7bc0abe6f60d6d0039d0097a02fceeab4613228400b6201fd57d889f7e"
+  },
+  {
+    "source": "investigations\\filter_refinement_2026-11-05\\quarter_analytic_response.py",
+    "published": "docs\\history\\post_t2_evidence\\quarter_analytic_response.py.txt",
+    "sha256": "043b8125b80976a7986a56ec1a7a35475a93ccd83ace9ccc0910aaa86fdaf5bd"
+  },
+  {
+    "source": "investigations\\filter_refinement_2026-11-05\\quarter_meander_control.py",
+    "published": "docs\\history\\post_t2_evidence\\quarter_meander_control.py.txt",
+    "sha256": "e6ad623f640d67c651455768438175829027ad94dfa22999de61770465f4d13e"
+  },
+  {
+    "source": "investigations\\filter_refinement_2026-11-05\\predict_ten_cell_filter.py",
+    "published": "docs\\history\\post_t2_evidence\\predict_ten_cell_filter.py.txt",
+    "sha256": "e044c0f24c6fd17d98d592c8c68e1cb6a4d651a7070586de37303e8b6d0dc137"
+  },
+  {
+    "source": "investigations\\filter_refinement_2026-11-05\\refine_quarter_raised_cover.py",
+    "published": "docs\\history\\post_t2_evidence\\refine_quarter_raised_cover.py.txt",
+    "sha256": "1595f72bd97da1b1391be73a23ab4446a270dd7e5c55959085c821280693238d"
+  }
+]

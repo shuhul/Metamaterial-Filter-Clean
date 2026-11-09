@@ -1,0 +1,13 @@
+{
+  "name": "current_2026_11_08/full_filter_single_point",
+  "project": "project.sonx",
+  "layout": "layout.gds",
+  "parameters": "parameters.json",
+  "box_um": [
+    9972.0,
+    1500.0
+  ],
+  "coordinate_system": "GDS box origin bottom-left; Sonnet y = box_height - GDS y",
+  "grid_um": 2,
+  "verification": "Completed single-frequency EM only"
+}

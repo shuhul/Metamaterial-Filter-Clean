@@ -1,0 +1,66 @@
+"""Regenerate only existing taper meanders, preserving their centered terminals."""
+from meander_position_control import *
+from geometry.meander import MeanderParams,make_meander
+import copy
+SPECS=[(1723,130,68,6,2,8),(2446,148,72,4,4,10),(2978,220,72,4,4,10)]
+
+def make_coils(d,controls,folder,input_ground_shift=0):
+    controls=np.asarray(controls,int);assert len(controls)==6 and np.all(controls%2==0)
+    from quarter_input_ground_control import make_feed
+    p=make_feed(d,input_ground_shift,folder) if input_ground_shift else make14(d,folder)
+    tree=ET.parse(p);before=metal(tree);parent=next(e for e in tree.iter(tag('Objects')) if e.find(tag('PlanarPolygon')) is not None)
+    nextid=max(int(e.get('Id')) for e in tree.iter(tag('PlanarPolygon')))+1;descriptions=[];windows=[]
+    for k,(center,w,n,t,g,top) in enumerate(SPECS):
+        half,dn=map(int,controls[2*k:2*k+2]);n+=dn//2;width=w+2*half;ltop=top+int(d[11+k])
+        m=MeanderParams(w=width,l_top=ltop,l=596,n=n,t=t,d=g)
+        assert m.l_bot>=6 and abs(half)<=12
+        roi=gdstk.rectangle((center-w/2-26,470),(center+w/2+26,1066));windows.append(roi)
+        # Only the old meander lies inside this window; pads are excluded below.
+        narrow=gdstk.rectangle((center-w/2,470),(center+w/2,1066))
+        old=gdstk.boolean(metal(tree),[narrow],'and',precision=.001)
+        generated=[gdstk.Polygon(np.column_stack([q.points[:,0]+center-width/2,1066-q.points[:,1]])) for q in make_meander(m,name=f'REBUILT_{k}').get_polygons()]
+        remainder=gdstk.boolean(metal(tree),[narrow],'not',precision=.001)
+        assert not gdstk.boolean(generated,remainder,'and',precision=.001),'Regenerated meander overlaps another conductor'
+        if not half and not dn:
+            assert not gdstk.boolean(old,generated,'xor',precision=.001),f'Baseline meander mismatch {k}'
+        template=None
+        for el in list(parent.findall(tag('PlanarPolygon'))):
+            polygon=gdstk.Polygon(points(el));cut=gdstk.boolean([polygon],[narrow],'and',precision=.001)
+            if not cut:continue
+            if template is None:template=copy.deepcopy(el)
+            rest=gdstk.boolean([polygon],[narrow],'not',precision=.001)
+            parent.remove(el)
+            for piece_index,piece in enumerate(rest):
+                node=copy.deepcopy(el)
+                if piece_index:node.set('Id',str(nextid));nextid+=1
+                for q in list(node.findall(tag('Points'))):node.remove(q)
+                q=ET.Element(tag('Points'));q.text=' '.join(f'({x:g},{y:g})' for x,y in piece.points);node.insert(0,q);parent.append(node)
+        assert template is not None
+        for piece in generated:
+            node=copy.deepcopy(template);node.set('Id',str(nextid));nextid+=1;node.set('MacroID',f'quarter_meander_{k}')
+            for q in list(node.findall(tag('Points'))):node.remove(q)
+            q=ET.Element(tag('Points'));q.text=' '.join(f'({x:g},{y:g})' for x,y in piece.points);node.insert(0,q);parent.append(node)
+        descriptions.append(dict(center_x_um=center,width_um=width,n=n,wire_um=t,gap_um=g,top_lead_um=ltop,bottom_lead_um=m.l_bot))
+    after=metal(tree);delta=gdstk.boolean(canonical(before),canonical(after),'xor',precision=.001)
+    if not np.any(controls):assert not delta,'Zero-change regeneration must reproduce all metal exactly'
+    assert not delta or not gdstk.boolean(delta,windows,'not',precision=.001)
+    assert len(canonical(before))==len(canonical(after))
+    assert all(np.allclose(q.points/2,np.round(q.points/2)) for q in after)
+    write_xml(tree,p);native_read(p)
+    save(folder/'meander_geometry.json',dict(deltas_um=np.asarray(d).tolist(),input_ground_shift_um=int(input_ground_shift),coil_controls=controls.tolist(),control_pairs='half-width increment um, twice integer run-count increment',meanders=descriptions,regular_cell_unchanged=True,inductance_requires_new_validation=True,zero_change_metal_xor_empty=not bool(delta),polygon_partition_changed=True,zero_change_native_comparison_required=True))
+    from matplotlib.patches import Polygon
+    fig,ax=plt.subplots(figsize=(17,5))
+    for poly in after:ax.add_patch(Polygon(poly.points,fc='#467865',ec='none'))
+    ax.set(xlim=(1150,3950),ylim=(1110,420),aspect='equal',xlabel='um',title=f'Existing meander width/run controls {controls.tolist()}');fig.tight_layout();fig.savefig(folder/'geometry.png',dpi=150);plt.close(fig)
+    return p
+
+def native_coils(d,controls,folder,input_ground_shift=0):
+    marker=folder/'analysis_run/run_status.json'
+    if marker.exists() and json.loads(marker.read_text()).get('status')=='complete':
+        p=folder/'project.sonx';r=json.loads(marker.read_text());assert digest(p)==r['project_sha256'] and digest(p.with_suffix('.snp'))==r['snp_sha256']
+        m=json.loads((folder/'meander_geometry.json').read_text());assert np.array_equal(m['deltas_um'],d) and np.array_equal(m['coil_controls'],controls) and m['input_ground_shift_um']==input_ground_shift
+    else:p=make_coils(d,controls,folder,input_ground_shift);sonnet.guarded_solver=solver;sonnet.simulate(p,folder/'analysis_run')
+    return read_snp(p.with_suffix('.snp'))
+
+if __name__=='__main__':
+    a=np.load(OUT/'quarter_percent_body_position/resume.npz');make_coils(a['d'],np.zeros(6,int),OUT/'quarter_percent_meanders/zero_change_audit')

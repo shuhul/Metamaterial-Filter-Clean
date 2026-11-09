@@ -1,0 +1,56 @@
+"""Validate a geometry derivative of the complete measured local network.
+
+Unlike the earlier capacitor-only geometry surrogate, both the static and the
+distributed response are remeasured. The first prediction is checked against
+an independent native two-port geometry, not just its own training curves.
+"""
+from reachable_network import *
+from local_step import make_geometry
+
+def passes(r):
+    return r['reconstruction']['pass_gate'] and r['dense_all_S_RMS']<.001 and r['heldout_S21_error']<.001 and r['low_heldout_relative_Z_error']<.01
+
+def evaluate(d,f):
+    return ((f/5e9)[:,None]**d['powers']@d['coefficients']).reshape(-1,7,7)
+
+def main():
+    marker=OUT/'baseline/analysis.json'
+    while not marker.exists():
+        s=json.loads((HERE/'status.json').read_text())
+        if s['phase'] in ['local_probe_gate_failed','local_network_failed']:raise RuntimeError('Baseline gate failed; inspect before continuing')
+        time.sleep(3)
+    baseline_report=json.loads(marker.read_text())
+    if not passes(baseline_report):
+        state('reachability_waiting_model_refinement',result=baseline_report);return
+    controls=[]
+    for name in ['input_IDC_span_+2um','T3_pad_width_+2um']:
+        source=HERE/'controls'/name/'project.sonx'
+        p=prepare(source,OUT/'controls'/name,PINS,FREQUENCIES);run(p,7)
+        r=analyze(p.parent,source.with_suffix('.snp'))
+        if not passes(r):state('reachability_control_model_failed',case=name,result=r);return
+        controls.append(np.load(p.parent/'network.npz'))
+    base=np.load(OUT/'baseline/network.npz');original=read_snp(BASE);f=original.f
+    z0=evaluate(base,f);jac=np.array([(evaluate(d,f)-z0)/2 for d in controls])
+    # Preserve a prospective, unfitted geometry prediction before its EM.
+    # Opposite signs test transfer beyond either measured +2um control.
+    delta=np.array([2,-2]);pred=closez(z0+np.einsum('i,ifab->fab',delta,jac))
+    folder=OUT/'validation/idc_plus2_pad_minus2';p=make_geometry(2,-2,folder)
+    save(folder/'prospective_prediction.json',dict(delta_um=delta.tolist(),dimensions=['input_IDC_span','T3_pad_width'],prediction_saved_before_EM=True,uses_complete_impedance_derivative=True,capacitance_only_model=False,source_sha256=digest(BASE)))
+    np.savez(folder/'prospective_prediction.npz',f=f,s=pred)
+    marker=folder/'analysis_run/run_status.json'
+    if not marker.exists() or json.loads(marker.read_text()).get('status')!='complete':
+        state('geometry_reachability_validation_EM',project=str(p),threads=36)
+        sonnet.guarded_solver=solver;sonnet.simulate(p,folder/'analysis_run')
+    actual=read_snp(p.with_suffix('.snp'));assert np.array_equal(actual.f,f)
+    changed=actual.s-original.s;predicted_change=pred-closez(z0)
+    rms=float(np.sqrt(np.mean(abs(pred-actual.s)**2)));s21=float(np.sqrt(np.mean(abs(pred[:,1,0]-actual.s[:,1,0])**2)))
+    difference_error=float(np.linalg.norm(predicted_change[:,1,0]-changed[:,1,0])/np.linalg.norm(changed[:,1,0]))
+    report=dict(project=str(p),prediction_all_S_RMS=rms,prediction_S21_RMS=s21,relative_change_prediction_error=difference_error,passed=bool(s21<.001 and difference_error<.25),scope='Independent prediction of a small combined geometry change; not proof of global reachability or target attainment.')
+    save(folder/'validation.json',report)
+    fig,ax=plt.subplots(figsize=(11,6));ax.plot(f/1e9,abs(original.s[:,1,0]),label='Baseline');ax.plot(f/1e9,abs(actual.s[:,1,0]),label='New native geometry');ax.plot(f/1e9,abs(pred[:,1,0]),'--',label=f'Prediction, RMS {s21:.5g}');ax.grid(alpha=.2);ax.legend();ax.set(xlabel='GHz',ylabel='|S21|');fig.tight_layout();fig.savefig(folder/'prediction_check.png',dpi=160);plt.close(fig)
+    np.savez(OUT/'measured_geometry_derivatives.npz',f=f,z0=z0,jacobian=jac)
+    state('geometry_direction_validation_complete',result=report,target_optimization_not_yet_done=True)
+
+if __name__=='__main__':
+    try:main()
+    except BaseException as e:state('geometry_reachability_failed',error=str(e),traceback=traceback.format_exc());raise

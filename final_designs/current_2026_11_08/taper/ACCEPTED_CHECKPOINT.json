@@ -1,0 +1,9 @@
+{
+  "project": "project.sonx",
+  "project_sha256": "ec140715df34013203218b873d264b6fffaeb0b9a8188f83895ec4282e308172",
+  "response_sha256": "4e35386c4b7d28299eab416ac230aa8cade30f5eedc2e55ae426b5532a55fcce",
+  "target_response_RMS": 0.0024918633384848348,
+  "normal_target_parameter_percent": 0.25,
+  "independent_model_fit_RMS": 8.117461191373584e-06,
+  "physical_parameter_uniqueness_claim": false
+}

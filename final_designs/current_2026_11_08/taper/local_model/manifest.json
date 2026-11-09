@@ -1,0 +1,51 @@
+{
+  "source": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\investigations\\filter_refinement_2026-11-05\\reachable_network\\quarter_percent_converged_cover\\steps\\pad34\\project.sonx",
+  "source_sha256": "ec140715df34013203218b873d264b6fffaeb0b9a8188f83895ec4282e308172",
+  "probes": [
+    {
+      "node": "T3",
+      "number": 3,
+      "x_um": 1724,
+      "y_um": 1064
+    },
+    {
+      "node": "T2",
+      "number": 4,
+      "x_um": 2446,
+      "y_um": 1064
+    },
+    {
+      "node": "T1",
+      "number": 5,
+      "x_um": 2978,
+      "y_um": 1064
+    },
+    {
+      "node": "regular",
+      "number": 6,
+      "x_um": 3376,
+      "y_um": 1064
+    },
+    {
+      "node": "output_end",
+      "number": 7,
+      "x_um": 3734,
+      "y_um": 1064
+    }
+  ],
+  "nports": 7,
+  "metal_union_unchanged": true,
+  "threads": 36,
+  "frequencies_GHz": [
+    0.5,
+    1.0,
+    1.5,
+    2.0,
+    4.65,
+    4.861,
+    5.0,
+    5.096,
+    5.25,
+    5.4
+  ]
+}

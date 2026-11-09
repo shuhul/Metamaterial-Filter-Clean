@@ -1,0 +1,137 @@
+"""Current-taper series-port extraction, with reconstruction gates.
+
+Independent experimental copies only. No target-constrained extraction and no
+full-filter solves. All native work uses the authorized serial 36-thread runner.
+"""
+from campaign import *
+from copy import deepcopy
+import runpy, shutil, tempfile
+import xml.etree.ElementTree as ET
+import gdstk
+import skrf as rf
+from geometry.prepare_sonnet import tag,points,write_xml,BIN
+from prepare import metal,canonical,discrete,native_read
+
+OUT=HERE/'reachable_network'
+PINS=[('T3',1724),('T2',2446),('T1',2978),('regular',3376),('output_end',3734)]
+FREQUENCIES=[.5,1.,1.5,2.,4.65,4.861,5.,5.096,5.25,5.4]
+
+def read(path,nports):
+    with tempfile.TemporaryDirectory() as d:
+        p=Path(d)/f'network.s{nports}p';shutil.copyfile(path,p);n=rf.Network(str(p))
+    assert n.nports==nports and np.all(np.isfinite(n.s)) and np.allclose(n.z0,50)
+    return n
+
+def close(s):
+    return s[:,:2,:2]-s[:,:2,2:]@np.linalg.solve(np.eye(s.shape[1]-2)+s[:,2:,2:],s[:,2:,:2])
+
+def sz(s):return 50*(np.eye(s.shape[1])+s)@np.linalg.inv(np.eye(s.shape[1])-s)
+def zs(z):return (z-50*np.eye(z.shape[1]))@np.linalg.inv(z+50*np.eye(z.shape[1]))
+def closez(z):return zs(z[:,:2,:2]-z[:,:2,2:]@np.linalg.solve(z[:,2:,2:],z[:,2:,:2]))
+
+def prepare(source,folder,pins,frequencies):
+    folder.mkdir(parents=True,exist_ok=True);p=folder/'project.sonx'
+    if (folder/'manifest.json').exists():
+        m=json.loads((folder/'manifest.json').read_text());assert m['source_sha256']==digest(source)
+        return p
+    tree=ET.parse(source);root=tree.getroot();before=metal(tree)
+    layer=root.find(f'.//{tag("PlanarTechLayer")}/{tag("Objects")}')
+    maxid=max(int(e.get('Id')) for e in root.iter(tag('PlanarPolygon')))
+    probes=[]
+    for i,(label,x) in enumerate(pins):
+        cut=1064
+        matches=[q for q in list(layer) if q.tag==tag('PlanarPolygon') and gdstk.inside([(x,cut-.5),(x,cut+.5)],[gdstk.Polygon(points(q))])==(True,True)]
+        if len(matches)!=1:raise ValueError(f'Ambiguous wire: {label}, {len(matches)}')
+        q=matches[0];original=deepcopy(q);poly=gdstk.Polygon(points(q))
+        upper=gdstk.boolean([poly],[gdstk.rectangle((0,0),(5000,cut))],'and',precision=.001)
+        lower=gdstk.boolean([poly],[gdstk.rectangle((0,cut),(5000,1600))],'and',precision=.001)
+        chosen=[u for u in upper if gdstk.inside([(x,cut-.5)],[u])[0]]
+        if len(chosen)!=1 or len(lower)!=1:raise ValueError(f'Split {label} is ambiguous')
+        selected=chosen[0];other=[u for u in upper if u is not selected]
+        for e in q.findall(tag('Points')):q.remove(e)
+        e=ET.Element(tag('Points'));e.text=' '.join(f'({a:g},{b:g})' for a,b in selected.points);q.insert(0,e)
+        for piece in lower+other:
+            maxid+=1
+            new=deepcopy(original);new.set('Id',str(maxid));new.set('MacroID',f'reachSplit{maxid}')
+            for e in list(new):
+                if e.tag in (tag('Points'),tag('Objects')):new.remove(e)
+            e=ET.Element(tag('Points'));e.text=' '.join(f'({a:g},{b:g})' for a,b in piece.points);new.insert(0,e);layer.append(new)
+        # Existing ports, if any, stay on the upper piece; preserve their edge
+        # positions by rejecting such a split rather than silently reindexing.
+        if list(q.iter(tag('Port'))):raise ValueError('Split polygon contains an existing port')
+        xy=points(q);edges=[j for j,(a,b) in enumerate(zip(xy,np.roll(xy,-1,axis=0))) if a[1]==b[1]==cut and min(a[0],b[0])<x<max(a[0],b[0])]
+        assert len(edges)==1
+        objects=q.find(tag('Objects'))
+        if objects is None:objects=ET.SubElement(q,tag('Objects'))
+        port=ET.SubElement(objects,tag('Port'),Number=str(i+3),Vertex=str(edges[0]),MacroID=f'reachGap{i}')
+        ET.SubElement(port,tag('Type'),Type='GAP');ET.SubElement(port,tag('Impedance'),Resistance='50',Reactance='0',Inductance='0',Capacitance='0')
+        ET.SubElement(port,tag('Center')).text=f'({x},{cut})'
+        probes.append(dict(node=label,number=i+3,x_um=x,y_um=cut))
+    assert not gdstk.boolean(canonical(before),canonical(metal(tree)),'xor',precision=.001)
+    discrete(tree,frequencies)
+    for e in root.iter(tag('File')):
+        if e.get('Type')=='TOUCH':e.set('Name','project.snp')
+    write_xml(tree,p);native_read(p)
+    save(folder/'manifest.json',dict(source=str(source),source_sha256=digest(source),probes=probes,nports=len(pins)+2,metal_union_unchanged=True,threads=36,frequencies_GHz=frequencies))
+    return p
+
+def run(p,nports):
+    marker=p.parent/'complete.json'
+    if marker.exists():
+        m=json.loads(marker.read_text());assert digest(p)==m['project_sha256'] and digest(p.with_suffix('.snp'))==m['snp_sha256']
+        return read(p.with_suffix('.snp'),nports)
+    state('local_network_EM',project=str(p),ports=nports,threads=36)
+    start=time.monotonic()
+    with (p.parent/'em.log').open('w') as log:r=solver([str(BIN/'em.exe'),'-v',str(p)],cwd=p.parent,stdout=log)
+    r.check_returncode();txt=(p.parent/'em.log').read_text()
+    assert 'Em simulation completed' in txt and 'Em errors detected: 0' in txt
+    n=read(p.with_suffix('.snp'),nports)
+    save(marker,dict(project_sha256=digest(p),snp_sha256=digest(p.with_suffix('.snp')),elapsed_s=time.monotonic()-start,frequencies_GHz=(n.f/1e9).tolist()))
+    return n
+
+def reconstruction(n,original):
+    pred=close(n.s);actual=np.empty_like(pred)
+    for a in range(2):
+        for b in range(2):actual[:,a,b]=np.interp(n.f,original.f,original.s[:,a,b].real)+1j*np.interp(n.f,original.f,original.s[:,a,b].imag)
+    err=abs(pred-actual)
+    return dict(frequencies_GHz=(n.f/1e9).tolist(),max_all_S_error=float(err.max()),S21_errors=err[:,1,0].tolist(),pass_gate=bool(err.max()<.001),gate=.001,comparison='Restored ports vs original two-port export at matching frequencies')
+
+def analyze(folder,source=BASE):
+    n=read(folder/'project.snp',7);pol=np.diag([1,1,-1,-1,-1,-1,-1]);z=sz(pol@n.s@pol)
+    assert np.max(abs(closez(z)-close(n.s)))<1e-7
+    idx=[0,2,3,4,5,1];low=n.f<3e9
+    variants=[]
+    for fs in [[.5,1.],[.5,1.,2.]]:
+        ii=[int(np.argmin(abs(n.f-v*1e9))) for v in fs];r=n.f[ii]/1e9
+        basis=np.array([-1/r,r,r**3][:len(ii)]).T
+        co=np.linalg.solve(basis,z[ii][:,idx,:][:,:,idx].imag.reshape(len(ii),-1))
+        c=np.linalg.inv(co[0].reshape(6,6))*1e6/(2*np.pi)
+        variants.append(dict(frequencies_GHz=fs,C_fF=c.tolist(),ground_fF=c.sum(axis=1).tolist()))
+    c=np.array(variants[-1]['C_fF']);assert np.linalg.eigvalsh((c+c.T)/2).min()>0
+    # Independent low-frequency check, not used in either C extraction.
+    rr=1.5;low_pred=np.array([-1/rr,rr,rr**3])@co
+    heldlow=int(np.argmin(abs(n.f-1.5e9)))
+    train=np.isin(np.round(n.f/1e9,6),[4.65,4.861,5.,5.25,5.4]);held=np.isclose(n.f,5.096e9,rtol=0,atol=1)
+    r=n.f[train]/5e9;powers=np.arange(-1,2*train.sum()-2,2)
+    coefficients=np.linalg.solve(r[:,None]**powers,z[train].reshape(train.sum(),-1))
+    def predict(f):return ((np.asarray(f)/5e9)[:,None]**powers@coefficients).reshape(-1,7,7)
+    original=read_snp(source);pred=closez(predict(original.f));err=pred-original.s
+    band=n.f>4e9;nn=n[np.flatnonzero(band)]
+    rec=reconstruction(nn,original)
+    report=dict(source=str(source),terminal_order=['input','T3','T2','T1','regular','output_end'],C_fF=c.tolist(),C_ground_fF=c.sum(axis=1).tolist(),low_variants=variants,low_heldout_relative_Z_error=float(np.linalg.norm(low_pred-z[heldlow][np.ix_(idx,idx)].imag.reshape(-1))/np.linalg.norm(z[heldlow][np.ix_(idx,idx)].imag)),band_training_GHz=(n.f[train]/1e9).tolist(),heldout_GHz=5.096,heldout_S21_error=float(abs(closez(predict(n.f[held]))-closez(z[held]))[:,1,0].max()),dense_S21_RMS=float(np.sqrt(np.mean(abs(err[:,1,0])**2))),dense_all_S_RMS=float(np.sqrt(np.mean(abs(err)**2))),reconstruction=rec,parameter_uniqueness_verified=False,geometry_prediction_verified=False)
+    save(folder/'analysis.json',report)
+    np.savez(folder/'network.npz',f=n.f,z=z,C=c,powers=powers,coefficients=coefficients)
+    fig,ax=plt.subplots(figsize=(11,6));ax.plot(original.f/1e9,abs(original.s[:,1,0]),label='Original Sonnet');ax.plot(original.f/1e9,abs(pred[:,1,0]),'--',label=f'Internal network RMS {report["dense_S21_RMS"]:.5g}');ax.legend();ax.grid(alpha=.2);ax.set(xlabel='GHz',ylabel='|S21|');fig.tight_layout();fig.savefig(folder/'prediction.png',dpi=160);plt.close(fig)
+    return report
+
+def main():
+    original=read_snp(BASE)
+    for name,pins in [('single_T3',PINS[:1]),('all_nodes_control',PINS)]:
+        p=prepare(BASE.with_suffix('.sonx'),OUT/name,pins,[5.096]);n=run(p,len(pins)+2);r=reconstruction(n,original);save(p.parent/'reconstruction.json',r)
+        if not r['pass_gate']:state('local_probe_gate_failed',case=name,result=r);return
+    p=prepare(BASE.with_suffix('.sonx'),OUT/'baseline',PINS,FREQUENCIES);run(p,7)
+    r=analyze(p.parent);state('local_network_baseline_analyzed',result=r)
+
+if __name__=='__main__':
+    try:main()
+    except BaseException as e:state('local_network_failed',error=str(e),traceback=traceback.format_exc());raise

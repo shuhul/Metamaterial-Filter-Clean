@@ -1,0 +1,37 @@
+{
+  "deltas_um": [
+    -2,
+    34,
+    16,
+    16,
+    2,
+    -20,
+    -20,
+    -32,
+    2,
+    0,
+    0,
+    -4,
+    8,
+    -2
+  ],
+  "body_shift_order": [
+    "T3",
+    "T2",
+    "T1"
+  ],
+  "body_shifts_um": [
+    -4,
+    8,
+    -2
+  ],
+  "wire_widths_turn_counts_and_total_wire_length_unchanged": true,
+  "top_and_bottom_lead_lengths_redistributed": true,
+  "regular_cell_meanders_unchanged": true,
+  "topology_unchanged": true,
+  "changed_vertex_counts": [
+    274,
+    428,
+    432
+  ]
+}

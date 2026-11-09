@@ -1,0 +1,125 @@
+"""Measured multiport geometry derivatives, target synthesis, native checks.
+
+Sparse *differences* are gated at both resonances and against native two-port
+data. A failed prediction is never promoted; it triggers local remeasurement.
+"""
+from reachable_target_step import target_distance
+from reachable_geometry import *
+import extended_iteration as geo
+
+RUN=OUT/'iteration'
+CHECK_F=[4.65,4.861,5.096,5.4]
+
+def delta_model(folder,base,source):
+    n=read(folder/'project.snp',7);n=n[np.flatnonzero(n.f>4e9)];pol=np.diag([1,1,-1,-1,-1,-1,-1]);z=sz(pol@n.s@pol)
+    training=[4.65,5.,5.4] if np.any(np.isclose(n.f,5e9,atol=1,rtol=0)) else [4.65,5.4]
+    train=np.isin(np.round(n.f/1e9,6),training);r=n.f[train]/5e9;powers=np.arange(-1,2*train.sum()-2,2)
+    coefficients=np.linalg.solve(r[:,None]**powers,(z[train]-evaluate(base,n.f[train])).reshape(train.sum(),-1))
+    def predict(f):return evaluate(base,f)+((f/5e9)[:,None]**powers@coefficients).reshape(-1,7,7)
+    held=~train;ps=closez(predict(n.f[held]));actual=closez(z[held])
+    net=read_snp(source);pred=closez(predict(net.f));nn=n[np.arange(len(n.f))]
+    r=dict(heldout_S21_max=float(abs(ps[:,1,0]-actual[:,1,0]).max()),heldout_local_all_S_RMS=float(np.sqrt(np.mean(abs(zs(predict(n.f[held]))-zs(z[held]))**2))),dense_S21_RMS=float(np.sqrt(np.mean(abs(pred[:,1,0]-net.s[:,1,0])**2))),reconstruction=reconstruction(nn,net),frequency_count=len(n.f),basis_powers=powers.tolist(),definition='Measured frequency-dependent geometry perturbation; coefficients are not relabelled static capacitances.')
+    r['passed']=r['heldout_S21_max']<.0003 and r['heldout_local_all_S_RMS']<.0003 and r['dense_S21_RMS']<.0003 and r['reconstruction']['pass_gate']
+    save(folder/'derivative_validation.json',r);np.savez(folder/'delta_model.npz',coefficients=coefficients,powers=powers)
+    return r,coefficients
+
+def refine_delta(p,base,source):
+    """Add only 5 GHz, retaining the completed four-frequency field cache."""
+    folder=p.parent;archive=folder/'two_frequency_screen'
+    if not archive.exists():
+        archive.mkdir()
+        for name in ['project.sonx','project.snp','em.log','em.log.resources.json','complete.json','manifest.json','derivative_validation.json','delta_model.npz']:
+            q=folder/name
+            if q.exists():shutil.copyfile(q,archive/name)
+    tree=ET.parse(p);discrete(tree,sorted(CHECK_F+[5.]));write_xml(tree,p)
+    marker=folder/'complete.json'
+    if marker.exists() and json.loads(marker.read_text())['project_sha256']!=digest(p):
+        marker.replace(archive/'complete.json')
+    save(folder/'refinement_manifest.json',dict(added_frequency_GHz=5.,cache_retained=True,training_GHz=[4.65,5.,5.4],heldout_GHz=[4.861,5.096],source=str(source)))
+    run(p,7);return delta_model(folder,base,source)
+
+def measure_controls():
+    base=np.load(OUT/'baseline/network.npz');net=read_snp(BASE);f=net.f;z0=evaluate(base,f);jac=[]
+    for name in ['input_IDC_span_+2um','T3_pad_width_+2um']:
+        d=np.load(OUT/'controls'/name/'network.npz');jac.append((evaluate(d,f)-z0)/2)
+    for k in range(2,6):
+        name=geo.NAMES[k];source=HERE/'extended_controls'/name/'project.sonx';folder=RUN/'controls'/name
+        p=prepare(source,folder,PINS,CHECK_F);run(p,7);r,co=delta_model(folder,base,source.with_suffix('.snp'))
+        if not r['passed']:
+            # Native full calibration is the fallback, not looser gates.
+            folder=RUN/'controls_full'/name;p=prepare(source,folder,PINS,FREQUENCIES);run(p,7);r=analyze(folder,source.with_suffix('.snp'))
+            if not passes(r):raise RuntimeError(f'Full derivative calibration failed for {name}')
+            jac.append((evaluate(np.load(folder/'network.npz'),f)-z0)/geo.STEPS[k])
+        else:jac.append(((f/5e9)[:,None]**np.arange(-1,2*len(co)-2,2)@co).reshape(-1,7,7)/geo.STEPS[k])
+    jac=np.asarray(jac);np.savez(RUN/'six_geometry_derivatives.npz',f=f,z0=z0,jacobian=jac)
+    return f,z0,jac
+
+def simulate(d,folder):
+    m=folder/'analysis_run/run_status.json'
+    if m.exists() and json.loads(m.read_text()).get('status')=='complete':
+        p=folder/'project.sonx';r=json.loads(m.read_text());assert digest(p)==r['project_sha256'] and digest(p.with_suffix('.snp'))==r['snp_sha256']
+    else:
+        p=geo.make(d,folder);state('reachable_target_geometry_EM',project=str(p),deltas_um=d.tolist(),threads=36)
+        sonnet.guarded_solver=solver;sonnet.simulate(p,folder/'analysis_run')
+    return read_snp(p.with_suffix('.snp'))
+
+def optimize(f,current,jac,d,trust):
+    ix=np.unique(np.linspace(0,len(f)-1,301).astype(int));fs=f[ix]
+    lower=np.maximum(geo.LOW-d,-trust);upper=np.minimum(geo.HIGH-d,trust)
+    # Avoid equal optimizer bounds at a geometry boundary.
+    active=np.flatnonzero(upper-lower>1e-8)
+    current_s=closez(current)
+    initial,pars=target_distance(fs,current_s[ix,1,0])
+    def expand(x):
+        step=np.zeros(6);step[active]=x[:len(active)];return step
+    def residual(x):
+        zz=current[ix]+np.einsum('i,ifab->fab',expand(x),jac[:,ix]);pred=closez(zz)[:,1,0]
+        diff=pred-response(fs,TARGET*x[len(active):len(active)+10],x[-1]);return np.r_[diff.real,diff.imag]
+    opts=[least_squares(residual,np.r_[np.zeros(len(active)),np.ones(10),t],bounds=(np.r_[lower[active],np.full(10,.99),-100],np.r_[upper[active],np.full(10,1.01),100]),x_scale=np.r_[np.maximum(trust[active],2),np.ones(10),20],max_nfev=700) for t in [pars[-1],0]]
+    best=min(opts,key=lambda q:q.cost);step=(2*np.round(expand(best.x)/2)).astype(int)
+    pred=closez(current+np.einsum('i,ifab->fab',step,jac));prms,target=target_distance(f,pred[:,1,0])
+    return step,pred,prms,target
+
+def main():
+    f,z0,jac=measure_controls();base=read_snp(BASE);d=np.zeros(6,int);current=z0.copy();current_model=np.load(OUT/'baseline/network.npz');rms,_=target_distance(f,base.s[:,1,0]);trust=np.array([4,12,2,2,2,8]);history=[]
+    for it in range(12):
+        step,pred,prms,target=optimize(f,current,jac,d,trust)
+        if not step.any() or prms>=rms*.999:
+            state('reachable_controls_local_limit',best_target_RMS=rms,deltas_um=d.tolist(),trust_um=trust.tolist(),needs_more_geometry_controls=True);break
+        candidate=d+step;folder=RUN/'steps'/f'{it:02d}'
+        save(folder/'prospective.json',dict(deltas_um=candidate.tolist(),step_um=step.tolist(),baseline_target_RMS=rms,predicted_target_RMS=prms,normal_target_C_fF=(TARGET*target[:10]).tolist(),normal_target_bounds_percent=1,calibrated_L_nH=L))
+        np.savez(folder/'prediction.npz',f=f,s=pred)
+        actual=simulate(candidate,folder);ar,at=target_distance(f,actual.s[:,1,0]);err=float(np.sqrt(np.mean(abs(pred[:,1,0]-actual.s[:,1,0])**2)))
+        record=dict(iteration=it,deltas_um=candidate.tolist(),predicted_target_RMS=prms,actual_target_RMS=ar,prediction_S21_RMS=err,improved=bool(ar<rms),prediction_passed=bool(err<.001),project=str(folder/'project.sonx'))
+        history.append(record);save(RUN/'history.json',history)
+        fig,ax=plt.subplots(figsize=(12,6));ax.plot(f/1e9,abs(actual.s[:,1,0]),label='Native geometry');ax.plot(f/1e9,abs(pred[:,1,0]),'--',label=f'Prediction, error {err:.5g}');ax.plot(f/1e9,abs(response(f,TARGET*at[:10],at[-1])),':',label=f'Normal target family (1%), RMS {ar:.5g}');ax.grid(alpha=.2);ax.legend();ax.set(xlabel='GHz',ylabel='|S21|');fig.tight_layout();fig.savefig(folder/'s21.png',dpi=160);plt.close(fig)
+        if ar<rms:
+            save(RUN/'best.json',record)
+            # Validate a sparse correction of the complete local response.
+            # Static C is re-extracted at the final candidate, not inferred
+            # from these band coefficients or silently held fixed.
+            p=prepare(folder/'project.sonx',folder/'local_delta',PINS,CHECK_F);run(p,7);check,co=delta_model(p.parent,current_model,folder/'project.snp')
+            if check['passed']:
+                coefficients=current_model['coefficients'].copy();coefficients[:len(co)]+=co
+                new_model=dict(coefficients=coefficients,powers=current_model['powers'].copy())
+                np.savez(p.parent/'band_model.npz',**new_model)
+                report=dict(dense_S21_RMS=check['dense_S21_RMS'],static_C_reextracted=False)
+            else:
+                p=prepare(folder/'project.sonx',folder/'local_model',PINS,FREQUENCIES);run(p,7);report=analyze(p.parent,folder/'project.snp')
+                if not passes(report):state('accepted_geometry_model_needs_refinement',result=report);break
+                new_model=np.load(p.parent/'network.npz')
+            newz=evaluate(new_model,f)
+            jac+=np.einsum('i,fab->ifab',step,newz-current-np.einsum('i,ifab->fab',step,jac))/(step@step)
+            current=newz;current_model=new_model;d=candidate;rms=ar
+            if ar<.01 and report['dense_S21_RMS']<.001:
+                p=prepare(folder/'project.sonx',folder/'final_local_model',PINS,FREQUENCIES);run(p,7);final_report=analyze(p.parent,folder/'project.snp')
+                if not passes(final_report):state('final_extraction_needs_refinement',result=final_report);return
+                state('taper_target_response_candidate_verified',target_RMS=ar,model_RMS=final_report['dense_S21_RMS'],project=str(folder/'project.sonx'),normal_target_C_fF=(TARGET*at[:10]).tolist(),full_filter_not_simulated=True);return
+            if err<.0003:trust=np.minimum(geo.TRUST,trust*2)
+            elif err>.001:trust=np.maximum(2,2*np.floor(trust/4)).astype(int)
+        else:trust=np.maximum(2,2*np.floor(trust/4)).astype(int)
+    save(RUN/'completion.json',dict(best_target_RMS=rms,deltas_um=d.tolist(),target_met=bool(rms<.01),iterations=len(history)))
+
+if __name__=='__main__':
+    try:main()
+    except BaseException as e:state('reachable_iteration_failed',error=str(e),traceback=traceback.format_exc());raise

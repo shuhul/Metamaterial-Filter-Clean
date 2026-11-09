@@ -1,0 +1,43 @@
+{
+  "deltas_um": [
+    -2,
+    34,
+    16,
+    16,
+    2,
+    -20,
+    -20,
+    -32,
+    2,
+    0,
+    0
+  ],
+  "downstream_body_shift_um": 0,
+  "local_probe_pins": [
+    [
+      "T3",
+      1724
+    ],
+    [
+      "T2",
+      2446
+    ],
+    [
+      "T1",
+      2978
+    ],
+    [
+      "regular",
+      3376
+    ],
+    [
+      "output_end",
+      3734
+    ]
+  ],
+  "unit_meanders_translation_only": true,
+  "T1_unit_facing_rails_unchanged": true,
+  "ground_strip_unchanged": true,
+  "flat_top_ground_preserved": true,
+  "box_width_um": 4310
+}

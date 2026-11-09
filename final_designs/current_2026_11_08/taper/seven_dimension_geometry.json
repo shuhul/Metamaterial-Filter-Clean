@@ -1,0 +1,25 @@
+{
+  "names": [
+    "input_IDC_span",
+    "T3_pad_width",
+    "T3_T2_IDC_span",
+    "T2_T1_rail_width",
+    "T1_regular_paired_rail_width",
+    "T2_pad_height",
+    "T1_regular_facing_rail_tip_length"
+  ],
+  "deltas_um": [
+    -2,
+    34,
+    16,
+    16,
+    2,
+    -20,
+    -20
+  ],
+  "source": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\investigations\\shorting_speed_2026-11-05\\extraction_runs\\short_0\\project.sonx",
+  "mesh_um": 2,
+  "flat_top_ground_unchanged": true,
+  "meanders_unchanged": true,
+  "ground_strip_center_unchanged": true
+}

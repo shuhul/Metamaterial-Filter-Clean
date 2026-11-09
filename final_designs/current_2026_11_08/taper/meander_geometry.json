@@ -1,0 +1,62 @@
+{
+  "deltas_um": [
+    -2,
+    34,
+    16,
+    16,
+    2,
+    -20,
+    -20,
+    -32,
+    2,
+    0,
+    0,
+    -4,
+    8,
+    -2
+  ],
+  "input_ground_shift_um": 96,
+  "coil_controls": [
+    -4,
+    8,
+    0,
+    0,
+    0,
+    0
+  ],
+  "control_pairs": "half-width increment um, twice integer run-count increment",
+  "meanders": [
+    {
+      "center_x_um": 1723,
+      "width_um": 122,
+      "n": 72,
+      "wire_um": 6,
+      "gap_um": 2,
+      "top_lead_um": 4,
+      "bottom_lead_um": 18
+    },
+    {
+      "center_x_um": 2446,
+      "width_um": 148,
+      "n": 72,
+      "wire_um": 4,
+      "gap_um": 4,
+      "top_lead_um": 18,
+      "bottom_lead_um": 6
+    },
+    {
+      "center_x_um": 2978,
+      "width_um": 220,
+      "n": 72,
+      "wire_um": 4,
+      "gap_um": 4,
+      "top_lead_um": 8,
+      "bottom_lead_um": 16
+    }
+  ],
+  "regular_cell_unchanged": true,
+  "inductance_requires_new_validation": true,
+  "zero_change_metal_xor_empty": false,
+  "polygon_partition_changed": true,
+  "zero_change_native_comparison_required": true
+}

@@ -14,7 +14,13 @@ ET.register_namespace('',NS);ET.register_namespace('xsi','http://www.w3.org/2001
 def tag(n):return '{'+NS+'}'+n
 def read(p):return json.loads(Path(p).read_text(encoding='utf-8-sig'))
 def points(p):return np.array([(float(x),float(y)) for x,y in re.findall(r'\(([^,]+),([^\)]+)\)',' '.join(q.text or '' for q in p.findall(tag('Points'))))])
-def signature(e):return None if e is None else (e.tag,dict(e.attrib),(e.text or '').strip(),[signature(q) for q in e])
+def signature(e):
+ if e is None:return None
+ attrs=dict(e.attrib)
+ # Native GDS import writes integral layer thicknesses as e.g. 12000.0.
+ # Compare the physical value, retaining strict checks on all other fields.
+ if 'Thickness' in attrs:attrs['Thickness']=float(attrs['Thickness'])
+ return (e.tag,attrs,(e.text or '').strip(),[signature(q) for q in e])
 def native_polys(path):return [gdstk.Polygon(points(p),layer=1) for p in ET.parse(path).iter(tag('PlanarPolygon'))]
 def gds_polys(path):
  lib=gdstk.read_gds(str(path));assert np.isclose(lib.unit,1e-6);tops=lib.top_level();assert len(tops)==1

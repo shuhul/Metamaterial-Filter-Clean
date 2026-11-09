@@ -11,13 +11,14 @@ final_designs/
     regular_cell/
     taper_1/
     taper_2/
-    taper_3/                 # current cleanup assembly
-    full_filter/             # ten regular cells, tapers at both ends
+    taper_3/                 # historical cleanup assembly
+    full_filter/             # historical full-filter input
+    current_2026_11_08/      # accepted taper and separate full-filter evidence
     references/              # the pre-cleanup T3 baseline
 reference_taper_geometry.png
 ```
 
-**Full-filter EM verification is still running as of November 3, 2026.** The full-filter folder contains the input project and layout, not a completed response. Current refinement goals are RMS below 0.005 and component errors below 1%; these are not achieved results.
+**Current checkpoint (November 8):** [current_2026_11_08](final_designs/current_2026_11_08/README.md) contains the accepted taper, completed 4.92 GHz full-filter check, and separate ongoing-sweep input. Taper complex S21 RMS is 0.00249186334 to a comparator whose 15 L/C values are within 0.25% of nominal. These are not uniquely extracted physical values. The full-band filter sweep remains preliminary. See [the current method and evidence](docs/CURRENT_METHOD.md).
 
 | Cell | L0 (nH) | C0 (fF) | Input Cg (fF) |
 |---|---:|---:|---:|
@@ -26,7 +27,7 @@ reference_taper_geometry.png
 | T2 | 4.33 | 149 | 153 |
 | T3 | 2.77 | 251 | 261 |
 
-These are nominal targets. Measured inductances and fitted capacitances are recorded separately. The current staged cleanup fit has complex S21 RMS 0.020312 with capacitances bounded within 5% of nominal targets. Several values reach bounds; the fit does not establish unique physical capacitances.
+These are nominal targets. The older staged cleanup fit (RMS 0.020312, 5% bounds) remains in the historical folders. The current checkpoint supersedes it; measured, fitted, and optimized comparator values must be distinguished.
 
 ## Rebuild from a fresh clone
 

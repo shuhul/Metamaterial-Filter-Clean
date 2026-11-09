@@ -1,0 +1,24 @@
+{
+  "deltas_um": [
+    -2,
+    34,
+    16,
+    16,
+    2,
+    -20,
+    -20,
+    -32,
+    2,
+    0,
+    0,
+    -4,
+    8,
+    -2
+  ],
+  "input_ground_boundary_shift_um": 96,
+  "input_ground_x_um": 508,
+  "top_ground_unchanged": true,
+  "ground_top_y_um": 472,
+  "input_feed_thickness_um": 10,
+  "unit_body_and_pads_unchanged": true
+}

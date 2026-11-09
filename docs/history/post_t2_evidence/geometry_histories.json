@@ -1,0 +1,841 @@
+[
+  {
+    "source": "investigations\\filter_refinement_2026-11-05\\reachable_network\\half_percent\\history.json",
+    "records": [
+      {
+        "iteration": 0,
+        "deltas_um": [
+          4,
+          -26,
+          8,
+          10,
+          2,
+          4,
+          -14
+        ],
+        "actual_target_RMS": 0.017308389589291494,
+        "predicted_target_RMS": 0.01713176725696037,
+        "prediction_S21_RMS": 0.0004990766221082784,
+        "improved": true,
+        "project": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\investigations\\filter_refinement_2026-11-05\\reachable_network\\half_percent\\steps\\00\\project.sonx"
+      },
+      {
+        "iteration": 1,
+        "deltas_um": [
+          2,
+          -22,
+          8,
+          12,
+          2,
+          12,
+          -14
+        ],
+        "actual_target_RMS": 0.017029941912746274,
+        "predicted_target_RMS": 0.01678102271618207,
+        "prediction_S21_RMS": 0.0014903079257567048,
+        "improved": true,
+        "project": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\investigations\\filter_refinement_2026-11-05\\reachable_network\\half_percent\\steps\\01\\project.sonx"
+      }
+    ]
+  },
+  {
+    "source": "investigations\\filter_refinement_2026-11-05\\reachable_network\\half_percent_all_LC\\history.json",
+    "records": [
+      {
+        "iteration": 0,
+        "deltas_um": [
+          2,
+          -22,
+          10,
+          12,
+          2,
+          -4,
+          -20
+        ],
+        "actual_target_RMS": 0.00959965576012396,
+        "predicted_target_RMS": 0.009605363483085388,
+        "prediction_S21_RMS": 0.001217193074152801,
+        "improved": true,
+        "project": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\investigations\\filter_refinement_2026-11-05\\reachable_network\\half_percent_all_LC\\steps\\00\\project.sonx"
+      },
+      {
+        "iteration": 1,
+        "deltas_um": [
+          0,
+          -20,
+          10,
+          14,
+          2,
+          0,
+          -20
+        ],
+        "actual_target_RMS": 0.009421518967794924,
+        "predicted_target_RMS": 0.009192247119719476,
+        "prediction_S21_RMS": 0.0012634315867117085,
+        "improved": true,
+        "project": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\investigations\\filter_refinement_2026-11-05\\reachable_network\\half_percent_all_LC\\steps\\01\\project.sonx"
+      }
+    ]
+  },
+  {
+    "source": "investigations\\filter_refinement_2026-11-05\\reachable_network\\half_percent_rail_spacing\\history.json",
+    "records": [
+      {
+        "project": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\investigations\\filter_refinement_2026-11-05\\reachable_network\\half_percent_rail_spacing\\T1_unit_rail_spacing_control\\project.sonx",
+        "deltas_um": [
+          -4,
+          -16,
+          12,
+          16,
+          2,
+          24,
+          -18,
+          -22,
+          2
+        ],
+        "actual_target_RMS": 0.004633961997885624,
+        "model_S21_RMS": 7.123230229921006e-06,
+        "normal_target_C_fF": [
+          252.2549999999999,
+          149.74499999999995,
+          148.73999999999995,
+          190.96550107364843,
+          191.35199999999995,
+          259.69500000000005,
+          153.76499999999996,
+          15.376499999999997,
+          8.245067500000001,
+          8.245067500000001
+        ],
+        "target_L_nH": [
+          2.7747013311890485,
+          4.3147262269197215,
+          5.999849999999998,
+          4.894803000000001,
+          4.943996999999999
+        ],
+        "total_reference_delay_ps": 1.6231840933705375,
+        "target_percent": 0.5,
+        "physical_parameter_uniqueness_claim": false,
+        "selected_from": "Independent rail-spacing control, not a fitted surrogate prediction",
+        "prior_anchor_RMS": 0.006534072119510343
+      }
+    ]
+  },
+  {
+    "source": "investigations\\filter_refinement_2026-11-05\\reachable_network\\half_percent_T1_pad\\history.json",
+    "records": [
+      {
+        "iteration": 0,
+        "deltas_um": [
+          -2,
+          -16,
+          12,
+          16,
+          2,
+          8,
+          -20,
+          -8
+        ],
+        "actual_target_RMS": 0.007756049794268594,
+        "predicted_target_RMS": 0.007741615402806878,
+        "prediction_S21_RMS": 0.0004030140085381747,
+        "improved": true,
+        "project": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\investigations\\filter_refinement_2026-11-05\\reachable_network\\half_percent_T1_pad\\steps\\00\\project.sonx"
+      },
+      {
+        "iteration": 1,
+        "deltas_um": [
+          -2,
+          -12,
+          12,
+          16,
+          2,
+          16,
+          -18,
+          -16
+        ],
+        "actual_target_RMS": 0.006752729960106911,
+        "predicted_target_RMS": 0.006670847168432974,
+        "prediction_S21_RMS": 0.00030447326842544093,
+        "improved": true,
+        "project": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\investigations\\filter_refinement_2026-11-05\\reachable_network\\half_percent_T1_pad\\steps\\01\\project.sonx"
+      },
+      {
+        "iteration": 2,
+        "deltas_um": [
+          -4,
+          -16,
+          12,
+          16,
+          2,
+          24,
+          -18,
+          -22
+        ],
+        "actual_target_RMS": 0.006534072119510343,
+        "predicted_target_RMS": 0.0064595511138115175,
+        "prediction_S21_RMS": 0.0009752857738644839,
+        "improved": true,
+        "project": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\investigations\\filter_refinement_2026-11-05\\reachable_network\\half_percent_T1_pad\\steps\\02\\project.sonx"
+      }
+    ]
+  },
+  {
+    "source": "investigations\\filter_refinement_2026-11-05\\reachable_network\\iteration_fine\\history.json",
+    "records": [
+      {
+        "iteration": 0,
+        "deltas_um": [
+          4,
+          -12,
+          2,
+          2,
+          2,
+          8,
+          -26
+        ],
+        "actual_target_RMS": 0.028263076493604145,
+        "predicted_target_RMS": 0.02801800828187934,
+        "prediction_S21_RMS": 0.004235567528866377,
+        "improved": true,
+        "prediction_passed": false,
+        "project": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\investigations\\filter_refinement_2026-11-05\\reachable_network\\iteration_fine\\steps\\00\\project.sonx"
+      },
+      {
+        "iteration": 1,
+        "deltas_um": [
+          6,
+          -18,
+          4,
+          4,
+          2,
+          12,
+          -18
+        ],
+        "actual_target_RMS": 0.01649629391274162,
+        "predicted_target_RMS": 0.016114188802902076,
+        "prediction_S21_RMS": 0.0014475482368537754,
+        "improved": true,
+        "prediction_passed": false,
+        "project": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\investigations\\filter_refinement_2026-11-05\\reachable_network\\iteration_fine\\steps\\01\\project.sonx"
+      },
+      {
+        "iteration": 2,
+        "deltas_um": [
+          4,
+          -20,
+          6,
+          6,
+          2,
+          14,
+          -16
+        ],
+        "actual_target_RMS": 0.010410395985655336,
+        "predicted_target_RMS": 0.010125402677630986,
+        "prediction_S21_RMS": 0.0010652754203930427,
+        "improved": true,
+        "prediction_passed": false,
+        "project": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\investigations\\filter_refinement_2026-11-05\\reachable_network\\iteration_fine\\steps\\02\\project.sonx"
+      },
+      {
+        "iteration": 3,
+        "deltas_um": [
+          4,
+          -22,
+          8,
+          8,
+          2,
+          12,
+          -16
+        ],
+        "actual_target_RMS": 0.007901471555329307,
+        "predicted_target_RMS": 0.007861929874156633,
+        "prediction_S21_RMS": 0.0009469941631200972,
+        "improved": true,
+        "prediction_passed": true,
+        "project": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\investigations\\filter_refinement_2026-11-05\\reachable_network\\iteration_fine\\steps\\03\\project.sonx"
+      }
+    ]
+  },
+  {
+    "source": "investigations\\filter_refinement_2026-11-05\\reachable_network\\quarter_percent\\history.json",
+    "records": [
+      {
+        "iteration": 0,
+        "deltas_um": [
+          -6,
+          -20,
+          12,
+          16,
+          2,
+          16,
+          -24,
+          -30,
+          2
+        ],
+        "actual_target_RMS": 0.0061085971297451256,
+        "predicted_target_RMS": 0.006107360121818452,
+        "prediction_S21_RMS": 0.0006174067339427994,
+        "improved": true,
+        "project": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\investigations\\filter_refinement_2026-11-05\\reachable_network\\quarter_percent\\steps\\00\\project.sonx"
+      },
+      {
+        "iteration": 1,
+        "deltas_um": [
+          -6,
+          -16,
+          14,
+          18,
+          2,
+          8,
+          -22,
+          -38,
+          2
+        ],
+        "actual_target_RMS": 0.004132203968845806,
+        "predicted_target_RMS": 0.004058393976396269,
+        "prediction_S21_RMS": 0.0005807982206344865,
+        "improved": true,
+        "project": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\investigations\\filter_refinement_2026-11-05\\reachable_network\\quarter_percent\\steps\\01\\project.sonx"
+      },
+      {
+        "iteration": 2,
+        "deltas_um": [
+          -6,
+          -12,
+          14,
+          18,
+          2,
+          0,
+          -20,
+          -46,
+          2
+        ],
+        "actual_target_RMS": 0.003959706222369438,
+        "predicted_target_RMS": 0.004042990819185488,
+        "prediction_S21_RMS": 0.00034311085676830077,
+        "improved": true,
+        "project": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\investigations\\filter_refinement_2026-11-05\\reachable_network\\quarter_percent\\steps\\02\\project.sonx"
+      },
+      {
+        "iteration": 3,
+        "deltas_um": [
+          -4,
+          -8,
+          14,
+          16,
+          2,
+          -8,
+          -18,
+          -48,
+          2
+        ],
+        "actual_target_RMS": 0.0037412945115759513,
+        "predicted_target_RMS": 0.003767522631831491,
+        "prediction_S21_RMS": 0.0009413718435652373,
+        "improved": true,
+        "project": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\investigations\\filter_refinement_2026-11-05\\reachable_network\\quarter_percent\\steps\\03\\project.sonx"
+      }
+    ]
+  },
+  {
+    "source": "investigations\\filter_refinement_2026-11-05\\reachable_network\\quarter_percent_body_position\\history.json",
+    "records": [
+      {
+        "iteration": 0,
+        "project": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\investigations\\filter_refinement_2026-11-05\\reachable_network\\quarter_percent_body_position\\steps\\00\\project.sonx",
+        "deltas_um": [
+          -4,
+          0,
+          14,
+          16,
+          2,
+          -24,
+          -22,
+          -62,
+          2,
+          2,
+          0,
+          0,
+          2,
+          2
+        ],
+        "actual_target_RMS": 0.0037469454454327456,
+        "predicted_RMS": 0.0035963789259145862,
+        "prediction_RMS": 0.001822388395301627,
+        "improved": false
+      },
+      {
+        "iteration": 1,
+        "project": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\investigations\\filter_refinement_2026-11-05\\reachable_network\\quarter_percent_body_position\\steps\\01\\project.sonx",
+        "deltas_um": [
+          -4,
+          -4,
+          14,
+          16,
+          2,
+          -16,
+          -22,
+          -46,
+          2,
+          0,
+          0,
+          -2,
+          2,
+          2
+        ],
+        "actual_target_RMS": 0.00369629353802357,
+        "predicted_RMS": 0.003621086245403244,
+        "prediction_RMS": 0.0015547242898706296,
+        "improved": true
+      },
+      {
+        "iteration": 2,
+        "project": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\investigations\\filter_refinement_2026-11-05\\reachable_network\\quarter_percent_body_position\\steps\\02\\project.sonx",
+        "deltas_um": [
+          -4,
+          -4,
+          14,
+          16,
+          2,
+          -18,
+          -22,
+          -50,
+          2,
+          0,
+          0,
+          -4,
+          4,
+          0
+        ],
+        "actual_target_RMS": 0.0036936457075359844,
+        "predicted_RMS": 0.003662403363963166,
+        "prediction_RMS": 0.0012335443279423287,
+        "improved": true
+      },
+      {
+        "iteration": 3,
+        "project": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\investigations\\filter_refinement_2026-11-05\\reachable_network\\quarter_percent_body_position\\steps\\03\\project.sonx",
+        "deltas_um": [
+          -4,
+          -2,
+          14,
+          16,
+          2,
+          -16,
+          -22,
+          -48,
+          2,
+          0,
+          0,
+          -2,
+          6,
+          -2
+        ],
+        "actual_target_RMS": 0.0037115067077685697,
+        "predicted_RMS": 0.003675183128327214,
+        "prediction_RMS": 0.0005704754465115752,
+        "improved": false
+      }
+    ]
+  },
+  {
+    "source": "investigations\\filter_refinement_2026-11-05\\reachable_network\\quarter_percent_converged_cover\\history.json",
+    "records": [
+      {
+        "iteration": 0,
+        "project": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\investigations\\filter_refinement_2026-11-05\\reachable_network\\quarter_percent_converged_cover\\steps\\00\\project.sonx",
+        "deltas_um": [
+          -2,
+          4,
+          16,
+          16,
+          2,
+          -18,
+          -20,
+          -42,
+          2,
+          4,
+          2,
+          0
+        ],
+        "actual_target_RMS": 0.002902406797511282,
+        "predicted_RMS": 0.002889875534570527,
+        "prediction_RMS": 0.0009861904789174535,
+        "improved": true
+      },
+      {
+        "iteration": 1,
+        "project": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\investigations\\filter_refinement_2026-11-05\\reachable_network\\quarter_percent_converged_cover\\steps\\01\\project.sonx",
+        "deltas_um": [
+          -2,
+          4,
+          16,
+          16,
+          2,
+          -12,
+          -20,
+          -34,
+          2,
+          2,
+          0,
+          0
+        ],
+        "actual_target_RMS": 0.0026180593221229193,
+        "predicted_RMS": 0.0026299001684373714,
+        "prediction_RMS": 0.0005511330710289746,
+        "improved": true
+      },
+      {
+        "iteration": 2,
+        "project": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\investigations\\filter_refinement_2026-11-05\\reachable_network\\quarter_percent_converged_cover\\steps\\02\\project.sonx",
+        "deltas_um": [
+          -2,
+          8,
+          16,
+          16,
+          2,
+          -14,
+          -20,
+          -32,
+          2,
+          2,
+          0,
+          0
+        ],
+        "actual_target_RMS": 0.0025899533210278687,
+        "predicted_RMS": 0.002600259725666258,
+        "prediction_RMS": 0.0004961618469121864,
+        "improved": true
+      },
+      {
+        "iteration": 3,
+        "project": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\investigations\\filter_refinement_2026-11-05\\reachable_network\\quarter_percent_converged_cover\\steps\\03\\project.sonx",
+        "deltas_um": [
+          -2,
+          12,
+          16,
+          16,
+          2,
+          -14,
+          -20,
+          -32,
+          2,
+          2,
+          0,
+          0
+        ],
+        "actual_target_RMS": 0.0025761046773134116,
+        "predicted_RMS": 0.002576488024615148,
+        "prediction_RMS": 0.00012342916165821181,
+        "improved": true
+      },
+      {
+        "iteration": 4,
+        "project": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\investigations\\filter_refinement_2026-11-05\\reachable_network\\quarter_percent_converged_cover\\steps\\04\\project.sonx",
+        "deltas_um": [
+          -2,
+          20,
+          16,
+          16,
+          2,
+          -12,
+          -20,
+          -32,
+          2,
+          2,
+          0,
+          0
+        ],
+        "actual_target_RMS": 0.002552044127897615,
+        "predicted_RMS": 0.0025543741890925406,
+        "prediction_RMS": 4.9975057605993016e-05,
+        "improved": true
+      },
+      {
+        "iteration": 5,
+        "project": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\investigations\\filter_refinement_2026-11-05\\reachable_network\\quarter_percent_converged_cover\\steps\\05\\project.sonx",
+        "deltas_um": [
+          -2,
+          28,
+          16,
+          16,
+          2,
+          -20,
+          -20,
+          -32,
+          2,
+          4,
+          0,
+          0
+        ],
+        "actual_target_RMS": 0.002519944129973286,
+        "predicted_RMS": 0.0025338942997421223,
+        "prediction_RMS": 0.0002609715721602484,
+        "improved": true
+      },
+      {
+        "iteration": 6,
+        "project": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\investigations\\filter_refinement_2026-11-05\\reachable_network\\quarter_percent_converged_cover\\steps\\06\\project.sonx",
+        "deltas_um": [
+          -2,
+          32,
+          16,
+          16,
+          2,
+          -20,
+          -20,
+          -32,
+          2,
+          4,
+          0,
+          0
+        ],
+        "actual_target_RMS": 0.0025016342869508077,
+        "predicted_RMS": 0.0025010545021991,
+        "prediction_RMS": 0.000522959889764035,
+        "improved": true
+      },
+      {
+        "project": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\investigations\\filter_refinement_2026-11-05\\reachable_network\\quarter_percent_converged_cover\\steps\\pad34\\project.sonx",
+        "actual_target_RMS": 0.0024918633384848348,
+        "deltas_um": [
+          -2,
+          34,
+          16,
+          16,
+          2,
+          -20,
+          -20,
+          -32,
+          2,
+          4,
+          0,
+          0
+        ],
+        "reason": "One 2 um pad-width increment beyond former search bound"
+      }
+    ]
+  },
+  {
+    "source": "investigations\\filter_refinement_2026-11-05\\reachable_network\\quarter_percent_direct\\history.json",
+    "records": [
+      {
+        "iteration": 0,
+        "project": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\investigations\\filter_refinement_2026-11-05\\reachable_network\\quarter_percent_direct\\steps\\00\\project.sonx",
+        "deltas_um": [
+          -4,
+          -14,
+          16,
+          16,
+          2,
+          -24,
+          -24,
+          -62,
+          2,
+          2,
+          2
+        ],
+        "actual_target_RMS": 0.0038689902881285415,
+        "predicted_RMS": 0.003613651226326912,
+        "prediction_RMS": 0.0018276144145678566,
+        "improved": false
+      }
+    ]
+  },
+  {
+    "source": "investigations\\filter_refinement_2026-11-05\\reachable_network\\quarter_percent_ground_width\\history.json",
+    "records": [
+      {
+        "iteration": 0,
+        "project": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\investigations\\filter_refinement_2026-11-05\\reachable_network\\quarter_percent_ground_width\\steps\\00\\project.sonx",
+        "deltas_um": [
+          -2,
+          -12,
+          12,
+          14,
+          2,
+          -12,
+          -22,
+          -56,
+          2,
+          0,
+          0,
+          -4,
+          6,
+          2,
+          0
+        ],
+        "actual_target_RMS": 0.004387751410411329,
+        "predicted_RMS": 0.00360575225377013,
+        "prediction_RMS": 0.0035293687880219526,
+        "improved": false
+      },
+      {
+        "iteration": 1,
+        "project": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\investigations\\filter_refinement_2026-11-05\\reachable_network\\quarter_percent_ground_width\\steps\\01\\project.sonx",
+        "deltas_um": [
+          -6,
+          -6,
+          14,
+          18,
+          2,
+          -10,
+          -22,
+          -44,
+          2,
+          0,
+          0,
+          -4,
+          6,
+          -2,
+          0
+        ],
+        "actual_target_RMS": 0.004049451235034293,
+        "predicted_RMS": 0.003661137226544254,
+        "prediction_RMS": 0.0027276252747605602,
+        "improved": false
+      }
+    ]
+  },
+  {
+    "source": "investigations\\filter_refinement_2026-11-05\\reachable_network\\quarter_percent_input_ground\\history.json",
+    "records": [
+      {
+        "iteration": 0,
+        "project": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\investigations\\filter_refinement_2026-11-05\\reachable_network\\quarter_percent_input_ground\\steps\\00\\project.sonx",
+        "deltas_um": [
+          -2,
+          -10,
+          12,
+          14,
+          2,
+          -2,
+          -22,
+          -54,
+          2,
+          0,
+          0,
+          -4,
+          6,
+          2,
+          128
+        ],
+        "actual_target_RMS": 0.004122908959244891,
+        "predicted_RMS": 0.0034643932169733604,
+        "prediction_RMS": 0.0033580937202370873,
+        "improved": false
+      },
+      {
+        "iteration": 1,
+        "project": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\investigations\\filter_refinement_2026-11-05\\reachable_network\\quarter_percent_input_ground\\steps\\01\\project.sonx",
+        "deltas_um": [
+          -4,
+          0,
+          14,
+          16,
+          2,
+          -10,
+          -22,
+          -58,
+          2,
+          0,
+          0,
+          -2,
+          6,
+          0,
+          64
+        ],
+        "actual_target_RMS": 0.0036583985934055168,
+        "predicted_RMS": 0.0036248979180194397,
+        "prediction_RMS": 0.0007466924723658093,
+        "improved": true
+      },
+      {
+        "iteration": 2,
+        "project": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\investigations\\filter_refinement_2026-11-05\\reachable_network\\quarter_percent_input_ground\\steps\\02\\project.sonx",
+        "deltas_um": [
+          -4,
+          -2,
+          14,
+          16,
+          2,
+          -6,
+          -22,
+          -54,
+          2,
+          0,
+          0,
+          -4,
+          8,
+          -2,
+          96
+        ],
+        "actual_target_RMS": 0.003615890682690924,
+        "predicted_RMS": 0.003603810516615021,
+        "prediction_RMS": 0.0003251333428934599,
+        "improved": true
+      }
+    ]
+  },
+  {
+    "source": "investigations\\filter_refinement_2026-11-05\\reachable_network\\quarter_percent_meanders\\history.json",
+    "records": [
+      {
+        "iteration": 0,
+        "project": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\investigations\\filter_refinement_2026-11-05\\reachable_network\\quarter_percent_meanders\\steps\\00\\project.sonx",
+        "deltas_um": [
+          -4,
+          2,
+          14,
+          16,
+          2,
+          -14,
+          -20,
+          -52,
+          2,
+          2,
+          0,
+          0
+        ],
+        "actual_target_RMS": 0.00357635377438462,
+        "predicted_RMS": 0.003569575164908222,
+        "prediction_RMS": 0.0005957790405362117,
+        "improved": true
+      }
+    ]
+  },
+  {
+    "source": "investigations\\filter_refinement_2026-11-05\\reachable_network\\quarter_percent_regular_pads\\history.json",
+    "records": [
+      {
+        "iteration": 0,
+        "project": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\investigations\\filter_refinement_2026-11-05\\reachable_network\\quarter_percent_regular_pads\\steps\\00\\project.sonx",
+        "deltas_um": [
+          -6,
+          12,
+          14,
+          18,
+          2,
+          14,
+          -26,
+          -46,
+          0,
+          2,
+          0,
+          4,
+          8,
+          -4,
+          0,
+          2,
+          4
+        ],
+        "actual_target_RMS": 0.008011650596368151,
+        "predicted_RMS": 0.003164082036201824,
+        "prediction_RMS": 0.018466938090706656,
+        "improved": false
+      }
+    ]
+  }
+]

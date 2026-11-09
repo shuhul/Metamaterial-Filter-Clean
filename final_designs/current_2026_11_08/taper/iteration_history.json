@@ -1,0 +1,175 @@
+[
+  {
+    "iteration": 0,
+    "project": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\investigations\\filter_refinement_2026-11-05\\reachable_network\\quarter_percent_converged_cover\\steps\\00\\project.sonx",
+    "deltas_um": [
+      -2,
+      4,
+      16,
+      16,
+      2,
+      -18,
+      -20,
+      -42,
+      2,
+      4,
+      2,
+      0
+    ],
+    "actual_target_RMS": 0.002902406797511282,
+    "predicted_RMS": 0.002889875534570527,
+    "prediction_RMS": 0.0009861904789174535,
+    "improved": true
+  },
+  {
+    "iteration": 1,
+    "project": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\investigations\\filter_refinement_2026-11-05\\reachable_network\\quarter_percent_converged_cover\\steps\\01\\project.sonx",
+    "deltas_um": [
+      -2,
+      4,
+      16,
+      16,
+      2,
+      -12,
+      -20,
+      -34,
+      2,
+      2,
+      0,
+      0
+    ],
+    "actual_target_RMS": 0.0026180593221229193,
+    "predicted_RMS": 0.0026299001684373714,
+    "prediction_RMS": 0.0005511330710289746,
+    "improved": true
+  },
+  {
+    "iteration": 2,
+    "project": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\investigations\\filter_refinement_2026-11-05\\reachable_network\\quarter_percent_converged_cover\\steps\\02\\project.sonx",
+    "deltas_um": [
+      -2,
+      8,
+      16,
+      16,
+      2,
+      -14,
+      -20,
+      -32,
+      2,
+      2,
+      0,
+      0
+    ],
+    "actual_target_RMS": 0.0025899533210278687,
+    "predicted_RMS": 0.002600259725666258,
+    "prediction_RMS": 0.0004961618469121864,
+    "improved": true
+  },
+  {
+    "iteration": 3,
+    "project": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\investigations\\filter_refinement_2026-11-05\\reachable_network\\quarter_percent_converged_cover\\steps\\03\\project.sonx",
+    "deltas_um": [
+      -2,
+      12,
+      16,
+      16,
+      2,
+      -14,
+      -20,
+      -32,
+      2,
+      2,
+      0,
+      0
+    ],
+    "actual_target_RMS": 0.0025761046773134116,
+    "predicted_RMS": 0.002576488024615148,
+    "prediction_RMS": 0.00012342916165821181,
+    "improved": true
+  },
+  {
+    "iteration": 4,
+    "project": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\investigations\\filter_refinement_2026-11-05\\reachable_network\\quarter_percent_converged_cover\\steps\\04\\project.sonx",
+    "deltas_um": [
+      -2,
+      20,
+      16,
+      16,
+      2,
+      -12,
+      -20,
+      -32,
+      2,
+      2,
+      0,
+      0
+    ],
+    "actual_target_RMS": 0.002552044127897615,
+    "predicted_RMS": 0.0025543741890925406,
+    "prediction_RMS": 4.9975057605993016e-05,
+    "improved": true
+  },
+  {
+    "iteration": 5,
+    "project": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\investigations\\filter_refinement_2026-11-05\\reachable_network\\quarter_percent_converged_cover\\steps\\05\\project.sonx",
+    "deltas_um": [
+      -2,
+      28,
+      16,
+      16,
+      2,
+      -20,
+      -20,
+      -32,
+      2,
+      4,
+      0,
+      0
+    ],
+    "actual_target_RMS": 0.002519944129973286,
+    "predicted_RMS": 0.0025338942997421223,
+    "prediction_RMS": 0.0002609715721602484,
+    "improved": true
+  },
+  {
+    "iteration": 6,
+    "project": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\investigations\\filter_refinement_2026-11-05\\reachable_network\\quarter_percent_converged_cover\\steps\\06\\project.sonx",
+    "deltas_um": [
+      -2,
+      32,
+      16,
+      16,
+      2,
+      -20,
+      -20,
+      -32,
+      2,
+      4,
+      0,
+      0
+    ],
+    "actual_target_RMS": 0.0025016342869508077,
+    "predicted_RMS": 0.0025010545021991,
+    "prediction_RMS": 0.000522959889764035,
+    "improved": true
+  },
+  {
+    "project": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\investigations\\filter_refinement_2026-11-05\\reachable_network\\quarter_percent_converged_cover\\steps\\pad34\\project.sonx",
+    "actual_target_RMS": 0.0024918633384848348,
+    "deltas_um": [
+      -2,
+      34,
+      16,
+      16,
+      2,
+      -20,
+      -20,
+      -32,
+      2,
+      4,
+      0,
+      0
+    ],
+    "reason": "One 2 um pad-width increment beyond former search bound"
+  }
+]

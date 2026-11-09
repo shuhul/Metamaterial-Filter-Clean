@@ -1,0 +1,28 @@
+! Sonnet Data File
+! From: em Version : 19.52.2025.261
+! From Project: project
+! Data is De-embedded 
+! Data File Written: 11/08/2026 10:41:38
+!< HDATE 06/03/2026 18:09:16
+!< MDATE 06/03/2026 18:09:16
+!< PARAMS
+!< Ind_repeat = 1
+!< Cp = 0
+!< C_add = 0.001
+!< adjust = 460.99999579237
+!< total_width = 158.0000327
+!< ind_w_6 = 110
+!< total_width2 = 500
+!< width30 = 128
+!< in_width100 = 188
+!< width3 = 302
+!< ind_width = 190
+!< width4 = 300.000069
+!< width5 = 300.000069
+!< width6 = 300.000069
+!< ind_width2 = 188
+!< ind_width3 = 188
+!< ind_width4 = 188
+!< END PARAMS
+# GHZ S MA R 50.00000
+4.920000000000000 0.2306833694063 -111.6279657213 0.9721396733666 159.09899833416 0.9721396733665 159.09899833418 0.2306837134936 -110.1406944519

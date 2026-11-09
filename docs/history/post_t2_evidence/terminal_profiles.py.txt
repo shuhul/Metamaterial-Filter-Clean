@@ -1,0 +1,42 @@
+"""Model-conditional compensation tests for the measured terminal C matrix.
+
+These are deterministic profiles, not statistical confidence intervals. The
+calibrated distributed background is fixed; low-frequency extrapolation checks
+are separate evidence for that decomposition.
+"""
+from reachable_network import *
+from itertools import combinations
+
+def main(folder=None):
+    folder=Path(folder) if folder is not None else OUT/'baseline'
+    data=np.load(folder/'network.npz');c=(data['C']+data['C'].T)/2;f=data['f'];z=data['z']
+    pairs=list(combinations(range(6),2));reference=np.r_[c.sum(axis=1),[-c[a,b] for a,b in pairs]]
+    assert np.all(reference>0)
+    labels=[f'{s}_ground' for s in ['input','T3','T2','T1','regular','output']]+[f'mutual_{a}_{b}' for a,b in pairs]
+    b=np.zeros((6,7))
+    for p,node in enumerate([0,5,1,2,3,4,5]):b[node,p]=1
+    assert np.linalg.matrix_rank(b)==6
+    def cm(x):
+        vals=reference*x;m=np.diag(vals[:6])
+        for v,(a,bb) in zip(vals[6:],pairs):m[a,a]+=v;m[bb,bb]+=v;m[a,bb]-=v;m[bb,a]-=v
+        return m
+    invref=np.linalg.inv(c*1e-15);observed=zs(z)
+    def residual(x):
+        delta=b.T@(np.linalg.inv(cm(x)*1e-15)-invref)@b
+        model=zs(z+delta[None,:,:]/(2j*np.pi*f[:,None,None]));d=(model-observed).reshape(-1)
+        return np.r_[d.real,d.imag]
+    # Taper ground and the four couplings leading through the taper.
+    primary=[1,2,3]+[6+pairs.index(p) for p in [(0,1),(1,2),(2,3),(3,4)]]
+    rows=[]
+    for index in primary:
+        active=[i for i in range(21) if i!=index]
+        for percent in [-5,-1,-.5,.5,1,5]:
+            def unpack(v):
+                x=np.ones(21);x[index]=1+percent/100;x[active]=v;return x
+            opt=least_squares(lambda v:residual(unpack(v)),np.ones(20),bounds=(np.full(20,.2),np.full(20,5)),max_nfev=500,ftol=1e-10,xtol=1e-10,gtol=1e-10)
+            rows.append(dict(parameter=labels[index],fixed_change_percent=percent,all_other_terminal_caps_refitted=True,local_all_S_RMS=float(np.sqrt(2*opt.cost/(len(f)*49))),success=bool(opt.success),cap_factors=unpack(opt.x).tolist()))
+    report=dict(reference_fF=reference.tolist(),parameter_labels=labels,conductor_mapping_rank=int(np.linalg.matrix_rank(b)),profiles=rows,background_fixed=True,statistical_confidence_claim=False,scope='Tests compensation within the measured terminal-C plus fixed distributed-background representation; not original ideal-ladder C0/Cg identification.')
+    save(folder/'terminal_profiles.json',report)
+    print(json.dumps([dict(parameter=labels[i],min_one_percent_RMS=min(r['local_all_S_RMS'] for r in rows if r['parameter']==labels[i] and abs(r['fixed_change_percent'])==1),min_half_percent_RMS=min(r['local_all_S_RMS'] for r in rows if r['parameter']==labels[i] and abs(r['fixed_change_percent'])==.5)) for i in primary]),flush=True)
+
+if __name__=='__main__':main(sys.argv[1] if len(sys.argv)>1 else None)

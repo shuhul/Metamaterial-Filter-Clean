@@ -1,0 +1,16 @@
+{
+  "project": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\investigations\\filter_refinement_2026-11-05\\quarter_percent_full_point_check_2026-11-08\\continuous_ground\\project.sonx",
+  "frequency_GHz": 4.92,
+  "elapsed_seconds": 867.2739730002359,
+  "actual_S21_real": -0.9081711695150801,
+  "actual_S21_imag": 0.3468150391706383,
+  "actual_abs_S21": 0.9721396733666,
+  "actual_S21_dB": -0.24542665590826462,
+  "circuit_abs_S21": 0.9574039743401397,
+  "circuit_S21_dB": -0.3780954804611971,
+  "magnitude_error": 0.014735699026460325,
+  "phase_reference_not_aligned": true,
+  "project_sha256": "889dde1c58758f5a1c8782b6ecb26c501ec16b93f6881b9271d18995c51f8e9b",
+  "response_sha256": "13ea2918dec19c5d273c8258f3ec6ee27e0eeec6b9d972004941f334831f28c7",
+  "scope": "One direct EM point only; does not validate the full response curve."
+}

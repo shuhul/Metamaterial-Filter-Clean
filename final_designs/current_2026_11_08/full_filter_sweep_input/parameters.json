@@ -1,0 +1,77 @@
+{
+  "layout_kind": "full_filter_mirrored_tapers",
+  "source_project": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\investigations\\filter_refinement_2026-11-05\\quarter_percent_full_point_check_2026-11-08\\source\\project.sonx",
+  "source_project_sha256": "ec140715df34013203218b873d264b6fffaeb0b9a8188f83895ec4282e308172",
+  "source_snp_sha256": "4e35386c4b7d28299eab416ac230aa8cade30f5eedc2e55ae426b5532a55fcce",
+  "n_regular": 10,
+  "total_resonators": 16,
+  "resonator_centers_um": [
+    1722.0,
+    2446.0,
+    2978.0,
+    3375.0,
+    3733.0,
+    4091.0,
+    4449.0,
+    4807.0,
+    5165.0,
+    5523.0,
+    5881.0,
+    6239.0,
+    6597.0,
+    6994.0,
+    7526.0,
+    8250.0
+  ],
+  "stage_order": [
+    "T3",
+    "T2",
+    "T1",
+    "regular",
+    "regular",
+    "regular",
+    "regular",
+    "regular",
+    "regular",
+    "regular",
+    "regular",
+    "regular",
+    "regular",
+    "T1_mirrored",
+    "T2_mirrored",
+    "T3_mirrored"
+  ],
+  "w_sim": 9972,
+  "first_regular_left_um": 3224,
+  "regular_centers_um": [
+    3375.0,
+    3733.0,
+    4091.0,
+    4449.0,
+    4807.0,
+    5165.0,
+    5523.0,
+    5881.0,
+    6239.0,
+    6597.0
+  ],
+  "regular_width_um": 302,
+  "regular_gap_um": 56,
+  "regular_ground_width_um": 4,
+  "expected_metal_components": 3,
+  "mirror_policy": "Reflect already snapped native taper metal in x only. All regular cells retain the verified regular orientation.",
+  "parameters": {
+    "n_cells": 16,
+    "l_sim": 1500,
+    "l_top_ground": 448,
+    "w_side": 412,
+    "t_feed": 10,
+    "unit": {
+      "d_top": 8,
+      "cap": {
+        "t_top": 14
+      }
+    }
+  },
+  "tuned_boundary_rail_preserved": true
+}

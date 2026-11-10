@@ -1,0 +1,7 @@
+{
+  "started_utc": "2026-11-08T18:48:56.551746+00:00",
+  "project": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\investigations\\filter_refinement_2026-11-05\\quarter_percent_full_sweep_2026-11-08\\project.sonx",
+  "project_sha256": "f021bbab9da274d7a6b835ab4a45b7a9219217440be1ca941e4a3c3f9ee49e99",
+  "status": "failed",
+  "reason": "Sonnet export does not match the requested range/grid; cache-only mode may have retained an older export"
+}

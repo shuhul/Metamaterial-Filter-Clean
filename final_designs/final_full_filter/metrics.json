@@ -1,0 +1,45 @@
+{
+  "status": "native_EM_complete_and_native_interpolation_export_verified",
+  "direct_solve_count": 123,
+  "interpolated_samples": 2001,
+  "frequency_GHz": [
+    4.5,
+    5.5
+  ],
+  "export_step_MHz": 0.5,
+  "native_completion_Pacific": "2026-11-10T04:08:02-08:00",
+  "start_utc": "2026-11-08T18:48:56.558455+00:00",
+  "elapsed_to_native_completion_seconds": 148745.441545,
+  "resource_runner_elapsed_seconds": 148812.91752400063,
+  "native_errors": 0,
+  "native_warnings": 0,
+  "final_ABS_SNR_dB": 40.9246,
+  "ABS_goal_dB": 40.0,
+  "interpolation_added_EM_solves": 0,
+  "thread_count": 36,
+  "subsections": 41299,
+  "native_peak_memory_GB": 14,
+  "amplitude_cutoff": 0.8,
+  "cutoff_dB": -1.938200260161128,
+  "main_passband_GHz": [
+    4.826025740383707,
+    5.168107583691898
+  ],
+  "main_passband_width_MHz": 342.0818433081916,
+  "target_passband_GHz": [
+    4.8,
+    5.2
+  ],
+  "crossing_method": "Linear crossing estimates on native Sonnet ABS 0.5 MHz export; not independent dense solves",
+  "direct_export_log_magnitude_max_difference": 4.973211999992344e-07,
+  "limitations": [
+    "Main contiguous band only; no claim entire 4.8-5.2 GHz meets cutoff",
+    "ABS convergence is interpolation evidence, not mesh or fabrication convergence",
+    "One narrow above-cutoff peak has unresolved width on this export grid"
+  ],
+  "hashes": {
+    "project.sonx": "f021bbab9da274d7a6b835ab4a45b7a9219217440be1ca941e4a3c3f9ee49e99",
+    "response_direct.snp": "07c87abff458821468abb4f4158b0b7dc35bcb46f7c667be7fd3131615a261b0",
+    "response_interpolated.snp": "e26e5498925b30c662120c5902600393c1066444012dc1d41a8ab4a5f1ad84b2"
+  }
+}

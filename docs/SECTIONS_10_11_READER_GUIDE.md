@@ -382,7 +382,7 @@ The full sweep uses 4.5–5.5 GHz ABS, a 2 µm grid, medium-speed edge meshing, 
 
 **Completed full-filter result (November 10, 2026):** Sonnet finished 123 direct frequencies with final ABS SNR 40.9246 dB against a 40 dB goal and zero reported errors or warnings. The wrapper then incorrectly rejected the 123-point direct export because it expected at least 2000 points. An isolated copy of the completed cache, with interpolated output enabled and `-AbsNoDiscrete`, exported Sonnet's 2001-point curve with zero new EM frequencies. Thus the wrapper error was not an EM failure.
 
-The verified native interpolated result is local at `investigations/filter_refinement_2026-11-05/quarter_percent_full_sweep_2026-11-08/interpolated_export/project.snp`; figures are in the sibling `completed_plots/` folder. At the chosen amplitude cutoff |S21| >= 0.8, the main continuous achieved band is approximately 4.8260-5.1681 GHz (342.1 MHz), estimated from that native 0.5 MHz export grid. This is a full uninstrumented-filter EM result, not an inference from the internal-port model. The original published folder still contains the frozen input and single-point evidence; these new full-sweep outputs have not been represented as already published there.
+The verified native interpolated result is local at `investigations/filter_refinement_2026-11-05/quarter_percent_full_sweep_2026-11-08/interpolated_export/project.snp`; figures are in the sibling `completed_plots/` folder. At the chosen amplitude cutoff |S21| >= 0.8, the main continuous achieved band is approximately 4.8260-5.1681 GHz (342.1 MHz), estimated from that native 0.5 MHz export grid. This is a full uninstrumented-filter EM result, not an inference from the internal-port model. The completed responses, native input, metrics and figures are now published in `final_designs/final_full_filter/`; the original working files remain at the local paths above.
 
 ## 10. Files and reproduction
 
@@ -397,7 +397,7 @@ final_designs/
     final_T1/             historical standalone T1 selection
     final_T2/             historical standalone T2 selection
     final_T3/             current complete taper fixture and response
-    final_full_filter/    current full-band input
+    final_full_filter/    completed full-band input, response and evidence
         verification_4p92GHz/  completed independent single-point check
 final_old/                superseded publication copies and old indexes
 reference_inputs/awr/     supplied target circuit and optimizer screenshot

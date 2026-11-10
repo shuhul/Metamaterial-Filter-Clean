@@ -1,0 +1,119 @@
+"""Optimize measured internal-network changes with discrete meander families."""
+import measure_quarter_coil_controls as measurement
+from measure_quarter_coil_controls import *
+import itertools
+from quarter_analytic_response import target_with_jac,network_with_jac,fast_distance
+PAIR=measurement.PAIR.copy();PAIR[:2]//=2
+STATES=[[-4,-2,0,2,4],[0,2,4],[-2,0,2]]
+LOW=np.r_[LOW[:9],-4,0,-2];HIGH=np.r_[HIGH[:9],4,4,2]
+
+def propose_network(f,z,j,d,trust,*,nhead=9,lower=None,upper=None):
+    lower=LOW if lower is None else np.asarray(lower)
+    upper=HIGH if upper is None else np.asarray(upper)
+    ix=np.unique(np.linspace(0,len(f)-1,151).astype(int));ff=f[ix];zz=z[ix];jj=j[:,ix]
+    _,pars=distance(ff,closez(zz)[:,1,0]);lo=np.maximum(lower[:nhead]-d[:nhead],-trust[:nhead]);hi=np.minimum(upper[:nhead]-d[:nhead],trust[:nhead]);options=[];continuous=[]
+    for states in itertools.product(*STATES):
+        tail=np.array(states)-d[nhead:]
+        if np.any(abs(tail)>trust[nhead:]):continue
+        cached=[None,None]
+        def res_jac(x):
+            if cached[0] is None or not np.array_equal(cached[0],x):
+                step=np.r_[x[:nhead],tail];pred,gj=network_with_jac(zz+np.einsum('i,ifab->fab',step,jj),jj[:nhead]);target,tj=target_with_jac(ff,x[nhead:]);error=pred-target;derivative=np.c_[gj,-tj]
+                cached[:]=[x.copy(),(np.r_[error.real,error.imag],np.r_[derivative.real,derivative.imag])]
+            return cached[1]
+        fit=least_squares(lambda x:res_jac(x)[0],np.r_[np.zeros(nhead),pars],jac=lambda x:res_jac(x)[1],bounds=(np.r_[lo,np.full(15,.9975),-100],np.r_[hi,np.full(15,1.0025),100]),x_scale=np.r_[trust[:nhead],np.ones(15),20],max_nfev=300)
+        continuous.append((float(np.sqrt(2*fit.cost/len(ff))),fit.x.copy(),tail.copy()))
+        for head in [2*np.round(fit.x[:nhead]/2),np.zeros(nhead)]:
+            step=np.r_[head,tail].astype(int);predz=z+np.einsum('i,ifab->fab',step,j);pred=closez(predz)[:,1,0];r,p=fast_distance(ff,pred[ix],fit.x[nhead:]);options.append((r,step,predz,pred,p))
+    # Enumerate the nearest grid cube around the best continuous solutions.
+    # This catches three-or-more compensating moves missed by coordinate steps.
+    visited={tuple(item[1]) for item in options}
+    for _,x,tail in sorted(continuous,key=lambda a:a[0])[:3]:
+        axes=[sorted(set(int(v) for v in [2*np.floor(value/2),2*np.ceil(value/2)] if lo[k]<=v<=hi[k])) for k,value in enumerate(x[:nhead])]
+        for head in itertools.product(*axes):
+            step=np.r_[head,tail].astype(int);key=tuple(step)
+            if key in visited:continue
+            visited.add(key);small=closez(zz+np.einsum('i,ifab->fab',step,jj))[:,1,0];r,p=fast_distance(ff,small,x[nhead:])
+            if r>sorted(item[0] for item in options)[min(7,len(options)-1)]:continue
+            predz=z+np.einsum('i,ifab->fab',step,j);pred=closez(predz)[:,1,0];options.append((r,step,predz,pred,p))
+    # Rounding a continuous optimum can be worse than no edit. Include that
+    # baseline explicitly and refine several grid seeds, not just one.
+    refined=[];unique={}
+    for candidate in sorted(options,key=lambda a:a[0]):unique.setdefault(tuple(candidate[1]),candidate)
+    for seed in list(unique.values())[:8]:
+        best=seed
+        for sweep in range(5):
+            before=best[0]
+            for k in [4,8,0,1,2,3,5,6,7]+list(range(9,nhead)):
+                for h in [-2,2]:
+                    step=best[1].copy();step[k]+=h
+                    if not lo[k]<=step[k]<=hi[k]:continue
+                    predz=z+np.einsum('i,ifab->fab',step,j);pred=closez(predz)[:,1,0];r,p=fast_distance(ff,pred[ix],best[4])
+                    if r<best[0]-1e-9:best=(r,step,predz,pred,p)
+            if before-best[0]<1e-8:break
+        refined.append(best)
+    # Correlated dimensions may need simultaneous grid moves: either move
+    # alone can worsen the response even when the pair improves it.
+    pairs=[(4,8),(0,1),(1,2),(3,5),(6,7),(6,8)]
+    if nhead>10:pairs.append((9,10))
+    paired=[]
+    for seed in sorted(refined,key=lambda a:a[0])[:3]:
+        best=seed
+        for sweep in range(3):
+            before=best[0]
+            for ka,kb in pairs:
+                for ha,hb in itertools.product([-2,2],repeat=2):
+                    step=best[1].copy();step[ka]+=ha;step[kb]+=hb
+                    if not (lo[ka]<=step[ka]<=hi[ka] and lo[kb]<=step[kb]<=hi[kb]):continue
+                    predz=z+np.einsum('i,ifab->fab',step,j);pred=closez(predz)[:,1,0];r,p=fast_distance(ff,pred[ix],best[4])
+                    if r<best[0]-1e-9:best=(r,step,predz,pred,p)
+            if before-best[0]<1e-8:break
+        paired.append(best)
+    refined.extend(paired)
+    best=min(refined,key=lambda a:a[0])
+    r,p=distance(f,best[3]);return best[1],best[2],best[3],r,p
+
+def finish(folder,d,r,pars,history):
+    calibration.calibrate(folder,{},full=True);rr=json.loads((folder/'full_local_model/analysis.json').read_text())
+    result=dict(project=str(folder/'project.sonx'),deltas_um=d.tolist(),actual_target_RMS=r,model_S21_RMS=rr['dense_S21_RMS'],normal_target_C_fF=(TARGET*pars[:10]).tolist(),target_L_nH=(NOMINAL_L*pars[10:15]).tolist(),total_reference_delay_ps=float(pars[-1]),target_percent=.25,physical_parameter_uniqueness_claim=False)
+    save(DEST/'target_verified.json',result);save(DEST/'history.json',history);report('strict_target_verified',**result)
+
+def main():
+    while True:
+        st=json.loads((DEST/'status.json').read_text()) if (DEST/'status.json').exists() else {}
+        if st.get('phase') in ['controls_complete','strict_target_verified','failed']:break
+        time.sleep(10)
+    if st['phase']=='strict_target_verified':return
+    if st['phase']=='failed':raise RuntimeError(str(st))
+    a=np.load(DEST/'paired_derivatives.npz');assert a['measured']==3
+    f=a['f'];z=a['z'];j=a['jac'].copy();j[9:11]*=.5;d=a['d'].astype(int);body=a['body'].astype(int);feed=int(a['feed']);model=dict(coefficients=a['coefficients'],powers=a['powers']);folder=DEST/'baseline'
+    nn=read_snp(folder/'project.snp');rms,pars=distance(f,nn.s[:,1,0]);trust=np.array([2,4,2,2,2,8,8,8,2,4,4,2]);history=[]
+    controls_done=json.loads((DEST/'controls.json').read_text());best_control=min(controls_done,key=lambda row:row['actual_target_RMS'])
+    if best_control['actual_target_RMS']<rms:
+        k=['T3','T2','T1'].index(best_control['taper']);d[9+k]=4 if k<2 else 2;folder=Path(best_control['project']).parent
+        model=calibration.calibrate(folder,model);z=evaluate(model,f);nn=read_snp(folder/'project.snp');rms,pars=distance(f,nn.s[:,1,0]);history.append(dict(seed_from_measured_control=True,**best_control))
+    for it in range(12):
+        report('internal_network_proposal',iteration=it,best_RMS=rms)
+        step,pz,pred,pr,pp=propose_network(f,z,j,d,trust)
+        if not step.any() or pr>=rms-1e-5:
+            step,pz,pred,pr,pp=propose_network(f,z,j,d,trust*2)
+            if not step.any() or pr>=rms-1e-5:report('measured_local_limit',RMS=rms,project=str(folder/'project.sonx'),predicted_RMS=pr);return
+        dd=d+step;trial=DEST/'steps'/f'{it:02d}';bb=body.copy();bb[:9]=dd[:9];controls=(dd[9:]@PAIR//2).astype(int)
+        if np.array_equal(bb,body):
+            for k,known in enumerate(measurement.PAIR):
+                if np.array_equal(controls,known):trial=DEST/'controls'/f'{k:02d}'
+            if not np.any(controls):trial=DEST/'baseline'
+        save(trial/'paired_geometry.json',dict(deltas_um=dd.tolist(),body=bb.tolist(),input_ground_shift_um=feed,coil_controls=controls.tolist()))
+        report('native_candidate_running',iteration=it,predicted_RMS=pr,deltas_um=dd.tolist(),coil_controls=controls.tolist())
+        net=native_coils(bb,controls,trial,feed);ar,at=distance(f,net.s[:,1,0]);err=float(np.sqrt(np.mean(abs(net.s[:,1,0]-pred)**2)))
+        row=dict(iteration=it,project=str(trial/'project.sonx'),deltas_um=dd.tolist(),actual_target_RMS=ar,predicted_RMS=pr,prediction_RMS=err,improved=bool(ar<rms));history.append(row);save(DEST/'history.json',history);report('native_candidate_complete',**row)
+        fig,ax=plt.subplots(figsize=(11,6));ax.plot(f/1e9,abs(net.s[:,1,0]),label='Sonnet');ax.plot(f/1e9,abs(predict_target(f,at)),label=f'Target within 0.25%, RMS {ar:.6f}');ax.legend();ax.grid(alpha=.2);fig.tight_layout();fig.savefig(trial/'s21.png',dpi=160);plt.close(fig)
+        if ar<.0025:finish(trial,dd,ar,at,history);return
+        new=calibration.calibrate(trial,model);actualz=evaluate(new,f);j=calibration.update_jac(j,step,actualz-pz)
+        if ar<rms:d=dd;z=actualz;model=new;rms=ar;pars=at;folder=trial;save(DEST/'best.json',row)
+        if err>.0005 or not row['improved']:trust=np.maximum(2,2*np.floor(trust/4)).astype(int)
+        np.savez(DEST/'resume.npz',f=f,z=z,jac=j,d=d,body=body,feed=feed,folder=str(folder),coefficients=model['coefficients'],powers=model['powers'])
+    report('iteration_limit',RMS=rms,project=str(folder/'project.sonx'))
+if __name__=='__main__':
+    try:main()
+    except BaseException as e:report('failed',error=str(e),traceback=traceback.format_exc());raise

@@ -1,0 +1,102 @@
+{
+  "files": [
+    {
+      "path": "final_designs/final_full_filter/response_direct.snp",
+      "source": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\investigations\\filter_refinement_2026-11-05\\quarter_percent_full_sweep_2026-11-08\\project.snp",
+      "sha256": "07c87abff458821468abb4f4158b0b7dc35bcb46f7c667be7fd3131615a261b0"
+    },
+    {
+      "path": "final_designs/final_full_filter/response_interpolated.snp",
+      "source": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\investigations\\filter_refinement_2026-11-05\\quarter_percent_full_sweep_2026-11-08\\interpolated_export\\project.snp",
+      "sha256": "e26e5498925b30c662120c5902600393c1066444012dc1d41a8ab4a5f1ad84b2"
+    },
+    {
+      "path": "final_designs/final_full_filter/interpolated_output/project.sonx",
+      "source": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\investigations\\filter_refinement_2026-11-05\\quarter_percent_full_sweep_2026-11-08\\interpolated_export\\project.sonx",
+      "sha256": "b29df1b564f5630f0fa0f3ed2a5f89ad819481c5fb61f2537334d776224a05c2"
+    },
+    {
+      "path": "final_designs/final_full_filter/evidence/native_completion.txt",
+      "source": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\investigations\\filter_refinement_2026-11-05\\quarter_percent_full_sweep_2026-11-08\\analysis_run\\em.log",
+      "sha256": "cc2775bc2bb45bed7a93360bfe6f1bb695a2c4d14d36c85af072cdf7e9b658b8"
+    },
+    {
+      "path": "final_designs/final_full_filter/evidence/interpolation_export.txt",
+      "source": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\investigations\\filter_refinement_2026-11-05\\quarter_percent_full_sweep_2026-11-08\\interpolated_export\\export.log",
+      "sha256": "b25b4b7dd1aa54639dcb4d3331fdeb0016306483febea0adc9d261f63b9bc6ec"
+    },
+    {
+      "path": "final_designs/final_full_filter/evidence/original_wrapper_error.json",
+      "source": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\investigations\\filter_refinement_2026-11-05\\quarter_percent_full_sweep_2026-11-08\\worker_error.json",
+      "sha256": "8d45ae8e1655ff4e37292d35ba4b83f132d3e5979d078aa97a7159b12d208c9b"
+    },
+    {
+      "path": "final_designs/final_full_filter/evidence/original_wrapper_status.json",
+      "source": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\investigations\\filter_refinement_2026-11-05\\quarter_percent_full_sweep_2026-11-08\\analysis_run\\run_status.json",
+      "sha256": "f610e678b40b48cfa5ffa6840a85f4a84526b38c389ed016be7484f5ebf3de3a"
+    },
+    {
+      "path": "final_designs/final_full_filter/figures/annotated_achieved_passband.json",
+      "source": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\investigations\\filter_refinement_2026-11-05\\quarter_percent_full_sweep_2026-11-08\\completed_plots\\annotated_achieved_passband.json",
+      "sha256": "aca1b0502c2399cca201cde651096d5bb5f7537e18262eac777d313d86d8be34"
+    },
+    {
+      "path": "final_designs/final_full_filter/figures/annotated_achieved_passband.pdf",
+      "source": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\investigations\\filter_refinement_2026-11-05\\quarter_percent_full_sweep_2026-11-08\\completed_plots\\annotated_achieved_passband.pdf",
+      "sha256": "773d6bdcaa1c95c484ebc13b62f2a3944a3e9854b39156df7a2d5af635f84624"
+    },
+    {
+      "path": "final_designs/final_full_filter/figures/annotated_achieved_passband.png",
+      "source": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\investigations\\filter_refinement_2026-11-05\\quarter_percent_full_sweep_2026-11-08\\completed_plots\\annotated_achieved_passband.png",
+      "sha256": "959fecb8577cf41094fdde6fa7231fbc189eb10a48df35ee4d55feb73c0f7fd5"
+    },
+    {
+      "path": "final_designs/final_full_filter/figures/annotated_main_passband_linear.pdf",
+      "source": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\investigations\\filter_refinement_2026-11-05\\quarter_percent_full_sweep_2026-11-08\\completed_plots\\annotated_main_passband_linear.pdf",
+      "sha256": "befef9f2c53380a6dc22d6fa19fb444d4e4c708d9ff67b62cdf628bc94d1fb30",
+      "note": "Regenerated from published native response by tools/analyze_final_full_filter.py; original source plot retained locally"
+    },
+    {
+      "path": "final_designs/final_full_filter/figures/annotated_main_passband_linear.png",
+      "source": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\investigations\\filter_refinement_2026-11-05\\quarter_percent_full_sweep_2026-11-08\\completed_plots\\annotated_main_passband_linear.png",
+      "sha256": "ca66e2efd634ddcff5f9d5069945797850b9c1b591083d54828642da12b3edb3",
+      "note": "Regenerated from published native response by tools/analyze_final_full_filter.py; original source plot retained locally"
+    },
+    {
+      "path": "final_designs/final_full_filter/figures/full_filter_s21.png",
+      "source": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\investigations\\filter_refinement_2026-11-05\\quarter_percent_full_sweep_2026-11-08\\completed_plots\\full_filter_s21.png",
+      "sha256": "86eed3c1937cfd33db0b4e456aa727901f68ff37297d18a8b82c724dccc3f234"
+    },
+    {
+      "path": "final_designs/final_full_filter/figures/interpolated_export_validation.json",
+      "source": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\investigations\\filter_refinement_2026-11-05\\quarter_percent_full_sweep_2026-11-08\\completed_plots\\interpolated_export_validation.json",
+      "sha256": "41cde6d3b84191abf288a1f0ba02cdea9e34cf78a76b22ee5334980f7373c7a6"
+    },
+    {
+      "path": "final_designs/final_full_filter/figures/reference_vs_completed_sonnet.pdf",
+      "source": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\investigations\\filter_refinement_2026-11-05\\quarter_percent_full_sweep_2026-11-08\\completed_plots\\reference_vs_completed_sonnet.pdf",
+      "sha256": "f3a2098a41f4f7477c4e113ccc32384583761ae6ebb2fa27ef65765fe4f44a9c"
+    },
+    {
+      "path": "final_designs/final_full_filter/figures/reference_vs_completed_sonnet.png",
+      "source": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\investigations\\filter_refinement_2026-11-05\\quarter_percent_full_sweep_2026-11-08\\completed_plots\\reference_vs_completed_sonnet.png",
+      "sha256": "87efafab8900f14129a055b1c5913c17a79c66844b839fa03c8e193fe972b514"
+    },
+    {
+      "path": "final_designs/final_full_filter/figures/sonnet_interpolated_s21.png",
+      "source": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\investigations\\filter_refinement_2026-11-05\\quarter_percent_full_sweep_2026-11-08\\completed_plots\\sonnet_interpolated_s21.png",
+      "sha256": "3e40d31e624d02f7b543680b6c8a029d0b0b04006918e99efe7c1f1fd0b54187"
+    },
+    {
+      "path": "final_designs/final_full_filter/figures/sonnet_reference_style.png",
+      "source": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\investigations\\filter_refinement_2026-11-05\\quarter_percent_full_sweep_2026-11-08\\completed_plots\\sonnet_reference_style.png",
+      "sha256": "6240989872c7d4f4dc591face0e26608d6b8f46e1229f904e99c21329cc4c4b7"
+    },
+    {
+      "path": "final_designs/final_full_filter/figures/validation.json",
+      "source": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\investigations\\filter_refinement_2026-11-05\\quarter_percent_full_sweep_2026-11-08\\completed_plots\\validation.json",
+      "sha256": "dcc129b7e4f73a28d6a13d3dfbf72928f705aabd838c6f915b4caa06cfc1a36b"
+    }
+  ],
+  "original_working_files_unchanged": true
+}

@@ -12,7 +12,7 @@
 
 | final_T3 | Current assembled taper fixture | Completed native response and independent terminal model |
 
-| final_full_filter | Current 10-cell filter with mirrored tapers | Input; final full-band results pending |
+| final_full_filter | Current 10-cell filter with mirrored tapers | Completed native sweep, direct and interpolated responses |
 
 | final_full_filter/verification_4p92GHz | Same full-filter geometry, single-frequency test | Completed 4.92 GHz EM |
 
@@ -20,6 +20,6 @@ Open project.sonx in a selected folder. layout.gds is its frozen metal, and desi
 
 For a continuous-ground taper-only drawing, use final_T3/continuous_ground/project.sonx. Its metal union matches the accepted original, but it has not been separately simulated as a taper validation. The full filter uses merged ground and has its own verification.
 
-Final full-filter result placeholder: **await completed native sweep and validation**. No live point count or provisional full response is represented as final here.
+The full-filter native sweep completed 123 direct frequencies; a cache-only native export produced 2001 interpolated samples. See `final_full_filter/metrics.json`, `figures/`, and `evidence/`. The original wrapper export-count failure is preserved and explained in the completed-results report.
 
 PUBLICATION_PATHS.json records the publication-only rename mapping. SOURCE_PATHS.json records original source paths and hashes. Original solver/campaign paths are unchanged. Earlier alternative packages are archived in ../final_old/. See ../docs/SECTIONS_10_11_READER_GUIDE.md and ../docs/REBUILD.md.

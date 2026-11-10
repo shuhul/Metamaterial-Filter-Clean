@@ -1,0 +1,15 @@
+{
+  "source": "investigations\\filter_refinement_2026-11-05\\quarter_percent_full_sweep_2026-11-08\\project.snp",
+  "sha256": "07c87abff458821468abb4f4158b0b7dc35bcb46f7c667be7fd3131615a261b0",
+  "points": 123,
+  "frequency_GHz": [
+    4.5,
+    5.5
+  ],
+  "log_magnitude_max_difference": 4.973211999992344e-07,
+  "em_complete": true,
+  "em_errors": 0,
+  "em_warnings": 0,
+  "final_ABS_SNR_dB": 40.9246,
+  "export": "direct solutions, not dense interpolated data"
+}

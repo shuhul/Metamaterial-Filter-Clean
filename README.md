@@ -14,15 +14,15 @@ The selected files are in [final_designs](final_designs/README.md):
 
 - [final_T3](final_designs/final_T3/): accepted assembled T3/T2/T1/regular taper fixture.
 
-- [final_full_filter](final_designs/final_full_filter/): current full-filter input, with completed 4.92 GHz verification in its subfolder.
+- [final_full_filter](final_designs/final_full_filter/): completed full-filter input, native responses, plots and evidence, plus the earlier 4.92 GHz verification.
 
-The accepted taper has complex S21 RMS 0.00249186334 to a normal circuit whose ten capacitances and five inductances are within 0.25% of nominal. Those are comparator values, not unique physical extractions. **Final full-band filter results are pending.** A one-frequency check is not full-band validation.
+The accepted taper has complex S21 RMS 0.00249186334 to a normal circuit whose ten capacitances and five inductances are within 0.25% of nominal. Those are comparator values, not unique physical extractions. **The full-filter EM sweep and native interpolated export are complete.** The main continuous |S21| >= 0.8 band is approximately 4.8260-5.1681 GHz. See [completed results](docs/FINAL_FILTER_REPORT.md) and [speed evidence](docs/SIMULATION_SPEED_EVIDENCE.md).
 
 Superseded publication copies are preserved in [final_old](final_old/README.md). [PUBLICATION_PATHS.json](final_designs/PUBLICATION_PATHS.json) records the renames; [SOURCE_PATHS.json](final_designs/SOURCE_PATHS.json) links current copies to original working artifacts. Running simulations and their source directories were not moved.
 
 ## Read and reproduce
 
-Start with the [Sections 10?11 reader guide](docs/SECTIONS_10_11_READER_GUIDE.md), [current technical method](docs/CURRENT_METHOD.md), and [rebuild guide](docs/REBUILD.md). The supplied AWR target project and optimizer screenshot are in [reference_inputs/awr](reference_inputs/awr/README.md).
+Start with the [Sections 10 and 11 reader guide](docs/SECTIONS_10_11_READER_GUIDE.md), [current technical method](docs/CURRENT_METHOD.md), and [rebuild guide](docs/REBUILD.md). The supplied AWR target project and optimizer screenshot are in [reference_inputs/awr](reference_inputs/awr/README.md).
 
 ```powershell
 

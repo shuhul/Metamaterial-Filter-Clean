@@ -2,7 +2,7 @@
 
 The canonical registry is `final_designs/designs.json`. It contains final_regular, final_T1, final_T2, final_T3, final_full_filter, and its verification_4p92GHz subfolder. The standalone regular/T1/T2 selections are staged baselines; final_T3 contains the later embedded geometry. Superseded publication copies are in final_old and are not part of the default replay.
 
-Each registered input has project.sonx (complete native settings and metal), layout.gds (the same frozen metal), design.json, and parameters.json. Finished response evidence is included where available. The full-filter folder has an input and a completed one-frequency subfolder, but final full-band results are pending. Original absolute paths in provenance JSON remain historical; they are not required by the replay.
+Each registered input has project.sonx (complete native settings and metal), layout.gds (the same frozen metal), design.json, and parameters.json. Finished response evidence is included where available. The full-filter folder contains the completed direct and interpolated full-band responses, evidence, metrics and the earlier one-frequency verification subfolder. `uv run python tools/analyze_final_full_filter.py` validates completed evidence and regenerates the principal annotated/convergence plots without EM. Original absolute paths in provenance JSON remain historical; they are not required by the replay.
 
 ## Check without Sonnet
 

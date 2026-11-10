@@ -1,0 +1,14 @@
+{
+  "threads": 8,
+  "elapsed_seconds": 628.9934374000877,
+  "complex_S21_RMS": 0.0,
+  "all_S_RMS": 0.0,
+  "S21_max": 0.0,
+  "reference": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\investigations\\shorting_speed_2026-11-05\\extraction_runs\\short_0\\project.snp",
+  "same_project_bytes": true,
+  "cold_independent_folder": true,
+  "scope": "Identical corrected geometry and original mesh; full-band ABS comparison. Runtime excludes prior pilots and estimates.",
+  "four_thread_wall_seconds": 1094.397511,
+  "measured_wall_speedup": 1.7399188066629696,
+  "saved_export_agreement_scope": "Responses identical at exported precision; this does not assert exact arithmetic equality or continuum mesh convergence."
+}

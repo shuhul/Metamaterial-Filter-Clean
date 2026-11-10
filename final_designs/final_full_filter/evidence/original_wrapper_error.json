@@ -1,0 +1,4 @@
+{
+  "error": "Sonnet export does not match the requested range/grid; cache-only mode may have retained an older export",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\investigations\\filter_refinement_2026-11-05\\run_quarter_full_sweep.py\", line 39, in <module>\n    try:main()\n        ~~~~^^\n  File \"C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\investigations\\filter_refinement_2026-11-05\\run_quarter_full_sweep.py\", line 26, in main\n    sonnet.simulate(p,WORK/'analysis_run')\n    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\geometry\\taper\\sonnet.py\", line 59, in simulate\n    raise RuntimeError(reason)\nRuntimeError: Sonnet export does not match the requested range/grid; cache-only mode may have retained an older export\n"
+}

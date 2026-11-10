@@ -1,0 +1,11 @@
+{
+  "native_interpolated_export": "investigations\\filter_refinement_2026-11-05\\quarter_percent_full_sweep_2026-11-08\\interpolated_export\\project.snp",
+  "samples": 2001,
+  "frequency_GHz": [
+    4.5,
+    5.5
+  ],
+  "new_EM_solves": 0,
+  "source_direct_points": 123,
+  "export_sha256": "e26e5498925b30c662120c5902600393c1066444012dc1d41a8ab4a5f1ad84b2"
+}

@@ -1,17 +1,127 @@
 {
   "schema_version": 3,
   "purpose": "Integrity manifest only; does not control Git tracking. Includes final_old history and supplied reference_inputs.",
-  "full_filter_status": "4.92 GHz point complete; final full-band results pending. final_old is historical.",
+  "full_filter_status": "Full-filter EM and native interpolation complete; 123 direct solves and 2001 exported samples. final_old is historical.",
   "files": [
     {
       "path": "final_designs/designs.json",
-      "bytes": 3330,
-      "sha256": "686402fb319a8485fcb9e3b707f25f676cd67abd6dacf192e0eb14621557031c"
+      "bytes": 3420,
+      "sha256": "3024df36311c91ff2667229962a0fa5cd40bb2ee079ec8d752b1a825f241d8be"
+    },
+    {
+      "path": "final_designs/final_full_filter/COMPLETED_SOURCE_PATHS.json",
+      "bytes": 7715,
+      "sha256": "7b8f939c8ef86337124b62e235ac3ed22d178519aa9b43e0ef4480f2ff6b1e28"
     },
     {
       "path": "final_designs/final_full_filter/design.json",
-      "bytes": 343,
-      "sha256": "0317a12e3bfac0633af47032b66daf02b326baef272b542dddb306f6911b7fde"
+      "bytes": 428,
+      "sha256": "9697fd635d0ce8c42be5a7a087359146fbceabf588e06d3b5b904010ab71173b"
+    },
+    {
+      "path": "final_designs/final_full_filter/evidence/historical_speed_report.md",
+      "bytes": 16694,
+      "sha256": "97293cdc969518456550cdd52f0e37558e5f0b88f143f109150ea7105561438d"
+    },
+    {
+      "path": "final_designs/final_full_filter/evidence/interpolation_export.txt",
+      "bytes": 1604,
+      "sha256": "b25b4b7dd1aa54639dcb4d3331fdeb0016306483febea0adc9d261f63b9bc6ec"
+    },
+    {
+      "path": "final_designs/final_full_filter/evidence/native_completion.txt",
+      "bytes": 70471,
+      "sha256": "cc2775bc2bb45bed7a93360bfe6f1bb695a2c4d14d36c85af072cdf7e9b658b8"
+    },
+    {
+      "path": "final_designs/final_full_filter/evidence/original_wrapper_error.json",
+      "bytes": 899,
+      "sha256": "8d45ae8e1655ff4e37292d35ba4b83f132d3e5979d078aa97a7159b12d208c9b"
+    },
+    {
+      "path": "final_designs/final_full_filter/evidence/original_wrapper_status.json",
+      "bytes": 466,
+      "sha256": "f610e678b40b48cfa5ffa6840a85f4a84526b38c389ed016be7484f5ebf3de3a"
+    },
+    {
+      "path": "final_designs/final_full_filter/evidence/resources_summary.json",
+      "bytes": 908,
+      "sha256": "b2c9f9494974059660c9f7ff67b6274dd9d61c6008196b592ad73ed60005d070"
+    },
+    {
+      "path": "final_designs/final_full_filter/evidence/threads36_pilot.json",
+      "bytes": 601,
+      "sha256": "52e445c8f57a921be3116882b94060d6bac3abd1074515bdaed593a258c9fbbf"
+    },
+    {
+      "path": "final_designs/final_full_filter/evidence/threads4_vs8.json",
+      "bytes": 741,
+      "sha256": "f7a2fe5d3a96441f32ac849c4628e12c3c8e0aaf4c07d62a1958b3c8a8ebd294"
+    },
+    {
+      "path": "final_designs/final_full_filter/figures/annotated_achieved_passband.json",
+      "bytes": 643,
+      "sha256": "aca1b0502c2399cca201cde651096d5bb5f7537e18262eac777d313d86d8be34"
+    },
+    {
+      "path": "final_designs/final_full_filter/figures/annotated_achieved_passband.pdf",
+      "bytes": 27673,
+      "sha256": "773d6bdcaa1c95c484ebc13b62f2a3944a3e9854b39156df7a2d5af635f84624"
+    },
+    {
+      "path": "final_designs/final_full_filter/figures/annotated_achieved_passband.png",
+      "bytes": 197164,
+      "sha256": "959fecb8577cf41094fdde6fa7231fbc189eb10a48df35ee4d55feb73c0f7fd5"
+    },
+    {
+      "path": "final_designs/final_full_filter/figures/annotated_main_passband_linear.pdf",
+      "bytes": 22043,
+      "sha256": "befef9f2c53380a6dc22d6fa19fb444d4e4c708d9ff67b62cdf628bc94d1fb30"
+    },
+    {
+      "path": "final_designs/final_full_filter/figures/annotated_main_passband_linear.png",
+      "bytes": 113236,
+      "sha256": "ca66e2efd634ddcff5f9d5069945797850b9c1b591083d54828642da12b3edb3"
+    },
+    {
+      "path": "final_designs/final_full_filter/figures/completed_convergence.png",
+      "bytes": 91371,
+      "sha256": "06e72c787037bc3a0f9ef07c4f8e9f6185e0ca0a21e19109c3c2e2b5a5e07adf"
+    },
+    {
+      "path": "final_designs/final_full_filter/figures/full_filter_s21.png",
+      "bytes": 269633,
+      "sha256": "86eed3c1937cfd33db0b4e456aa727901f68ff37297d18a8b82c724dccc3f234"
+    },
+    {
+      "path": "final_designs/final_full_filter/figures/interpolated_export_validation.json",
+      "bytes": 367,
+      "sha256": "41cde6d3b84191abf288a1f0ba02cdea9e34cf78a76b22ee5334980f7373c7a6"
+    },
+    {
+      "path": "final_designs/final_full_filter/figures/reference_vs_completed_sonnet.pdf",
+      "bytes": 76890,
+      "sha256": "f3a2098a41f4f7477c4e113ccc32384583761ae6ebb2fa27ef65765fe4f44a9c"
+    },
+    {
+      "path": "final_designs/final_full_filter/figures/reference_vs_completed_sonnet.png",
+      "bytes": 294092,
+      "sha256": "87efafab8900f14129a055b1c5913c17a79c66844b839fa03c8e193fe972b514"
+    },
+    {
+      "path": "final_designs/final_full_filter/figures/sonnet_interpolated_s21.png",
+      "bytes": 262077,
+      "sha256": "3e40d31e624d02f7b543680b6c8a029d0b0b04006918e99efe7c1f1fd0b54187"
+    },
+    {
+      "path": "final_designs/final_full_filter/figures/sonnet_reference_style.png",
+      "bytes": 53646,
+      "sha256": "6240989872c7d4f4dc591face0e26608d6b8f46e1229f904e99c21329cc4c4b7"
+    },
+    {
+      "path": "final_designs/final_full_filter/figures/validation.json",
+      "bytes": 478,
+      "sha256": "dcc129b7e4f73a28d6a13d3dfbf72928f705aabd838c6f915b4caa06cfc1a36b"
     },
     {
       "path": "final_designs/final_full_filter/geometry.png",
@@ -19,9 +129,19 @@
       "sha256": "58fcfda1a906279f3e8579db29fa6b595ea53c2ed6fec8965b19ba1d9929a761"
     },
     {
+      "path": "final_designs/final_full_filter/interpolated_output/project.sonx",
+      "bytes": 134007,
+      "sha256": "b29df1b564f5630f0fa0f3ed2a5f89ad819481c5fb61f2537334d776224a05c2"
+    },
+    {
       "path": "final_designs/final_full_filter/layout.gds",
       "bytes": 87822,
       "sha256": "f0db21e22c4026d2d339054a643b62178533ae4fa10a9467c428fa1412e095f0"
+    },
+    {
+      "path": "final_designs/final_full_filter/metrics.json",
+      "bytes": 1677,
+      "sha256": "ac7d2512129c4fc5b61eb1ecf900f9e3eb20908ebbf27ebdd1c8720088a2df7d"
     },
     {
       "path": "final_designs/final_full_filter/parameters.json",
@@ -34,9 +154,24 @@
       "sha256": "f021bbab9da274d7a6b835ab4a45b7a9219217440be1ca941e4a3c3f9ee49e99"
     },
     {
+      "path": "final_designs/final_full_filter/README.md",
+      "bytes": 1585,
+      "sha256": "c50a6d0084a4bd1061f1c2cc22d0b41c347b3364a4b578aef10a499163a511bd"
+    },
+    {
       "path": "final_designs/final_full_filter/rebuild_validation.json",
       "bytes": 281,
       "sha256": "b45a86ec0caef33e771794c64abc9a7614f2cbeba9e8ac0c67c1c67cae1919dc"
+    },
+    {
+      "path": "final_designs/final_full_filter/response_direct.snp",
+      "bytes": 18698,
+      "sha256": "07c87abff458821468abb4f4158b0b7dc35bcb46f7c667be7fd3131615a261b0"
+    },
+    {
+      "path": "final_designs/final_full_filter/response_interpolated.snp",
+      "bytes": 294764,
+      "sha256": "e26e5498925b30c662120c5902600393c1066444012dc1d41a8ab4a5f1ad84b2"
     },
     {
       "path": "final_designs/final_full_filter/verification_4p92GHz/comparison.png",
@@ -554,6 +689,21 @@
       "sha256": "347cb3226d33fce86c8cab09d33d87adf759926adcba8af0dc19e7212d22b4b8"
     },
     {
+      "path": "final_designs/final_T3/port_review/gap-port-detail.png",
+      "bytes": 217142,
+      "sha256": "a3ef6fc42e43a74082a7208ad805ed48b0f17244336ff80442df05defb4c7fc0"
+    },
+    {
+      "path": "final_designs/final_T3/port_review/gap-ports-overview.png",
+      "bytes": 643799,
+      "sha256": "a8a35459081d482acb7b15d427a99b5e847f4e9afe7efdc96bcfd0911fab10e4"
+    },
+    {
+      "path": "final_designs/final_T3/port_review/README.md",
+      "bytes": 1633,
+      "sha256": "2ba635655af8bf4e99e79140186b34d3b0849d6b786267b8ad1aa249f73d2396"
+    },
+    {
       "path": "final_designs/final_T3/project.snp",
       "bytes": 221264,
       "sha256": "4e35386c4b7d28299eab416ac230aa8cade30f5eedc2e55ae426b5532a55fcce"
@@ -610,8 +760,8 @@
     },
     {
       "path": "final_designs/README.md",
-      "bytes": 1715,
-      "sha256": "9df06e5032fba9045a7f68c744c07b3611c8f39084df9998d7541964808dad12"
+      "bytes": 1863,
+      "sha256": "ae0a9594a26c397cac24af04b8dc65d0fffc5f98bd1c30db70bef6b7662e1067"
     },
     {
       "path": "final_designs/SOURCE_PATHS.json",
@@ -1179,5 +1329,5 @@
       "sha256": "1d9c74cbcdff45e15fb7b6f477bcf8b51bf6e68b275fbc1b42ba9d96b6f61616"
     }
   ],
-  "total_bytes": 29269315
+  "total_bytes": 32092355
 }

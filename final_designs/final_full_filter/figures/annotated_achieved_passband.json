@@ -1,0 +1,25 @@
+{
+  "source": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\investigations\\filter_refinement_2026-11-05\\quarter_percent_full_sweep_2026-11-08\\interpolated_export\\project.snp",
+  "amplitude_cutoff": 0.8,
+  "dB_cutoff": -1.938200260161128,
+  "target_GHz": [
+    4.8,
+    5.2
+  ],
+  "intervals_GHz_linear_crossing_estimates": [
+    [
+      4.826025740383707,
+      5.168107583691898
+    ],
+    [
+      5.186891633903861,
+      5.196206114252935
+    ],
+    [
+      5.213454979459399,
+      5.213529333947164
+    ]
+  ],
+  "export_step_GHz": 0.0004999999999997229,
+  "last_interval_width_unresolved": true
+}

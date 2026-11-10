@@ -9,5 +9,6 @@
   ],
   "coordinate_system": "GDS box origin bottom-left; Sonnet y = box_height - GDS y",
   "grid_um": 2,
-  "verification": "Input only; adaptive full sweep unfinished"
+  "verification": "Completed native full-band ABS; 123 direct solves, 2001 native interpolated samples",
+  "response": "response_interpolated.snp"
 }

@@ -1,0 +1,1381 @@
+
+               ELECTROMAGNETIC ANALYSIS OF 3-D PLANAR CIRCUITS
+                                 Version 19.52.2025.261
+
+                Copyright (c) 1986-2026 Sonnet Software Inc.
+                             All rights reserved.
+
+Run 1:  Sun Nov 08 10:48:57 2026.  caltech9.1.63687.
+        Em version 19.52.2025.261 (64-bit Windows) on DESKTOP-0ST43U4 local.
+
+  Project:  C:\Users\shuhul\Downloads\filter_new_automation_clean\investigations\filter_refinement_2026-11-05\quarter_percent_full_sweep_2026-11-08\project.sonx.
+
+    Begin electromagnetic simulation using frequency sweep:
+      ABS Start = 4.5, Stop = 5.5 GHZ
+
+    Frequency:  4.5 GHZ
+      Subsectioning time:  14 seconds.
+      ABS setup time:  9 seconds.
+      De-embedding setup time:  1 second.
+      Circuit requires 41,299 subsections and 13 GB of memory.
+      Threads:  using 36 thread(s), 36 core(s) available.
+
+      Waveguide mode time:  0.447 seconds.
+      Matrix fill time:  5 minutes 21 seconds.
+      Matrix solve time:  5 minutes 54 seconds.
+
+      De-embedded S-Parameters. 50 Ohm Port Terminations.
+      Magnitude/Angle. Touchstone Format. (S11 S21 S12 S22).
+      4.50000000 0.999958 -60.57 0.002713 -150.7 0.002713 -150.7 0.999958 -60.58
+      ! P1 F=4.5 Eeff=(6.55381 - j3.02271e-05) Z0=(56.8875 + j0.0001312)
+      ! P2 F=4.5 Eeff=(6.55381 - j3.02271e-05) Z0=(56.8875 + j0.0001312)
+      Total time per frequency:  11 minutes 35 seconds.
+
+    Frequency:  5.5 GHZ
+      Waveguide mode time:  0.452 seconds.
+      Matrix fill time:  5 minutes 25 seconds.
+      Matrix solve time:  6 minutes 14 seconds.
+      5.50000000 0.999907 12.066 0.009404 -78.06 0.009404 -78.06 0.999907 12.061
+      ! P1 F=5.5 Eeff=(6.55372 - j3.02261e-05) Z0=(56.8867 + j0.000131202)
+      ! P2 F=5.5 Eeff=(6.55372 - j3.02261e-05) Z0=(56.8867 + j0.000131202)
+      Total time per frequency:  11 minutes 41 seconds.
+      ABS: SNR = 13.4446 dB (140 dB Goal) for S2_2 at 5 GHz.
+      ABS: Time = 0.061 seconds.
+
+    Frequency:  5 GHZ
+      Waveguide mode time:  0.551 seconds.
+      Matrix fill time:  5 minutes 38 seconds.
+      Matrix solve time:  6 minutes 17 seconds.
+      5.00000000 0.032063 -64.10 0.998693 -153.4 0.998693 -153.4 0.032068 -62.58
+      ! P1 F=5.0 Eeff=(6.55377 - j3.02265e-05) Z0=(56.8871 + j0.000131202)
+      ! P2 F=5.0 Eeff=(6.55377 - j3.02265e-05) Z0=(56.8871 + j0.000131202)
+      Total time per frequency:  11 minutes 59 seconds.
+      ABS: SNR = 0.871153 dB (50 dB Goal) for S1_2 at 5.0055 GHz.
+      ABS: Time = 0.054 seconds.
+
+    Frequency:  5.0055 GHZ
+      Waveguide mode time:  0.460 seconds.
+      Matrix fill time:  5 minutes 31 seconds.
+      Matrix solve time:  6 minutes 8 seconds.
+      5.00550000 0.049506 -84.88 0.997987 -173.3 0.997987 -173.3 0.049512 -81.74
+      ! P1 F=5.0055 Eeff=(6.55377 - j3.02268e-05) Z0=(56.8871 + j0.000131201)
+      ! P2 F=5.0055 Eeff=(6.55377 - j3.02268e-05) Z0=(56.8871 + j0.000131201)
+      Total time per frequency:  11 minutes 42 seconds.
+      ABS: SNR = 5.29099 dB (50 dB Goal) for S1_2 at 5.132 GHz.
+      ABS: Time = 0.057 seconds.
+
+    Frequency:  5.132 GHZ
+      Waveguide mode time:  0.499 seconds.
+      Matrix fill time:  5 minutes 33 seconds.
+      Matrix solve time:  6 minutes 11 seconds.
+      5.13200000 0.259762 174.87 0.964822 85.670 0.964822 85.670 0.259768 176.46
+      ! P1 F=5.132 Eeff=(6.55375 - j3.02265e-05) Z0=(56.887 + j0.000131201)
+      ! P2 F=5.132 Eeff=(6.55375 - j3.02265e-05) Z0=(56.887 + j0.000131201)
+      Total time per frequency:  11 minutes 47 seconds.
+      ABS: SNR = 0.737131 dB (50 dB Goal) for S2_2 at 5.314 GHz.
+      ABS: Time = 0.056 seconds.
+
+    Frequency:  5.314 GHZ
+      Waveguide mode time:  0.540 seconds.
+      Matrix fill time:  5 minutes 34 seconds.
+      Matrix solve time:  6 minutes 11 seconds.
+      5.31400000 0.999508 50.118 0.026993 -40.02 0.026993 -40.02 0.999509 50.055
+      ! P1 F=5.314 Eeff=(6.55374 - j3.02263e-05) Z0=(56.8869 + j0.000131202)
+      ! P2 F=5.314 Eeff=(6.55374 - j3.02263e-05) Z0=(56.8869 + j0.000131202)
+      Total time per frequency:  11 minutes 48 seconds.
+      ABS: SNR = 15.8878 dB (40 dB Goal) for S2_2 at 4.8875 GHz.
+      ABS: Time = 0.059 seconds.
+
+    Frequency:  4.8875 GHZ
+      Waveguide mode time:  0.446 seconds.
+      Matrix fill time:  6 minutes 19 seconds.
+      Matrix solve time:  9 minutes 41 seconds.
+      4.88750000 0.244368 -139.8 0.968656 -49.63 0.968656 -49.63 0.244364 -139.3
+      ! P1 F=4.8875 Eeff=(6.55378 - j3.02268e-05) Z0=(56.8872 + j0.000131201)
+      ! P2 F=4.8875 Eeff=(6.55378 - j3.02268e-05) Z0=(56.8872 + j0.000131201)
+      Total time per frequency:  16 minutes 3 seconds.
+      ABS: SNR = 1.02733 dB (40 dB Goal) for S1_2 at 4.882 GHz.
+      ABS: Time = 0.069 seconds.
+
+    Frequency:  4.882 GHZ
+      Waveguide mode time:  0.428 seconds.
+      Matrix fill time:  8 minutes 22 seconds.
+      Matrix solve time:  9 minutes 35 seconds.
+      4.88200000 0.319359 -112.7 0.946599 -22.30 0.946599 -22.30 0.319356 -111.9
+      ! P1 F=4.882 Eeff=(6.55378 - j3.02269e-05) Z0=(56.8872 + j0.0001312)
+      ! P2 F=4.882 Eeff=(6.55378 - j3.02269e-05) Z0=(56.8872 + j0.0001312)
+      Total time per frequency:  17 minutes 59 seconds.
+      ABS: SNR = 14.5817 dB (40 dB Goal) for S1_2 at 4.5565 GHz.
+      ABS: Time = 0.061 seconds.
+
+    Frequency:  4.5565 GHZ
+      Waveguide mode time:  0.485 seconds.
+      Matrix fill time:  8 minutes 27 seconds.
+      Matrix solve time:  9 minutes 44 seconds.
+      4.55650000 0.999946 -71.28 0.003801 -161.4 0.003801 -161.4 0.999946 -71.30
+      ! P1 F=4.5565 Eeff=(6.5538 - j3.02271e-05) Z0=(56.8875 + j0.0001312)
+      ! P2 F=4.5565 Eeff=(6.5538 - j3.02271e-05) Z0=(56.8875 + j0.0001312)
+      Total time per frequency:  18 minutes 14 seconds.
+      ABS: SNR = 4.22056 dB (40 dB Goal) for S1_2 at 4.667 GHz.
+      ABS: Time = 0.065 seconds.
+
+    Frequency:  4.667 GHZ
+      Waveguide mode time:  0.453 seconds.
+      Matrix fill time:  8 minutes 31 seconds.
+      Matrix solve time:  9 minutes 47 seconds.
+      4.66700000 0.999885 -101.1 0.007501 168.75 0.007501 168.75 0.999885 -101.2
+      ! P1 F=4.667 Eeff=(6.55379 - j3.02271e-05) Z0=(56.8874 + j0.000131201)
+      ! P2 F=4.667 Eeff=(6.55379 - j3.02271e-05) Z0=(56.8874 + j0.000131201)
+      Total time per frequency:  18 minutes 22 seconds.
+      ABS: SNR = 11.0155 dB (40 dB Goal) for S1_2 at 4.925 GHz.
+      ABS: Time = 0.064 seconds.
+
+    Frequency:  4.925 GHZ
+      Waveguide mode time:  0.434 seconds.
+      Matrix fill time:  8 minutes 22 seconds.
+      Matrix solve time:  9 minutes 49 seconds.
+      4.92500000 0.208018 -132.2 0.977251 138.46 0.977251 138.46 0.208018 -130.8
+      ! P1 F=4.925 Eeff=(6.55377 - j3.02269e-05) Z0=(56.8872 + j0.0001312)
+      ! P2 F=4.925 Eeff=(6.55377 - j3.02269e-05) Z0=(56.8872 + j0.0001312)
+      Total time per frequency:  18 minutes 14 seconds.
+      ABS: SNR = -0.641349 dB (40 dB Goal) for S1_2 at 4.948 GHz.
+      ABS: Time = 0.069 seconds.
+
+    Frequency:  4.948 GHZ
+      Waveguide mode time:  0.512 seconds.
+      Matrix fill time:  8 minutes 28 seconds.
+      Matrix solve time:  9 minutes 54 seconds.
+      4.94800000 0.062162 -46.70 0.997267 44.610 0.997267 44.610 0.062160 -44.31
+      ! P1 F=4.948 Eeff=(6.55377 - j3.02265e-05) Z0=(56.8872 + j0.000131201)
+      ! P2 F=4.948 Eeff=(6.55377 - j3.02265e-05) Z0=(56.8872 + j0.000131201)
+      Total time per frequency:  18 minutes 26 seconds.
+      ABS: SNR = -2.43023 dB (40 dB Goal) for S1_1 at 4.8835 GHz.
+      ABS: Time = 0.101 seconds.
+
+    Frequency:  4.8835 GHZ
+      Waveguide mode time:  0.560 seconds.
+      Matrix fill time:  8 minutes 59 seconds.
+      Matrix solve time:  9 minutes 49 seconds.
+      4.88350000 0.303484 -120.1 0.951805 -29.74 0.951805 -29.74 0.303481 -119.3
+      ! P1 F=4.8835 Eeff=(6.55378 - j3.02268e-05) Z0=(56.8872 + j0.0001312)
+      ! P2 F=4.8835 Eeff=(6.55378 - j3.02268e-05) Z0=(56.8872 + j0.0001312)
+      Total time per frequency:  19 minutes 1 second.
+      ABS: SNR = 0.654522 dB (40 dB Goal) for S1_2 at 5.2905 GHz.
+      ABS: Time = 0.067 seconds.
+
+    Frequency:  5.2905 GHZ
+      Waveguide mode time:  0.445 seconds.
+      Matrix fill time:  8 minutes 27 seconds.
+      Matrix solve time:  9 minutes 46 seconds.
+      5.29050000 0.999292 59.227 0.033263 -30.93 0.033263 -30.93 0.999292 59.132
+      ! P1 F=5.2905 Eeff=(6.55374 - j3.02266e-05) Z0=(56.8869 + j0.000131202)
+      ! P2 F=5.2905 Eeff=(6.55374 - j3.02266e-05) Z0=(56.8869 + j0.000131202)
+      Total time per frequency:  18 minutes 16 seconds.
+      ABS: SNR = 2.75341 dB (40 dB Goal) for S1_1 at 4.8375 GHz.
+      ABS: Time = 0.059 seconds.
+
+    Frequency:  4.8375 GHZ
+      Waveguide mode time:  0.491 seconds.
+      Matrix fill time:  8 minutes 24 seconds.
+      Matrix solve time:  9 minutes 48 seconds.
+      4.83750000 0.436914 -15.22 0.897729 -104.6 0.897729 -104.6 0.436913 -14.00
+      ! P1 F=4.8375 Eeff=(6.55378 - j3.02269e-05) Z0=(56.8873 + j0.0001312)
+      ! P2 F=4.8375 Eeff=(6.55378 - j3.02269e-05) Z0=(56.8873 + j0.0001312)
+      Total time per frequency:  18 minutes 14 seconds.
+      ABS: SNR = -0.547972 dB (40 dB Goal) for S2_2 at 4.9145 GHz.
+      ABS: Time = 0.069 seconds.
+
+    Frequency:  4.9145 GHZ
+      Waveguide mode time:  0.493 seconds.
+      Matrix fill time:  8 minutes 27 seconds.
+      Matrix solve time:  9 minutes 42 seconds.
+      4.91450000 0.224089 -88.61 0.973659 -177.8 0.973659 -177.8 0.224089 -86.99
+      ! P1 F=4.9145 Eeff=(6.55377 - j3.02268e-05) Z0=(56.8872 + j0.000131201)
+      ! P2 F=4.9145 Eeff=(6.55377 - j3.02268e-05) Z0=(56.8872 + j0.000131201)
+      Total time per frequency:  18 minutes 12 seconds.
+      ABS: SNR = -12.921 dB (40 dB Goal) for S2_2 at 4.9 GHz.
+      ABS: Time = 0.061 seconds.
+
+    Frequency:  4.9 GHZ
+      Waveguide mode time:  0.442 seconds.
+      Matrix fill time:  8 minutes 25 seconds.
+      Matrix solve time:  9 minutes 52 seconds.
+      4.90000000 0.026386 -26.24 0.998663 -111.9 0.998663 -111.9 0.026362 -18.38
+      ! P1 F=4.9 Eeff=(6.55378 - j3.02268e-05) Z0=(56.8872 + j0.0001312)
+      ! P2 F=4.9 Eeff=(6.55378 - j3.02268e-05) Z0=(56.8872 + j0.0001312)
+      Total time per frequency:  18 minutes 20 seconds.
+      ABS: SNR = -12.2402 dB (40 dB Goal) for S2_2 at 4.937 GHz.
+      ABS: Time = 0.070 seconds.
+
+    Frequency:  4.937 GHZ
+      Waveguide mode time:  0.501 seconds.
+      Matrix fill time:  8 minutes 51 seconds.
+      Matrix solve time:  9 minutes 52 seconds.
+      4.93700000 0.077389 178.80 0.996164 89.194 0.996164 89.194 0.077388 179.84
+      ! P1 F=4.937 Eeff=(6.55377 - j3.02268e-05) Z0=(56.8872 + j0.000131201)
+      ! P2 F=4.937 Eeff=(6.55377 - j3.02268e-05) Z0=(56.8872 + j0.000131201)
+      Total time per frequency:  18 minutes 47 seconds.
+      ABS: SNR = -10.1588 dB (40 dB Goal) for S2_2 at 4.943 GHz.
+      ABS: Time = 0.073 seconds.
+
+    Frequency:  4.943 GHZ
+      Waveguide mode time:  0.468 seconds.
+      Matrix fill time:  8 minutes 26 seconds.
+      Matrix solve time:  9 minutes 49 seconds.
+      4.94300000 0.002469 -38.57 0.999181 64.727 0.999181 64.727 0.002421 -19.14
+      ! P1 F=4.943 Eeff=(6.55377 - j3.02266e-05) Z0=(56.8872 + j0.000131202)
+      ! P2 F=4.943 Eeff=(6.55377 - j3.02266e-05) Z0=(56.8872 + j0.000131202)
+      Total time per frequency:  18 minutes 18 seconds.
+      ABS: SNR = 6.08643 dB (40 dB Goal) for S1_2 at 4.8345 GHz.
+      ABS: Time = 0.073 seconds.
+
+    Frequency:  4.8345 GHZ
+      Waveguide mode time:  0.482 seconds.
+      Matrix fill time:  8 minutes 35 seconds.
+      Matrix solve time:  10 minutes 17 seconds.
+      4.83450000 0.358874 10.858 0.931400 -78.41 0.931400 -78.41 0.358872 12.158
+      ! P1 F=4.8345 Eeff=(6.55378 - j3.02269e-05) Z0=(56.8873 + j0.000131201)
+      ! P2 F=4.8345 Eeff=(6.55378 - j3.02269e-05) Z0=(56.8873 + j0.000131201)
+      Total time per frequency:  18 minutes 55 seconds.
+      ABS: SNR = -1.6262 dB (40 dB Goal) for S2_2 at 4.899 GHz.
+      ABS: Time = 0.080 seconds.
+
+    Frequency:  4.899 GHZ
+      Waveguide mode time:  0.523 seconds.
+      Matrix fill time:  9 minutes 2 seconds.
+      Matrix solve time:  9 minutes 38 seconds.
+      4.89900000 0.004821 -39.21 0.998995 -107.0 0.998995 -107.0 0.004678 0.2777
+      ! P1 F=4.899 Eeff=(6.55378 - j3.02268e-05) Z0=(56.8872 + j0.000131201)
+      ! P2 F=4.899 Eeff=(6.55378 - j3.02268e-05) Z0=(56.8872 + j0.000131201)
+      Total time per frequency:  18 minutes 44 seconds.
+      ABS: SNR = -6.55428 dB (40 dB Goal) for S2_2 at 4.978 GHz.
+      ABS: Time = 0.080 seconds.
+
+    Frequency:  4.978 GHZ
+      Waveguide mode time:  0.447 seconds.
+      Matrix fill time:  8 minutes 28 seconds.
+      Matrix solve time:  9 minutes 47 seconds.
+      4.97800000 0.106020 -162.5 0.993574 -71.02 0.993574 -71.02 0.106021 -159.5
+      ! P1 F=4.978 Eeff=(6.55377 - j3.02267e-05) Z0=(56.8872 + j0.000131201)
+      ! P2 F=4.978 Eeff=(6.55377 - j3.02267e-05) Z0=(56.8872 + j0.000131201)
+      Total time per frequency:  18 minutes 19 seconds.
+      ABS: SNR = 1.13212 dB (40 dB Goal) for S2_2 at 4.994 GHz.
+      ABS: Time = 0.053 seconds.
+
+    Frequency:  4.994 GHZ
+      Waveguide mode time:  0.499 seconds.
+      Matrix fill time:  8 minutes 32 seconds.
+      Matrix solve time:  9 minutes 55 seconds.
+      4.99400000 0.002007 -23.87 0.999202 -131.2 0.999202 -131.2 0.002020 -59.43
+      ! P1 F=4.994 Eeff=(6.55377 - j3.02269e-05) Z0=(56.8871 + j0.000131201)
+      ! P2 F=4.994 Eeff=(6.55377 - j3.02269e-05) Z0=(56.8871 + j0.000131201)
+      Total time per frequency:  18 minutes 30 seconds.
+      ABS: SNR = 3.0583 dB (40 dB Goal) for S1_2 at 4.7575 GHz.
+      ABS: Time = 0.069 seconds.
+
+    Frequency:  4.7575 GHZ
+      Waveguide mode time:  0.465 seconds.
+      Matrix fill time:  8 minutes 42 seconds.
+      Matrix solve time:  9 minutes 52 seconds.
+      4.75750000 0.999677 -157.8 0.012810 112.06 0.012810 112.06 0.999677 -157.8
+      ! P1 F=4.7575 Eeff=(6.55379 - j3.02269e-05) Z0=(56.8873 + j0.0001312)
+      ! P2 F=4.7575 Eeff=(6.55379 - j3.02269e-05) Z0=(56.8873 + j0.0001312)
+      Total time per frequency:  18 minutes 37 seconds.
+      ABS: SNR = 2.71949 dB (40 dB Goal) for S1_2 at 4.855 GHz.
+      ABS: Time = 0.071 seconds.
+
+    Frequency:  4.855 GHZ
+      Waveguide mode time:  0.471 seconds.
+      Matrix fill time:  8 minutes 41 seconds.
+      Matrix solve time:  10 minutes 14 seconds.
+      4.85500000 0.128774 -138.6 0.990314 131.01 0.990314 131.01 0.128763 -139.0
+      ! P1 F=4.855 Eeff=(6.55378 - j3.02267e-05) Z0=(56.8873 + j0.0001312)
+      ! P2 F=4.855 Eeff=(6.55378 - j3.02267e-05) Z0=(56.8873 + j0.0001312)
+      Total time per frequency:  18 minutes 58 seconds.
+      ABS: SNR = 4.78822 dB (40 dB Goal) for S1_2 at 5.256 GHz.
+      ABS: Time = 0.063 seconds.
+
+    Frequency:  5.256 GHZ
+      Waveguide mode time:  0.519 seconds.
+      Matrix fill time:  9 minutes 29 seconds.
+      Matrix solve time:  11 minutes 24 seconds.
+      5.25600000 0.998536 77.304 0.049794 -12.89 0.049794 -12.89 0.998538 77.105
+      ! P1 F=5.256 Eeff=(6.55374 - j3.02263e-05) Z0=(56.8869 + j0.000131202)
+      ! P2 F=5.256 Eeff=(6.55374 - j3.02263e-05) Z0=(56.8869 + j0.000131202)
+      Total time per frequency:  20 minutes 57 seconds.
+      ABS: SNR = 5.33686 dB (40 dB Goal) for S1_2 at 4.802 GHz.
+      ABS: Time = 0.067 seconds.
+
+    Frequency:  4.802 GHZ
+      Waveguide mode time:  0.530 seconds.
+      Matrix fill time:  9 minutes 27 seconds.
+      Matrix solve time:  10 minutes 46 seconds.
+      4.80200000 0.999259 113.77 0.008568 -156.2 0.008568 -156.2 0.999263 114.06
+      ! P1 F=4.802 Eeff=(6.55378 - j3.02268e-05) Z0=(56.8873 + j0.0001312)
+      ! P2 F=4.802 Eeff=(6.55378 - j3.02268e-05) Z0=(56.8873 + j0.0001312)
+      Total time per frequency:  20 minutes 17 seconds.
+      ABS: SNR = -5.04525 dB (40 dB Goal) for S1_2 at 4.8035 GHz.
+      ABS: Time = 0.069 seconds.
+
+    Frequency:  4.8035 GHZ
+      Waveguide mode time:  0.547 seconds.
+      Matrix fill time:  10 minutes 16 seconds.
+      Matrix solve time:  11 minutes 13 seconds.
+      4.80350000 0.999173 108.30 0.013145 -161.6 0.013145 -161.6 0.999177 108.61
+      ! P1 F=4.8035 Eeff=(6.55378 - j3.02269e-05) Z0=(56.8873 + j0.000131201)
+      ! P2 F=4.8035 Eeff=(6.55378 - j3.02269e-05) Z0=(56.8873 + j0.000131201)
+      Total time per frequency:  21 minutes 33 seconds.
+      ABS: SNR = -1.76736 dB (40 dB Goal) for S1_2 at 4.821 GHz.
+      ABS: Time = 0.105 seconds.
+
+    Frequency:  4.821 GHZ
+      Waveguide mode time:  0.707 seconds.
+      Matrix fill time:  11 minutes 13 seconds.
+      Matrix solve time:  10 minutes 52 seconds.
+      4.82100000 0.936896 8.1249 0.344256 98.393 0.344256 98.393 0.936900 8.9277
+      ! P1 F=4.821 Eeff=(6.55378 - j3.02267e-05) Z0=(56.8873 + j0.000131201)
+      ! P2 F=4.821 Eeff=(6.55378 - j3.02267e-05) Z0=(56.8873 + j0.000131201)
+      Total time per frequency:  22 minutes 8 seconds.
+      ABS: SNR = 1.1587 dB (40 dB Goal) for S1_2 at 4.797 GHz.
+      ABS: Time = 0.071 seconds.
+
+    Frequency:  4.797 GHZ
+      Waveguide mode time:  0.597 seconds.
+      Matrix fill time:  10 minutes 31 seconds.
+      Matrix solve time:  10 minutes 58 seconds.
+      4.79700000 0.999398 130.11 0.001516 39.943 0.001516 39.943 0.999401 130.31
+      ! P1 F=4.797 Eeff=(6.55378 - j3.02268e-05) Z0=(56.8873 + j0.0001312)
+      ! P2 F=4.797 Eeff=(6.55378 - j3.02268e-05) Z0=(56.8873 + j0.0001312)
+      Total time per frequency:  21 minutes 33 seconds.
+      ABS: SNR = -7.89705 dB (40 dB Goal) for S1_1 at 4.8575 GHz.
+      ABS: Time = 0.073 seconds.
+
+    Frequency:  4.8575 GHZ
+      Waveguide mode time:  0.525 seconds.
+      Matrix fill time:  10 minutes 8 seconds.
+      Matrix solve time:  12 minutes 35 seconds.
+      4.85750000 0.038136 -153.1 0.997956 114.28 0.997956 114.28 0.038100 -157.0
+      ! P1 F=4.8575 Eeff=(6.55378 - j3.02267e-05) Z0=(56.8873 + j0.0001312)
+      ! P2 F=4.8575 Eeff=(6.55378 - j3.02267e-05) Z0=(56.8873 + j0.0001312)
+      Total time per frequency:  22 minutes 48 seconds.
+      ABS: SNR = 0.0812235 dB (40 dB Goal) for S2_2 at 4.8585 GHz.
+      ABS: Time = 0.083 seconds.
+
+    Frequency:  4.8585 GHZ
+      Waveguide mode time:  0.611 seconds.
+      Matrix fill time:  11 minutes 26 seconds.
+      Matrix solve time:  12 minutes 32 seconds.
+      4.85850000 0.003007 -119.3 0.998697 107.70 0.998697 107.70 0.002506 168.68
+      ! P1 F=4.8585 Eeff=(6.55378 - j3.02267e-05) Z0=(56.8872 + j0.0001312)
+      ! P2 F=4.8585 Eeff=(6.55378 - j3.02267e-05) Z0=(56.8872 + j0.0001312)
+      Total time per frequency:  24 minutes 3 seconds.
+      ABS: SNR = -2.19929 dB (39.0689 dB Goal) for S1_2 at 4.798 GHz.
+      ABS: Time = 0.072 seconds.
+
+    Frequency:  4.798 GHZ
+      Waveguide mode time:  0.556 seconds.
+      Matrix fill time:  9 minutes 42 seconds.
+      Matrix solve time:  10 minutes 44 seconds.
+      4.79800000 0.999381 127.06 2.197e-5 -131.6 2.197e-5 -131.6 0.999384 127.27
+      ! P1 F=4.798 Eeff=(6.55378 - j3.02266e-05) Z0=(56.8873 + j0.0001312)
+      ! P2 F=4.798 Eeff=(6.55378 - j3.02266e-05) Z0=(56.8873 + j0.0001312)
+      Total time per frequency:  20 minutes 30 seconds.
+      ABS: SNR = 4.00586 dB (40 dB Goal) for S1_2 at 4.828 GHz.
+      ABS: Time = 0.073 seconds.
+
+    Frequency:  4.828 GHZ
+      Waveguide mode time:  0.536 seconds.
+      Matrix fill time:  11 minutes 28 seconds.
+      Matrix solve time:  12 minutes 21 seconds.
+      4.82800000 0.297051 -86.50 0.951606 3.4828 0.951606 3.4828 0.297042 -85.78
+      ! P1 F=4.828 Eeff=(6.55378 - j3.02268e-05) Z0=(56.8873 + j0.0001312)
+      ! P2 F=4.828 Eeff=(6.55378 - j3.02268e-05) Z0=(56.8873 + j0.0001312)
+      Total time per frequency:  23 minutes 53 seconds.
+      ABS: SNR = -2.12671 dB (40 dB Goal) for S1_1 at 4.83 GHz.
+      ABS: Time = 0.069 seconds.
+
+    Frequency:  4.83 GHZ
+      Waveguide mode time:  0.445 seconds.
+      Matrix fill time:  10 minutes 41 seconds.
+      Matrix solve time:  11 minutes 57 seconds.
+      4.83000000 0.002494 -54.19 0.997277 -26.77 0.997277 -26.77 0.001298 -86.57
+      ! P1 F=4.83 Eeff=(6.55378 - j3.0227e-05) Z0=(56.8873 + j0.0001312)
+      ! P2 F=4.83 Eeff=(6.55378 - j3.0227e-05) Z0=(56.8873 + j0.0001312)
+      Total time per frequency:  22 minutes 41 seconds.
+      ABS: SNR = 10.3248 dB (40 dB Goal) for S2_2 at 4.866 GHz.
+      ABS: Time = 0.082 seconds.
+
+    Frequency:  4.866 GHZ
+      Waveguide mode time:  0.682 seconds.
+      Matrix fill time:  10 minutes 49 seconds.
+      Matrix solve time:  11 minutes 25 seconds.
+      4.86600000 0.224104 -29.59 0.973398 61.332 0.973398 61.332 0.224099 -27.89
+      ! P1 F=4.866 Eeff=(6.55378 - j3.02266e-05) Z0=(56.8872 + j0.0001312)
+      ! P2 F=4.866 Eeff=(6.55378 - j3.02266e-05) Z0=(56.8872 + j0.0001312)
+      Total time per frequency:  22 minutes 18 seconds.
+      ABS: SNR = 11.2494 dB (40 dB Goal) for S1_2 at 5.097 GHz.
+      ABS: Time = 0.072 seconds.
+
+    Frequency:  5.097 GHZ
+      Waveguide mode time:  0.521 seconds.
+      Matrix fill time:  9 minutes 48 seconds.
+      Matrix solve time:  10 minutes 48 seconds.
+      5.09700000 0.065886 123.72 0.996974 -142.1 0.996974 -142.1 0.065882 132.07
+      ! P1 F=5.097 Eeff=(6.55376 - j3.02265e-05) Z0=(56.8871 + j0.000131201)
+      ! P2 F=5.097 Eeff=(6.55376 - j3.02265e-05) Z0=(56.8871 + j0.000131201)
+      Total time per frequency:  20 minutes 39 seconds.
+      ABS: SNR = -11.598 dB (40 dB Goal) for S2_2 at 5.0315 GHz.
+      ABS: Time = 0.077 seconds.
+
+    Frequency:  5.0315 GHZ
+      Waveguide mode time:  0.519 seconds.
+      Matrix fill time:  10 minutes 47 seconds.
+      Matrix solve time:  11 minutes 45 seconds.
+      5.03150000 0.017416 173.30 0.999109 94.469 0.999109 94.469 0.017442 -163.9
+      ! P1 F=5.0315 Eeff=(6.55376 - j3.02264e-05) Z0=(56.8871 + j0.000131201)
+      ! P2 F=5.0315 Eeff=(6.55376 - j3.02264e-05) Z0=(56.8871 + j0.000131201)
+      Total time per frequency:  22 minutes 37 seconds.
+      ABS: SNR = 7.51457 dB (40 dB Goal) for S1_2 at 4.7985 GHz.
+      ABS: Time = 0.070 seconds.
+
+    Frequency:  4.7985 GHZ
+      Waveguide mode time:  0.552 seconds.
+      Matrix fill time:  10 minutes 46 seconds.
+      Matrix solve time:  10 minutes 40 seconds.
+      4.79850000 0.999371 125.49 8.604e-4 -144.2 8.604e-4 -144.2 0.999374 125.71
+      ! P1 F=4.7985 Eeff=(6.55378 - j3.02271e-05) Z0=(56.8873 + j0.0001312)
+      ! P2 F=4.7985 Eeff=(6.55378 - j3.02271e-05) Z0=(56.8873 + j0.0001312)
+      Total time per frequency:  21 minutes 30 seconds.
+      ABS: SNR = -4.29366 dB (40 dB Goal) for S1_2 at 4.7975 GHz.
+      ABS: Time = 0.068 seconds.
+
+    Frequency:  4.7975 GHZ
+      Waveguide mode time:  0.480 seconds.
+      Matrix fill time:  9 minutes 27 seconds.
+      Matrix solve time:  12 minutes 29 seconds.
+      4.79750000 0.999390 128.60 7.734e-4 38.280 7.734e-4 38.280 0.999393 128.80
+      ! P1 F=4.7975 Eeff=(6.55378 - j3.02269e-05) Z0=(56.8873 + j0.0001312)
+      ! P2 F=4.7975 Eeff=(6.55378 - j3.02269e-05) Z0=(56.8873 + j0.0001312)
+      Total time per frequency:  22 minutes.
+      ABS: SNR = 0.086622 dB (40 dB Goal) for S1_2 at 4.8005 GHz.
+      ABS: Time = 0.083 seconds.
+
+    Frequency:  4.8005 GHZ
+      Waveguide mode time:  0.599 seconds.
+      Matrix fill time:  12 minutes 20 seconds.
+      Matrix solve time:  13 minutes 1 second.
+      4.80050000 0.999318 118.97 0.004827 -151.0 0.004827 -151.0 0.999322 119.22
+      ! P1 F=4.8005 Eeff=(6.55378 - j3.02268e-05) Z0=(56.8873 + j0.000131201)
+      ! P2 F=4.8005 Eeff=(6.55378 - j3.02268e-05) Z0=(56.8873 + j0.000131201)
+      Total time per frequency:  25 minutes 25 seconds.
+      ABS: SNR = 0.680624 dB (40 dB Goal) for S1_2 at 4.799 GHz.
+      ABS: Time = 0.072 seconds.
+
+    Frequency:  4.799 GHZ
+      Waveguide mode time:  0.538 seconds.
+      Matrix fill time:  9 minutes 35 seconds.
+      Matrix solve time:  10 minutes 40 seconds.
+      4.79900000 0.999360 123.90 0.001758 -145.9 0.001758 -145.9 0.999363 124.13
+      ! P1 F=4.799 Eeff=(6.55378 - j3.02268e-05) Z0=(56.8873 + j0.0001312)
+      ! P2 F=4.799 Eeff=(6.55378 - j3.02268e-05) Z0=(56.8873 + j0.0001312)
+      Total time per frequency:  20 minutes 20 seconds.
+      ABS: SNR = -0.0978207 dB (40 dB Goal) for S1_2 at 5.069 GHz.
+      ABS: Time = 0.083 seconds.
+
+    Frequency:  5.069 GHZ
+      Waveguide mode time:  0.629 seconds.
+      Matrix fill time:  9 minutes 46 seconds.
+      Matrix solve time:  11 minutes 22 seconds.
+      5.06900000 0.094929 -130.3 0.994721 -38.95 0.994721 -38.95 0.094933 -127.7
+      ! P1 F=5.069 Eeff=(6.55376 - j3.02266e-05) Z0=(56.8871 + j0.000131201)
+      ! P2 F=5.069 Eeff=(6.55376 - j3.02266e-05) Z0=(56.8871 + j0.000131201)
+      Total time per frequency:  21 minutes 12 seconds.
+      ABS: SNR = 2.69792 dB (40 dB Goal) for S1_1 at 5.081 GHz.
+      ABS: Time = 0.075 seconds.
+
+    Frequency:  5.081 GHZ
+      Waveguide mode time:  0.570 seconds.
+      Matrix fill time:  10 minutes 35 seconds.
+      Matrix solve time:  11 minutes 25 seconds.
+      5.08100000 0.106597 -175.1 0.993495 -82.83 0.993495 -82.83 0.106597 -170.6
+      ! P1 F=5.081 Eeff=(6.55376 - j3.02267e-05) Z0=(56.8871 + j0.000131201)
+      ! P2 F=5.081 Eeff=(6.55376 - j3.02267e-05) Z0=(56.8871 + j0.000131201)
+      Total time per frequency:  22 minutes 3 seconds.
+      ABS: SNR = -4.19482 dB (40 dB Goal) for S2_2 at 5.128 GHz.
+      ABS: Time = 0.070 seconds.
+
+    Frequency:  5.128 GHZ
+      Waveguide mode time:  0.489 seconds.
+      Matrix fill time:  9 minutes 26 seconds.
+      Matrix solve time:  10 minutes 30 seconds.
+      5.12800000 0.233775 -169.8 0.971436 100.78 0.971436 100.78 0.233781 -168.7
+      ! P1 F=5.128 Eeff=(6.55375 - j3.02265e-05) Z0=(56.887 + j0.000131202)
+      ! P2 F=5.128 Eeff=(6.55375 - j3.02265e-05) Z0=(56.887 + j0.000131202)
+      Total time per frequency:  19 minutes 59 seconds.
+      ABS: SNR = -5.9979 dB (40 dB Goal) for S2_2 at 5.1055 GHz.
+      ABS: Time = 0.072 seconds.
+
+    Frequency:  5.1055 GHZ
+      Waveguide mode time:  0.493 seconds.
+      Matrix fill time:  9 minutes 43 seconds.
+      Matrix solve time:  11 minutes 37 seconds.
+      5.10550000 0.005198 49.579 0.999122 -174.0 0.999122 -174.0 0.005218 142.73
+      ! P1 F=5.1055 Eeff=(6.55376 - j3.02264e-05) Z0=(56.887 + j0.000131201)
+      ! P2 F=5.1055 Eeff=(6.55376 - j3.02264e-05) Z0=(56.887 + j0.000131201)
+      Total time per frequency:  21 minutes 23 seconds.
+      ABS: SNR = 0.847847 dB (40 dB Goal) for S1_1 at 5.044 GHz.
+      ABS: Time = 0.097 seconds.
+
+    Frequency:  5.044 GHZ
+      Waveguide mode time:  0.628 seconds.
+      Matrix fill time:  10 minutes 22 seconds.
+      Matrix solve time:  11 minutes 34 seconds.
+      5.04400000 0.026870 -34.33 0.998916 50.484 0.998916 50.484 0.026881 -44.89
+      ! P1 F=5.044 Eeff=(6.55376 - j3.02267e-05) Z0=(56.8871 + j0.000131202)
+      ! P2 F=5.044 Eeff=(6.55376 - j3.02267e-05) Z0=(56.8871 + j0.000131202)
+      Total time per frequency:  22 minutes.
+      ABS: SNR = -3.68978 dB (40 dB Goal) for S1_1 at 5.0365 GHz.
+      ABS: Time = 0.076 seconds.
+
+    Frequency:  5.0365 GHZ
+      Waveguide mode time:  0.503 seconds.
+      Matrix fill time:  11 minutes 13 seconds.
+      Matrix solve time:  11 minutes 11 seconds.
+      5.03650000 0.003178 70.013 0.999264 76.897 0.999264 76.897 0.003292 -96.43
+      ! P1 F=5.0365 Eeff=(6.55376 - j3.02266e-05) Z0=(56.8871 + j0.000131201)
+      ! P2 F=5.0365 Eeff=(6.55376 - j3.02266e-05) Z0=(56.8871 + j0.000131201)
+      Total time per frequency:  22 minutes 29 seconds.
+      ABS: SNR = 9.10799 dB (40 dB Goal) for S2_2 at 4.9935 GHz.
+      ABS: Time = 0.082 seconds.
+
+    Frequency:  4.9935 GHZ
+      Waveguide mode time:  0.502 seconds.
+      Matrix fill time:  9 minutes 39 seconds.
+      Matrix solve time:  10 minutes 27 seconds.
+      4.99350000 0.001255 107.39 0.999203 -129.4 0.999203 -129.4 0.001271 175.24
+      ! P1 F=4.9935 Eeff=(6.55377 - j3.0227e-05) Z0=(56.8871 + j0.000131201)
+      ! P2 F=4.9935 Eeff=(6.55377 - j3.0227e-05) Z0=(56.8871 + j0.000131201)
+      Total time per frequency:  20 minutes 9 seconds.
+      ABS: SNR = 11.1512 dB (40 dB Goal) for S1_1 at 5.02 GHz.
+      ABS: Time = 0.068 seconds.
+
+    Frequency:  5.02 GHZ
+      Waveguide mode time:  0.562 seconds.
+      Matrix fill time:  9 minutes 8 seconds.
+      Matrix solve time:  11 minutes 7 seconds.
+      5.02000000 0.049375 -138.6 0.998017 134.95 0.998017 134.95 0.049385 -131.3
+      ! P1 F=5.02 Eeff=(6.55376 - j3.02265e-05) Z0=(56.8871 + j0.000131201)
+      ! P2 F=5.02 Eeff=(6.55376 - j3.02265e-05) Z0=(56.8871 + j0.000131201)
+      Total time per frequency:  20 minutes 20 seconds.
+      ABS: SNR = 11.7843 dB (40 dB Goal) for S2_2 at 4.848 GHz.
+      ABS: Time = 0.071 seconds.
+
+    Frequency:  4.848 GHZ
+      Waveguide mode time:  0.512 seconds.
+      Matrix fill time:  10 minutes 7 seconds.
+      Matrix solve time:  11 minutes 3 seconds.
+      4.84800000 0.348723 -91.38 0.935749 178.97 0.935749 178.97 0.348719 -90.56
+      ! P1 F=4.848 Eeff=(6.55378 - j3.02266e-05) Z0=(56.8873 + j0.000131201)
+      ! P2 F=4.848 Eeff=(6.55378 - j3.02266e-05) Z0=(56.8873 + j0.000131201)
+      Total time per frequency:  21 minutes 14 seconds.
+      ABS: SNR = 6.54342 dB (40 dB Goal) for S2_2 at 4.7885 GHz.
+      ABS: Time = 0.076 seconds.
+
+    Frequency:  4.7885 GHZ
+      Waveguide mode time:  0.501 seconds.
+      Matrix fill time:  10 minutes 6 seconds.
+      Matrix solve time:  11 minutes 8 seconds.
+      4.78850000 0.999487 152.53 0.009151 62.441 0.009151 62.441 0.999488 152.62
+      ! P1 F=4.7885 Eeff=(6.55378 - j3.02268e-05) Z0=(56.8873 + j0.0001312)
+      ! P2 F=4.7885 Eeff=(6.55378 - j3.02268e-05) Z0=(56.8873 + j0.0001312)
+      Total time per frequency:  21 minutes 19 seconds.
+      ABS: SNR = 12.6948 dB (40 dB Goal) for S1_2 at 4.8125 GHz.
+      ABS: Time = 0.094 seconds.
+
+    Frequency:  4.8125 GHZ
+      Waveguide mode time:  0.513 seconds.
+      Matrix fill time:  9 minutes 52 seconds.
+      Matrix solve time:  10 minutes 42 seconds.
+      4.81250000 0.996006 67.919 0.076619 158.09 0.076619 158.09 0.996011 68.471
+      ! P1 F=4.8125 Eeff=(6.55378 - j3.02271e-05) Z0=(56.8873 + j0.000131201)
+      ! P2 F=4.8125 Eeff=(6.55378 - j3.02271e-05) Z0=(56.8873 + j0.000131201)
+      Total time per frequency:  20 minutes 38 seconds.
+      ABS: SNR = 14.6065 dB (40 dB Goal) for S1_1 at 4.7995 GHz.
+      ABS: Time = 0.075 seconds.
+
+    Frequency:  4.7995 GHZ
+      Waveguide mode time:  0.484 seconds.
+      Matrix fill time:  9 minutes 4 seconds.
+      Matrix solve time:  10 minutes 18 seconds.
+      4.79950000 0.999347 122.29 0.002716 -147.6 0.002716 -147.6 0.999350 122.52
+      ! P1 F=4.7995 Eeff=(6.55378 - j3.02267e-05) Z0=(56.8873 + j0.000131201)
+      ! P2 F=4.7995 Eeff=(6.55378 - j3.02267e-05) Z0=(56.8873 + j0.000131201)
+      Total time per frequency:  19 minutes 24 seconds.
+      ABS: SNR = 17.488 dB (40 dB Goal) for S1_1 at 4.958 GHz.
+      ABS: Time = 0.070 seconds.
+
+    Frequency:  4.958 GHZ
+      Waveguide mode time:  0.505 seconds.
+      Matrix fill time:  9 minutes 41 seconds.
+      Matrix solve time:  10 minutes 2 seconds.
+      4.95800000 0.139747 -85.77 0.989407 5.3450 0.989407 5.3450 0.139747 -83.59
+      ! P1 F=4.958 Eeff=(6.55377 - j3.02266e-05) Z0=(56.8872 + j0.000131201)
+      ! P2 F=4.958 Eeff=(6.55377 - j3.02266e-05) Z0=(56.8872 + j0.000131201)
+      Total time per frequency:  19 minutes 47 seconds.
+      ABS: SNR = 11.7817 dB (40 dB Goal) for S1_1 at 5.1065 GHz.
+      ABS: Time = 0.070 seconds.
+
+    Frequency:  5.1065 GHZ
+      Waveguide mode time:  0.470 seconds.
+      Matrix fill time:  8 minutes 34 seconds.
+      Matrix solve time:  9 minutes 37 seconds.
+      5.10650000 0.006702 -55.39 0.999112 -177.8 0.999112 -177.8 0.006727 -120.4
+      ! P1 F=5.1065 Eeff=(6.55376 - j3.02266e-05) Z0=(56.887 + j0.000131202)
+      ! P2 F=5.1065 Eeff=(6.55376 - j3.02266e-05) Z0=(56.887 + j0.000131202)
+      Total time per frequency:  18 minutes 14 seconds.
+      ABS: SNR = 14.2952 dB (40 dB Goal) for S1_1 at 4.9685 GHz.
+      ABS: Time = 0.072 seconds.
+
+    Frequency:  4.9685 GHZ
+      Waveguide mode time:  0.480 seconds.
+      Matrix fill time:  8 minutes 33 seconds.
+      Matrix solve time:  9 minutes 40 seconds.
+      4.96850000 0.149136 -126.1 0.988036 -34.89 0.988036 -34.89 0.149137 -123.7
+      ! P1 F=4.9685 Eeff=(6.55377 - j3.02267e-05) Z0=(56.8872 + j0.0001312)
+      ! P2 F=4.9685 Eeff=(6.55377 - j3.02267e-05) Z0=(56.8872 + j0.0001312)
+      Total time per frequency:  18 minutes 16 seconds.
+      ABS: SNR = 14.6845 dB (40 dB Goal) for S2_2 at 5.1705 GHz.
+      ABS: Time = 0.072 seconds.
+
+    Frequency:  5.1705 GHZ
+      Waveguide mode time:  0.452 seconds.
+      Matrix fill time:  8 minutes 28 seconds.
+      Matrix solve time:  9 minutes 42 seconds.
+      5.17050000 0.656838 176.45 0.752524 -93.70 0.752524 -93.70 0.656855 176.02
+      ! P1 F=5.1705 Eeff=(6.55375 - j3.02265e-05) Z0=(56.887 + j0.000131201)
+      ! P2 F=5.1705 Eeff=(6.55375 - j3.02265e-05) Z0=(56.887 + j0.000131201)
+      Total time per frequency:  18 minutes 12 seconds.
+      ABS: SNR = 0.168832 dB (40 dB Goal) for S1_2 at 4.8 GHz.
+      ABS: Time = 0.064 seconds.
+
+    Frequency:  4.8 GHZ
+      Waveguide mode time:  0.499 seconds.
+      Matrix fill time:  8 minutes 31 seconds.
+      Matrix solve time:  9 minutes 38 seconds.
+      4.80000000 0.999333 120.64 0.003741 -149.3 0.003741 -149.3 0.999337 120.89
+      ! P1 F=4.8 Eeff=(6.55378 - j3.02266e-05) Z0=(56.8873 + j0.0001312)
+      ! P2 F=4.8 Eeff=(6.55378 - j3.02266e-05) Z0=(56.8873 + j0.0001312)
+      Total time per frequency:  18 minutes 13 seconds.
+      ABS: SNR = -2.21211 dB (40 dB Goal) for S1_2 at 5.1615 GHz.
+      ABS: Time = 0.070 seconds.
+
+    Frequency:  5.1615 GHZ
+      Waveguide mode time:  0.435 seconds.
+      Matrix fill time:  8 minutes 29 seconds.
+      Matrix solve time:  9 minutes 40 seconds.
+      5.16150000 0.350022 -136.9 0.935410 -47.97 0.935410 -47.97 0.350056 -139.3
+      ! P1 F=5.1615 Eeff=(6.55375 - j3.02263e-05) Z0=(56.887 + j0.000131201)
+      ! P2 F=5.1615 Eeff=(6.55375 - j3.02263e-05) Z0=(56.887 + j0.000131201)
+      Total time per frequency:  18 minutes 11 seconds.
+      ABS: SNR = -1.21077 dB (40 dB Goal) for S1_1 at 5.1455 GHz.
+      ABS: Time = 0.065 seconds.
+
+    Frequency:  5.1455 GHZ
+      Waveguide mode time:  0.422 seconds.
+      Matrix fill time:  8 minutes 30 seconds.
+      Matrix solve time:  9 minutes 38 seconds.
+      5.14550000 0.205269 120.36 0.977799 32.386 0.977799 32.386 0.205288 124.52
+      ! P1 F=5.1455 Eeff=(6.55375 - j3.02264e-05) Z0=(56.887 + j0.000131201)
+      ! P2 F=5.1455 Eeff=(6.55375 - j3.02264e-05) Z0=(56.887 + j0.000131201)
+      Total time per frequency:  18 minutes 11 seconds.
+      ABS: SNR = 4.01844 dB (40 dB Goal) for S1_1 at 5.156 GHz.
+      ABS: Time = 0.057 seconds.
+
+    Frequency:  5.156 GHZ
+      Waveguide mode time:  0.430 seconds.
+      Matrix fill time:  8 minutes 27 seconds.
+      Matrix solve time:  9 minutes 41 seconds.
+      5.15600000 0.103982 -103.5 0.993428 -17.91 0.993428 -17.91 0.104072 -112.9
+      ! P1 F=5.156 Eeff=(6.55375 - j3.02266e-05) Z0=(56.887 + j0.000131201)
+      ! P2 F=5.156 Eeff=(6.55375 - j3.02266e-05) Z0=(56.887 + j0.000131201)
+      Total time per frequency:  18 minutes 11 seconds.
+      ABS: SNR = -0.125386 dB (40 dB Goal) for S1_1 at 5.1535 GHz.
+      ABS: Time = 0.080 seconds.
+
+    Frequency:  5.1535 GHZ
+      Waveguide mode time:  0.487 seconds.
+      Matrix fill time:  8 minutes 26 seconds.
+      Matrix solve time:  9 minutes 35 seconds.
+      5.15350000 0.009256 -32.75 0.998884 -4.884 0.998884 -4.884 0.010067 -159.4
+      ! P1 F=5.1535 Eeff=(6.55375 - j3.02264e-05) Z0=(56.887 + j0.000131202)
+      ! P2 F=5.1535 Eeff=(6.55375 - j3.02264e-05) Z0=(56.887 + j0.000131202)
+      Total time per frequency:  18 minutes 4 seconds.
+      ABS: SNR = 5.23229 dB (40 dB Goal) for S1_2 at 5.201 GHz.
+      ABS: Time = 0.071 seconds.
+
+    Frequency:  5.201 GHZ
+      Waveguide mode time:  0.455 seconds.
+      Matrix fill time:  8 minutes 27 seconds.
+      Matrix solve time:  9 minutes 36 seconds.
+      5.20100000 0.883454 154.24 0.466013 63.515 0.466013 63.515 0.883487 152.63
+      ! P1 F=5.201 Eeff=(6.55375 - j3.02262e-05) Z0=(56.887 + j0.0001312)
+      ! P2 F=5.201 Eeff=(6.55375 - j3.02262e-05) Z0=(56.887 + j0.0001312)
+      Total time per frequency:  18 minutes 6 seconds.
+      ABS: SNR = 17.5668 dB (40 dB Goal) for S2_2 at 4.8315 GHz.
+      ABS: Time = 0.074 seconds.
+
+    Frequency:  4.8315 GHZ
+      Waveguide mode time:  0.437 seconds.
+      Matrix fill time:  8 minutes 26 seconds.
+      Matrix solve time:  9 minutes 33 seconds.
+      4.83150000 0.165477 42.476 0.983818 -46.36 0.983818 -46.36 0.165467 44.074
+      ! P1 F=4.8315 Eeff=(6.55378 - j3.0227e-05) Z0=(56.8873 + j0.0001312)
+      ! P2 F=4.8315 Eeff=(6.55378 - j3.0227e-05) Z0=(56.8873 + j0.0001312)
+      Total time per frequency:  18 minutes 1 second.
+      ABS: SNR = 16.266 dB (40 dB Goal) for S1_1 at 5.114 GHz.
+      ABS: Time = 0.062 seconds.
+
+    Frequency:  5.114 GHZ
+      Waveguide mode time:  0.487 seconds.
+      Matrix fill time:  8 minutes 24 seconds.
+      Matrix solve time:  9 minutes 35 seconds.
+      5.11400000 0.084890 -114.9 0.995522 153.83 0.995522 153.83 0.084898 -117.5
+      ! P1 F=5.114 Eeff=(6.55376 - j3.02266e-05) Z0=(56.887 + j0.000131201)
+      ! P2 F=5.114 Eeff=(6.55376 - j3.02266e-05) Z0=(56.887 + j0.000131201)
+      Total time per frequency:  18 minutes 1 second.
+      ABS: SNR = 9.49645 dB (40 dB Goal) for S1_2 at 5.1925 GHz.
+      ABS: Time = 0.072 seconds.
+
+    Frequency:  5.1925 GHZ
+      Waveguide mode time:  0.443 seconds.
+      Matrix fill time:  8 minutes 28 seconds.
+      Matrix solve time:  9 minutes 47 seconds.
+      5.19250000 0.024155 -77.99 0.996976 141.41 0.996976 141.41 0.027219 175.63
+      ! P1 F=5.1925 Eeff=(6.55375 - j3.02263e-05) Z0=(56.887 + j0.000131202)
+      ! P2 F=5.1925 Eeff=(6.55375 - j3.02263e-05) Z0=(56.887 + j0.000131202)
+      Total time per frequency:  18 minutes 18 seconds.
+      ABS: SNR = 6.194 dB (40 dB Goal) for S1_1 at 5.192 GHz.
+      ABS: Time = 0.071 seconds.
+
+    Frequency:  5.192 GHZ
+      Waveguide mode time:  0.434 seconds.
+      Matrix fill time:  8 minutes 25 seconds.
+      Matrix solve time:  9 minutes 35 seconds.
+      5.19200000 0.071953 42.776 0.994749 147.41 0.994749 147.41 0.072994 74.838
+      ! P1 F=5.192 Eeff=(6.55375 - j3.02266e-05) Z0=(56.887 + j0.000131201)
+      ! P2 F=5.192 Eeff=(6.55375 - j3.02266e-05) Z0=(56.887 + j0.000131201)
+      Total time per frequency:  18 minutes 2 seconds.
+      ABS: SNR = 16.4755 dB (40 dB Goal) for S1_1 at 5.178 GHz.
+      ABS: Time = 0.071 seconds.
+
+    Frequency:  5.178 GHZ
+      Waveguide mode time:  0.500 seconds.
+      Matrix fill time:  8 minutes 31 seconds.
+      Matrix solve time:  9 minutes 38 seconds.
+      5.17800000 0.743586 144.52 0.667088 -125.3 0.667088 -125.3 0.743603 144.89
+      ! P1 F=5.178 Eeff=(6.55375 - j3.02267e-05) Z0=(56.887 + j0.000131201)
+      ! P2 F=5.178 Eeff=(6.55375 - j3.02267e-05) Z0=(56.887 + j0.000131201)
+      Total time per frequency:  18 minutes 12 seconds.
+      ABS: SNR = 16.9014 dB (40 dB Goal) for S1_1 at 5.1875 GHz.
+      ABS: Time = 0.060 seconds.
+
+    Frequency:  5.1875 GHZ
+      Waveguide mode time:  0.491 seconds.
+      Matrix fill time:  8 minutes 28 seconds.
+      Matrix solve time:  9 minutes 40 seconds.
+      5.18750000 0.564418 97.785 0.823542 -171.0 0.823542 -171.0 0.564482 100.29
+      ! P1 F=5.1875 Eeff=(6.55375 - j3.02263e-05) Z0=(56.887 + j0.000131201)
+      ! P2 F=5.1875 Eeff=(6.55375 - j3.02263e-05) Z0=(56.887 + j0.000131201)
+      Total time per frequency:  18 minutes 11 seconds.
+      ABS: SNR = 18.2079 dB (40 dB Goal) for S1_2 at 4.801 GHz.
+      ABS: Time = 0.073 seconds.
+
+    Frequency:  4.801 GHZ
+      Waveguide mode time:  0.465 seconds.
+      Matrix fill time:  8 minutes 31 seconds.
+      Matrix solve time:  9 minutes 44 seconds.
+      4.80100000 0.999301 117.27 0.005998 -152.7 0.005998 -152.7 0.999304 117.53
+      ! P1 F=4.801 Eeff=(6.55378 - j3.02267e-05) Z0=(56.8873 + j0.000131201)
+      ! P2 F=4.801 Eeff=(6.55378 - j3.02267e-05) Z0=(56.8873 + j0.000131201)
+      Total time per frequency:  18 minutes 18 seconds.
+      ABS: SNR = 18.306 dB (40 dB Goal) for S2_2 at 4.8725 GHz.
+      ABS: Time = 0.074 seconds.
+
+    Frequency:  4.8725 GHZ
+      Waveguide mode time:  0.517 seconds.
+      Matrix fill time:  8 minutes 58 seconds.
+      Matrix solve time:  10 minutes 7 seconds.
+      4.87250000 0.326131 -65.01 0.944239 25.625 0.944239 25.625 0.326128 -63.78
+      ! P1 F=4.8725 Eeff=(6.55378 - j3.02269e-05) Z0=(56.8872 + j0.000131201)
+      ! P2 F=4.8725 Eeff=(6.55378 - j3.02269e-05) Z0=(56.8872 + j0.000131201)
+      Total time per frequency:  19 minutes 10 seconds.
+      ABS: SNR = 18.8653 dB (40 dB Goal) for S1_1 at 5.054 GHz.
+      ABS: Time = 0.076 seconds.
+
+    Frequency:  5.054 GHZ
+      Waveguide mode time:  0.523 seconds.
+      Matrix fill time:  9 minutes 8 seconds.
+      Matrix solve time:  10 minutes 31 seconds.
+      5.05400000 0.058677 -74.16 0.997551 15.027 0.997551 15.027 0.058683 -75.85
+      ! P1 F=5.054 Eeff=(6.55376 - j3.02268e-05) Z0=(56.8871 + j0.000131201)
+      ! P2 F=5.054 Eeff=(6.55376 - j3.02268e-05) Z0=(56.8871 + j0.000131201)
+      Total time per frequency:  19 minutes 43 seconds.
+      ABS: SNR = 21.1235 dB (40 dB Goal) for S1_1 at 4.825 GHz.
+      ABS: Time = 0.084 seconds.
+
+    Frequency:  4.825 GHZ
+      Waveguide mode time:  0.624 seconds.
+      Matrix fill time:  8 minutes 26 seconds.
+      Matrix solve time:  9 minutes 44 seconds.
+      4.82500000 0.715307 -39.49 0.694769 50.754 0.694769 50.754 0.715306 -38.63
+      ! P1 F=4.825 Eeff=(6.55378 - j3.02268e-05) Z0=(56.8873 + j0.000131201)
+      ! P2 F=4.825 Eeff=(6.55378 - j3.02268e-05) Z0=(56.8873 + j0.000131201)
+      Total time per frequency:  18 minutes 14 seconds.
+      ABS: SNR = 21.0707 dB (40 dB Goal) for S2_2 at 4.907 GHz.
+      ABS: Time = 0.074 seconds.
+
+    Frequency:  4.907 GHZ
+      Waveguide mode time:  0.464 seconds.
+      Matrix fill time:  9 minutes 4 seconds.
+      Matrix solve time:  10 minutes.
+      4.90700000 0.153853 -55.92 0.987145 -144.8 0.987145 -144.8 0.153851 -53.81
+      ! P1 F=4.907 Eeff=(6.55377 - j3.02269e-05) Z0=(56.8872 + j0.000131201)
+      ! P2 F=4.907 Eeff=(6.55377 - j3.02269e-05) Z0=(56.8872 + j0.000131201)
+      Total time per frequency:  19 minutes 7 seconds.
+      ABS: SNR = 21.2745 dB (40 dB Goal) for S2_2 at 4.8435 GHz.
+      ABS: Time = 0.075 seconds.
+
+    Frequency:  4.8435 GHZ
+      Waveguide mode time:  0.505 seconds.
+      Matrix fill time:  8 minutes 49 seconds.
+      Matrix solve time:  10 minutes 9 seconds.
+      4.84350000 0.432694 -60.06 0.899973 -149.6 0.899973 -149.6 0.432692 -59.02
+      ! P1 F=4.8435 Eeff=(6.55378 - j3.0227e-05) Z0=(56.8873 + j0.000131201)
+      ! P2 F=4.8435 Eeff=(6.55378 - j3.0227e-05) Z0=(56.8873 + j0.000131201)
+      Total time per frequency:  19 minutes 3 seconds.
+      ABS: SNR = 23.7481 dB (40 dB Goal) for S1_1 at 5.0895 GHz.
+      ABS: Time = 0.075 seconds.
+
+    Frequency:  5.0895 GHZ
+      Waveguide mode time:  0.505 seconds.
+      Matrix fill time:  8 minutes 58 seconds.
+      Matrix solve time:  10 minutes 27 seconds.
+      5.08950000 0.095856 152.84 0.994560 -114.2 0.994560 -114.2 0.095853 158.71
+      ! P1 F=5.0895 Eeff=(6.55376 - j3.02266e-05) Z0=(56.8871 + j0.000131201)
+      ! P2 F=5.0895 Eeff=(6.55376 - j3.02266e-05) Z0=(56.8871 + j0.000131201)
+      Total time per frequency:  19 minutes 29 seconds.
+      ABS: SNR = 24.3132 dB (40 dB Goal) for S1_2 at 4.7255 GHz.
+      ABS: Time = 0.077 seconds.
+
+    Frequency:  4.7255 GHZ
+      Waveguide mode time:  0.536 seconds.
+      Matrix fill time:  9 minutes 42 seconds.
+      Matrix solve time:  9 minutes 53 seconds.
+      4.72550000 0.999789 -130.1 0.010912 139.71 0.010912 139.71 0.999789 -130.2
+      ! P1 F=4.7255 Eeff=(6.55379 - j3.0227e-05) Z0=(56.8874 + j0.0001312)
+      ! P2 F=4.7255 Eeff=(6.55379 - j3.0227e-05) Z0=(56.8874 + j0.0001312)
+      Total time per frequency:  19 minutes 39 seconds.
+      ABS: SNR = 18.0014 dB (40 dB Goal) for S1_2 at 4.8015 GHz.
+      ABS: Time = 0.086 seconds.
+
+    Frequency:  4.8015 GHZ
+      Waveguide mode time:  0.516 seconds.
+      Matrix fill time:  8 minutes 54 seconds.
+      Matrix solve time:  10 minutes 3 seconds.
+      4.80150000 0.999281 115.53 0.007242 -154.4 0.007242 -154.4 0.999285 115.81
+      ! P1 F=4.8015 Eeff=(6.55378 - j3.02269e-05) Z0=(56.8873 + j0.000131201)
+      ! P2 F=4.8015 Eeff=(6.55378 - j3.02269e-05) Z0=(56.8873 + j0.000131201)
+      Total time per frequency:  19 minutes 1 second.
+      ABS: SNR = 24.9167 dB (40 dB Goal) for S1_1 at 5.2195 GHz.
+      ABS: Time = 0.081 seconds.
+
+    Frequency:  5.2195 GHZ
+      Waveguide mode time:  0.470 seconds.
+      Matrix fill time:  8 minutes 52 seconds.
+      Matrix solve time:  9 minutes 58 seconds.
+      5.21950000 0.993748 111.44 0.106857 20.971 0.106857 20.971 0.993768 110.68
+      ! P1 F=5.2195 Eeff=(6.55375 - j3.02262e-05) Z0=(56.8869 + j0.000131201)
+      ! P2 F=5.2195 Eeff=(6.55375 - j3.02262e-05) Z0=(56.8869 + j0.000131201)
+      Total time per frequency:  18 minutes 53 seconds.
+      ABS: SNR = 25.5477 dB (40 dB Goal) for S2_2 at 4.861 GHz.
+      ABS: Time = 0.076 seconds.
+
+    Frequency:  4.861 GHZ
+      Waveguide mode time:  0.500 seconds.
+      Matrix fill time:  8 minutes 43 seconds.
+      Matrix solve time:  9 minutes 47 seconds.
+      4.86100000 0.083578 -0.271 0.995248 91.623 0.995248 91.623 0.083562 2.9937
+      ! P1 F=4.861 Eeff=(6.55378 - j3.02267e-05) Z0=(56.8872 + j0.000131201)
+      ! P2 F=4.861 Eeff=(6.55378 - j3.02267e-05) Z0=(56.8872 + j0.000131201)
+      Total time per frequency:  18 minutes 34 seconds.
+      ABS: SNR = 24.8144 dB (40 dB Goal) for S1_1 at 5.013 GHz.
+      ABS: Time = 0.090 seconds.
+
+    Frequency:  5.013 GHZ
+      Waveguide mode time:  0.588 seconds.
+      Matrix fill time:  8 minutes 49 seconds.
+      Matrix solve time:  9 minutes 58 seconds.
+      5.01300000 0.057008 -112.6 0.997598 159.76 0.997598 159.76 0.057015 -107.7
+      ! P1 F=5.013 Eeff=(6.55377 - j3.02267e-05) Z0=(56.8871 + j0.000131201)
+      ! P2 F=5.013 Eeff=(6.55377 - j3.02267e-05) Z0=(56.8871 + j0.000131201)
+      Total time per frequency:  18 minutes 52 seconds.
+      ABS: SNR = 27.795 dB (40 dB Goal) for S1_1 at 5.152 GHz.
+      ABS: Time = 0.068 seconds.
+
+    Frequency:  5.152 GHZ
+      Waveguide mode time:  0.456 seconds.
+      Matrix fill time:  8 minutes 45 seconds.
+      Matrix solve time:  10 minutes 6 seconds.
+      5.15200000 0.048691 82.979 0.997782 2.6217 0.997782 2.6217 0.048833 103.19
+      ! P1 F=5.152 Eeff=(6.55375 - j3.02265e-05) Z0=(56.887 + j0.000131201)
+      ! P2 F=5.152 Eeff=(6.55375 - j3.02265e-05) Z0=(56.887 + j0.000131201)
+      Total time per frequency:  18 minutes 55 seconds.
+      ABS: SNR = 26.0293 dB (40 dB Goal) for S1_1 at 5.183 GHz.
+      ABS: Time = 0.097 seconds.
+
+    Frequency:  5.183 GHZ
+      Waveguide mode time:  0.444 seconds.
+      Matrix fill time:  9 minutes 14 seconds.
+      Matrix solve time:  9 minutes 48 seconds.
+      5.18300000 0.714611 123.14 0.697884 -146.3 0.697884 -146.3 0.714637 124.20
+      ! P1 F=5.183 Eeff=(6.55375 - j3.02264e-05) Z0=(56.887 + j0.000131201)
+      ! P2 F=5.183 Eeff=(6.55375 - j3.02264e-05) Z0=(56.887 + j0.000131201)
+      Total time per frequency:  19 minutes 6 seconds.
+      ABS: SNR = 29.7867 dB (40 dB Goal) for S1_1 at 5.1205 GHz.
+      ABS: Time = 0.074 seconds.
+
+    Frequency:  5.1205 GHZ
+      Waveguide mode time:  0.503 seconds.
+      Matrix fill time:  8 minutes 42 seconds.
+      Matrix solve time:  9 minutes 59 seconds.
+      5.12050000 0.159544 -140.9 0.986326 129.15 0.986326 129.15 0.159551 -140.9
+      ! P1 F=5.1205 Eeff=(6.55376 - j3.02265e-05) Z0=(56.887 + j0.000131201)
+      ! P2 F=5.1205 Eeff=(6.55376 - j3.02265e-05) Z0=(56.887 + j0.000131201)
+      Total time per frequency:  18 minutes 45 seconds.
+      ABS: SNR = 27.3454 dB (40 dB Goal) for S1_1 at 5.1395 GHz.
+      ABS: Time = 0.074 seconds.
+
+    Frequency:  5.1395 GHZ
+      Waveguide mode time:  0.508 seconds.
+      Matrix fill time:  8 minutes 37 seconds.
+      Matrix solve time:  9 minutes 41 seconds.
+      5.13950000 0.264210 145.62 0.963606 56.879 0.963606 56.879 0.264219 148.17
+      ! P1 F=5.1395 Eeff=(6.55375 - j3.02264e-05) Z0=(56.887 + j0.0001312)
+      ! P2 F=5.1395 Eeff=(6.55375 - j3.02264e-05) Z0=(56.887 + j0.0001312)
+      Total time per frequency:  18 minutes 21 seconds.
+      ABS: SNR = 28.3671 dB (40 dB Goal) for S1_2 at 5.2365 GHz.
+      ABS: Time = 0.064 seconds.
+
+    Frequency:  5.2365 GHZ
+      Waveguide mode time:  0.416 seconds.
+      Matrix fill time:  8 minutes 40 seconds.
+      Matrix solve time:  9 minutes 49 seconds.
+      5.23650000 0.997234 92.023 0.070159 1.7710 0.070159 1.7710 0.997238 91.677
+      ! P1 F=5.2365 Eeff=(6.55374 - j3.02264e-05) Z0=(56.8869 + j0.000131201)
+      ! P2 F=5.2365 Eeff=(6.55374 - j3.02264e-05) Z0=(56.8869 + j0.000131201)
+      Total time per frequency:  18 minutes 32 seconds.
+      ABS: SNR = 30.3646 dB (40 dB Goal) for S2_2 at 4.8955 GHz.
+      ABS: Time = 0.092 seconds.
+
+    Frequency:  4.8955 GHZ
+      Waveguide mode time:  0.538 seconds.
+      Matrix fill time:  8 minutes 58 seconds.
+      Matrix solve time:  10 minutes 3 seconds.
+      4.89550000 0.075287 -178.9 0.996153 -89.68 0.996153 -89.68 0.075277 179.86
+      ! P1 F=4.8955 Eeff=(6.55378 - j3.02265e-05) Z0=(56.8872 + j0.000131201)
+      ! P2 F=4.8955 Eeff=(6.55378 - j3.02265e-05) Z0=(56.8872 + j0.000131201)
+      Total time per frequency:  19 minutes 5 seconds.
+      ABS: SNR = 26.528 dB (40 dB Goal) for S1_1 at 4.9885 GHz.
+      ABS: Time = 0.087 seconds.
+
+    Frequency:  4.9885 GHZ
+      Waveguide mode time:  0.518 seconds.
+      Matrix fill time:  8 minutes 55 seconds.
+      Matrix solve time:  10 minutes 7 seconds.
+      4.98850000 0.033592 156.76 0.998639 -110.7 0.998639 -110.7 0.033592 161.94
+      ! P1 F=4.9885 Eeff=(6.55377 - j3.02267e-05) Z0=(56.8871 + j0.000131201)
+      ! P2 F=4.9885 Eeff=(6.55377 - j3.02267e-05) Z0=(56.8871 + j0.000131201)
+      Total time per frequency:  19 minutes 6 seconds.
+      ABS: SNR = 26.5157 dB (40 dB Goal) for S1_2 at 4.8165 GHz.
+      ABS: Time = 0.080 seconds.
+
+    Frequency:  4.8165 GHZ
+      Waveguide mode time:  0.476 seconds.
+      Matrix fill time:  9 minutes 13 seconds.
+      Matrix solve time:  10 minutes 3 seconds.
+      4.81650000 0.986902 43.923 0.153042 134.15 0.153042 134.15 0.986907 44.598
+      ! P1 F=4.8165 Eeff=(6.55378 - j3.02267e-05) Z0=(56.8873 + j0.000131201)
+      ! P2 F=4.8165 Eeff=(6.55378 - j3.02267e-05) Z0=(56.8873 + j0.000131201)
+      Total time per frequency:  19 minutes 20 seconds.
+      ABS: SNR = 29.2914 dB (40 dB Goal) for S1_1 at 5.196 GHz.
+      ABS: Time = 0.077 seconds.
+
+    Frequency:  5.196 GHZ
+      Waveguide mode time:  0.503 seconds.
+      Matrix fill time:  9 minutes 13 seconds.
+      Matrix solve time:  10 minutes 16 seconds.
+      5.19600000 0.572531 -168.3 0.817050 99.987 0.817050 99.987 0.572650 -172.2
+      ! P1 F=5.196 Eeff=(6.55375 - j3.02263e-05) Z0=(56.887 + j0.000131201)
+      ! P2 F=5.196 Eeff=(6.55375 - j3.02263e-05) Z0=(56.887 + j0.000131201)
+      Total time per frequency:  19 minutes 33 seconds.
+      ABS: SNR = 31.1718 dB (40 dB Goal) for S1_1 at 4.8515 GHz.
+      ABS: Time = 0.075 seconds.
+
+    Frequency:  4.8515 GHZ
+      Waveguide mode time:  0.488 seconds.
+      Matrix fill time:  9 minutes 6 seconds.
+      Matrix solve time:  10 minutes 25 seconds.
+      4.85150000 0.248887 -115.3 0.967115 154.86 0.967115 154.86 0.248881 -114.8
+      ! P1 F=4.8515 Eeff=(6.55378 - j3.02267e-05) Z0=(56.8873 + j0.0001312)
+      ! P2 F=4.8515 Eeff=(6.55378 - j3.02267e-05) Z0=(56.8873 + j0.0001312)
+      Total time per frequency:  19 minutes 34 seconds.
+      ABS: SNR = 27.2647 dB (40 dB Goal) for S2_2 at 4.931 GHz.
+      ABS: Time = 0.076 seconds.
+
+    Frequency:  4.931 GHZ
+      Waveguide mode time:  0.608 seconds.
+      Matrix fill time:  8 minutes 46 seconds.
+      Matrix solve time:  10 minutes 24 seconds.
+      4.93100000 0.152432 -156.8 0.987458 113.82 0.987458 113.82 0.152432 -155.5
+      ! P1 F=4.931 Eeff=(6.55377 - j3.02266e-05) Z0=(56.8872 + j0.000131202)
+      ! P2 F=4.931 Eeff=(6.55377 - j3.02266e-05) Z0=(56.8872 + j0.000131202)
+      Total time per frequency:  19 minutes 14 seconds.
+      ABS: SNR = 30.4165 dB (40 dB Goal) for S1_2 at 5.2115 GHz.
+      ABS: Time = 0.080 seconds.
+
+    Frequency:  5.2115 GHZ
+      Waveguide mode time:  0.507 seconds.
+      Matrix fill time:  9 minutes 41 seconds.
+      Matrix solve time:  9 minutes 58 seconds.
+      5.21150000 0.967645 119.33 0.249150 29.237 0.249150 29.237 0.967714 119.24
+      ! P1 F=5.2115 Eeff=(6.55375 - j3.02264e-05) Z0=(56.887 + j0.000131202)
+      ! P2 F=5.2115 Eeff=(6.55375 - j3.02264e-05) Z0=(56.887 + j0.000131202)
+      Total time per frequency:  19 minutes 43 seconds.
+      ABS: SNR = 22.5714 dB (40 dB Goal) for S1_2 at 5.215 GHz.
+      ABS: Time = 0.077 seconds.
+
+    Frequency:  5.215 GHZ
+      Waveguide mode time:  0.490 seconds.
+      Matrix fill time:  8 minutes 52 seconds.
+      Matrix solve time:  10 minutes 40 seconds.
+      5.21500000 0.995836 122.37 0.070318 30.624 0.070318 30.624 0.996032 120.75
+      ! P1 F=5.215 Eeff=(6.55375 - j3.02265e-05) Z0=(56.887 + j0.000131201)
+      ! P2 F=5.215 Eeff=(6.55375 - j3.02265e-05) Z0=(56.887 + j0.000131201)
+      Total time per frequency:  19 minutes 36 seconds.
+      ABS: SNR = 8.40484 dB (40 dB Goal) for S1_2 at 5.213 GHz.
+      ABS: Time = 0.077 seconds.
+
+    Frequency:  5.213 GHZ
+      Waveguide mode time:  0.510 seconds.
+      Matrix fill time:  9 minutes.
+      Matrix solve time:  9 minutes 58 seconds.
+      5.21300000 0.921806 107.09 0.373991 17.276 0.373991 17.276 0.922751 108.87
+      ! P1 F=5.213 Eeff=(6.55375 - j3.02264e-05) Z0=(56.887 + j0.000131201)
+      ! P2 F=5.213 Eeff=(6.55375 - j3.02264e-05) Z0=(56.887 + j0.000131201)
+      Total time per frequency:  19 minutes 2 seconds.
+      ABS: SNR = 2.10272 dB (40 dB Goal) for S2_2 at 5.214 GHz.
+      ABS: Time = 0.159 seconds.
+
+    Frequency:  5.214 GHZ
+      Waveguide mode time:  0.450 seconds.
+      Matrix fill time:  9 minutes 3 seconds.
+      Matrix solve time:  10 minutes 3 seconds.
+      5.21400000 0.980784 136.83 0.123637 -130.4 0.123637 -130.4 0.982646 132.94
+      ! P1 F=5.214 Eeff=(6.55375 - j3.02264e-05) Z0=(56.887 + j0.000131201)
+      ! P2 F=5.214 Eeff=(6.55375 - j3.02264e-05) Z0=(56.887 + j0.000131201)
+      Total time per frequency:  19 minutes 9 seconds.
+      ABS: SNR = 14.8949 dB (40 dB Goal) for S1_1 at 5.2135 GHz.
+      ABS: Time = 0.102 seconds.
+
+    Frequency:  5.2135 GHZ
+      Waveguide mode time:  0.468 seconds.
+      Matrix fill time:  10 minutes 9 seconds.
+      Matrix solve time:  10 minutes 56 seconds.
+      5.21350000 0.383011 62.249 0.842154 -28.57 0.842154 -28.57 0.414361 82.496
+      ! P1 F=5.2135 Eeff=(6.55375 - j3.02265e-05) Z0=(56.887 + j0.000131202)
+      ! P2 F=5.2135 Eeff=(6.55375 - j3.02265e-05) Z0=(56.887 + j0.000131202)
+      Total time per frequency:  21 minutes 8 seconds.
+      ABS: SNR = 23.5722 dB (40 dB Goal) for S1_2 at 5.2075 GHz.
+      ABS: Time = 0.085 seconds.
+
+    Frequency:  5.2075 GHZ
+      Waveguide mode time:  0.492 seconds.
+      Matrix fill time:  9 minutes 53 seconds.
+      Matrix solve time:  11 minutes 14 seconds.
+      5.20750000 0.961962 130.70 0.270768 40.343 0.270768 40.343 0.961978 129.94
+      ! P1 F=5.2075 Eeff=(6.55375 - j3.02262e-05) Z0=(56.887 + j0.000131201)
+      ! P2 F=5.2075 Eeff=(6.55375 - j3.02262e-05) Z0=(56.887 + j0.000131201)
+      Total time per frequency:  21 minutes 10 seconds.
+      ABS: SNR = 15.285 dB (40 dB Goal) for S1_2 at 5.217 GHz.
+      ABS: Time = 0.096 seconds.
+
+    Frequency:  5.217 GHZ
+      Waveguide mode time:  0.519 seconds.
+      Matrix fill time:  9 minutes 56 seconds.
+      Matrix solve time:  11 minutes 22 seconds.
+      5.21700000 0.993596 116.00 0.106502 25.343 0.106502 25.343 0.993641 115.01
+      ! P1 F=5.217 Eeff=(6.55375 - j3.02264e-05) Z0=(56.8869 + j0.000131201)
+      ! P2 F=5.217 Eeff=(6.55375 - j3.02264e-05) Z0=(56.8869 + j0.000131201)
+      Total time per frequency:  21 minutes 23 seconds.
+      ABS: SNR = 26.6066 dB (40 dB Goal) for S1_2 at 5.21 GHz.
+      ABS: Time = 0.071 seconds.
+
+    Frequency:  5.21 GHZ
+      Waveguide mode time:  0.607 seconds.
+      Matrix fill time:  10 minutes 25 seconds.
+      Matrix solve time:  11 minutes 32 seconds.
+      5.21000000 0.969131 123.97 0.244015 33.749 0.244015 33.749 0.969157 123.52
+      ! P1 F=5.21 Eeff=(6.55375 - j3.02264e-05) Z0=(56.887 + j0.0001312)
+      ! P2 F=5.21 Eeff=(6.55375 - j3.02264e-05) Z0=(56.887 + j0.0001312)
+      Total time per frequency:  22 minutes 1 second.
+      ABS: SNR = 22.6318 dB (40 dB Goal) for S1_2 at 5.2255 GHz.
+      ABS: Time = 0.078 seconds.
+
+    Frequency:  5.2255 GHZ
+      Waveguide mode time:  0.442 seconds.
+      Matrix fill time:  10 minutes 4 seconds.
+      Matrix solve time:  11 minutes 29 seconds.
+      5.22550000 0.995376 103.30 0.091875 12.966 0.091875 12.966 0.995385 102.77
+      ! P1 F=5.2255 Eeff=(6.55375 - j3.02263e-05) Z0=(56.8869 + j0.0001312)
+      ! P2 F=5.2255 Eeff=(6.55375 - j3.02263e-05) Z0=(56.8869 + j0.0001312)
+      Total time per frequency:  21 minutes 37 seconds.
+      ABS: SNR = 29.7893 dB (40 dB Goal) for S1_2 at 4.7745 GHz.
+      ABS: Time = 0.078 seconds.
+
+    Frequency:  4.7745 GHZ
+      Waveguide mode time:  0.495 seconds.
+      Matrix fill time:  10 minutes 8 seconds.
+      Matrix solve time:  11 minutes 10 seconds.
+      4.77450000 0.999584 179.48 0.012658 89.361 0.012658 89.361 0.999584 179.49
+      ! P1 F=4.7745 Eeff=(6.55379 - j3.02271e-05) Z0=(56.8873 + j0.000131201)
+      ! P2 F=4.7745 Eeff=(6.55379 - j3.02271e-05) Z0=(56.8873 + j0.000131201)
+      Total time per frequency:  21 minutes 22 seconds.
+      ABS: SNR = 31.3706 dB (40 dB Goal) for S2_2 at 4.903 GHz.
+      ABS: Time = 0.081 seconds.
+
+    Frequency:  4.903 GHZ
+      Waveguide mode time:  0.426 seconds.
+      Matrix fill time:  10 minutes 25 seconds.
+      Matrix solve time:  11 minutes 18 seconds.
+      4.90300000 0.087260 -37.89 0.995214 -126.2 0.995214 -126.2 0.087254 -34.84
+      ! P1 F=4.903 Eeff=(6.55377 - j3.02265e-05) Z0=(56.8872 + j0.0001312)
+      ! P2 F=4.903 Eeff=(6.55377 - j3.02265e-05) Z0=(56.8872 + j0.0001312)
+      Total time per frequency:  21 minutes 46 seconds.
+      ABS: SNR = 32.0003 dB (40 dB Goal) for S1_1 at 5.0395 GHz.
+      ABS: Time = 0.091 seconds.
+
+    Frequency:  5.0395 GHZ
+      Waveguide mode time:  0.494 seconds.
+      Matrix fill time:  10 minutes 6 seconds.
+      Matrix solve time:  11 minutes 46 seconds.
+      5.03950000 0.011421 -8.839 0.999208 66.344 0.999208 66.344 0.011450 -38.97
+      ! P1 F=5.0395 Eeff=(6.55376 - j3.02265e-05) Z0=(56.8871 + j0.000131201)
+      ! P2 F=5.0395 Eeff=(6.55376 - j3.02265e-05) Z0=(56.8871 + j0.000131201)
+      Total time per frequency:  21 minutes 56 seconds.
+      ABS: SNR = 32.0073 dB (40 dB Goal) for S1_1 at 4.963 GHz.
+      ABS: Time = 0.084 seconds.
+
+    Frequency:  4.963 GHZ
+      Waveguide mode time:  0.484 seconds.
+      Matrix fill time:  9 minutes 57 seconds.
+      Matrix solve time:  10 minutes 59 seconds.
+      4.96300000 0.153155 -105.0 0.987424 -13.89 0.987424 -13.89 0.153155 -102.8
+      ! P1 F=4.963 Eeff=(6.55377 - j3.02264e-05) Z0=(56.8872 + j0.0001312)
+      ! P2 F=4.963 Eeff=(6.55377 - j3.02264e-05) Z0=(56.8872 + j0.0001312)
+      Total time per frequency:  20 minutes 59 seconds.
+      ABS: SNR = 32.063 dB (40 dB Goal) for S1_2 at 4.808 GHz.
+      ABS: Time = 0.078 seconds.
+
+    Frequency:  4.808 GHZ
+      Waveguide mode time:  0.493 seconds.
+      Matrix fill time:  10 minutes 46 seconds.
+      Matrix solve time:  11 minutes 18 seconds.
+      4.80800000 0.998536 89.931 0.034419 -180.0 0.034419 -180.0 0.998541 90.354
+      ! P1 F=4.808 Eeff=(6.55378 - j3.02267e-05) Z0=(56.8873 + j0.000131201)
+      ! P2 F=4.808 Eeff=(6.55378 - j3.02267e-05) Z0=(56.8873 + j0.000131201)
+      Total time per frequency:  22 minutes 6 seconds.
+      ABS: SNR = 33.3047 dB (40 dB Goal) for S1_1 at 5.026 GHz.
+      ABS: Time = 0.089 seconds.
+
+    Frequency:  5.026 GHZ
+      Waveguide mode time:  0.450 seconds.
+      Matrix fill time:  10 minutes.
+      Matrix solve time:  11 minutes 5 seconds.
+      5.02600000 0.034735 -161.8 0.998646 113.80 0.998646 113.80 0.034749 -150.4
+      ! P1 F=5.026 Eeff=(6.55376 - j3.02265e-05) Z0=(56.8871 + j0.000131201)
+      ! P2 F=5.026 Eeff=(6.55376 - j3.02265e-05) Z0=(56.8871 + j0.000131201)
+      Total time per frequency:  21 minutes 8 seconds.
+      ABS: SNR = 34.5126 dB (40 dB Goal) for S1_1 at 4.8295 GHz.
+      ABS: Time = 0.097 seconds.
+
+    Frequency:  4.8295 GHZ
+      Waveguide mode time:  0.497 seconds.
+      Matrix fill time:  10 minutes 6 seconds.
+      Matrix solve time:  11 minutes 17 seconds.
+      4.82950000 0.068569 -108.2 0.994801 -19.61 0.994801 -19.61 0.068533 -108.4
+      ! P1 F=4.8295 Eeff=(6.55378 - j3.02268e-05) Z0=(56.8873 + j0.000131201)
+      ! P2 F=4.8295 Eeff=(6.55378 - j3.02268e-05) Z0=(56.8873 + j0.000131201)
+      Total time per frequency:  21 minutes 27 seconds.
+      ABS: SNR = 33.1412 dB (40 dB Goal) for S2_2 at 4.9195 GHz.
+      ABS: Time = 0.082 seconds.
+
+    Frequency:  4.9195 GHZ
+      Waveguide mode time:  0.537 seconds.
+      Matrix fill time:  11 minutes 9 seconds.
+      Matrix solve time:  13 minutes 43 seconds.
+      4.91950000 0.231531 -109.6 0.971937 161.18 0.971937 161.18 0.231531 -108.1
+      ! P1 F=4.9195 Eeff=(6.55377 - j3.02268e-05) Z0=(56.8872 + j0.000131201)
+      ! P2 F=4.9195 Eeff=(6.55377 - j3.02268e-05) Z0=(56.8872 + j0.000131201)
+      Total time per frequency:  24 minutes 56 seconds.
+      ABS: SNR = 35.6477 dB (40 dB Goal) for S1_1 at 5.1015 GHz.
+      ABS: Time = 0.082 seconds.
+
+    Frequency:  5.1015 GHZ
+      Waveguide mode time:  0.522 seconds.
+      Matrix fill time:  12 minutes 7 seconds.
+      Matrix solve time:  13 minutes 56 seconds.
+      5.10150000 0.036860 104.25 0.998460 -158.9 0.998460 -158.9 0.036858 117.89
+      ! P1 F=5.1015 Eeff=(6.55376 - j3.02263e-05) Z0=(56.887 + j0.0001312)
+      ! P2 F=5.1015 Eeff=(6.55376 - j3.02263e-05) Z0=(56.887 + j0.0001312)
+      Total time per frequency:  26 minutes 7 seconds.
+      ABS: SNR = 36.1459 dB (40 dB Goal) for S2_2 at 4.8405 GHz.
+      ABS: Time = 0.080 seconds.
+
+    Frequency:  4.8405 GHZ
+      Waveguide mode time:  0.488 seconds.
+      Matrix fill time:  12 minutes 25 seconds.
+      Matrix solve time:  14 minutes 35 seconds.
+      4.84050000 0.453843 -38.38 0.889430 -127.8 0.889430 -127.8 0.453841 -37.23
+      ! P1 F=4.8405 Eeff=(6.55378 - j3.02266e-05) Z0=(56.8873 + j0.0001312)
+      ! P2 F=4.8405 Eeff=(6.55378 - j3.02266e-05) Z0=(56.8873 + j0.0001312)
+      Total time per frequency:  27 minutes 3 seconds.
+      ABS: SNR = 34.1679 dB (40 dB Goal) for S1_1 at 4.9425 GHz.
+      ABS: Time = 0.074 seconds.
+
+    Frequency:  4.9425 GHZ
+      Waveguide mode time:  0.509 seconds.
+      Matrix fill time:  12 minutes 23 seconds.
+      Matrix solve time:  14 minutes 13 seconds.
+      4.94250000 0.004089 163.46 0.999174 66.755 0.999174 66.755 0.004060 154.44
+      ! P1 F=4.9425 Eeff=(6.55377 - j3.02267e-05) Z0=(56.8872 + j0.000131202)
+      ! P2 F=4.9425 Eeff=(6.55377 - j3.02267e-05) Z0=(56.8872 + j0.000131202)
+      Total time per frequency:  26 minutes 41 seconds.
+      ABS: SNR = 36.249 dB (40 dB Goal) for S1_1 at 5.0605 GHz.
+      ABS: Time = 0.107 seconds.
+
+    Frequency:  5.0605 GHZ
+      Waveguide mode time:  0.497 seconds.
+      Matrix fill time:  12 minutes 11 seconds.
+      Matrix solve time:  14 minutes 11 seconds.
+      5.06050000 0.076359 -98.59 0.996342 -8.238 0.996342 -8.238 0.076363 -97.94
+      ! P1 F=5.0605 Eeff=(6.55376 - j3.02267e-05) Z0=(56.8871 + j0.000131202)
+      ! P2 F=5.0605 Eeff=(6.55376 - j3.02267e-05) Z0=(56.8871 + j0.000131202)
+      Total time per frequency:  26 minutes 26 seconds.
+      ABS: SNR = 36.356 dB (40 dB Goal) for S1_1 at 5.19 GHz.
+      ABS: Time = 0.081 seconds.
+
+    Frequency:  5.19 GHZ
+      Waveguide mode time:  0.485 seconds.
+      Matrix fill time:  12 minutes 10 seconds.
+      Matrix solve time:  14 minutes 2 seconds.
+      5.19000000 0.352987 76.313 0.933316 168.80 0.933316 168.80 0.353147 81.743
+      ! P1 F=5.19 Eeff=(6.55375 - j3.02264e-05) Z0=(56.887 + j0.000131201)
+      ! P2 F=5.19 Eeff=(6.55375 - j3.02264e-05) Z0=(56.887 + j0.000131201)
+      Total time per frequency:  26 minutes 15 seconds.
+      ABS: SNR = 36.3801 dB (40 dB Goal) for S2_2 at 4.8765 GHz.
+      ABS: Time = 0.085 seconds.
+
+    Frequency:  4.8765 GHZ
+      Waveguide mode time:  0.551 seconds.
+      Matrix fill time:  12 minutes 24 seconds.
+      Matrix solve time:  14 minutes 1 second.
+      4.87650000 0.344168 -85.42 0.937853 5.1101 0.937853 5.1101 0.344165 -84.36
+      ! P1 F=4.8765 Eeff=(6.55378 - j3.02267e-05) Z0=(56.8872 + j0.0001312)
+      ! P2 F=4.8765 Eeff=(6.55378 - j3.02267e-05) Z0=(56.8872 + j0.0001312)
+      Total time per frequency:  26 minutes 28 seconds.
+      ABS: SNR = 36.4669 dB (40 dB Goal) for S1_2 at 5.2145 GHz.
+      ABS: Time = 0.069 seconds.
+
+    Frequency:  5.2145 GHZ
+      Waveguide mode time:  0.496 seconds.
+      Matrix fill time:  12 minutes 14 seconds.
+      Matrix solve time:  14 minutes 6 seconds.
+      5.21450000 0.996496 126.19 0.027240 29.931 0.027240 29.931 0.996931 124.03
+      ! P1 F=5.2145 Eeff=(6.55375 - j3.02264e-05) Z0=(56.887 + j0.000131202)
+      ! P2 F=5.2145 Eeff=(6.55375 - j3.02264e-05) Z0=(56.887 + j0.000131202)
+      Total time per frequency:  26 minutes 22 seconds.
+      ABS: SNR = 38.7812 dB (40 dB Goal) for S1_2 at 4.7935 GHz.
+      ABS: Time = 0.084 seconds.
+
+    Frequency:  4.7935 GHZ
+      Waveguide mode time:  0.540 seconds.
+      Matrix fill time:  12 minutes.
+      Matrix solve time:  14 minutes 5 seconds.
+      4.79350000 0.999443 140.06 0.005609 49.981 0.005609 49.981 0.999445 140.20
+      ! P1 F=4.7935 Eeff=(6.55378 - j3.0227e-05) Z0=(56.8873 + j0.000131201)
+      ! P2 F=4.7935 Eeff=(6.55378 - j3.0227e-05) Z0=(56.8873 + j0.000131201)
+      Total time per frequency:  26 minutes 10 seconds.
+      ABS: SNR = 38.4195 dB (40 dB Goal) for S1_1 at 5.149 GHz.
+      ABS: Time = 0.090 seconds.
+
+    Frequency:  5.149 GHZ
+      Waveguide mode time:  0.507 seconds.
+      Matrix fill time:  12 minutes 9 seconds.
+      Matrix solve time:  14 minutes 8 seconds.
+      5.14900000 0.134602 103.53 0.989937 16.888 0.989937 16.888 0.134642 110.50
+      ! P1 F=5.149 Eeff=(6.55375 - j3.02268e-05) Z0=(56.887 + j0.000131201)
+      ! P2 F=5.149 Eeff=(6.55375 - j3.02268e-05) Z0=(56.887 + j0.000131201)
+      Total time per frequency:  26 minutes 20 seconds.
+      ABS: SNR = 39.2818 dB (40 dB Goal) for S1_1 at 4.8265 GHz.
+      ABS: Time = 0.066 seconds.
+
+    Frequency:  4.8265 GHZ
+      Waveguide mode time:  0.439 seconds.
+      Matrix fill time:  12 minutes 1 second.
+      Matrix solve time:  13 minutes 44 seconds.
+      4.82650000 0.529326 -62.47 0.844756 27.709 0.844756 27.709 0.529323 -61.63
+      ! P1 F=4.8265 Eeff=(6.55378 - j3.02271e-05) Z0=(56.8873 + j0.000131201)
+      ! P2 F=4.8265 Eeff=(6.55378 - j3.02271e-05) Z0=(56.8873 + j0.000131201)
+      Total time per frequency:  25 minutes 48 seconds.
+      ABS: SNR = 38.5984 dB (40 dB Goal) for S1_1 at 5.166 GHz.
+      ABS: Time = 0.081 seconds.
+
+    Frequency:  5.166 GHZ
+      Waveguide mode time:  0.435 seconds.
+      Matrix fill time:  12 minutes 6 seconds.
+      Matrix solve time:  14 minutes.
+      5.16600000 0.530635 -161.5 0.846156 -71.96 0.846156 -71.96 0.530657 -162.6
+      ! P1 F=5.166 Eeff=(6.55375 - j3.02265e-05) Z0=(56.887 + j0.000131201)
+      ! P2 F=5.166 Eeff=(6.55375 - j3.02265e-05) Z0=(56.887 + j0.000131201)
+      Total time per frequency:  26 minutes 10 seconds.
+      ABS: SNR = 39.7111 dB (40 dB Goal) for S1_2 at 5.2045 GHz.
+      ABS: Time = 0.074 seconds.
+
+    Frequency:  5.2045 GHZ
+      Waveguide mode time:  0.484 seconds.
+      Matrix fill time:  12 minutes 6 seconds.
+      Matrix solve time:  13 minutes 56 seconds.
+      5.20450000 0.941386 139.81 0.334909 49.315 0.334909 49.315 0.941405 138.73
+      ! P1 F=5.2045 Eeff=(6.55375 - j3.02266e-05) Z0=(56.887 + j0.000131201)
+      ! P2 F=5.2045 Eeff=(6.55375 - j3.02266e-05) Z0=(56.887 + j0.000131201)
+      Total time per frequency:  26 minutes 5 seconds.
+      ABS: Energy conservation for port 1 at 5.1805 GHz.
+      ABS: Time = 0.095 seconds.
+
+    Frequency:  5.1805 GHZ
+      Waveguide mode time:  0.570 seconds.
+      Matrix fill time:  11 minutes 59 seconds.
+      Matrix solve time:  14 minutes 4 seconds.
+      5.18050000 0.739931 134.18 0.671104 -135.5 0.671104 -135.5 0.739951 134.85
+      ! P1 F=5.1805 Eeff=(6.55375 - j3.02265e-05) Z0=(56.887 + j0.000131201)
+      ! P2 F=5.1805 Eeff=(6.55375 - j3.02265e-05) Z0=(56.887 + j0.000131201)
+      Total time per frequency:  26 minutes 7 seconds.
+      ABS: SNR = 40.9246 dB (40 dB Goal) for S1_1 at 4.9835 GHz.
+      ABS: Time = 0.107 seconds.
+
+    Post-Analysis information for em run 1:
+      Peak memory usage:  14 GB.
+      Total time for 123 frequencies:  1 day 17 hours.
+      Em errors detected: 0    Em warnings detected: 0.
+
+Em simulation completed Tue Nov 10 04:08:02 2026.

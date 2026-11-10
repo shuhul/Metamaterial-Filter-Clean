@@ -1,0 +1,14 @@
+{
+  "state": "complete",
+  "threads": 36,
+  "frequency_GHz": 4.65,
+  "all_S_max_error": 1.6703092038514714e-10,
+  "complex_S21_error": 1.077099105436625e-12,
+  "native_time_per_frequency": [
+    "1 minute 10 seconds."
+  ],
+  "reference_16_thread_time_seconds": 95,
+  "resource_record": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\investigations\\filter_refinement_2026-11-05\\thirtysix_threads_pilot\\em.log.resources.json",
+  "scope": "Identical corrected metal and original mesh at one directly solved frequency; not a full-band validation.",
+  "accuracy_pass": true
+}

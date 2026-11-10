@@ -1,8 +1,8 @@
-# Current taper method and evidence (November 8, 2026)
+# Current taper method and evidence (November 10, 2026)
 
 The accepted taper matches a normal ladder comparator with all ten capacitances and five inductances within 0.25% of nominal, at complex S21 RMS 0.00249186334 over 4.65–5.40 GHz. These are **optimized comparator values, not uniquely extracted physical L/C values**. An independently simulated terminal network predicts the taper response at RMS 0.00000811746. These two errors answer different questions.
 
-Current artifacts are in `final_designs/`. The older `taper_3/` and `full_filter/` packages remain historical. `SOURCE_PATHS.json` maps every copied original artifact to its new repository path and hash. No working simulation was moved.
+Current artifacts are in `final_designs/`. Superseded publication copies are in `final_old/taper_3_cleanup` and `final_old/full_filter_cleanup`. `SOURCE_PATHS.json` maps every copied original artifact to its new repository path and hash. No working simulation was moved.
 
 ## What changed after the selected T2 stage
 
@@ -28,9 +28,9 @@ For the accepted geometry, restored-port versus original native data has maximum
 
 ## Static capacitance and distributed response
 
-At low frequencies, a selected six-terminal imaginary-Z block is represented as `-A/r + B*r + D*r^3`, with `r=f/(1 GHz)`. Solving at 0.5, 1, and 2 GHz gives `C_fF = inv(A) * 1e6/(2*pi)`. A two-frequency variant checks extrapolation sensitivity; 1.5 GHz is held out. Ground capacitances are matrix row sums and mutual capacitances are negative off-diagonal entries. The accepted low-frequency held-out relative Z error is 8.24754e-6.
+At low frequencies, a selected six-terminal imaginary-Z block is represented as `-A/r + B*r + D*r^3`, with `r=f/(1 GHz)`. Solving at 0.5, 1, and 2 GHz gives `C_fF = inv(A) * 1e6/(2*pi)`. A two-frequency variant checks extrapolation sensitivity; 1.5 GHz is held out. The code records row sums and negative off-diagonal terms as ground/mutual interpretations of this selected coordinate model; these are not automatically uniquely measured physical capacitances in the original layout. The accepted low-frequency held-out relative Z error is 8.24754e-6.
 
-This matrix is a terminal representation; its entries are not relabeled as original ladder C0/Cg. For example, the accepted T3 ground row sum is about 339.20 fF, whereas the normal comparator T3 C0 is 251.6275 fF. They have different definitions. Distributing frequency-dependent loading between a static capacitance and an effective inductance is model dependent.
+This matrix is a terminal representation; its entries are not relabeled as original ladder C0/Cg. The selected terminal coordinates and boundary conditions must be considered before attaching a physical capacitance interpretation.
 
 For the operating band, the full 7×7 Z matrix is interpolated in powers `r^-1, r, r^3, r^5, r^7`, now with `r=f/(5 GHz)`. Training frequencies are 4.65, 4.861, 5.0, 5.25, and 5.4 GHz. The independent 5.096 GHz point gives restored S21 error 1.45418e-6. Against the dense native two-port export, RMS is 8.11746e-6 for S21 and 3.44610e-5 for all S. The 1,501 export samples are not 1,501 independent EM solves.
 
@@ -40,11 +40,13 @@ These powers accommodate capacitive low-frequency behavior and smooth distribute
 
 `terminal_profiles.py` tests six ground terms and fifteen mutual terms. For seven primary terms, it fixes a change of ±0.5%, ±1%, or ±5%, then refits the other twenty positive factors within 0.2–5.0 using all 49 complex S entries. The impedance change is `B.T @ (inv(Cnew)-inv(Cref)) @ B / (j*omega)`. The mapping has rank six. The distributed background is held fixed. These are deterministic compensation profiles, not statistical confidence intervals or proof of unique original ladder values. Full profiles are packaged in `terminal_profiles.json`.
 
-Crucially, geometry prediction uses changes in the **whole terminal Z**, not only static C. Native ±dimension controls provide finite-difference derivatives. Local proposals use `Znew ~= Zbase + sum(delta_d[k] * dZ/dd[k])`. Sparse difference models are checked at held-out resonance-region frequencies and against a separate native two-port simulation; inadequate models trigger remeasurement. The difference-model gate is 0.0003 for held-out S21, local all-S RMS, and dense S21 RMS, plus restoration. Early failed directions are not accepted merely because their surrogate predicts improvement.
+Crucially, geometry prediction uses changes in the **whole terminal Z**, not only static C. Native ±dimension controls provide finite-difference derivatives. Local proposals add each geometry change multiplied by its measured matrix sensitivity to the baseline Z. Sparse difference models are checked at held-out resonance-region frequencies and against a separate native two-port simulation; inadequate models trigger remeasurement. The difference-model gate is 0.0003 for held-out S21, local all-S RMS, and dense S21 RMS, plus restoration. Early failed directions are not accepted merely because their surrogate predicts improvement.
 
 `reachable_iterate.py` and its fine/control extensions store proposals before EM, compare predicted and actual changes, shrink trust regions after failures, and update derivatives after accepted measurements. The final search uses existing geometry dimensions on the 2 µm grid, enumerating nearby manufacturable rail choices. Later analytic Jacobians accelerate numerical optimization; they do not change the EM model or objective. Historical trajectories are in the copied history evidence rather than presented as universally reliable gradients.
 
 `quarter_target_optimizer.py` minimizes the equal-frequency, unweighted real/imaginary residual to a normal ladder. There are 15 multiplicative component factors bounded to [0.9975,1.0025], and total reference delay bounded to ±100 ps. SciPy `least_squares` uses several delay starts. Reported RMS is `sqrt(sum(abs(S21native-S21model)^2)/N)`, equivalently `sqrt(2*cost/N)`. Delay multiplies S21 by `exp(-j*2*pi*f*tau)`; it does not alter magnitude. The accepted total delay is 3.58104935 ps. Low residual and tight bounds establish existence of a nearby comparator, not physical parameter uniqueness or guaranteed full-array transfer.
+
+The internal network was used to generate proposals, but its advantage over a simpler two-port sensitivity model was never demonstrated. The final search objective was external S21 versus the bounded ladder, not uniquely extracted internal capacitances. Ordinary two-port baseline and perturbed responses could support the same local predictive-search procedure without short restoration. The added ports and frequency approximation can introduce discrepancies; algebraic shorting itself is exact for the supplied network. Final acceptance used native uninstrumented two-port responses. See the reader guide for the complete mechanism and limitations.
 
 ## Final geometry and boundary correction
 
@@ -56,18 +58,18 @@ The original 1.5 mm free-space top boundary was too close for boundary-independe
 
 The accepted stack uses 12 mm upper air, 500 µm silicon, 5 mm lower air, and the saved covers/materials. Grid 2×2 µm, MEDIUM_SPEED, edge meshing, double precision, de-embedding, 36 threads. Earlier coarse-mesh screens were not substituted for final evidence. A 36-thread same-metal pilot took 70 s per frequency versus 95 s at 16 threads, with S21 difference 1.08e-12; that is one-point evidence, not a universal runtime guarantee. Earlier four/eight-thread full-band timing was 1094.40/628.99 s with identical saved exports.
 
-The isolated short-input check reduced clearance 740→440 µm and worsened comparator RMS to 0.00885226; original-versus-shortened magnitude RMS was 0.00774039. The user retained the original clearance. This rejected test is not the input used by the running full filter.
+The isolated short-input check reduced clearance 740→440 µm and worsened comparator RMS to 0.00885226; original-versus-shortened magnitude RMS was 0.00774039. The user retained the original clearance. This rejected test is not the input used by the completed full filter.
 
 ## Full-filter evidence is separate
 
 Ten regular cells plus three mirrored tapers at each end make sixteen resonators. The conditional ladder prediction repeats the regular values, omits the output fixture, mirrors taper components, and omits fixture phase delay. At 4.92 GHz it predicts |S21|=0.957403974 (−0.378095480 dB). Direct EM gives 0.972139673 (−0.245426656 dB), a +0.132668825 dB difference, in 867.274 s. Phase was not aligned, so this is a magnitude sanity check at one frequency only.
 
-The separate ABS sweep covers 4.5–5.5 GHz with 2,000 output intervals and 36 threads. Its input is copied under `final_full_filter/`; no partial response is published as final. Direct solve count and ABS SNR are progress observations, not percent complete or stopband attenuation. See the timestamped mailbox snapshot for live status. Completing the taper comparator criterion does not automatically validate passband ripple, loss, or band edges of the full device.
+The completed ABS sweep covers 4.5-5.5 GHz with 123 direct solves and a verified 2001-sample native interpolated export. Final ABS SNR was 40.9246 dB against a 40 dB goal, with zero errors/warnings. The wrapper mistakenly rejected the direct-only export count; cache-only interpolation then exported the dense curve with zero new EM frequencies. The main continuous |S21| >= 0.8 interval is approximately 4.8260-5.1681 GHz. Canonical responses, metrics, native input, figures and completion evidence are now in `final_designs/final_full_filter/`. See `docs/FINAL_FILTER_REPORT.md` and `docs/SIMULATION_SPEED_EVIDENCE.md`.
 
 ## Reproduction and remaining limits
 
-Run `uv sync --locked`, `uv run python tools/check_published_files.py`, and `uv run python -m geometry.rebuild_final --verify-only`. The design registry includes the three current projects; GDS/native equality, grid and ports are checked without Sonnet. Native regeneration uses `--output-dir build/final_designs` and imports/reads projects without launching EM. Frozen layout replay is self-contained; it does not claim every historical campaign is portable.
+Run `uv sync --locked`, `uv run python tools/check_published_files.py`, and `uv run python -m geometry.rebuild_final --verify-only`. The design registry includes six selected project entries; GDS/native equality, grid and ports are checked without Sonnet. Native regeneration uses `--output-dir build/final_designs` and imports/reads projects without launching EM. Frozen layout replay is self-contained; it does not claim every historical campaign is portable.
 
 `uv run python tools/verify_current_response.py` independently replays the saved network coefficients and bounded ladder comparison without EM. Original source paths and provenance are retained. The old root design folders are not silently overwritten. Solver caches, investigations, logs and environments stay excluded by directory-based Git policy.
 
-Unresolved: unique physical C0/Cg/L identification; extrapolation beyond the validated band; physical material uncertainty; finer-than-2 µm convergence; effect of alternative valid external reference planes; and complete full-filter verification. Native `Ls=0.0388` is recorded, but the specific surface-model unit convention still needs authoritative confirmation; a general project inductance unit of NH alone does not settle the Ls field units. Do not repeat the old pH/square assertion as verified.
+Unresolved: unique physical C0/Cg/L identification; extrapolation beyond the validated band; physical material uncertainty; finer-than-2 µm convergence; effect of alternative valid external reference planes; and fabricated-device performance. Native `Ls=0.0388` is recorded, but the specific surface-model unit convention still needs authoritative confirmation; a general project inductance unit of NH alone does not settle the Ls field units. Do not repeat the old pH/square assertion as verified.

@@ -4,7 +4,7 @@ Publish source, documentation, reference artwork, supplied `reference_inputs/`, 
 
 Do not add local `sonnet_files/`, `output_data/`, `investigations/`, virtual environments, duplicate handoff bundles, generated `build/` outputs, or Sonnet `sondata` caches. Those directories remain untouched on disk. No original campaign files are moved or deleted to prepare this repository.
 
-All selected native `.sonx` projects, GDS layouts, saved `.snp` responses, calibration inputs, settings, previews, and the reference taper image are published. The unfinished full-filter response and diagnostic fit ensembles remain local. The selected-design index identifies the current assembly and its baselines.
+All selected native `.sonx` projects, GDS layouts, saved `.snp` responses, calibration inputs, settings, previews, and the reference taper image are published. Completed full-filter responses and concise completion evidence are published. Large diagnostic fit ensembles, solver caches and raw resource time-series remain local. The selected-design index identifies the current assembly and its baselines.
 
 `final_designs/manifest.json` records integrity hashes for current designs, archived publication copies, and supplied reference inputs. It is **not a Git allowlist** and does not control which files Git can track. Refresh it after intentionally updating a final design:
 

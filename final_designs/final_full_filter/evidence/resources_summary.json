@@ -1,0 +1,20 @@
+{
+  "started_utc": "2026-11-08T18:48:56.558455+00:00",
+  "state": "completed",
+  "launcher_pid": 154152,
+  "child_pid": 43312,
+  "working_directory": "C:\\Users\\shuhul\\Downloads\\filter_new_automation_clean\\investigations\\filter_refinement_2026-11-05\\quarter_percent_full_sweep_2026-11-08",
+  "thread_limit": 36,
+  "logical_processors": 36,
+  "max_concurrent_jobs": 1,
+  "policy": "User-authorized up to 36 threads, serial exclusive lease; own declared/CPU caps enforced. Full-host utilization allowed at 36 threads.",
+  "peak_child_core_equivalents": 34.86950672233064,
+  "declared_threads": 36,
+  "ended_utc": "2026-11-10T12:09:09.475826+00:00",
+  "elapsed_seconds": 148812.91752400063,
+  "returncode": 0,
+  "error": null,
+  "final_child_cpu_seconds": 2506470.828125,
+  "source_sha256": "4d44b6759c0adf2ea6ed7dccc933f6c4be8191cbc4c69e0c4d411cb478c32615",
+  "sample_count": 14730
+}
